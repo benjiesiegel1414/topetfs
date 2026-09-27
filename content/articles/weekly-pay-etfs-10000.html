@@ -1,0 +1,58 @@
+<!--meta
+{"title":"What $10,000 Earns in Weekly-Pay ETFs, and What It Costs You","short":"What $10K earns weekly","seoTitle":"Weekly Dividend ETFs: How Much Income Does $10,000 Make?","dek":"Weekly-pay ETFs turn a portfolio into something that feels like a paycheck. We ran $10,000 through the most popular ones, then looked at what happened to the share price behind the checks.","section":"weekly","date":"2026-09-27","time":"07","read":6,"art":"bars","tickers":["QDTE","XDTE","RDTE","WEEK","FEPI","GOOW","CHPY","ULTY","MSTY"],"coverLabel":"Weekly pay","keyNumbers":[["Weekly-pay ETFs tracked","{{count:weekly}}"],["QDTE yield","{{live:QDTE:yield}}"],["XDTE yield","{{live:XDTE:yield}}"],["$10K in QDTE, per week","{{calc:usd2:10000*QDTE.yield/100/52}}"]]}
+-->
+<div class="takeaways"><h2>The short version</h2><ul>
+<li>Weekly-pay ETFs mostly run option strategies, and they pay 52 times a year instead of 4 or 12.</li>
+<li>At current yields, $10,000 pays anywhere from under $10 a week in a T-bill fund to over $100 in the highest-yield option funds.</li>
+<li>The paycheck feeling is real, but so is price decay in many of them. Look at total return before you buy.</li>
+</ul></div>
+
+<p class="lede">A few years ago there were almost no ETFs that paid every week. Now our tracker at <a href="https://weeklyetfs.com/">WeeklyETFs.com</a> follows {{count:weekly}} of them. The appeal is obvious: money shows up every Friday, like a paycheck, and you can plan your spending around it.</p>
+
+<p>So what does that paycheck actually look like? We took $10,000 and ran it through some of the most popular weekly payers at their current yields.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="QDTE,XDTE,RDTE,FEPI,GOOW,CHPY,ULTY,TOPW,WEEK" data-per="week">
+  <p class="figure-title">Weekly income from one investment</p>
+  <p class="figure-sub">Estimated income per week at each fund's current distribution yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="wk-amt">Amount invested</label><input id="wk-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:290px"></div>
+  <p class="figure-note">Yield divided by 52. Real weekly payouts move up and down every week and are not guaranteed.</p>
+</div>
+
+<p>At current yields, $10,000 in Roundhill's {{tkr:QDTE}} would pay roughly {{calc:usd2:10000*QDTE.yield/100/52}} a week. The S&amp;P 500 version, {{tkr:XDTE}}, works out to about {{calc:usd2:10000*XDTE.yield/100/52}}. On the calm end of the list, {{tkr:WEEK}} holds T-bills and pays about {{calc:usd2:10000*WEEK.yield/100/52}} a week, which is the closest thing to a savings account in the group.</p>
+
+<h2>Where the weekly money comes from</h2>
+
+<p>Most weekly payers are option-income funds. {{tkr:QDTE}} and {{tkr:XDTE}} sell options that expire the same day they are written, called zero-days-to-expiration or 0DTE options, and bundle the premium into a weekly distribution. Single-stock funds like {{tkr:GOOW}} do something similar on one company. If the mechanics are new to you, our <a href="/articles/covered-call-etfs-explained">covered call explainer</a> walks through the trade with an interactive chart.</p>
+
+<p>The key thing to understand: paying weekly does not make a fund earn more. It just slices the same income into 52 smaller pieces. A 20% yield paid weekly and a 20% yield paid monthly are the same amount of money over a year.</p>
+
+<h2>Now look behind the paycheck</h2>
+
+<p>Here is the part most weekly-income posts skip. Of the {{count:weekly}} weekly funds we track, most carry a price decay flag, meaning the share price sits below where it launched. Total return still tells the real story, since it counts every payout.</p>
+
+<div class="board" data-w="board" data-src="weekly" data-cols="yield,tr,decay" data-sort="yield" data-n="12" data-syms="QDTE,XDTE,RDTE,FEPI,GOOW,CHPY,ULTY,TOPW,WEEK,MSTY,QQQY,IWMY">
+  <div class="board-head"><div><h3>The paycheck and the price</h3><p class="meta">Popular weekly payers, live</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return is since inception.</span><span>Source: WeeklyETFs.com</span></div>
+</div>
+
+<p>Some weekly funds, like {{tkr:CHPY}} with a total return of {{live:CHPY:tr:signed}}, have delivered strong overall results. Others have paid out big numbers while the share price slid. Neither is automatically good or bad. It depends on whether you are spending the income or trying to grow it.</p>
+
+<h2>Who weekly-pay ETFs are for</h2>
+
+<ul>
+<li><strong>Income now.</strong> If you live on your portfolio, weekly cash flow can smooth out budgeting and reduce the need to sell shares.</li>
+<li><strong>Reinvestors, with care.</strong> Reinvesting weekly compounds faster in theory, but only if the share price holds up. Run the numbers in our <a href="/tools#drip">DRIP calculator</a>.</li>
+<li><strong>Not a replacement for growth.</strong> Most weekly payers are designed to pay out, not to grow. Many investors pair them with a core like {{tkr:VOO}} or {{tkr:SCHD}}.</li>
+</ul>
+
+<div class="figure" data-w="income" data-src="weekly" data-default="QDTE">
+  <p class="figure-title">Try your own number</p>
+  <p class="figure-sub">Any weekly-pay ETF we track, at its current yield</p>
+  <div class="controls"><div class="field"><label for="wk-amt2">Invest</label><input id="wk-amt2" name="amount" inputmode="decimal" value="10000"></div><div class="field"><label>ETF</label><select aria-label="ETF"></select></div></div>
+  <div class="results"><div><div class="label">Per week</div><div class="value big" data-o="weekly">$0</div></div><div><div class="label">Per month</div><div class="value" data-o="monthly">$0</div></div><div><div class="label">Per year</div><div class="value" data-o="annual">$0</div></div></div>
+  <p class="figure-note" data-o="name"></p>
+</div>
+
+<p>For the full list with yields, total returns and price decay on every fund, head to <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>. For monthly payers, see <a href="https://monthlyetfs.com/">MonthlyETFs.com</a>.</p>

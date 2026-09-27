@@ -1,0 +1,42 @@
+<!--meta
+{"title":"Reinvest or Spend? What Turning On DRIP Does to Your Portfolio Over 20 Years","short":"Reinvest or spend?","seoTitle":"DRIP Calculator: Should You Reinvest Dividends? See the Math","dek":"Dividend reinvestment is the quiet engine behind most long-term dividend success stories. Set your own yield, growth and timeline and watch the gap open up.","section":"tools","date":"2026-09-25","time":"10","read":5,"art":"line","tickers":["SCHD","VYM","JEPI","DGRO"],"coverLabel":"DRIP math","keyNumbers":[["SCHD yield","{{live:SCHD:yield}}"],["$100K in SCHD, yearly income","{{calc:usd:100000*SCHD.yield/100}}"],["JEPI yield","{{live:JEPI:yield}}"],["$100K in JEPI, yearly income","{{calc:usd:100000*JEPI.yield/100}}"]]}
+-->
+<div class="takeaways"><h2>The short version</h2><ul>
+<li>DRIP means your dividends automatically buy more shares instead of landing as cash.</li>
+<li>More shares means bigger future dividends, which buy even more shares. That loop is compounding.</li>
+<li>The longer your timeline, the bigger the gap between reinvesting and spending.</li>
+</ul></div>
+
+<p class="lede">Every dividend investor hits the same fork in the road. The payout lands in your account. Do you spend it, or put it back to work? Most brokerages let you flip a switch called DRIP, short for dividend reinvestment plan, and make that decision once. It might be the most important switch in your account.</p>
+
+<h2>How the loop works</h2>
+
+<p>Say you own $100,000 of {{tkr:SCHD}}, which yields {{live:SCHD:yield}} today. That is about {{calc:usd:100000*SCHD.yield/100}} a year. With DRIP on, that money buys more SCHD shares. Next year you own more shares, so your dividend is bigger, so you buy even more shares. Stack that on top of any growth in the share price, and the curve bends upward.</p>
+
+<p>Spend the dividends instead, and your share count never changes. Your income can still grow if the fund raises its payout, but you lose the compounding on the reinvested dollars.</p>
+
+<div class="figure" data-w="drip" id="drip">
+  <p class="figure-title">DRIP vs. taking the cash</p>
+  <p class="figure-sub">Same investment, same yield, same growth. The only difference is what happens to the dividends.</p>
+  <div class="controls"><div class="field"><label>Starting amount</label><input type="number" name="start" value="10000" min="0" step="500"></div><div class="field"><label>Monthly add</label><input type="number" name="monthly" value="500" min="0" step="50"></div>
+  <div class="field"><label>Yield <output for="yield"></output></label><input type="range" name="yield" min="0" max="15" step="0.5" value="3.5" data-unit="%"></div><div class="field"><label>Price growth / yr <output for="growth"></output></label><input type="range" name="growth" min="-5" max="12" step="0.5" value="6" data-unit="%"></div><div class="field"><label>Years <output for="years"></output></label><input type="range" name="years" min="1" max="40" step="1" value="20"></div></div>
+  <div class="legend"></div><div class="chart"></div>
+  <div class="results"><div><div class="label">Ending value (DRIP)</div><div class="value big" data-o="end">$0</div></div><div><div class="label">Annual income at the end</div><div class="value" data-o="income">$0</div></div><div><div class="label">Cash route (value + dividends)</div><div class="value" data-o="cash">$0</div></div><div><div class="label">You contributed</div><div class="value" data-o="contrib">$0</div></div></div>
+  <p class="figure-note">Illustration only. Assumes a steady yield and price growth, monthly compounding and no taxes. "Cash route" adds up the dividends you took without investing them.</p>
+</div>
+
+<h2>What to try in the calculator</h2>
+
+<ul>
+<li><strong>Stretch the timeline.</strong> Move years from 10 to 30. The gap between the two lines grows much faster than the timeline does.</li>
+<li><strong>Raise the yield, drop the growth.</strong> This mimics a high-yield option fund. Notice that if price growth goes negative, reinvesting buys more shares of a shrinking asset. That is why total return matters, not just yield.</li>
+<li><strong>Add monthly contributions.</strong> Regular buying plus DRIP is the classic recipe behind most "I built a six-figure dividend portfolio" stories.</li>
+</ul>
+
+<h2>When spending makes more sense</h2>
+
+<p>DRIP is a growth tool. Once you actually need the income, flipping it off is the whole point of building the portfolio. Many investors run DRIP for decades and switch to cash in retirement. Others reinvest from one fund into another, for example taking payouts from a high-yield fund like {{tkr:JEPI}}, which yields {{live:JEPI:yield}}, and buying a dividend grower like {{tkr:DGRO}} with them.</p>
+
+<div class="callout"><strong>Taxes still apply</strong>In a taxable account, reinvested dividends are taxed the year you receive them, just like cash dividends. Reinvesting inside an IRA or 401(k) avoids that drag. This is general information, not tax advice.</div>
+
+<p>For a year-by-year projection using live yields from our database, try <a href="https://dividendprojection.com/">DividendProjection.com</a>. More calculators live on our <a href="/tools">Tools page</a> and at <a href="https://topdividendtools.com/">TopDividendTools.com</a>.</p>

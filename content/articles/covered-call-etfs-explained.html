@@ -1,0 +1,79 @@
+<!--meta
+{"title":"Covered Call ETFs, Explained: Where the Big Yields Actually Come From","short":"Covered call ETFs, explained","seoTitle":"Covered Call ETFs Explained: How JEPI, JEPQ, QQQI and QYLD Pay Big Yields","dek":"JEPI, JEPQ, QQQI and QYLD pay far more than the stocks they hold. Here is the trade behind that income, what you give up for it, and an interactive payoff chart to see it for yourself.","section":"income","date":"2026-09-27","time":"09","read":8,"lead":true,"art":"line","tickers":["JEPI","JEPQ","QQQI","SPYI","QYLD","XYLD","GPIQ","GPIX","DIVO"],"coverLabel":"Covered calls","keyNumbers":[["JEPI yield","{{live:JEPI:yield}}"],["JEPQ yield","{{live:JEPQ:yield}}"],["QQQI yield","{{live:QQQI:yield}}"],["QYLD yield","{{live:QYLD:yield}}"],["SCHD yield (for scale)","{{live:SCHD:yield}}"]]}
+-->
+<div class="takeaways"><h2>The short version</h2><ul>
+<li>A covered call ETF owns stocks and sells call options on them. The option premium is most of the income you see.</li>
+<li>You are trading away some upside for cash today. In a big rally the fund lags. In a flat or choppy market it tends to shine.</li>
+<li>The yield number is only half the story. Always check total return and whether the share price has held up.</li>
+</ul></div>
+
+<p class="lede">Most dividend ETFs pay somewhere around 2% to 4% a year. {{tkr:SCHD}}, one of the most popular dividend funds on the planet, yields about {{live:SCHD:yield}} right now. Then you look at {{tkr:JEPQ}} and see {{live:JEPQ:yield}}. Or {{tkr:QQQI}} at {{live:QQQI:yield}}. Or {{tkr:QYLD}} at {{live:QYLD:yield}}. Same stock market. Wildly different income. So where does the extra money come from?</p>
+
+<p>The answer is an options strategy called a covered call, and once you understand it you will never look at a high-yield ETF the same way again.</p>
+
+<h2>What a covered call actually is</h2>
+
+<p>A call option gives someone the right to buy a stock from you at a set price, called the strike, before a set date. When you sell that option, the buyer pays you cash up front. That cash is the premium, and you keep it no matter what happens.</p>
+
+<p>It is "covered" because you already own the shares. If the stock rallies past the strike, your shares get called away at the strike price. You keep the premium, but you miss every dollar of upside above that strike.</p>
+
+<p>That is the whole trade. <strong>You sell your future upside for cash today.</strong> A covered call ETF does this across an entire portfolio, month after month (or in some newer funds, day after day), and passes the premium to you as distributions.</p>
+
+<div class="figure" data-w="payoff">
+  <p class="figure-title">Covered call vs. owning the stock, one month</p>
+  <p class="figure-sub">Drag the sliders to change the premium collected and how far out the strike is</p>
+  <div class="controls">
+    <div class="field"><label>Premium collected <output for="prem">1.0%</output></label><input type="range" name="prem" min="0.2" max="3" step="0.1" value="1"></div>
+    <div class="field"><label>Strike above today's price <output for="otm">2.0%</output></label><input type="range" name="otm" min="0" max="8" step="0.5" value="2"></div>
+  </div>
+  <div class="legend"></div>
+  <div class="chart"></div>
+  <div class="results">
+    <div><div class="label">Most you can make</div><div class="value big" data-o="cap">+3.0%</div></div>
+    <div><div class="label">Cushion on the way down</div><div class="value" data-o="cush">1.0%</div></div>
+    <div><div class="label">Stock wins above</div><div class="value" data-o="cross">+3.0%</div></div>
+  </div>
+  <p class="figure-note">Simplified one-month payoff at expiration, before fees and taxes. Real funds sell options on different schedules and strikes.</p>
+</div>
+
+<p>Play with that chart for a second. Below the strike, the covered call line sits above the stock line by exactly the premium. That is your cushion. Above the strike, the covered call line goes flat while the stock keeps climbing. That is the cost.</p>
+
+<h2>Why the Nasdaq funds pay more</h2>
+
+<p>Option premiums are priced off volatility. The more a stock or index moves around, the more buyers pay for the right to own its upside. The Nasdaq-100 is more volatile than the S&amp;P 500, so calls on it are worth more, and funds that sell them collect more.</p>
+
+<p>You can see it in the data. The S&amp;P 500 version from JPMorgan, {{tkr:JEPI}}, yields {{live:JEPI:yield}}. Its Nasdaq sibling {{tkr:JEPQ}} yields {{live:JEPQ:yield}}. NEOS shows the same pattern: {{tkr:SPYI}} at {{live:SPYI:yield}} versus {{tkr:QQQI}} at {{live:QQQI:yield}}. Global X too: {{tkr:XYLD}} at {{live:XYLD:yield}} and {{tkr:QYLD}} at {{live:QYLD:yield}}.</p>
+
+<div class="figure" data-w="bars" data-src="pro" data-field="yield" data-syms="JEPI,JEPQ,SPYI,QQQI,XYLD,QYLD,GPIX,GPIQ,DIVO,BALI,ISPY" data-sorted>
+  <p class="figure-title">Covered call ETF yields today</p>
+  <p class="figure-sub">Trailing distribution yield, live from our database</p>
+  <div class="chart" style="min-height:330px"></div>
+  <p class="figure-note">Hover a bar for total return and assets. Click to open the fund profile.</p>
+</div>
+
+<h2>Not all covered call ETFs are built the same</h2>
+
+<p>This is where most people get tripped up. "Covered call ETF" describes a family, not a single recipe. The differences matter a lot for how the fund behaves.</p>
+
+<ul>
+<li><strong>Full overwrite, at the money.</strong> {{tkr:QYLD}} and {{tkr:XYLD}} sell calls on the whole index, right at the current price. Maximum premium, almost no upside. Over time, both have struggled to grow their share price.</li>
+<li><strong>Partial overwrite.</strong> Goldman Sachs' {{tkr:GPIX}} and {{tkr:GPIQ}} only sell calls on part of the portfolio, so some upside stays in the fund. Their yields are lower, around {{live:GPIX:yield}} and {{live:GPIQ:yield}}, but they participate more in rallies.</li>
+<li><strong>Stock picking plus options.</strong> {{tkr:JEPI}} holds a hand-picked, lower-volatility basket of S&amp;P 500 stocks and earns option income through equity-linked notes. {{tkr:DIVO}} owns dividend stocks and writes calls tactically on individual names, which is why its yield is only {{live:DIVO:yield}}.</li>
+<li><strong>Index options.</strong> {{tkr:SPYI}} and {{tkr:QQQI}} sell options on the index itself. Those are Section 1256 contracts, which get 60/40 long-term and short-term tax treatment, and much of the payout has been classified as return of capital. That can matter a lot in a taxable account. Check with a tax pro for your situation.</li>
+</ul>
+
+<h2>The number that matters more than yield</h2>
+
+<p>A fund can pay you 12% a year and still leave you poorer if the share price falls 12% a year. That is why every serious look at an income ETF should include total return, which counts both the distributions and the change in price.</p>
+
+<p>Since inception, {{tkr:JEPI}} has a total return of {{live:JEPI:tr:signed}} and {{tkr:JEPQ}} has returned {{live:JEPQ:tr:signed}}. {{tkr:QYLD}}, one of the oldest funds in the group, shows {{live:QYLD:tr:signed}}. Those numbers cover different time periods, so they are not a head-to-head race, but they show you the full picture instead of just the payout.</p>
+
+<div class="callout"><strong>Quick rule of thumb</strong>If a fund's yield is far above what its index could reasonably earn, the difference has to come from somewhere. Usually it comes from giving up upside, and sometimes it comes out of the share price. Our <a href="/articles/yield-vs-total-return">yield vs. total return breakdown</a> shows how to spot the difference.</div>
+
+<h2>When covered call ETFs make sense</h2>
+
+<p>These funds are built for investors who want cash flow now and are fine giving up some of the market's best days to get it. Retirees living off distributions, people who want monthly or weekly income, and investors who expect a sideways market are the natural fit.</p>
+
+<p>They are a tougher fit if you are decades from retirement and trying to maximize growth. In strong bull markets a plain index fund like {{tkr:VOO}} will usually leave a covered call fund behind, because the covered call fund sold away the rally.</p>
+
+<p>Want to see what these yields mean in dollars? Plug any of them into the <a href="/tools#income">income calculator</a>, or compare them all side by side on the <a href="/dividend">Income hub</a>.</p>
