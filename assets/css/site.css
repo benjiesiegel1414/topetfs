@@ -394,3 +394,19 @@ a.tk:hover{color:var(--link)}
 .mt0{margin-top:0}
 .skeleton{background:linear-gradient(90deg,var(--rule) 0%,var(--canvas) 50%,var(--rule) 100%);background-size:200% 100%;animation:sk 1.2s infinite;border-radius:4px;color:transparent!important}
 @keyframes sk{from{background-position:200% 0}to{background-position:-200% 0}}
+
+/* ---------- Author + contact ---------- */
+a.avatar{text-decoration:none}
+a.avatar:hover{color:#fff;text-decoration:none;opacity:.9}
+.byline a{color:inherit}
+.byline a strong{color:var(--ink)}
+.avatar.lg{width:56px;height:56px;font-size:18px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;flex-shrink:0;font-family:var(--sans)}
+.avatar.xl{width:92px;height:92px;font-size:30px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;display:grid;place-items:center;font-weight:800;flex-shrink:0;box-shadow:0 0 0 4px var(--paper),0 0 0 5px var(--rule-strong)}
+.author-hero{display:flex;gap:22px;align-items:center}
+.author-hero h1{margin-top:2px}
+@media(max-width:640px){.author-hero{flex-direction:column;align-items:flex-start}}
+.author-box{display:flex;gap:16px;align-items:flex-start;font-family:var(--sans);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;margin:2em 0 1.2em}
+.author-box p{font-size:15px;line-height:1.6;margin:4px 0 0;color:var(--ink-2)}
+.contact-card{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:var(--paper);border:1px solid var(--rule);border-top:3px solid var(--navy);border-radius:var(--radius);padding:22px 24px}
+.contact-card .label{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.contact-email{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--ink);word-break:break-all}
