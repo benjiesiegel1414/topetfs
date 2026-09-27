@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
-const GA_ID = ""; // Add the GA4 measurement ID for topetfs.com here (e.g. "G-XXXXXXX")
+const GA_ID = "G-QL5W6LQ1Z7"; // Add the GA4 measurement ID for topetfs.com here (e.g. "G-XXXXXXX")
 const BUILD_DATE = new Date();
 
 /* ---------------- data ---------------- */
