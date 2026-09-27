@@ -9,6 +9,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
 const GA_ID = "G-QL5W6LQ1Z7"; // Add the GA4 measurement ID for topetfs.com here (e.g. "G-XXXXXXX")
 const BUILD_DATE = new Date();
+const EMAIL = "Business@TopDividendETFs.com";
+const AUTHOR = {name:"Benjamin Siegel", title:"Founder, TopETFs", url:"/author/benjamin-siegel"};
 
 /* ---------------- data ---------------- */
 function parseCSV(text){const rows=[];let row=[],f="",q=false;for(let i=0;i<text.length;i++){const c=text[i];if(q){if(c==='"'){if(text[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}else if(c==='"')q=true;else if(c===','){row.push(f);f="";}else if(c==='\n'){row.push(f);rows.push(row);row=[];f="";}else if(c!=='\r')f+=c;}if(f!==""||row.length){row.push(f);rows.push(row);}return rows;}
@@ -181,7 +183,7 @@ function foot(){
     <div><a class="brand" href="/">${LOGO}<span>Top<b>ETFs</b></span></a><p>Plain-English ETF research with live numbers. Income, weekly pay, growth and the math behind all of it.</p><p><a class="btn btn-gold" href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Try TopDividendETFsPRO</a></p></div>
     <div><h4>Sections</h4><ul>${NAV.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join("")}</ul></div>
     <div><h4>Our network</h4><ul>${NETWORK.map(n=>`<li><a href="https://${n.domain}/" target="_blank" rel="noopener">${n.name}.com</a></li>`).join("")}</ul></div>
-    <div><h4>Latest</h4><ul>${arts.map(a=>`<li><a href="/articles/${a.slug}">${esc(a.short||a.title)}</a></li>`).join("")}</ul><h4 style="margin-top:18px">Company</h4><ul><li><a href="/about">About</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="https://topdividendetfs.com/advertise.html" target="_blank" rel="noopener">Advertise</a></li><li><a href="/feed.xml">RSS</a></li></ul></div>
+    <div><h4>Latest</h4><ul>${arts.map(a=>`<li><a href="/articles/${a.slug}">${esc(a.short||a.title)}</a></li>`).join("")}</ul><h4 style="margin-top:18px">Company</h4><ul><li><a href="/about">About</a></li><li><a href="/author/benjamin-siegel">Our founder</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="https://topdividendetfs.com/advertise.html" target="_blank" rel="noopener">Advertise</a></li><li><a href="/feed.xml">RSS</a></li></ul></div>
   </div>
   <p class="disclaimer">${DISCLAIMER}</p>
   <div class="foot-bottom"><span>&copy; ${BUILD_DATE.getFullYear()} Dividend Empire LLC. All rights reserved.</span><button class="theme-toggle" type="button">Toggle dark mode</button></div>
@@ -361,7 +363,129 @@ out["about.html"]=page({title:"About TopETFs",desc:"TopETFs is an ETF research h
 <p>TopETFs is the research hub of a network of ETF sites built by an investor with more than ten years of dividend investing behind him. The rest of the network is built for scanning tables. This site is built for reading: stories that explain what a fund actually does, why its yield looks the way it does, and what the math means for your money.</p>
 <p>Every number inside a story is pulled from the same database that powers <a href="https://topdividendetfs.com/">TopDividendETFs.com</a>, <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>, <a href="https://growthetfs.com/">GrowthETFs.com</a> and <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>. When the data changes, the stories change with it. Fund details come from issuer websites and SEC filings.</p>
 <p>TopETFs is published by Dividend Empire LLC. Some placements on the site are paid sponsorships from ETF issuers, and they are always labeled "Sponsored." Sponsors do not see or approve our stories.</p>
-<p>Questions, corrections or partnership ideas: use the contact details on <a href="https://topdividendetfs.com/advertise.html">our advertising page</a>.</p></div></div>`);
+<p>TopETFs was founded by <a href="/author/benjamin-siegel">Benjamin Siegel</a>, who writes and oversees everything published here.</p>
+<p>Questions, corrections or partnership ideas: <a href="/contact">contact us</a> or email <a href="mailto:${EMAIL}">${EMAIL}</a>.</p></div></div>`);
+
+// Author
+out["author/benjamin-siegel.html"]=page({title:"Benjamin Siegel, Founder of TopETFs",desc:"Benjamin Siegel is the founder of TopETFs and Dividend Empire LLC, a dividend investor of more than ten years who runs a network of ETF research sites.",canonical:"/author/benjamin-siegel",
+ ld:{"@context":"https://schema.org","@type":"ProfilePage",mainEntity:{"@type":"Person",name:AUTHOR.name,jobTitle:AUTHOR.title,url:SITE+AUTHOR.url,worksFor:{"@type":"Organization",name:"Dividend Empire LLC"},email:"mailto:"+EMAIL,sameAs:NETWORK.map(n=>"https://"+n.domain+"/")}}},
+`<header class="page-head"><div class="wrap"><div class="author-hero"><span class="avatar xl">BS</span><div><span class="kicker">Founder</span><h1>Benjamin Siegel</h1><p>Founder of TopETFs and Dividend Empire LLC. Dividend investor for more than ten years. Builder of the TopETFs network.</p></div></div></div></header>
+<div class="wrap" style="max-width:760px;margin-top:28px"><div class="prose">
+<p class="lede">I started investing in dividend stocks and ETFs more than ten years ago, and like a lot of people I learned the hard way that the biggest yield on the screen is not always the best investment. Most of the ETF information I found was either buried in fund documents or written to sell something. So I started building the tools I wished I had.</p>
+<h2>What I built</h2>
+<p>That started with <a href="https://topdividendetfs.com/">TopDividendETFs.com</a>, a free, daily-updated ranking of top dividend ETFs. It grew into a network of specialist sites, each focused on one corner of the ETF market: <a href="https://weeklyetfs.com/">WeeklyETFs.com</a> for weekly payers, <a href="https://monthlyetfs.com/">MonthlyETFs.com</a> for monthly income, <a href="https://growthetfs.com/">GrowthETFs.com</a>, <a href="https://etftotalreturns.com/">ETFTotalReturns.com</a>, <a href="https://topdividendtools.com/">TopDividendTools.com</a>, <a href="https://dividendprojection.com/">DividendProjection.com</a> and <a href="https://photonicsetfs.com/">PhotonicsETFs.com</a>. For investors who want to go deeper, <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a> is a premium terminal covering 160+ income ETFs.</p>
+<p>I built every one of these sites myself, without outside funding and without a background in web development. I also share ETF research every day with more than 80,000 followers on X and on YouTube under the name DevotedDividend.</p>
+<h2>Why TopETFs</h2>
+<p>The rest of the network is built for scanning tables. TopETFs is built for reading. My goal is to explain ETFs in plain English: what a fund actually does, where its yield comes from, what it costs, and how it has really performed, with every number pulled live from the same database that powers the rest of the network.</p>
+<h2>How I work</h2>
+<ul>
+<li><strong>Numbers first.</strong> Yields, fees, assets and total returns come from our database and update daily. When the data changes, the articles change with it.</li>
+<li><strong>Show the whole trade.</strong> A high yield is always shown next to total return and price history, so you can see what it costs.</li>
+<li><strong>Primary sources.</strong> Fund details come from issuer websites, prospectuses and SEC filings.</li>
+<li><strong>Clear about money.</strong> The network is supported by clearly labeled sponsorships from ETF issuers. Sponsors never see or approve what I write.</li>
+</ul>
+<h2>What I am not</h2>
+<p>I am not a licensed financial advisor, and nothing on this site is personal investment advice. I write about ETFs I research and sometimes own, and I always recommend reading a fund's prospectus and talking with a professional before investing. See the full <a href="/disclaimer">disclaimer</a>.</p>
+<h2>Get in touch</h2>
+<p>Corrections, questions and partnership ideas are always welcome at <a href="mailto:${EMAIL}">${EMAIL}</a> or through the <a href="/contact">contact page</a>.</p>
+</div>
+<div class="section-head"><h2>Latest from Benjamin</h2><a href="/latest">All stories &rarr;</a></div>
+<div class="grid-3">${ARTICLES.slice(0,6).map(a=>storyCard(a)).join("")}</div></div>`);
+
+// Contact
+out["contact.html"]=page({title:"Contact TopETFs",desc:"Contact TopETFs for corrections, questions, partnerships and ETF issuer sponsorships.",canonical:"/contact"},
+`<header class="page-head"><div class="wrap"><span class="kicker">Contact</span><h1>Contact us</h1><p>We read every message. The fastest way to reach us is email.</p></div></header>
+<div class="wrap" style="max-width:860px;margin-top:28px">
+<div class="contact-card"><div><div class="label">Email</div><a class="contact-email" href="mailto:${EMAIL}">${EMAIL}</a><p class="muted" style="margin:6px 0 0">We usually reply within one to two business days.</p></div><a class="btn btn-navy" href="mailto:${EMAIL}">Send an email</a></div>
+<div class="grid-3" style="margin-top:22px">
+<div class="net-card"><h3>Corrections</h3><p>Spot a number that looks off or a fund detail that has changed? Send the ticker and the page link and we will check it against the source.</p></div>
+<div class="net-card"><h3>Partnerships and sponsorships</h3><p>ETF issuers and financial brands can reach our audience across the TopETFs network. Email us or see our <a href="https://topdividendetfs.com/advertise.html">advertising page</a>.</p></div>
+<div class="net-card"><h3>Questions and feedback</h3><p>Ideas for a story, a calculator or a data feature? We would love to hear them.</p></div>
+</div>
+<div class="callout" style="margin-top:26px"><strong>Please note</strong>We cannot give personal investment advice or tell you whether to buy or sell a specific fund. For decisions about your own money, please talk with a licensed financial advisor.</div>
+<p class="muted" style="font-size:14px">TopETFs is published by Dividend Empire LLC. Founder: <a href="/author/benjamin-siegel">Benjamin Siegel</a>.</p>
+</div>`);
+
+// Privacy
+out["privacy.html"]=page({title:"Privacy Policy | TopETFs",desc:"How TopETFs.com collects, uses and protects information, including cookies, analytics and advertising.",canonical:"/privacy"},
+`<header class="page-head"><div class="wrap"><span class="kicker">Legal</span><h1>Privacy Policy</h1><p>Effective September 27, 2026</p></div></header>
+<div class="wrap" style="max-width:760px;margin-top:28px"><div class="prose">
+<div class="takeaways"><h2>The short version</h2><ul>
+<li>You do not need an account to use TopETFs, and we do not ask for your name, email or payment details to read the site.</li>
+<li>We use Google Analytics to understand how the site is used, and we may show ads that use cookies.</li>
+<li>We do not sell your personal information.</li>
+<li>You can block or delete cookies at any time, and you can opt out of personalized ads.</li>
+</ul></div>
+<p>This Privacy Policy explains how Dividend Empire LLC ("we," "us" or "our") handles information when you visit TopETFs.com (the "Site"). By using the Site, you agree to the practices described here.</p>
+
+<h2>1. Information we collect</h2>
+<h3>Information you give us</h3>
+<p>If you email us, we receive your email address, your name if you include it, and anything you choose to write. We use it only to reply and to keep a record of the conversation.</p>
+<h3>Information collected automatically</h3>
+<p>Like most websites, when you visit the Site we and our service providers automatically receive certain technical information, such as your IP address, browser type, device type, operating system, referring page, the pages you view, the time and length of your visit, and approximate location (city or region) derived from your IP address.</p>
+<h3>Information stored in your browser</h3>
+<p>The Site stores a small amount of information in your own browser to make it work better, for example your light or dark mode choice and a short-term copy of ETF data so pages load faster. This information stays on your device and is not sent to us.</p>
+
+<h2>2. Cookies and similar technologies</h2>
+<p>Cookies are small text files placed on your device. We and our partners use cookies and similar technologies to:</p>
+<ul>
+<li><strong>Measure usage.</strong> Understand which pages are read and how visitors find the Site.</li>
+<li><strong>Show and measure advertising.</strong> Display ads and measure how they perform, if and when advertising runs on the Site.</li>
+<li><strong>Remember preferences.</strong> Keep settings such as dark mode.</li>
+</ul>
+<p>You can block or delete cookies through your browser settings. Some parts of the Site may not work as intended without them.</p>
+
+<h2>3. Google Analytics</h2>
+<p>We use Google Analytics 4, a web analytics service provided by Google LLC, to understand how visitors use the Site. Google Analytics uses cookies to collect information such as pages visited, time on site and general location. This information is used to produce aggregate reports and does not identify you by name. You can learn how Google uses this data at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites that use its services</a>, and you can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+<h2>4. Advertising</h2>
+<p>The Site may display advertising, including ads served by Google AdSense and other third-party ad networks, as well as sponsorships from ETF issuers that are clearly labeled "Sponsored."</p>
+<ul>
+<li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this Site or other websites.</li>
+<li>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this Site and/or other sites on the internet.</li>
+<li>You may opt out of personalized advertising by visiting Google's <a href="https://adssettings.google.com" target="_blank" rel="noopener">Ads Settings</a>. You can also opt out of some third-party vendors' use of cookies for personalized advertising at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a> and, in the EU, <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener">www.youronlinechoices.eu</a>.</li>
+</ul>
+<p>Where required by law, such as for visitors in the European Economic Area, the United Kingdom and Switzerland, we will ask for your consent before personalized advertising cookies are used.</p>
+
+<h2>5. Other third-party services</h2>
+<p>To run the Site, your browser connects to a few outside services, which may receive your IP address and standard browser information:</p>
+<ul>
+<li><strong>GitHub Pages</strong> hosts the Site.</li>
+<li><strong>Google Fonts</strong> delivers the typefaces used on the Site.</li>
+<li><strong>Google Sheets</strong> supplies the live ETF data shown in articles and tables.</li>
+</ul>
+<p>The Site also links to other websites, including our network sites, ETF issuers and the SEC. We are not responsible for the privacy practices of other websites, so please review their policies.</p>
+
+<h2>6. How we use information</h2>
+<p>We use information to operate and improve the Site, understand what content is useful, respond to messages, show and measure advertising, keep the Site secure, and comply with legal obligations.</p>
+
+<h2>7. How we share information</h2>
+<p><strong>We do not sell your personal information</strong>, and we do not share it for money. We share information only with service providers that help us run the Site (such as the analytics, hosting and advertising partners listed above), when required by law, or to protect our rights and the safety of our users.</p>
+
+<h2>8. Data retention</h2>
+<p>Google Analytics data is kept for the retention period set in our Analytics account, after which it is deleted. Emails you send us are kept only as long as needed to respond and keep reasonable business records.</p>
+
+<h2>9. Your privacy rights</h2>
+<p>Depending on where you live, you may have the right to know what personal information we hold about you, to request a copy, to correct it, to delete it, or to object to or limit certain uses, including opting out of targeted advertising.</p>
+<ul>
+<li><strong>California residents</strong> have these rights under the California Consumer Privacy Act (CCPA), as amended by the CPRA. We do not sell personal information or use it for purposes that require a "Do Not Sell or Share" opt-out beyond the advertising choices described above, and we will not discriminate against you for exercising your rights.</li>
+<li><strong>Visitors in the EEA, UK and Switzerland</strong> have rights under the GDPR, including the right to lodge a complaint with a data protection authority. Our legal bases are your consent (for advertising and analytics cookies where required) and our legitimate interest in operating and improving the Site.</li>
+</ul>
+<p>To make a request, email <a href="mailto:${EMAIL}">${EMAIL}</a>. We may need to verify your request before acting on it.</p>
+
+<h2>10. Children's privacy</h2>
+<p>The Site is intended for adults and is not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has sent us information, contact us and we will delete it.</p>
+
+<h2>11. Security</h2>
+<p>The Site is served over encrypted HTTPS connections. No method of transmission or storage is completely secure, but we use reasonable measures to protect information.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this Privacy Policy from time to time. When we do, we will change the effective date at the top of this page. Significant changes will be highlighted on the Site.</p>
+
+<h2>13. Contact</h2>
+<p>Dividend Empire LLC<br>Email: <a href="mailto:${EMAIL}">${EMAIL}</a><br>Web: <a href="/contact">topetfs.com/contact</a></p>
+</div></div>`);
+
 out["disclaimer.html"]=page({title:"Disclaimer | TopETFs",desc:"Important information about the data and content on TopETFs.com.",canonical:"/disclaimer"},
 `<header class="page-head"><div class="wrap"><span class="kicker">Legal</span><h1>Disclaimer</h1></div></header>
 <div class="wrap" style="max-width:760px;margin-top:28px"><div class="prose"><p>${DISCLAIMER.replace("<strong>Disclaimer:</strong> ","")}</p>
@@ -378,7 +502,7 @@ for(const a of ARTICLES){
   const keys=(a.keyNumbers||[]).map(([label,token])=>`<div class="kv"><span>${label}</span><span>${renderTokens(token)}</span></div>`).join("");
   const more=ARTICLES.filter(x=>x!==a).slice(0,5);
   out["articles/"+a.slug+".html"]=page({title:(a.seoTitle||a.title)+" | TopETFs",desc:a.dek,canonical:url,type:"article",active:s.path,slug:a.slug,
-    ld:{"@context":"https://schema.org","@type":"Article",headline:a.title,description:a.dek,datePublished:a.date,dateModified:BUILD_DATE.toISOString().slice(0,10),author:{"@type":"Organization",name:"TopETFs Research"},publisher:{"@type":"Organization",name:"Dividend Empire LLC"},mainEntityOfPage:SITE+url}},
+    ld:{"@context":"https://schema.org","@type":"Article",headline:a.title,description:a.dek,datePublished:a.date,dateModified:BUILD_DATE.toISOString().slice(0,10),author:{"@type":"Person",name:AUTHOR.name,url:SITE+AUTHOR.url,jobTitle:AUTHOR.title},publisher:{"@type":"Organization",name:"Dividend Empire LLC"},mainEntityOfPage:SITE+url}},
 `<div class="wrap"><div class="article-wrap">
 <article>
   <header class="article-head">
@@ -386,12 +510,13 @@ for(const a of ARTICLES){
     <span class="kicker">${s.name}</span>
     <h1>${esc(a.title)}</h1>
     <p class="dek">${esc(a.dek)}</p>
-    <div class="byline"><span class="avatar">TE</span><span><strong>TopETFs Research</strong><br>${fmtDate(a.date)}<span class="dot">&middot;</span>${a.read} min read<span class="dot">&middot;</span><span class="live-dot"></span>Live data</span>
+    <div class="byline"><a class="avatar" href="${AUTHOR.url}" aria-label="About ${AUTHOR.name}">BS</a><span>By <a href="${AUTHOR.url}"><strong>${AUTHOR.name}</strong></a>, ${AUTHOR.title}<br>${fmtDate(a.date)}<span class="dot">&middot;</span>${a.read} min read<span class="dot">&middot;</span><span class="live-dot"></span>Live data</span>
       <span class="share"><a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(SITE+url)}&text=${encodeURIComponent(a.title)}" target="_blank" rel="noopener">Share on X</a><button type="button" data-copy-link>Copy link</button></span></div>
   </header>
   <figure class="article-cover"><div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="${esc(a.title)}" width="800" height="450"></div></figure>
   <div class="prose">
 ${body}
+  <div class="author-box"><a class="avatar lg" href="${AUTHOR.url}">BS</a><div><div class="kicker">About the author</div><p><a href="${AUTHOR.url}"><strong>${AUTHOR.name}</strong></a> is the founder of Dividend Empire LLC and has been a dividend investor for more than ten years. He built and runs the TopETFs network, including TopDividendETFs.com and TopDividendETFsPRO, and shares daily ETF research with more than 80,000 followers as DevotedDividend. <a href="${AUTHOR.url}">More about Benjamin</a></p></div></div>
   <div class="callout"><strong>Keep going</strong>Screen every income ETF we track with filters for yield, fees, AUM and payout schedule on <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>. For the full weekly list see <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>, for monthly payers <a href="https://monthlyetfs.com/">MonthlyETFs.com</a>, and for growth funds <a href="https://growthetfs.com/">GrowthETFs.com</a>.</div>
   <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6">${DISCLAIMER}</p>
   </div>
@@ -408,7 +533,7 @@ ${body}
 }
 
 // sitemap, rss, robots, CNAME, favicon
-const pages=["/","/latest","/dividend","/weekly","/growth","/learn","/tools","/network","/about","/disclaimer"];
+const pages=["/","/latest","/dividend","/weekly","/growth","/learn","/tools","/network","/about","/author/benjamin-siegel","/contact","/privacy","/disclaimer"];
 out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
 out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
