@@ -10,7 +10,7 @@ const SITE = "https://topetfs.com";
 const GA_ID = "G-QL5W6LQ1Z7"; // Add the GA4 measurement ID for topetfs.com here (e.g. "G-XXXXXXX")
 const BUILD_DATE = new Date();
 const EMAIL = "Business@TopDividendETFs.com";
-const AUTHOR = {name:"Benjamin Siegel", title:"Founder, TopETFs", url:"/author/benjamin-siegel"};
+const AUTHOR = {name:"Benjie Siegel", title:"Founder, TopETFs", url:"/author/benjie-siegel"};
 
 /* ---------------- data ---------------- */
 function parseCSV(text){const rows=[];let row=[],f="",q=false;for(let i=0;i<text.length;i++){const c=text[i];if(q){if(c==='"'){if(text[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}else if(c==='"')q=true;else if(c===','){row.push(f);f="";}else if(c==='\n'){row.push(f);rows.push(row);row=[];f="";}else if(c!=='\r')f+=c;}if(f!==""||row.length){row.push(f);rows.push(row);}return rows;}
@@ -183,7 +183,7 @@ function foot(){
     <div><a class="brand" href="/">${LOGO}<span>Top<b>ETFs</b></span></a><p>Plain-English ETF research with live numbers. Income, weekly pay, growth and the math behind all of it.</p><p><a class="btn btn-gold" href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Try TopDividendETFsPRO</a></p></div>
     <div><h4>Sections</h4><ul>${NAV.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join("")}</ul></div>
     <div><h4>Our network</h4><ul>${NETWORK.map(n=>`<li><a href="https://${n.domain}/" target="_blank" rel="noopener">${n.name}.com</a></li>`).join("")}</ul></div>
-    <div><h4>Latest</h4><ul>${arts.map(a=>`<li><a href="/articles/${a.slug}">${esc(a.short||a.title)}</a></li>`).join("")}</ul><h4 style="margin-top:18px">Company</h4><ul><li><a href="/about">About</a></li><li><a href="/author/benjamin-siegel">Our founder</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="https://topdividendetfs.com/advertise.html" target="_blank" rel="noopener">Advertise</a></li><li><a href="/feed.xml">RSS</a></li></ul></div>
+    <div><h4>Latest</h4><ul>${arts.map(a=>`<li><a href="/articles/${a.slug}">${esc(a.short||a.title)}</a></li>`).join("")}</ul><h4 style="margin-top:18px">Company</h4><ul><li><a href="/about">About</a></li><li><a href="/author/benjie-siegel">Our founder</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="https://topdividendetfs.com/advertise.html" target="_blank" rel="noopener">Advertise</a></li><li><a href="/feed.xml">RSS</a></li></ul></div>
   </div>
   <p class="disclaimer">${DISCLAIMER}</p>
   <div class="foot-bottom"><span>&copy; ${BUILD_DATE.getFullYear()} Dividend Empire LLC. All rights reserved.</span><button class="theme-toggle" type="button">Toggle dark mode</button></div>
@@ -363,13 +363,14 @@ out["about.html"]=page({title:"About TopETFs",desc:"TopETFs is an ETF research h
 <p>TopETFs is the research hub of a network of ETF sites built by an investor with more than ten years of dividend investing behind him. The rest of the network is built for scanning tables. This site is built for reading: stories that explain what a fund actually does, why its yield looks the way it does, and what the math means for your money.</p>
 <p>Every number inside a story is pulled from the same database that powers <a href="https://topdividendetfs.com/">TopDividendETFs.com</a>, <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>, <a href="https://growthetfs.com/">GrowthETFs.com</a> and <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>. When the data changes, the stories change with it. Fund details come from issuer websites and SEC filings.</p>
 <p>TopETFs is published by Dividend Empire LLC. Some placements on the site are paid sponsorships from ETF issuers, and they are always labeled "Sponsored." Sponsors do not see or approve our stories.</p>
-<p>TopETFs was founded by <a href="/author/benjamin-siegel">Benjamin Siegel</a>, who writes and oversees everything published here.</p>
+<p>TopETFs was founded by <a href="/author/benjie-siegel">Benjie Siegel</a>, who writes and oversees everything published here.</p>
+<p>Articles are written with the help of AI tools, then edited, fact-checked and shaped by Benjie around the topics he finds most useful. All fund data comes live from our database.</p>
 <p>Questions, corrections or partnership ideas: <a href="/contact">contact us</a> or email <a href="mailto:${EMAIL}">${EMAIL}</a>.</p></div></div>`);
 
 // Author
-out["author/benjamin-siegel.html"]=page({title:"Benjamin Siegel, Founder of TopETFs",desc:"Benjamin Siegel is the founder of TopETFs and Dividend Empire LLC, a dividend investor of more than ten years who runs a network of ETF research sites.",canonical:"/author/benjamin-siegel",
+out["author/benjie-siegel.html"]=page({title:"Benjie Siegel, Founder of TopETFs",desc:"Benjie Siegel is the founder of TopETFs and Dividend Empire LLC, a dividend investor of more than ten years who runs a network of ETF research sites.",canonical:"/author/benjie-siegel",
  ld:{"@context":"https://schema.org","@type":"ProfilePage",mainEntity:{"@type":"Person",name:AUTHOR.name,jobTitle:AUTHOR.title,url:SITE+AUTHOR.url,worksFor:{"@type":"Organization",name:"Dividend Empire LLC"},email:"mailto:"+EMAIL,sameAs:NETWORK.map(n=>"https://"+n.domain+"/")}}},
-`<header class="page-head"><div class="wrap"><div class="author-hero"><span class="avatar xl">BS</span><div><span class="kicker">Founder</span><h1>Benjamin Siegel</h1><p>Founder of TopETFs and Dividend Empire LLC. Dividend investor for more than ten years. Builder of the TopETFs network.</p></div></div></div></header>
+`<header class="page-head"><div class="wrap"><div class="author-hero"><span class="avatar xl">BS</span><div><span class="kicker">Founder</span><h1>Benjie Siegel</h1><p>Founder of TopETFs and Dividend Empire LLC. Dividend investor for more than ten years. Builder of the TopETFs network.</p></div></div></div></header>
 <div class="wrap" style="max-width:760px;margin-top:28px"><div class="prose">
 <p class="lede">I started investing in dividend stocks and ETFs more than ten years ago, and like a lot of people I learned the hard way that the biggest yield on the screen is not always the best investment. Most of the ETF information I found was either buried in fund documents or written to sell something. So I started building the tools I wished I had.</p>
 <h2>What I built</h2>
@@ -382,6 +383,7 @@ out["author/benjamin-siegel.html"]=page({title:"Benjamin Siegel, Founder of TopE
 <li><strong>Numbers first.</strong> Yields, fees, assets and total returns come from our database and update daily. When the data changes, the articles change with it.</li>
 <li><strong>Show the whole trade.</strong> A high yield is always shown next to total return and price history, so you can see what it costs.</li>
 <li><strong>Primary sources.</strong> Fund details come from issuer websites, prospectuses and SEC filings.</li>
+<li><strong>AI as a tool, not the author.</strong> I use AI tools to help research, draft and format articles. I choose every topic based on my own interests and what I think will help investors, and I review, edit and fact-check everything before it goes live.</li>
 <li><strong>Clear about money.</strong> The network is supported by clearly labeled sponsorships from ETF issuers. Sponsors never see or approve what I write.</li>
 </ul>
 <h2>What I am not</h2>
@@ -389,8 +391,10 @@ out["author/benjamin-siegel.html"]=page({title:"Benjamin Siegel, Founder of TopE
 <h2>Get in touch</h2>
 <p>Corrections, questions and partnership ideas are always welcome at <a href="mailto:${EMAIL}">${EMAIL}</a> or through the <a href="/contact">contact page</a>.</p>
 </div>
-<div class="section-head"><h2>Latest from Benjamin</h2><a href="/latest">All stories &rarr;</a></div>
+<div class="section-head"><h2>Latest from Benjie</h2><a href="/latest">All stories &rarr;</a></div>
 <div class="grid-3">${ARTICLES.slice(0,6).map(a=>storyCard(a)).join("")}</div></div>`);
+
+out["author/benjamin-siegel.html"]=`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Benjie Siegel</title><link rel="canonical" href="${SITE}/author/benjie-siegel"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=/author/benjie-siegel"></head><body><a href="/author/benjie-siegel">Benjie Siegel</a></body></html>`;
 
 // Contact
 out["contact.html"]=page({title:"Contact TopETFs",desc:"Contact TopETFs for corrections, questions, partnerships and ETF issuer sponsorships.",canonical:"/contact"},
@@ -403,7 +407,7 @@ out["contact.html"]=page({title:"Contact TopETFs",desc:"Contact TopETFs for corr
 <div class="net-card"><h3>Questions and feedback</h3><p>Ideas for a story, a calculator or a data feature? We would love to hear them.</p></div>
 </div>
 <div class="callout" style="margin-top:26px"><strong>Please note</strong>We cannot give personal investment advice or tell you whether to buy or sell a specific fund. For decisions about your own money, please talk with a licensed financial advisor.</div>
-<p class="muted" style="font-size:14px">TopETFs is published by Dividend Empire LLC. Founder: <a href="/author/benjamin-siegel">Benjamin Siegel</a>.</p>
+<p class="muted" style="font-size:14px">TopETFs is published by Dividend Empire LLC. Founder: <a href="/author/benjie-siegel">Benjie Siegel</a>.</p>
 </div>`);
 
 // Privacy
@@ -516,7 +520,8 @@ for(const a of ARTICLES){
   <figure class="article-cover"><div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="${esc(a.title)}" width="800" height="450"></div></figure>
   <div class="prose">
 ${body}
-  <div class="author-box"><a class="avatar lg" href="${AUTHOR.url}">BS</a><div><div class="kicker">About the author</div><p><a href="${AUTHOR.url}"><strong>${AUTHOR.name}</strong></a> is the founder of Dividend Empire LLC and has been a dividend investor for more than ten years. He built and runs the TopETFs network, including TopDividendETFs.com and TopDividendETFsPRO, and shares daily ETF research with more than 80,000 followers as DevotedDividend. <a href="${AUTHOR.url}">More about Benjamin</a></p></div></div>
+  <div class="author-box"><a class="avatar lg" href="${AUTHOR.url}">BS</a><div><div class="kicker">About the author</div><p><a href="${AUTHOR.url}"><strong>${AUTHOR.name}</strong></a> is the founder of Dividend Empire LLC and has been a dividend investor for more than ten years. He built and runs the TopETFs network, including TopDividendETFs.com and TopDividendETFsPRO, and shares daily ETF research with more than 80,000 followers as DevotedDividend. <a href="${AUTHOR.url}">More about Benjie</a></p></div></div>
+  <p style="font-family:var(--sans);font-size:13.5px;color:var(--muted);line-height:1.55;margin:0 0 1.2em"><strong style="color:var(--ink-2)">How this article was made:</strong> Benjie picks every topic based on what he finds useful as a dividend investor and what readers ask about. Parts of this article were drafted with help from AI tools, then edited, fact-checked and shaped by Benjie. All fund numbers come from the TopETFs database and update daily.</p>
   <div class="callout"><strong>Keep going</strong>Screen every income ETF we track with filters for yield, fees, AUM and payout schedule on <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>. For the full weekly list see <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>, for monthly payers <a href="https://monthlyetfs.com/">MonthlyETFs.com</a>, and for growth funds <a href="https://growthetfs.com/">GrowthETFs.com</a>.</div>
   <p style="font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6">${DISCLAIMER}</p>
   </div>
@@ -533,7 +538,7 @@ ${body}
 }
 
 // sitemap, rss, robots, CNAME, favicon
-const pages=["/","/latest","/dividend","/weekly","/growth","/learn","/tools","/network","/about","/author/benjamin-siegel","/contact","/privacy","/disclaimer"];
+const pages=["/","/latest","/dividend","/weekly","/growth","/learn","/tools","/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
 out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
 out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
