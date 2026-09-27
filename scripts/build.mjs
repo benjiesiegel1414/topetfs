@@ -193,7 +193,7 @@ function foot(){
 </html>`;
 }
 function page(opts,body){
-  return head(opts)+`\n<body${opts.slug?` data-slug="${opts.slug}"`:""}>\n`+top(opts.active)+`\n`+SPONSOR+`\n<main id="main">\n`+body+`\n</main>\n`+SPONSOR+foot();
+  return head(opts)+`\n<body${opts.slug?` data-slug="${opts.slug}"`:""}>\n`+top(opts.active)+`\n`+`\n<main id="main">\n`+body+`\n</main>\n`+foot();
 }
 
 /* ---------------- components ---------------- */
