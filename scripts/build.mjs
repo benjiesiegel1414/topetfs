@@ -125,7 +125,9 @@ const SPONSOR=`<aside class="sponsor" aria-label="Sponsored">
 
 const DISCLAIMER=`<strong>Disclaimer:</strong> TopETFs.com is published by Dividend Empire LLC for educational and entertainment purposes only. We are not financial advisors, and nothing on this site is financial advice, a recommendation, or a solicitation to buy or sell any security. ETF data is compiled from public sources and fund issuers, may be delayed, inaccurate or outdated, and may differ from the fund sponsor's own figures. Yields are trailing distribution yields, are not guaranteed, and distributions may include return of capital, which reduces your cost basis and is not a measure of performance. Total returns are since each fund's inception unless noted and are not comparable across funds with different start dates. Past performance does not guarantee future results. Investing carries risk, including loss of principal. Read each fund's prospectus and consult a licensed financial advisor before investing. Dividend Empire LLC receives compensation from ETF issuers for sponsored placements, which are labeled as such.`;
 
-function head({title,desc,canonical,type="website",extra="",ld}){
+const OG_IMAGE=SITE+"/assets/og/topetfs-card.png";
+const OG_ALT="TopETFs: ETF news, research and income math with live data";
+function head({title,desc,canonical,type="website",extra="",ld,image=OG_IMAGE,imageAlt=OG_ALT}){
   const url=SITE+canonical;
   return `<!doctype html>
 <html lang="en">
@@ -141,7 +143,15 @@ function head({title,desc,canonical,type="website",extra="",ld}){
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
+<meta property="og:image" content="${image}">
+<meta property="og:image:secure_url" content="${image}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(imageAlt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${image}">
+<meta name="twitter:image:alt" content="${esc(imageAlt)}">
 <meta name="theme-color" content="#0e2a4d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="TopETFs" href="/feed.xml">
