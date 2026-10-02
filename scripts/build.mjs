@@ -601,21 +601,25 @@ const SCREENER_PAGES=[];
   const shell=(base,d,lead,cur)=>{const q=TES.parse("",d);return `${chipbar(cur)}
 <div class="scr" data-screener data-base="${base}" data-defaults='${esc(JSON.stringify(d))}'>
 <div data-screener-formwrap>${TES.form(ALL,q)}</div>
+${NOTE}
 <div data-screener-out>${TES.render(ALL,q,base,d)}</div>
 </div>`;};
+  const SCR_CSS=`<style>.scr-note{display:flex;gap:10px;align-items:flex-start;background:color-mix(in srgb,var(--warn) 9%,var(--paper));border:1px solid color-mix(in srgb,var(--warn) 30%,var(--rule));border-radius:var(--radius);padding:11px 14px;margin:0 0 18px;font-size:13.5px;line-height:1.5;color:var(--ink-2)}.scr-note b{color:var(--ink)}.scr-note a{font-weight:700}.scr-disc{margin:34px 0 0;padding:18px 20px;border:1px solid var(--rule);border-radius:var(--radius);background:var(--paper);font-size:13.5px;line-height:1.6;color:var(--muted)}.scr-disc h2{font-size:15px;margin:0 0 8px;color:var(--ink);font-family:var(--sans)}.scr-disc p{margin:0 0 8px}.scr-disc p:last-child{margin:0}</style>`;
+  const NOTE=`<div class="scr-note" role="note"><span aria-hidden="true">&#9888;</span><span><b>Heads up:</b> Data is for educational purposes only and may be delayed, outdated or contain errors. Yields, AUM and returns change daily. Nothing here is financial advice or a recommendation to buy or sell. Always verify with the fund issuer before investing. <a href="/disclaimer">Full disclaimer</a></span></div>`;
+  const DISC=`<section class="scr-disc" aria-label="Screener disclaimer"><h2>Important disclaimer</h2><p>The ETF Screener and every list on this page are provided by TopETFs.com (Dividend Empire LLC) for educational and informational purposes only. They are not financial, investment, tax or legal advice, and nothing here is a recommendation or solicitation to buy, sell or hold any security. We are not registered investment advisors or broker-dealers.</p><p>Data is compiled from our own database and third-party sources and is refreshed about once a day, so it may be delayed, outdated, incomplete or inaccurate. Yields are based on recent distributions and can change or stop at any time. Total return is measured since each fund's inception, funds launched on different dates are not directly comparable, and past performance does not guarantee future results. Price decay and the "$10K pays per year" figures are simple estimates, not guarantees.</p><p>Always confirm current figures with the fund issuer's website and prospectus, consider your own situation and risk tolerance, and talk to a licensed financial professional before making investment decisions. Investing involves risk, including the possible loss of principal. <a href="/disclaimer">Read our full disclaimer</a>.</p></section>`;
   const n=Object.keys(ALL).length;
-  out["screener.html"]=page({title:`ETF Screener: Filter ${n}+ ETFs by Yield, AUM, Payout and Fees | TopETFs`,desc:`Free ETF screener. Filter ${n}+ dividend, weekly-pay and growth ETFs by yield, payout frequency, AUM, expense ratio, total return, price decay and provider.`,canonical:"/screener",active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>`,
+  out["screener.html"]=page({title:`ETF Screener: Filter ${n}+ ETFs by Yield, AUM, Payout and Fees | TopETFs`,desc:`Free ETF screener. Filter ${n}+ dividend, weekly-pay and growth ETFs by yield, payout frequency, AUM, expense ratio, total return, price decay and provider.`,canonical:"/screener",active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>${SCR_CSS}`,
     ld:{"@context":"https://schema.org","@type":"WebApplication",name:"TopETFs ETF Screener",url:SITE+"/screener",applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"}}},
   `<header class="page-head"><div class="wrap"><span class="kicker">Free tool</span><h1>ETF Screener</h1><p>Filter ${n}+ ETFs by yield, payout frequency, fund size, fees, total return, price decay and more. Every screen gets its own link, so bookmark the ones you use.</p></div></header>
 <div class="wrap">${shell("/screener",{},"",null)}
 <aside class="pro-ad scr-pro"><a href="https://topdividendetfspro.com/" target="_blank" rel="noopener" data-ga="screener"><span class="kicker">TopDividendETFsPRO</span><strong>Want ratings, tax grades and alerts on top of this?</strong><span>PRO adds our grades, tax treatment and deeper filters for every income ETF we track. Go PRO &rarr;</span></a></aside>
-${linkGrid(null)}${faqHtml}${proBand()}</div>`);
+${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
   for(const p of ALLP){
     const base="/lists/"+p.slug;
-    out["lists/"+p.slug+".html"]=page({title:`${p.t} | TopETFs`,desc:p.intro,canonical:base,active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>`,
+    out["lists/"+p.slug+".html"]=page({title:`${p.t} | TopETFs`,desc:p.intro,canonical:base,active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>${SCR_CSS}`,
       ld:{"@context":"https://schema.org","@type":"CollectionPage",name:p.t,url:SITE+base,description:p.intro,isPartOf:{"@type":"WebSite",name:"TopETFs",url:SITE}}},
     `<header class="page-head"><div class="wrap"><nav class="crumbs"><a href="/">Home</a> / <a href="/screener">ETF Screener</a></nav><span class="kicker">ETF Screener</span><h1>${esc(p.h1)}</h1><p>${esc(p.intro)} Updated daily. Adjust any filter below to build your own screen.</p></div></header>
-<div class="wrap">${shell(base,p.d,"",p.slug)}${linkGrid(p.slug)}${faqHtml}${proBand()}</div>`);
+<div class="wrap">${shell(base,p.d,"",p.slug)}${linkGrid(p.slug)}${faqHtml}${DISC}${proBand()}</div>`);
   }
   SCREENER_PAGES.push("/screener",...ALLP.map(p=>"/lists/"+p.slug));
 }
