@@ -1,0 +1,109 @@
+<!--meta
+{"title":"How Much Do You Need in SCHD to Make $1,000 a Month?","short":"SCHD $1,000 a month","seoTitle":"How Much Do I Need in SCHD to Make $1000 a Month?","dek":"At today's SCHD yield, here's the exact amount you need for $1,000 a month, plus live income tables, a calculator, and the risks behind the math.","section":"income","date":"2026-10-02","time":"08","read":7,"art":"bars","tickers":["SCHD","JEPI","VYM"],"coverLabel":"SCHD  ·  $1,000/mo","keyNumbers":[["SCHD yield","{{live:SCHD:yield}}"],["SCHD expense ratio","{{live:SCHD:er:pct2}}"],["SCHD assets","{{live:SCHD:aum:aum}}"],["SCHD total return","{{live:SCHD:tr}}"]],"keyword":"how much do I need in SCHD to make $1000 a month","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>At {{tkr:SCHD}}'s current yield of {{live:SCHD:yield}}, you need about {{calc:usd:12000/(SCHD.yield/100)}} invested to collect $1,000 a month on average.</li><li>SCHD pays {{live:SCHD:freq:text}}, so the income arrives in bigger chunks every three months, not a steady $1,000 each month.</li><li>The yield moves with the share price and the dividend, so treat that target as a moving number, not a fixed finish line.</li></ul></div>
+
+<p class="lede">To make $1,000 a month from SCHD, you need roughly {{calc:usd:12000/(SCHD.yield/100)}} at today's {{live:SCHD:yield}} yield. That works out to $12,000 a year, which is the target divided by the yield. It's a big number, and I'd rather show you the math honestly than pretend there's a shortcut.</p>
+
+<p>Here's the thing: that figure changes every day. If the yield rises, you need less. If it falls, you need more. So let's go through how the number is built, what it looks like at different yields, and what can go wrong.</p>
+
+<div class="board" data-w="board" data-syms="SCHD,VYM,DGRO,VIG,DVY,HDV,JEPI,JEPQ" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>SCHD and the funds people compare it to</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>The simple formula behind the number</h2>
+
+<p>The math is one line. Take the yearly income you want and divide it by the yield. For $1,000 a month, that's $12,000 a year divided by {{live:SCHD:yield}}, which gives you {{calc:usd:12000/(SCHD.yield/100)}}.</p>
+
+<p>Yield is just the last year of dividends divided by the share price. It's a snapshot, not a promise. A fund can pay the same dollars and still show a different yield if the price moves.</p>
+
+<p>Here's how the target changes with the monthly income you're after, at SCHD's current yield:</p>
+
+<table><thead><tr><th>Monthly income goal</th><th>Amount needed in SCHD</th></tr></thead><tbody><tr><td>$500 a month</td><td>{{calc:usd:6000/(SCHD.yield/100)}}</td></tr><tr><td>$1,000 a month</td><td>{{calc:usd:12000/(SCHD.yield/100)}}</td></tr><tr><td>$2,000 a month</td><td>{{calc:usd:24000/(SCHD.yield/100)}}</td></tr><tr><td>$5,000 a month</td><td>{{calc:usd:60000/(SCHD.yield/100)}}</td></tr></tbody></table>
+
+<p>The target scales in a straight line. Double the income goal and you double the money needed.</p>
+
+<h2>What different portfolio sizes pay in SCHD</h2>
+
+<p>Maybe you're not starting from the goal. Maybe you're starting from the balance you actually have. Here's what SCHD would pay today at a few sizes, using the current yield.</p>
+
+<table><thead><tr><th>Amount invested</th><th>Estimated yearly income</th><th>Average per month</th></tr></thead><tbody><tr><td>$50,000</td><td>{{calc:usd:50000*SCHD.yield/100}}</td><td>{{calc:usd:50000*SCHD.yield/100/12}}</td></tr><tr><td>$100,000</td><td>{{calc:usd:100000*SCHD.yield/100}}</td><td>{{calc:usd:100000*SCHD.yield/100/12}}</td></tr><tr><td>$250,000</td><td>{{calc:usd:250000*SCHD.yield/100}}</td><td>{{calc:usd:250000*SCHD.yield/100/12}}</td></tr><tr><td>$500,000</td><td>{{calc:usd:500000*SCHD.yield/100}}</td><td>{{calc:usd:500000*SCHD.yield/100/12}}</td></tr></tbody></table>
+
+<p>Even $100,000 in SCHD pays a modest monthly average. That's not bad news, it's just reality. A {{live:SCHD:yield}} yield is built for growth of income over time, not for replacing a paycheck on day one.</p>
+
+<h2>SCHD pays quarterly, not monthly</h2>
+
+<p>This catches people off guard. SCHD pays {{live:SCHD:freq:text}}. So when I say $1,000 a month, I mean an average. In practice you'd get roughly $3,000 every three months, and nothing in between.</p>
+
+<p>If you need cash on a monthly schedule, you can handle it two ways. Keep a small cash buffer and pay yourself monthly from the quarterly deposits. Or pair SCHD with a fund that pays monthly. Neither is wrong. It's just a planning detail you want to know before you count on the income.</p>
+
+<h2>How SCHD works, in plain English</h2>
+
+<p>SCHD tracks an index of U.S. dividend-paying stocks from {{tkr:SCHD}}'s issuer, Schwab. The index screens for companies with a history of paying dividends, then looks at things like cash flow, balance sheet strength and return on equity. It's built around quality and dividend sustainability, not the highest possible yield.</p>
+
+<p>That's why the yield sits where it does. The expense ratio (the yearly fee the fund takes out of your money) is {{live:SCHD:er:pct2}}, which is very low. The fund has {{live:SCHD:aum:aum}} in assets, so liquidity isn't a concern. Price decay, meaning the share price steadily eroding over time, is flagged as {{live:SCHD:decay:decay}} in our data.</p>
+
+<p>I like funds like this because the dividend comes from real company profits, not from options income or return of capital. If you want a deeper look at the fund itself, I wrote up <a href="/articles/schd-etf-dividend-yield-total-return">SCHD's yield, total return and what $10,000 pays today</a>.</p>
+
+<h2>How much would you need in other dividend funds?</h2>
+
+<p>The target depends entirely on the yield, so the fund you choose changes the answer a lot. Here's what you'd need for $1,000 a month in several alternatives, at each fund's current yield.</p>
+
+<table><thead><tr><th>Fund</th><th>Yield</th><th>Needed for $1,000 a month</th></tr></thead><tbody><tr><td>{{tkr:SCHD}}</td><td>{{live:SCHD:yield}}</td><td>{{calc:usd:12000/(SCHD.yield/100)}}</td></tr><tr><td>{{tkr:VYM}}</td><td>{{live:VYM:yield}}</td><td>{{calc:usd:12000/(VYM.yield/100)}}</td></tr><tr><td>{{tkr:VIG}}</td><td>{{live:VIG:yield}}</td><td>{{calc:usd:12000/(VIG.yield/100)}}</td></tr><tr><td>{{tkr:VOO}}</td><td>{{live:VOO:yield}}</td><td>{{calc:usd:12000/(VOO.yield/100)}}</td></tr><tr><td>{{tkr:JEPI}}</td><td>{{live:JEPI:yield}}</td><td>{{calc:usd:12000/(JEPI.yield/100)}}</td></tr><tr><td>{{tkr:JEPQ}}</td><td>{{live:JEPQ:yield}}</td><td>{{calc:usd:12000/(JEPQ.yield/100)}}</td></tr></tbody></table>
+
+<p>The gap is huge. {{tkr:JEPI}} and {{tkr:JEPQ}} are covered call funds, which sell options on their holdings to collect extra income. That's how they pay monthly and show much higher yields, and it means you need far less capital to hit $1,000 a month.</p>
+
+<p>But a smaller target isn't automatically a better deal. Covered call funds usually give up some upside when markets rally. I explain the trade-off in <a href="/articles/covered-call-etfs-explained">Covered Call ETFs, Explained</a>. For a straight comparison among the traditional dividend funds, see <a href="/articles/schd-vs-vym-vs-dgro-vs-vig">SCHD vs. VYM vs. DGRO vs. VIG</a>.</p>
+
+<h2>Total return matters more than the yield number</h2>
+
+<p>It's tempting to chase the lowest target. I'd look at total return first, which is price change plus dividends together. Since inception, SCHD's total return is {{live:SCHD:tr}}, and its inception date is {{live:SCHD:inception:text}}.</p>
+
+<p>For context, {{tkr:VYM}} is at {{live:VYM:tr}} since {{live:VYM:inception:text}}, and {{tkr:JEPI}} is at {{live:JEPI:tr}} since {{live:JEPI:inception:text}}. These funds launched in very different years, so the numbers are not a fair race. JEPI has a much shorter track record, and it hasn't been through as many market cycles.</p>
+
+<p>The point is that a bigger yield doesn't mean you ended up with more money. A fund that pays a lot but grows slowly can leave you with less total wealth than a lower-yield fund that keeps growing. I go deeper on this in <a href="/articles/yield-vs-total-return">The Yield Trap</a>.</p>
+
+<h2>The risks behind the $1,000 a month plan</h2>
+
+<ul><li><strong>The yield moves.</strong> If SCHD's price rises faster than its dividend, the yield falls and your target grows. If the price drops, the yield rises, but your portfolio shrank.</li><li><strong>Dividends aren't guaranteed.</strong> Companies can cut payouts, and the fund's income follows what its holdings pay.</li><li><strong>Market drops are real.</strong> A $400,000-sized portfolio can lose a big chunk of value in a bad year, even while income keeps coming in. Make sure you could live with that.</li><li><strong>Concentration.</strong> SCHD holds a limited set of U.S. stocks, and certain sectors can be overweight at times. It's not the whole market.</li><li><strong>Taxes.</strong> Dividends are generally taxable in a regular brokerage account, and what you keep depends on your situation. Plan for that rather than counting the gross number as spendable.</li></ul>
+
+<p>None of this means SCHD is a bad choice. It means $1,000 a month is an estimate, and you should build in some room for the real world.</p>
+
+<h2>Ways to get closer to the target</h2>
+
+<p>Most people don't write one big check. They build up over time. Adding money regularly gets you there faster than waiting for the perfect entry point, and what you do with the dividends matters a lot along the way.</p>
+
+<p>If you reinvest dividends while you build, your share count grows and so does the income. I walk through the long-term effect in <a href="/articles/drip-reinvest-or-spend">Reinvest or Spend?</a>. Then, once you reach your number, you can switch from reinvesting to spending.</p>
+
+<p>You can also test your own numbers with the <a href="/tools">TopETFs calculators</a>, or use <a href="https://dividendprojection.com/">Dividend Projection</a> to model how your income could grow over time. If you want to screen other income funds, <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a> covers every one in detail.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="SCHD,VYM,JEPI,VOO" data-per="year">
+  <p class="figure-title">What your money pays in SCHD and three comparisons</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="100000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>How much do I need in SCHD to make $1,000 a month?</h3>
+<p>At the current yield of {{live:SCHD:yield}}, you need about {{calc:usd:12000/(SCHD.yield/100)}}. The number changes whenever the yield changes.</p>
+<h3>Does SCHD pay monthly?</h3>
+<p>No. SCHD pays {{live:SCHD:freq:text}}, so the dividends come in larger amounts every three months. You can still budget it as a monthly average.</p>
+<h3>Is SCHD a good investment for income?</h3>
+<p>It's a popular choice for investors who want a quality-focused dividend fund with a low fee of {{live:SCHD:er:pct2}}. Whether it fits you depends on your goals, timeline and how much income you need now versus later.</p>
+<h3>SCHD vs. JEPI: which needs less money for $1,000 a month?</h3>
+<p>JEPI needs far less, about {{calc:usd:12000/(JEPI.yield/100)}} at its current yield, versus {{calc:usd:12000/(SCHD.yield/100)}} for SCHD. But JEPI uses options and has a shorter history, so the trade-offs are different.</p>
+<h3>Will SCHD's yield stay the same?</h3>
+<p>No. The yield changes with the share price and with the dividends the fund collects. Never plan around today's yield as if it's permanent.</p>
+</section>
+
+<h2>My bottom line</h2>
+
+<p>The honest answer is that SCHD needs a lot of capital to produce $1,000 a month today, about {{calc:usd:12000/(SCHD.yield/100)}} at the current yield. That's the price of a quality, lower-yield dividend fund with a {{live:SCHD:er:pct2}} fee.</p>
+
+<p>You can lower the target with higher-yield funds, but you take on different risks, like capped upside or a shorter track record. Or you can build toward the number over time, let dividends compound, and watch the income grow along the way.</p>
+
+<p>This isn't a buy or sell signal. It's the math, laid out so you can decide what fits your own plan. Do your own due diligence before you invest.</p>
