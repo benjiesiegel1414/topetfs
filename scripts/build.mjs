@@ -127,7 +127,7 @@ const DISCLAIMER=`<strong>Disclaimer:</strong> TopETFs.com is published by Divid
 
 const OG_IMAGE=SITE+"/assets/og/topetfs-card.png";
 const OG_ALT="TopETFs: ETF news, research and income math with live data";
-function head({title,desc,canonical,type="website",extra="",ld,image=OG_IMAGE,imageAlt=OG_ALT}){
+function head({title,desc,canonical,type="website",extra="",ld,faq,image=OG_IMAGE,imageAlt=OG_ALT}){
   const url=SITE+canonical;
   return `<!doctype html>
 <html lang="en">
@@ -160,7 +160,7 @@ function head({title,desc,canonical,type="website",extra="",ld,image=OG_IMAGE,im
 <link rel="stylesheet" href="/assets/css/site.css">
 <script>try{var t=localStorage.getItem("te-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 ${GA_ID?`<script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');</script>`:""}
-${ld?`<script type="application/ld+json">${JSON.stringify(ld)}</script>`:""}
+${ld?`<script type="application/ld+json">${JSON.stringify(ld)}</script>`:""}${faq&&faq.length?`<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",mainEntity:faq})}</script>`:""}
 ${extra}
 </head>`;
 }
@@ -528,9 +528,11 @@ for(const a of ARTICLES){
   const body=renderTokens(a.body);
   const url="/articles/"+a.slug;
   const keys=(a.keyNumbers||[]).map(([label,token])=>`<div class="kv"><span>${label}</span><span>${renderTokens(token)}</span></div>`).join("");
-  const more=ARTICLES.filter(x=>x!==a).slice(0,5);
+  const tk=new Set(a.tickers||[]);
+  const more=ARTICLES.filter(x=>x!==a).map((x,i)=>({x,i,s:(x.tickers||[]).filter(t=>tk.has(t)).length})).sort((p,q)=>(q.s-p.s)||(p.i-q.i)).slice(0,5).map(o=>o.x);
+  const faqs=[...body.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)].filter(()=>/<section class="faq"/.test(body)).filter(m=>body.indexOf(m[0])>body.indexOf('<section class="faq"')).map(m=>({"@type":"Question",name:m[1].replace(/<[^>]+>/g,"").trim(),acceptedAnswer:{"@type":"Answer",text:m[2].replace(/<[^>]+>/g,"").trim()}}));
   out["articles/"+a.slug+".html"]=page({title:(a.seoTitle||a.title)+" | TopETFs",desc:a.dek,canonical:url,type:"article",active:s.path,slug:a.slug,
-    ld:{"@context":"https://schema.org","@type":"Article",headline:a.title,description:a.dek,datePublished:a.date,dateModified:BUILD_DATE.toISOString().slice(0,10),author:{"@type":"Person",name:AUTHOR.name,url:SITE+AUTHOR.url,jobTitle:AUTHOR.title},publisher:{"@type":"Organization",name:"Dividend Empire LLC"},mainEntityOfPage:SITE+url}},
+    ld:{"@context":"https://schema.org","@type":"Article",headline:a.title,description:a.dek,datePublished:a.date,dateModified:BUILD_DATE.toISOString().slice(0,10),author:{"@type":"Person",name:AUTHOR.name,url:SITE+AUTHOR.url,jobTitle:AUTHOR.title},publisher:{"@type":"Organization",name:"Dividend Empire LLC"},mainEntityOfPage:SITE+url,...(a.tickers&&a.tickers.length?{about:a.tickers.map(t=>({"@type":"Thing",name:t+(ALL[t]?" ("+ALL[t].name+")":"")}))}:{})},faq:faqs},
 `<div class="wrap"><div class="article-wrap">
 <article>
   <header class="article-head">
