@@ -101,7 +101,7 @@ var F={
   decay:function(v){ return v==null?"n/a":(v?"Yes":"No"); }
 };
 function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
-function etfUrl(sym){ return "/etf?t="+encodeURIComponent(sym); }
+function etfUrl(sym){ return "/etfs/"+String(sym).toLowerCase().replace(/[^a-z0-9]+/g,"-"); }
 function median(a){ a=a.filter(function(x){return x!=null&&!isNaN(x);}).sort(function(x,y){return x-y;}); if(!a.length) return null; var m=a.length>>1; return a.length%2?a[m]:(a[m-1]+a[m])/2; }
 
 /* ---------------- live fields ----------------

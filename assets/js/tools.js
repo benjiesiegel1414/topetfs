@@ -22,7 +22,8 @@ function ageYears(e){var d=pDate(e&&e.inception);return d?(Date.now()-d.getTime(
 function annualized(e){var a=ageYears(e);if(a==null||a<1||e.tr==null||e.tr<=-100)return null;return (Math.pow(1+e.tr/100,1/a)-1)*100;}
 function isGrowthOnly(e){return e&&e.lists&&e.lists.indexOf("growth")>-1&&e.lists.indexOf("pro")<0&&e.lists.indexOf("weekly")<0;}
 function yld(e){return e&&!isGrowthOnly(e)&&e.yield!=null?e.yield:null;}
-function link(e){return '<a href="/etf?t='+encodeURIComponent(e.sym)+'">'+esc(e.sym)+'</a>';}
+function epath(s){return "/etfs/"+String(s).toLowerCase().replace(/[^a-z0-9]+/g,"-");}
+function link(e){return '<a href="'+epath(e.sym)+'">'+esc(e.sym)+'</a>';}
 function legend(el,series){if(el)el.innerHTML=series.map(function(s){return '<span><i style="background:'+s.color+'"></i>'+esc(s.name)+'</span>';}).join("");}
 function out(el,k,v){$$(el,'[data-o="'+k+'"]').forEach(function(t){t.innerHTML=v;});}
 function params(){var o={};location.search.replace(/^\?/,"").split("&").forEach(function(p){if(!p)return;var kv=p.split("=");o[decodeURIComponent(kv[0])]=decodeURIComponent((kv[1]||"").replace(/\+/g," "));});return o;}
@@ -136,13 +137,13 @@ TOOLS.compare=function(el){
     ["Inception date",function(e){var d=pDate(e.inception);return d?d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"n/a";}],
     ["Price decay",function(e){return e.decay==null?"n/a":e.decay?'<span class="tl-flag bad">Yes</span>':'<span class="tl-flag good">No</span>';}]
   ];
-  var html='<div class="tbl-scroll"><table class="data cmp-table"><thead><tr><th class="l">Metric</th>'+list.map(function(e){return '<th><a href="/etf?t='+e.sym+'">'+e.sym+'</a></th>';}).join("")+'</tr></thead><tbody>'+
+  var html='<div class="tbl-scroll"><table class="data cmp-table"><thead><tr><th class="l">Metric</th>'+list.map(function(e){return '<th><a href="'+epath(e.sym)+'">'+e.sym+'</a></th>';}).join("")+'</tr></thead><tbody>'+
     R.map(function(r){var b=r[2]?best(list.map(r[2]),r[3]):null;return '<tr><td class="l">'+r[0]+'</td>'+list.map(function(e){var v=r[2]?r[2](e):null,win=b!=null&&v===b;return '<td'+(win?' class="win"':'')+'>'+r[1](e)+'</td>';}).join("")+'</tr>';}).join("")+'</tbody></table></div><p class="figure-note">Green marks the best value in each row among the funds compared. Total return is since each fund\'s own inception, so use annualized return to compare funds of different ages.</p>';
   $(el,".cmp-out").innerHTML=html;
   var c1=$(el,".chart-y"),c2=$(el,".chart-r");
   function draw(){
-    T.charts.bar(c1,list.filter(function(e){return yld(e)!=null;}).map(function(e){return {label:e.sym,sub:e.name,value:yld(e)*100,href:"/etf?t="+e.sym,tip:[["Yield",F.pct(yld(e))],["$10K pays / yr",usd(yld(e)*100,0)]]};}),{fmt:function(v){return usd(v,0);},valW:80,aria:"Yearly income on $10,000"});
-    T.charts.bar(c2,list.filter(function(e){return annualized(e)!=null;}).map(function(e){return {label:e.sym,sub:e.name,value:annualized(e),href:"/etf?t="+e.sym,tip:[["Annualized return",F.signed(annualized(e))],["Total return",F.signed(e.tr)]]};}),{fmt:F.signed,valW:70,aria:"Annualized total return since inception"});
+    T.charts.bar(c1,list.filter(function(e){return yld(e)!=null;}).map(function(e){return {label:e.sym,sub:e.name,value:yld(e)*100,href:epath(e.sym),tip:[["Yield",F.pct(yld(e))],["$10K pays / yr",usd(yld(e)*100,0)]]};}),{fmt:function(v){return usd(v,0);},valW:80,aria:"Yearly income on $10,000"});
+    T.charts.bar(c2,list.filter(function(e){return annualized(e)!=null;}).map(function(e){return {label:e.sym,sub:e.name,value:annualized(e),href:epath(e.sym),tip:[["Annualized return",F.signed(annualized(e))],["Total return",F.signed(e.tr)]]};}),{fmt:F.signed,valW:70,aria:"Annualized total return since inception"});
   }
   draw();onResize(draw);
 };

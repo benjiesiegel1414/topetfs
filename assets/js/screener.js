@@ -108,7 +108,7 @@ function render(all,q,base,defaults){
   var th=COLS.map(function(c){var on=q.sort===c.k,nd=on?(q.dir==="asc"?"desc":"asc"):c.dir;
     return '<th'+(c.k==="sym"||c.k==="provider"?' class="l"':'')+(on?' aria-sort="'+(q.dir==="asc"?"ascending":"descending")+'"':'')+'><a rel="nofollow" href="'+esc(href(base,q,defaults,{sort:c.k,dir:nd}))+'">'+c.l+(on?(q.dir==="asc"?" &#9650;":" &#9660;"):"")+'</a></th>';}).join("");
   var tb=slice.map(function(e){
-    return '<tr><td class="l"><a class="tk" href="/etf?t='+encodeURIComponent(e.sym)+'">'+esc(e.sym)+'</a><span class="fund-name">'+esc(e.name)+'</span></td>'+
+    return '<tr><td class="l"><a class="tk" href="/etfs/'+e.sym.toLowerCase().replace(/[^a-z0-9]+/g,"-")+'">'+esc(e.sym)+'</a><span class="fund-name">'+esc(e.name)+'</span></td>'+
       '<td class="l">'+(e.provider?'<a rel="nofollow" href="'+esc(href(base,q,defaults,{p:e.provider}))+'">'+esc(e.provider)+'</a>':'<span class="muted">n/a</span>')+'</td>'+
       '<td><b>'+F.pct(e.yield)+'</b></td><td>'+F.usd(e.inc)+'</td><td>'+(e.freq||'<span class="muted">n/a</span>')+'</td><td>'+F.pct(e.er,2)+'</td><td>'+F.aum(e.aum)+'</td>'+
       '<td class="'+(e.tr==null?'':e.tr>=0?'pos':'neg')+'">'+F.signed(e.tr)+'</td><td class="'+(e.ar==null?'':e.ar>=0?'pos':'neg')+'">'+F.signed(e.ar)+'</td>'+
