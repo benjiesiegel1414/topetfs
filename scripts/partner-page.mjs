@@ -1,0 +1,188 @@
+// "Partner with us" page for ETF issuers (/partner-with-us)
+export function buildPartner({page,out,esc,SITE,ALL,NETWORK,EMAIL}){
+const N=Object.keys(ALL).length;
+const PARTNERS=["REX Shares","VistaShares","VegaShares","IncomeShares","Liquid Strategies","Tuttle Capital","GraniteShares"];
+const MAIL=`mailto:${EMAIL}?subject=${encodeURIComponent("Partnership inquiry: TopETFs / Dividend Empire network")}`;
+const I={
+ chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+ bulb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V16h8v-1.3A7 7 0 0 0 12 2z"/></svg>',
+ users:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M16 3.5a4 4 0 0 1 0 9M22 21a7 7 0 0 0-4-6.3"/></svg>',
+ display:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
+ doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>',
+ social:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>',
+ video:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3"/></svg>',
+ rocket:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14 4c3-2 6-2 6-2s0 3-2 6l-6 6-4-4z"/><circle cx="15" cy="9" r="1.5"/></svg>',
+ data:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>',
+ star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>'
+};
+const CSS=`<style>
+.pw-hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.pw-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 340px at 85% 0%,rgba(242,193,78,.18),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(42,120,214,.25),transparent 70%);pointer-events:none}
+.pw-hero .wrap{position:relative;padding-top:64px;padding-bottom:64px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.pw-hero .kicker{color:#f2c14e}
+.pw-hero h1{font-family:var(--serif);font-size:52px;line-height:1.05;margin:10px 0 16px;color:#fff;letter-spacing:-.02em}
+.pw-hero p.lead{font-size:19px;line-height:1.55;color:rgba(255,255,255,.85);margin:0 0 24px;max-width:600px}
+.pw-hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.pw-hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.pw-hero .btn-ghost:hover{border-color:#fff;text-decoration:none}
+.pw-quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:26px}
+.pw-quote b{display:block;font-family:var(--serif);font-size:30px;line-height:1.15;color:#f2c14e;margin-bottom:10px}
+.pw-quote p{margin:0;color:rgba(255,255,255,.82);font-size:15.5px;line-height:1.6}
+.pw-sec{margin:56px 0}
+.pw-sec>.kicker{display:block;margin-bottom:6px}
+.pw-sec>h2{font-family:var(--serif);font-size:36px;line-height:1.15;margin:0 0 12px;letter-spacing:-.01em}
+.pw-sec>p.sub{font-size:17px;color:var(--ink-2);max-width:760px;margin:0 0 26px;line-height:1.6}
+.pw-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:var(--paper)}
+.pw-pillars>div{padding:26px;border-right:1px solid var(--rule);position:relative}
+.pw-pillars>div:last-child{border-right:0}
+.pw-pillars .n{font-size:12px;font-weight:900;letter-spacing:.12em;color:var(--muted)}
+.pw-pillars h3{font-size:20px;margin:8px 0 8px}
+.pw-pillars p{margin:0;color:var(--ink-2);font-size:15px;line-height:1.55}
+.pw-pillars .ic,.pw-card .ic{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:color-mix(in srgb,var(--link) 12%,transparent);color:var(--link);margin-bottom:10px}
+.pw-pillars .ic svg,.pw-card .ic svg{width:22px;height:22px}
+.pw-pillars .eq{position:absolute;right:-13px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--navy);color:#f2c14e;display:grid;place-items:center;font-weight:900;z-index:1;font-size:14px}
+.pw-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden;margin:0 0 22px}
+.pw-stats>div{background:var(--paper);padding:22px}
+.pw-stats b{display:block;font-family:var(--serif);font-size:40px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+[data-theme="dark"] .pw-stats b{color:#f2c14e}
+.pw-stats span{display:block;margin-top:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pw-aud{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pw-aud>div{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:16px 18px}
+.pw-aud .ck{flex:none;width:26px;height:26px;border-radius:50%;background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos);display:grid;place-items:center;font-weight:900}
+.pw-aud h4{margin:0 0 4px;font-size:16px}
+.pw-aud p{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.5}
+.pw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pw-card{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:22px;display:flex;flex-direction:column}
+.pw-card h3{font-size:18.5px;margin:2px 0 8px}
+.pw-card p{margin:0 0 12px;color:var(--ink-2);font-size:14.5px;line-height:1.55}
+.pw-card ul{margin:auto 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.pw-card li{font-size:13.5px;color:var(--ink-2);padding-left:18px;position:relative}
+.pw-card li::before{content:"";position:absolute;left:2px;top:7px;width:7px;height:7px;border-radius:2px;background:#f2c14e}
+.pw-logos{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:26px 0;overflow:hidden;position:relative}
+.pw-logos::before,.pw-logos::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:1;pointer-events:none}
+.pw-logos::before{left:0;background:linear-gradient(90deg,var(--paper),transparent)}
+.pw-logos::after{right:0;background:linear-gradient(-90deg,var(--paper),transparent)}
+.pw-track{display:flex;gap:14px;width:max-content;animation:pwscroll 34s linear infinite}
+.pw-logos:hover .pw-track{animation-play-state:paused}
+.pw-logo{flex:none;display:flex;align-items:center;gap:10px;border:1px solid var(--rule);border-radius:12px;padding:14px 22px;background:var(--canvas);font-weight:900;font-size:19px;letter-spacing:-.01em;color:var(--ink)}
+.pw-logo i{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-style:normal;font-size:12px;color:#fff;background:var(--navy)}
+@keyframes pwscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.pw-track{animation:none;flex-wrap:wrap;width:auto;padding:0 20px}}
+.pw-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:st}
+.pw-steps>div{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:22px;position:relative}
+.pw-steps>div::before{counter-increment:st;content:counter(st);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#f2c14e;font-weight:900;margin-bottom:10px}
+.pw-steps h4{margin:0 0 6px;font-size:16.5px}
+.pw-steps p{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.5}
+.pw-std{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pw-std>div{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--pos);border-radius:12px;padding:18px 20px}
+.pw-std h4{margin:0 0 6px;font-size:16px}
+.pw-std p{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.55}
+.pw-cta{background:var(--navy);color:#fff;border-radius:18px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:start;position:relative;overflow:hidden}
+.pw-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 100% 0%,rgba(242,193,78,.16),transparent 70%);pointer-events:none}
+.pw-cta>*{position:relative}
+.pw-cta h2{font-family:var(--serif);font-size:38px;line-height:1.1;margin:8px 0 12px;color:#fff}
+.pw-cta p{color:rgba(255,255,255,.82);font-size:16px;line-height:1.6;margin:0 0 18px}
+.pw-cta .kicker{color:#f2c14e}
+.pw-mail{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);font-weight:900;font-size:19px;padding:14px 20px;border-radius:12px;word-break:break-all}
+.pw-mail:hover{text-decoration:none;background:#f2c14e;color:#1a1400}
+.pw-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:22px;display:grid;gap:12px}
+.pw-form label{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);display:block;margin-bottom:5px}
+.pw-form input,.pw-form textarea,.pw-form select{width:100%;font:inherit;font-size:15px;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:9px;padding:10px 12px}
+.pw-form select option{color:#111}
+.pw-form textarea{min-height:96px;resize:vertical}
+.pw-form input:focus,.pw-form textarea:focus,.pw-form select:focus{outline:2px solid #f2c14e;border-color:#f2c14e}
+.pw-form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pw-form small{color:rgba(255,255,255,.6);font-size:12.5px}
+.pw-disc{font-size:12.5px;color:var(--muted);line-height:1.6;margin:30px 0 0}
+@media(max-width:900px){.pw-hero .wrap{grid-template-columns:1fr;padding-top:44px;padding-bottom:44px}.pw-hero h1{font-size:38px}.pw-pillars,.pw-grid,.pw-steps{grid-template-columns:1fr 1fr}.pw-pillars>div:nth-child(2){border-right:0}.pw-pillars>div:last-child{grid-column:span 2;border-top:1px solid var(--rule)}.pw-pillars .eq{display:none}.pw-stats{grid-template-columns:1fr 1fr}.pw-cta{grid-template-columns:1fr;padding:30px 22px}}
+@media(max-width:600px){.pw-pillars,.pw-grid,.pw-steps,.pw-aud,.pw-std{grid-template-columns:1fr}.pw-pillars>div{border-right:0;border-bottom:1px solid var(--rule)}.pw-pillars>div:last-child{grid-column:auto}.pw-sec>h2{font-size:29px}.pw-cta h2{font-size:30px}.pw-form .row{grid-template-columns:1fr}.pw-mail{font-size:16px}}
+</style>`;
+const logo=n=>`<span class="pw-logo"><i>${esc(n.split(/\s+/).map(w=>w[0]).join("").slice(0,2))}</i>${esc(n)}</span>`;
+const sites=NETWORK.map(n=>n.name+".com").concat(["TopETFs.com"]);
+const ways=[
+ ["display","Site sponsorships","Exclusive, direct-sold display placements on the sites income investors already use to research ETFs. No ad networks, no programmatic filler, and only a few sponsors per site.",["Above-the-fold banners next to live ETF rankings","Run on one site or across the network","We can design the creative for you"]],
+ ["doc","Sponsored research and fund spotlights","Plain-English deep dives on your fund or strategy, written for retail investors and clearly labeled as sponsored.",["Fund explainers and strategy breakdowns","Live yield, AUM and return data embedded","Evergreen pages that keep ranking in search"]],
+ ["social","Social media features","Reach our X audience, including DevotedDividend (about 80K followers) plus the TopDividendETFs, WeeklyETFs and DividendTools accounts.",["Dedicated posts and threads","Distribution and launch announcements","Ongoing sponsored content packages"]],
+ ["video","YouTube integrations","Fund walk-throughs and sponsor reads across our YouTube channels, where we break down ETFs on screen with real numbers.",["Dedicated fund breakdown videos","Integrated sponsor segments","Pinned links and descriptions"]],
+ ["rocket","New fund launch support","Get a new ETF in front of income investors from day one, with coverage that lines up across sites, social and video.",["Launch-week placement package","Inclusion in our ETF database and screeners","Coordinated posts across the network"]],
+ ["data","Data and tool partnerships","Make sure your funds are tracked accurately across our rankings, screeners and calculators, and explore co-branded tools and educational resources.",[`Coverage in our ${N}+ ETF database`,"Co-branded calculators and guides","Featured placement on TopDividendETFsPRO"]]
+];
+out["partner-with-us.html"]=page({title:"Partner With Us: ETF Issuer Sponsorships and Partnerships | TopETFs",desc:"Reach self-directed retail ETF and income investors across the Dividend Empire network: TopETFs, TopDividendETFs, WeeklyETFs, MonthlyETFs and more. Sponsorships, research, social and YouTube partnerships for ETF issuers.",canonical:"/partner-with-us",active:"",extra:CSS,
+ ld:{"@context":"https://schema.org","@type":"WebPage",name:"Partner With Us",url:SITE+"/partner-with-us",about:{"@type":"Organization",name:"Dividend Empire LLC",email:EMAIL,url:SITE}}},
+`<section class="pw-hero"><div class="wrap">
+<div><span class="kicker">Partner with us</span><h1>Reach the retail investors who actually buy ETFs.</h1>
+<p class="lead">TopETFs is part of the Dividend Empire network, a group of ETF research sites, social accounts and YouTube channels followed by self-directed retail investors. We partner with ETF issuers to help those investors understand your funds, with real data, plain English and full transparency.</p>
+<div class="btns"><a class="btn btn-gold" href="${MAIL}" data-ga="partner-hero">Email ${EMAIL}</a><a class="btn btn-ghost" href="#ways">See partnership options</a></div></div>
+<div class="pw-quote"><b>We don't sell banner space to just anyone.</b><p>Every placement is sold directly and limited to a handful of sponsors per site. We work with issuers whose funds our readers are already researching, and we keep sponsored content clearly labeled so trust stays high on both sides.</p></div>
+</div></section>
+<div class="wrap">
+
+<section class="pw-sec"><span class="kicker">How it works</span><h2>Better for issuers. Better for investors.</h2><p class="sub">Our partnerships bring three things together. When they line up, investors get better information and your fund gets in front of people who are ready to act on it.</p>
+<div class="pw-pillars">
+<div><span class="eq">+</span><span class="ic">${I.chart}</span><span class="n">01 &middot; OUR PLATFORM</span><h3>Data and reach</h3><p>Daily-updated ETF data, rankings, screeners and calculators across a network of sites, plus social and YouTube audiences built over 10+ years of dividend investing.</p></div>
+<div><span class="eq">=</span><span class="ic">${I.bulb}</span><span class="n">02 &middot; YOUR EXPERTISE</span><h3>Your funds and strategy</h3><p>Your team knows the product best. We turn your strategy, distributions and fund story into content retail investors can follow.</p></div>
+<div><span class="ic">${I.users}</span><span class="n">03 &middot; THE RESULT</span><h3>Informed retail investors</h3><p>Investors who understand what they own make better long-term shareholders. That is the outcome every partnership is built around.</p></div>
+</div></section>
+
+<section class="pw-sec"><span class="kicker">Our audience</span><h2>Self-directed retail investors, focused on income.</h2><p class="sub">Our readers and followers are individual investors managing their own money. They come to us to compare yields, payout schedules, total returns and fees before they buy, which puts your fund in front of them at the exact moment they are deciding.</p>
+<div class="pw-stats">
+<div><b>~80K</b><span>Followers on X (DevotedDividend)</span></div>
+<div><b>${NETWORK.length+1}</b><span>Websites in the network</span></div>
+<div><b>5</b><span>YouTube channels</span></div>
+<div><b>${N}+</b><span>ETFs tracked daily</span></div>
+</div>
+<div class="pw-aud">
+<div><span class="ck">&#10003;</span><div><h4>Income-focused</h4><p>Dividend, covered call, option-income, weekly-pay and monthly-pay ETF investors looking for cash flow.</p></div></div>
+<div><span class="ck">&#10003;</span><div><h4>Actively researching</h4><p>They use our rankings, screeners and calculators to compare funds side by side before buying.</p></div></div>
+<div><span class="ck">&#10003;</span><div><h4>Self-directed</h4><p>Retail investors who pick their own ETFs in brokerage accounts and IRAs, not through an advisor.</p></div></div>
+<div><span class="ck">&#10003;</span><div><h4>Engaged and loyal</h4><p>Many come back daily for updated yields, votes and new content, and follow along on X and YouTube.</p></div></div>
+</div></section>
+
+<section class="pw-sec"><span class="kicker">Trusted by issuers</span><h2>Partners who already trust our network</h2><p class="sub">A selection of ETF issuers who have sponsored or partnered across the Dividend Empire network.</p>
+<div class="pw-logos" aria-label="Previous partners"><div class="pw-track">${PARTNERS.concat(PARTNERS).map(logo).join("")}</div></div>
+</section>
+
+<section class="pw-sec" id="ways"><span class="kicker">Ways to partner</span><h2>Partnership options</h2><p class="sub">Every partnership is built around your goals, from a single site placement to a coordinated campaign across sites, social and video. Mix and match, or let us put a package together.</p>
+<div class="pw-grid">${ways.map(([ic,h,p,l])=>`<div class="pw-card"><span class="ic">${I[ic]}</span><h3>${h}</h3><p>${p}</p><ul>${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>
+</section>
+
+<section class="pw-sec"><span class="kicker">The network</span><h2>Where your fund can appear</h2><p class="sub">Each site serves a specific kind of ETF investor, so you can target exactly the audience your fund is built for, or run across all of them.</p>
+<div class="net-grid">${[{name:"TopETFs",domain:"topetfs.com",desc:"Our ETF news and research hub: daily articles, a full ETF screener and free calculators with live data.",color:"#0e2a4d",mark:"TE"}].concat(NETWORK).map(n=>`<a class="net-card" href="https://${n.domain}/" target="_blank" rel="noopener"><div class="net-top"><div class="net-logo" style="background:${n.color}">${n.mark}</div><div><h3>${n.name}</h3><div class="domain">${n.domain}</div></div></div><p>${n.desc}</p><span class="go">Visit ${n.domain} &rarr;</span></a>`).join("")}</div>
+</section>
+
+<section class="pw-sec"><span class="kicker">Our standards</span><h2>Built on trust</h2><p class="sub">Our audience trusts us because we are straight with them. That protects your brand too.</p>
+<div class="pw-std">
+<div><h4>Clearly labeled</h4><p>Sponsored placements and content are always marked as sponsored. We never disguise a paid placement as editorial.</p></div>
+<div><h4>Compliance friendly</h4><p>No performance promises. We use your approved language, include prospectus links and disclosures where needed, and send creative for review before it goes live.</p></div>
+<div><h4>Real data, every time</h4><p>Fund numbers come from our live database and your official materials, so what investors see is accurate and current.</p></div>
+<div><h4>Limited inventory</h4><p>A small number of sponsors per site means your placement stands out instead of getting lost in a wall of ads.</p></div>
+</div></section>
+
+<section class="pw-sec"><span class="kicker">Getting started</span><h2>From first email to live in days</h2>
+<div class="pw-steps">
+<div><h4>Reach out</h4><p>Email us with your fund(s), goals and timing.</p></div>
+<div><h4>Quick call</h4><p>We learn about the strategy and recommend the right mix of sites, social and video.</p></div>
+<div><h4>Build</h4><p>We create the creative and content and send it for your compliance review.</p></div>
+<div><h4>Launch and report</h4><p>Your partnership goes live and we share performance data along the way.</p></div>
+</div></section>
+
+<section class="pw-sec" id="contact"><div class="pw-cta">
+<div><span class="kicker">Let's talk</span><h2>Ready to reach more retail ETF investors?</h2><p>Tell us about your fund and what you want to accomplish. Every inquiry goes straight to the founder, Benjie Siegel, and we usually reply within one to two business days.</p>
+<a class="pw-mail" href="${MAIL}" data-ga="partner-email">&#9993; ${EMAIL}</a></div>
+<form class="pw-form" id="pw-form" novalidate>
+<div class="row"><div><label for="pw-n">Name</label><input id="pw-n" name="n" autocomplete="name"></div><div><label for="pw-c">Company</label><input id="pw-c" name="c" autocomplete="organization"></div></div>
+<div class="row"><div><label for="pw-e">Email</label><input id="pw-e" name="e" type="email" autocomplete="email"></div><div><label for="pw-i">Interested in</label><select id="pw-i" name="i"><option>Not sure yet</option><option>Site sponsorship</option><option>Sponsored research</option><option>Social media</option><option>YouTube</option><option>New fund launch</option><option>Full network package</option></select></div></div>
+<div><label for="pw-m">Message (optional)</label><textarea id="pw-m" name="m" placeholder="Fund tickers, goals, timing..."></textarea></div>
+<button class="btn btn-gold" type="submit">Start the conversation &rarr;</button>
+<small>This opens an email to ${EMAIL} in your mail app with your details filled in.</small>
+</form>
+</div></section>
+
+<p class="pw-disc">TopETFs.com and the Dividend Empire network are published by Dividend Empire LLC. Our sites are educational and informational and do not provide investment advice. Sponsored content and placements are clearly labeled. Audience figures are approximate and change over time. Partner names are shown for identification only and do not imply endorsement of any site content.</p>
+</div>
+<script>(function(){var f=document.getElementById("pw-form");if(!f)return;f.addEventListener("submit",function(e){e.preventDefault();var g=function(n){var x=f.elements[n];return x?x.value.trim():"";};
+var body="Name: "+g("n")+"\\nCompany: "+g("c")+"\\nEmail: "+g("e")+"\\nInterested in: "+g("i")+"\\n\\n"+g("m");
+if(typeof gtag==="function"){try{gtag("event","partner_inquiry",{interest:g("i")});}catch(_){}}
+location.href="mailto:${EMAIL}?subject="+encodeURIComponent("Partnership inquiry"+(g("c")?": "+g("c"):""))+"&body="+encodeURIComponent(body);});})();</script>`);
+return ["/partner-with-us"];
+}

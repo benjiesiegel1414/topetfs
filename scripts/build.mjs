@@ -6,6 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { buildTools } from "./tools-pages.mjs";
+import { buildPartner } from "./partner-page.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
@@ -195,7 +196,7 @@ function foot(){
     <div><a class="brand" href="/">${LOGO}<span>Top<b>ETFs</b></span></a><p>Plain-English ETF research with live numbers. Income, weekly pay, growth and the math behind all of it.</p><p><a class="btn btn-gold" href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Try TopDividendETFsPRO</a></p></div>
     <div><h4>Sections</h4><ul>${NAV.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join("")}</ul></div>
     <div><h4>Our network</h4><ul>${NETWORK.map(n=>`<li><a href="https://${n.domain}/" target="_blank" rel="noopener">${n.name}.com</a></li>`).join("")}</ul></div>
-    <div><h4>Latest</h4><ul>${arts.map(a=>`<li><a href="/articles/${a.slug}">${esc(a.short||a.title)}</a></li>`).join("")}</ul><h4 style="margin-top:18px">Company</h4><ul><li><a href="/about">About</a></li><li><a href="/author/benjie-siegel">Our founder</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="https://topdividendetfs.com/advertise.html" target="_blank" rel="noopener">Advertise</a></li><li><a href="/feed.xml">RSS</a></li></ul></div>
+    <div><h4>Latest</h4><ul>${arts.map(a=>`<li><a href="/articles/${a.slug}">${esc(a.short||a.title)}</a></li>`).join("")}</ul><h4 style="margin-top:18px">Company</h4><ul><li><a href="/about">About</a></li><li><a href="/author/benjie-siegel">Our founder</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="/partner-with-us">Partner with us</a></li><li><a href="/feed.xml">RSS</a></li></ul></div>
   </div>
   <p class="disclaimer">${DISCLAIMER}</p>
   <div class="foot-bottom"><span>&copy; ${BUILD_DATE.getFullYear()} Dividend Empire LLC. All rights reserved.</span><button class="theme-toggle" type="button">Toggle dark mode</button></div>
@@ -347,6 +348,7 @@ hub("learn.html","learn","ETF 101: how ETFs work, explained | TopETFs","ETF 101"
 
 // Tools: hub + one page per tool (scripts/tools-pages.mjs)
 const TOOL_PAGES=buildTools({page,out,esc,proBand,SITE,ALL,F});
+const PARTNER_PAGES=buildPartner({page,out,esc,SITE,ALL,NETWORK,EMAIL});
 
 export function dripWidget(){ return `<div class="figure" data-w="drip" id="drip"><p class="figure-title">DRIP compounding calculator</p><p class="figure-sub">Reinvesting dividends vs. spending them</p>
  <div class="controls"><div class="field"><label>Starting amount</label><input type="number" name="start" value="10000" min="0" step="500"></div><div class="field"><label>Monthly add</label><input type="number" name="monthly" value="500" min="0" step="50"></div>
@@ -616,7 +618,7 @@ ${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
 }
 
 // sitemap, rss, robots, CNAME, favicon
-const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
+const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,...PARTNER_PAGES,"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
 out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
 out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
