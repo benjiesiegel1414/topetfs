@@ -255,12 +255,26 @@ out["index.html"]=page({title:"TopETFs: ETF news, research and income math with 
     <p style="margin-top:14px"><button class="btn btn-ghost" style="width:100%" data-open-search>${ICON_SEARCH.replace("<svg",'<svg width="16" height="16"')} Search any ETF</button></p></div>
 </section>
 
-<section class="stats" data-w="stats" aria-label="By the numbers">
-  <div class="stat" data-stat="count"><div class="label">ETFs tracked</div><div class="value">${Object.keys(ALL).length}</div><div class="sub">across income, weekly-pay and growth lists</div></div>
-  <div class="stat" data-stat="weekly"><div class="label">Highest weekly yield</div><div class="value">&nbsp;</div><div class="sub">&nbsp;</div></div>
-  <div class="stat" data-stat="growth"><div class="label">Top growth total return</div><div class="value">&nbsp;</div><div class="sub">&nbsp;</div></div>
-  <div class="stat" data-stat="er"><div class="label">Median expense ratio</div><div class="value">&nbsp;</div><div class="sub">&nbsp;</div></div>
-</section>
+<aside class="pro-ad" aria-label="TopDividendETFsPRO">
+  <span class="pro-ad-tag">From our network</span>
+  <a class="pro-ad-card" href="https://topdividendetfspro.com/?utm_source=topetfs&amp;utm_medium=home_display&amp;utm_campaign=pro" target="_blank" rel="noopener" data-ga="pro_display_home">
+    <div class="pro-ad-copy">
+      <div class="pro-ad-brand"><span class="pro-ad-mark">PRO</span><span>TopDividendETFs<b>PRO</b></span></div>
+      <h2>The research terminal for income investors</h2>
+      <p>Every income ETF we track in one screen, with advanced filters, ratings, tax treatment, payout schedules, total returns and price decay.</p>
+      <ul class="pro-ad-feats"><li>Advanced filters</li><li>Ratings &amp; tax grades</li><li>Yield &amp; return movers</li><li>Watchlists</li></ul>
+    </div>
+    <div class="pro-ad-viz" aria-hidden="true">
+      <div class="pv-head"><span></span><span></span><span></span></div>
+      <div class="pv-row"><i style="width:34%"></i><i class="g" style="width:78%"></i></div>
+      <div class="pv-row"><i style="width:28%"></i><i class="g" style="width:64%"></i></div>
+      <div class="pv-row"><i style="width:40%"></i><i class="g" style="width:52%"></i></div>
+      <div class="pv-row"><i style="width:24%"></i><i class="g" style="width:41%"></i></div>
+      <svg viewBox="0 0 200 48" class="pv-spark"><path d="M2 40 L26 34 L44 37 L66 26 L88 29 L110 18 L132 21 L156 11 L178 13 L198 4" fill="none" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="198" cy="4" r="3" fill="#f2c14e"/></svg>
+    </div>
+    <div class="pro-ad-cta"><span class="btn btn-gold">Explore PRO &rarr;</span><small>topdividendetfspro.com</small></div>
+  </a>
+</aside>
 
 <div class="section-head"><div><h2>Latest</h2><p>New stories every day, built on live data</p></div><a href="/latest">All stories &rarr;</a></div>
 <div class="grid-3">${rest.slice(0,6).map(a=>storyCard(a)).join("")}</div>
