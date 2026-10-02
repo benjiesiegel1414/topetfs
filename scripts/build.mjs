@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
+import { buildTools } from "./tools-pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
@@ -344,18 +345,8 @@ hub("growth.html","growth","Growth ETFs: total return leaders | TopETFs","Growth
 hub("learn.html","learn","ETF 101: how ETFs work, explained | TopETFs","ETF 101","The concepts behind every number on this site: what an ETF is, how yield and total return differ, and what fees really cost.",
   board({title:"The core dividend ETFs",sub:"Where most dividend portfolios start",syms:"SCHD,VYM,DGRO,VIG,HDV,NOBL,DGRW,FDVV,SPHD",cols:"yield,er,aum,tr",sort:"aum",n:9,views:[["aum","Assets"],["yield","Yield"],["er","Lowest fee","asc"]]}));
 
-// Tools
-out["tools.html"]=page({title:"ETF calculators: income, DRIP and fee drag | TopETFs",desc:"Free ETF calculators with live yields: dividend income, DRIP compounding and expense ratio drag.",canonical:"/tools",active:"/tools"},
-`<header class="page-head"><div class="wrap"><span class="kicker">Tools</span><h1>ETF calculators</h1><p>Run the numbers yourself. Income math uses live yields from our database.</p></div></header>
-<div class="wrap" style="max-width:900px">
-<div class="figure" data-w="income" data-src="all" data-default="SCHD" id="income"><p class="figure-title">Dividend income calculator</p><p class="figure-sub">Any ETF in our database, at its current distribution yield</p>
- <div class="controls"><div class="field"><label>Invest</label><input name="amount" inputmode="decimal" value="25000"></div><div class="field"><label>ETF</label><select aria-label="ETF"></select></div></div>
- <div class="results"><div><div class="label">Per year</div><div class="value big" data-o="annual">$0</div></div><div><div class="label">Per month</div><div class="value" data-o="monthly">$0</div></div><div><div class="label" data-o="perLabel">Per payout</div><div class="value" data-o="per">$0</div></div></div><p class="figure-note" data-o="name"></p></div>
-${dripWidget()}
-${feeWidget()}
-<p class="center" style="margin-top:24px"><a class="btn btn-ghost" href="https://topdividendtools.com/" target="_blank" rel="noopener">More calculators on TopDividendTools.com &rarr;</a> <a class="btn btn-ghost" href="https://dividendprojection.com/" target="_blank" rel="noopener">Project your income on DividendProjection.com &rarr;</a></p>
-${proBand()}
-</div>`);
+// Tools: hub + one page per tool (scripts/tools-pages.mjs)
+const TOOL_PAGES=buildTools({page,out,esc,proBand,SITE,ALL,F});
 
 export function dripWidget(){ return `<div class="figure" data-w="drip" id="drip"><p class="figure-title">DRIP compounding calculator</p><p class="figure-sub">Reinvesting dividends vs. spending them</p>
  <div class="controls"><div class="field"><label>Starting amount</label><input type="number" name="start" value="10000" min="0" step="500"></div><div class="field"><label>Monthly add</label><input type="number" name="monthly" value="500" min="0" step="50"></div>
@@ -625,7 +616,7 @@ ${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
 }
 
 // sitemap, rss, robots, CNAME, favicon
-const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools","/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
+const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
 out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
 out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
