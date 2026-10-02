@@ -521,3 +521,6 @@ if(document.readyState==="loading") document.addEventListener("DOMContentLoaded"
 
 window.TopETFs={ready:ready,F:F,charts:{bar:barChart,scatter:scatter,line:lineChart}};
 })();
+
+/* GA click tracking for house ads */
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-ga]");if(a&&typeof gtag==="function"){try{gtag("event","pro_ad_click",{placement:a.getAttribute("data-ga")});}catch(_){}}});
