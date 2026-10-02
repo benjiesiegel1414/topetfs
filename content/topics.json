@@ -1,0 +1,1210 @@
+{
+ "_note": "Queue of article topics. The daily writer takes the first 'pending' topic. Reorder, add or remove freely. status: pending | published | failed",
+ "topics": [
+  {
+   "slug": "schd-etf-dividend-yield-total-return",
+   "keyword": "SCHD ETF",
+   "title": "SCHD ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "SCHD"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to SCHD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: the most popular dividend ETF; quality screen, annual reconstitution, dividend growth, quarterly pay",
+   "status": "published",
+   "date": "2026-10-01",
+   "words": 1692
+  },
+  {
+   "slug": "how-much-do-i-need-in-schd-to-make-1000-a-month",
+   "keyword": "how much do I need in SCHD to make $1000 a month",
+   "title": "How Much Do You Need in SCHD to Make $1,000 a Month?",
+   "tickers": [
+    "SCHD",
+    "JEPI",
+    "VYM"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "schd-vs-jepi",
+   "keyword": "SCHD vs JEPI",
+   "title": "SCHD vs. JEPI: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SCHD",
+    "JEPI"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SCHD and JEPI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "jepi-etf-dividend-yield-total-return",
+   "keyword": "JEPI ETF",
+   "title": "JEPI ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "JEPI"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to JEPI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: covered calls via ELNs on S&P 500 low-vol stocks, monthly income, upside cap",
+   "status": "pending"
+  },
+  {
+   "slug": "how-much-do-i-need-in-jepi-to-make-1000-a-month",
+   "keyword": "how much do I need in JEPI to make $1000 a month",
+   "title": "How Much Do You Need in JEPI to Make $1,000 a Month?",
+   "tickers": [
+    "JEPI",
+    "JEPQ",
+    "SCHD"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "jepi-vs-jepq",
+   "keyword": "JEPI vs JEPQ",
+   "title": "JEPI vs. JEPQ: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "JEPI",
+    "JEPQ"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between JEPI and JEPQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "jepq-etf-dividend-yield-total-return",
+   "keyword": "JEPQ ETF",
+   "title": "JEPQ ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "JEPQ"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to JEPQ: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Nasdaq-100 covered call income, monthly pay, tech-heavy",
+   "status": "pending"
+  },
+  {
+   "slug": "how-much-does-100-000-in-schd-pay",
+   "keyword": "how much does $100,000 in SCHD pay",
+   "title": "What $100,000 in SCHD Pays You Every Year (and Every Quarter)",
+   "tickers": [
+    "SCHD"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "schd-vs-voo",
+   "keyword": "SCHD vs VOO",
+   "title": "SCHD vs. VOO: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SCHD",
+    "VOO"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SCHD and VOO: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "voo-etf-dividend-yield-total-return",
+   "keyword": "VOO ETF",
+   "title": "VOO ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "VOO"
+   ],
+   "section": "growth",
+   "type": "profile",
+   "angle": "Complete plain-English guide to VOO: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: the S&P 500 benchmark, low fee, total return king, small yield",
+   "status": "pending"
+  },
+  {
+   "slug": "best-monthly-dividend-etfs",
+   "keyword": "best monthly dividend ETFs",
+   "title": "The Best Monthly Dividend ETFs, Ranked by Yield, Fees and Total Return",
+   "tickers": [
+    "JEPI",
+    "JEPQ",
+    "SPYI",
+    "QQQI",
+    "DIVO",
+    "GPIQ",
+    "GPIX",
+    "SPHD",
+    "SGOV"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "qqqi-vs-jepq",
+   "keyword": "QQQI vs JEPQ",
+   "title": "QQQI vs. JEPQ: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "QQQI",
+    "JEPQ"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between QQQI and JEPQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "qqq-etf-dividend-yield-total-return",
+   "keyword": "QQQ ETF",
+   "title": "QQQ ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "QQQ"
+   ],
+   "section": "growth",
+   "type": "profile",
+   "angle": "Complete plain-English guide to QQQ: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Nasdaq-100 growth, tech concentration, low yield",
+   "status": "pending"
+  },
+  {
+   "slug": "best-weekly-dividend-etfs",
+   "keyword": "best weekly dividend ETFs",
+   "title": "Weekly Dividend ETFs: The Funds That Pay You Every Single Week",
+   "tickers": [
+    "QDTE",
+    "XDTE",
+    "ULTY",
+    "YMAX",
+    "FEPI",
+    "MSTY"
+   ],
+   "section": "weekly",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "spyi-vs-jepi",
+   "keyword": "SPYI vs JEPI",
+   "title": "SPYI vs. JEPI: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SPYI",
+    "JEPI"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SPYI and JEPI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "vym-etf-dividend-yield-total-return",
+   "keyword": "VYM ETF",
+   "title": "VYM ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "VYM"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to VYM: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: broad high-dividend index, 400+ holdings, quarterly",
+   "status": "pending"
+  },
+  {
+   "slug": "highest-yielding-etfs-without-price-decay",
+   "keyword": "highest yielding ETFs without price decay",
+   "title": "High Yield ETFs Without Price Decay: Big Income That Kept Its Value",
+   "tickers": [
+    "SPYI",
+    "QQQI",
+    "GPIQ",
+    "JEPQ",
+    "DIVO",
+    "BALI"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "schd-vs-vym",
+   "keyword": "SCHD vs VYM",
+   "title": "SCHD vs. VYM: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SCHD",
+    "VYM"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SCHD and VYM: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "spyi-etf-dividend-yield-total-return",
+   "keyword": "SPYI ETF",
+   "title": "SPYI ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "SPYI"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to SPYI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: NEOS S&P 500 high income, index options, Section 1256 tax treatment, monthly",
+   "status": "pending"
+  },
+  {
+   "slug": "best-dividend-etfs-for-beginners",
+   "keyword": "best dividend ETFs for beginners",
+   "title": "The Best Dividend ETFs for Beginners: A Simple Starting Lineup",
+   "tickers": [
+    "SCHD",
+    "VYM",
+    "DGRO",
+    "VIG",
+    "VOO"
+   ],
+   "section": "learn",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "voo-vs-qqq",
+   "keyword": "VOO vs QQQ",
+   "title": "VOO vs. QQQ: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "VOO",
+    "QQQ"
+   ],
+   "section": "growth",
+   "type": "vs",
+   "angle": "Head-to-head between VOO and QQQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "qqqi-etf-dividend-yield-total-return",
+   "keyword": "QQQI ETF",
+   "title": "QQQI ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "QQQI"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to QQQI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: NEOS Nasdaq-100 high income, 1256 tax treatment, monthly",
+   "status": "pending"
+  },
+  {
+   "slug": "best-dividend-etfs-for-roth-ira",
+   "keyword": "best dividend ETFs for Roth IRA",
+   "title": "Dividend ETFs in a Roth IRA: Which Ones Make the Most Sense",
+   "tickers": [
+    "SCHD",
+    "JEPI",
+    "JEPQ",
+    "QYLD",
+    "SPYI",
+    "DIVO"
+   ],
+   "section": "learn",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "schg-vs-qqq",
+   "keyword": "SCHG vs QQQ",
+   "title": "SCHG vs. QQQ: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SCHG",
+    "QQQ"
+   ],
+   "section": "growth",
+   "type": "vs",
+   "angle": "Head-to-head between SCHG and QQQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "dgro-etf-dividend-yield-total-return",
+   "keyword": "DGRO ETF",
+   "title": "DGRO ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "DGRO"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to DGRO: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: dividend growth, payout ratio screen",
+   "status": "pending"
+  },
+  {
+   "slug": "best-growth-etfs",
+   "keyword": "best growth ETFs",
+   "title": "The Best Growth ETFs by Total Return, Fees and Size",
+   "tickers": [
+    "QQQ",
+    "VUG",
+    "SCHG",
+    "VGT",
+    "MGK",
+    "VOO"
+   ],
+   "section": "growth",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "vug-vs-schg",
+   "keyword": "VUG vs SCHG",
+   "title": "VUG vs. SCHG: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "VUG",
+    "SCHG"
+   ],
+   "section": "growth",
+   "type": "vs",
+   "angle": "Head-to-head between VUG and SCHG: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "vig-etf-dividend-yield-total-return",
+   "keyword": "VIG ETF",
+   "title": "VIG ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "VIG"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to VIG: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: 10+ years of raises, excludes top yielders",
+   "status": "pending"
+  },
+  {
+   "slug": "dividend-growth-vs-high-yield-etfs",
+   "keyword": "dividend growth vs high yield ETFs",
+   "title": "Dividend Growth vs. High Yield ETFs: Which Strategy Wins Over Time?",
+   "tickers": [
+    "SCHD",
+    "DGRO",
+    "VIG",
+    "JEPI",
+    "QYLD",
+    "VYM"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "dgro-vs-vig",
+   "keyword": "DGRO vs VIG",
+   "title": "DGRO vs. VIG: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "DGRO",
+    "VIG"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between DGRO and VIG: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "schg-etf-dividend-yield-total-return",
+   "keyword": "SCHG ETF",
+   "title": "SCHG ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "SCHG"
+   ],
+   "section": "growth",
+   "type": "profile",
+   "angle": "Complete plain-English guide to SCHG: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Schwab large cap growth, very low fee",
+   "status": "pending"
+  },
+  {
+   "slug": "what-is-return-of-capital-etf",
+   "keyword": "what is return of capital ETF",
+   "title": "Return of Capital, Explained: Why Some ETF Distributions Are Not Really Income",
+   "tickers": [
+    "QYLD",
+    "MSTY",
+    "SPYI",
+    "JEPI"
+   ],
+   "section": "learn",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "schd-vs-dgro",
+   "keyword": "SCHD vs DGRO",
+   "title": "SCHD vs. DGRO: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SCHD",
+    "DGRO"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SCHD and DGRO: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "vug-etf-dividend-yield-total-return",
+   "keyword": "VUG ETF",
+   "title": "VUG ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "VUG"
+   ],
+   "section": "growth",
+   "type": "profile",
+   "angle": "Complete plain-English guide to VUG: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Vanguard growth, big tech weights",
+   "status": "pending"
+  },
+  {
+   "slug": "section-1256-etfs-taxes",
+   "keyword": "section 1256 ETFs taxes",
+   "title": "Section 1256 ETFs: How SPYI and QQQI Can Lower the Tax on Option Income",
+   "tickers": [
+    "SPYI",
+    "QQQI",
+    "JEPI",
+    "JEPQ"
+   ],
+   "section": "learn",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "qyld-vs-qqqi",
+   "keyword": "QYLD vs QQQI",
+   "title": "QYLD vs. QQQI: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "QYLD",
+    "QQQI"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between QYLD and QQQI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "qyld-etf-dividend-yield-total-return",
+   "keyword": "QYLD ETF",
+   "title": "QYLD ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "QYLD"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to QYLD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: the original Nasdaq covered call, full writes, price decay history",
+   "status": "pending"
+  },
+  {
+   "slug": "0dte-covered-call-etfs",
+   "keyword": "0DTE covered call ETFs",
+   "title": "0DTE Covered Call ETFs, Explained: How QDTE and XDTE Pay Weekly",
+   "tickers": [
+    "QDTE",
+    "XDTE",
+    "RDTE"
+   ],
+   "section": "weekly",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "gpiq-vs-jepq",
+   "keyword": "GPIQ vs JEPQ",
+   "title": "GPIQ vs. JEPQ: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "GPIQ",
+    "JEPQ"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between GPIQ and JEPQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "divo-etf-dividend-yield-total-return",
+   "keyword": "DIVO ETF",
+   "title": "DIVO ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "DIVO"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to DIVO: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: dividend stocks plus tactical covered calls, monthly",
+   "status": "pending"
+  },
+  {
+   "slug": "single-stock-option-income-etfs-risks",
+   "keyword": "single stock option income ETFs risks",
+   "title": "Single-Stock Option Income ETFs: The Real Risks Behind 50%+ Yields",
+   "tickers": [
+    "MSTY",
+    "NVDY",
+    "TSLY",
+    "CONY",
+    "PLTY"
+   ],
+   "section": "weekly",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "spyi-vs-qqqi",
+   "keyword": "SPYI vs QQQI",
+   "title": "SPYI vs. QQQI: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SPYI",
+    "QQQI"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SPYI and QQQI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "nobl-etf-dividend-yield-total-return",
+   "keyword": "NOBL ETF",
+   "title": "NOBL ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "NOBL"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to NOBL: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P 500 Dividend Aristocrats, equal weight, 25+ year raisers",
+   "status": "pending"
+  },
+  {
+   "slug": "price-decay-etf-meaning",
+   "keyword": "price decay ETF meaning",
+   "title": "What Is Price Decay? How to Tell If a High-Yield ETF Is Shrinking",
+   "tickers": [
+    "QYLD",
+    "XYLD",
+    "JEPI",
+    "MSTY"
+   ],
+   "section": "learn",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "jepi-vs-divo",
+   "keyword": "JEPI vs DIVO",
+   "title": "JEPI vs. DIVO: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "JEPI",
+    "DIVO"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between JEPI and DIVO: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "hdv-etf-dividend-yield-total-return",
+   "keyword": "HDV ETF",
+   "title": "HDV ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "HDV"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to HDV: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: iShares core high dividend, quality screen",
+   "status": "pending"
+  },
+  {
+   "slug": "dividend-etf-portfolio-for-1000-a-month",
+   "keyword": "dividend ETF portfolio for $1000 a month",
+   "title": "Building a $1,000 a Month Dividend ETF Portfolio: Three Example Mixes",
+   "tickers": [
+    "SCHD",
+    "JEPI",
+    "JEPQ",
+    "SPYI",
+    "VYM"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "xyld-vs-spyi",
+   "keyword": "XYLD vs SPYI",
+   "title": "XYLD vs. SPYI: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "XYLD",
+    "SPYI"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between XYLD and SPYI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "msty-etf-dividend-yield-total-return",
+   "keyword": "MSTY ETF",
+   "title": "MSTY ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "MSTY"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to MSTY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax MSTR option income, huge yield, extreme risk, price decay",
+   "status": "pending"
+  },
+  {
+   "slug": "schd-dividend-growth-rate",
+   "keyword": "SCHD dividend growth rate",
+   "title": "SCHD's Dividend Growth Rate: Why the Payout Has Climbed for Over a Decade",
+   "tickers": [
+    "SCHD",
+    "VYM",
+    "DGRO"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "schd-vs-nobl",
+   "keyword": "SCHD vs NOBL",
+   "title": "SCHD vs. NOBL: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SCHD",
+    "NOBL"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SCHD and NOBL: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "ulty-etf-dividend-yield-total-return",
+   "keyword": "ULTY ETF",
+   "title": "ULTY ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "ULTY"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to ULTY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax Ultra option income, weekly pay",
+   "status": "pending"
+  },
+  {
+   "slug": "covered-call-etf-vs-s-p-500",
+   "keyword": "covered call ETF vs S&P 500",
+   "title": "Do Covered Call ETFs Beat the S&P 500? Total Return vs. Income",
+   "tickers": [
+    "JEPI",
+    "QYLD",
+    "XYLD",
+    "SPYI",
+    "VOO"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "vym-vs-hdv",
+   "keyword": "VYM vs HDV",
+   "title": "VYM vs. HDV: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "VYM",
+    "HDV"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between VYM and HDV: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "qdte-etf-dividend-yield-total-return",
+   "keyword": "QDTE ETF",
+   "title": "QDTE ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "QDTE"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to QDTE: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Roundhill 0DTE Nasdaq covered call, weekly pay",
+   "status": "pending"
+  },
+  {
+   "slug": "etf-expense-ratio-explained",
+   "keyword": "ETF expense ratio explained",
+   "title": "What a Good Expense Ratio Looks Like for Dividend and Growth ETFs",
+   "tickers": [
+    "VOO",
+    "SCHD",
+    "JEPI",
+    "QYLD"
+   ],
+   "section": "learn",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "qdte-vs-xdte",
+   "keyword": "QDTE vs XDTE",
+   "title": "QDTE vs. XDTE: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "QDTE",
+    "XDTE"
+   ],
+   "section": "weekly",
+   "type": "vs",
+   "angle": "Head-to-head between QDTE and XDTE: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "xdte-etf-dividend-yield-total-return",
+   "keyword": "XDTE ETF",
+   "title": "XDTE ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "XDTE"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to XDTE: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Roundhill 0DTE S&P 500 covered call, weekly pay",
+   "status": "pending"
+  },
+  {
+   "slug": "leveraged-etf-decay",
+   "keyword": "leveraged ETF decay",
+   "title": "Leveraged ETF Decay: Why TQQQ Can Lose Money Even When QQQ Rises",
+   "tickers": [
+    "TQQQ",
+    "QQQ"
+   ],
+   "section": "growth",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "msty-vs-ulty",
+   "keyword": "MSTY vs ULTY",
+   "title": "MSTY vs. ULTY: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "MSTY",
+    "ULTY"
+   ],
+   "section": "weekly",
+   "type": "vs",
+   "angle": "Head-to-head between MSTY and ULTY: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "gpiq-etf-dividend-yield-total-return",
+   "keyword": "GPIQ ETF",
+   "title": "GPIQ ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "GPIQ"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to GPIQ: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Goldman Nasdaq-100 premium income, partial overwrite, monthly",
+   "status": "pending"
+  },
+  {
+   "slug": "t-bill-etf-yield",
+   "keyword": "T-bill ETF yield",
+   "title": "SGOV and T-Bill ETFs: A Paycheck for Your Cash While You Wait",
+   "tickers": [
+    "SGOV",
+    "JPIE"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "gpix-vs-jepi",
+   "keyword": "GPIX vs JEPI",
+   "title": "GPIX vs. JEPI: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "GPIX",
+    "JEPI"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between GPIX and JEPI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "gpix-etf-dividend-yield-total-return",
+   "keyword": "GPIX ETF",
+   "title": "GPIX ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "GPIX"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to GPIX: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Goldman S&P 500 premium income, partial overwrite",
+   "status": "pending"
+  },
+  {
+   "slug": "dividend-aristocrats-etf",
+   "keyword": "dividend aristocrats ETF",
+   "title": "Dividend Aristocrat ETFs: NOBL, SDY and the Long-Streak Payers",
+   "tickers": [
+    "NOBL",
+    "SDY",
+    "VIG",
+    "SCHD"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "vgt-vs-qqq",
+   "keyword": "VGT vs QQQ",
+   "title": "VGT vs. QQQ: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "VGT",
+    "QQQ"
+   ],
+   "section": "growth",
+   "type": "vs",
+   "angle": "Head-to-head between VGT and QQQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "bali-etf-dividend-yield-total-return",
+   "keyword": "BALI ETF",
+   "title": "BALI ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "BALI"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to BALI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: iShares large cap premium income active",
+   "status": "pending"
+  },
+  {
+   "slug": "international-dividend-etfs",
+   "keyword": "international dividend ETFs",
+   "title": "International Dividend ETFs: Do You Need Them Next to SCHD?",
+   "tickers": [
+    "IDVO",
+    "VYMI",
+    "IDV",
+    "SCHD"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "schd-vs-spyi",
+   "keyword": "SCHD vs SPYI",
+   "title": "SCHD vs. SPYI: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SCHD",
+    "SPYI"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SCHD and SPYI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "fepi-etf-dividend-yield-total-return",
+   "keyword": "FEPI ETF",
+   "title": "FEPI ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "FEPI"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to FEPI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: REX FANG & innovation premium income",
+   "status": "pending"
+  },
+  {
+   "slug": "tech-dividend-etfs",
+   "keyword": "tech dividend ETFs",
+   "title": "Tech With a Paycheck: ETFs That Pair Nasdaq Exposure With Monthly Income",
+   "tickers": [
+    "JEPQ",
+    "QQQI",
+    "GPIQ",
+    "QYLD",
+    "QQQ"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "jepq-vs-qqq",
+   "keyword": "JEPQ vs QQQ",
+   "title": "JEPQ vs. QQQ: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "JEPQ",
+    "QQQ"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between JEPQ and QQQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "sphd-etf-dividend-yield-total-return",
+   "keyword": "SPHD ETF",
+   "title": "SPHD ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "SPHD"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to SPHD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P 500 high dividend low volatility, monthly",
+   "status": "pending"
+  },
+  {
+   "slug": "drip-dividend-etf-compounding",
+   "keyword": "DRIP dividend ETF compounding",
+   "title": "Reinvesting SCHD Dividends: What DRIP Does Over 10 and 20 Years",
+   "tickers": [
+    "SCHD",
+    "VOO"
+   ],
+   "section": "learn",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "sphd-vs-schd",
+   "keyword": "SPHD vs SCHD",
+   "title": "SPHD vs. SCHD: Yield, Total Return, Fees and Which One Fits You",
+   "tickers": [
+    "SPHD",
+    "SCHD"
+   ],
+   "section": "income",
+   "type": "vs",
+   "angle": "Head-to-head between SPHD and SCHD: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
+   "status": "pending"
+  },
+  {
+   "slug": "dvy-etf-dividend-yield-total-return",
+   "keyword": "DVY ETF",
+   "title": "DVY ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "DVY"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to DVY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: iShares select dividend",
+   "status": "pending"
+  },
+  {
+   "slug": "monthly-income-retirement-etfs",
+   "keyword": "monthly income retirement ETFs",
+   "title": "Retirement Income From ETFs: How to Turn a Portfolio Into a Monthly Paycheck",
+   "tickers": [
+    "SCHD",
+    "JEPI",
+    "SPYI",
+    "SGOV",
+    "VYM"
+   ],
+   "section": "income",
+   "type": "question",
+   "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "pending"
+  },
+  {
+   "slug": "xyld-etf-dividend-yield-total-return",
+   "keyword": "XYLD ETF",
+   "title": "XYLD ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "XYLD"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to XYLD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P 500 covered call, full overwrite",
+   "status": "pending"
+  },
+  {
+   "slug": "ryld-etf-dividend-yield-total-return",
+   "keyword": "RYLD ETF",
+   "title": "RYLD ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "RYLD"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to RYLD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Russell 2000 covered call",
+   "status": "pending"
+  },
+  {
+   "slug": "svol-etf-dividend-yield-total-return",
+   "keyword": "SVOL ETF",
+   "title": "SVOL ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "SVOL"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to SVOL: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: short volatility income strategy",
+   "status": "pending"
+  },
+  {
+   "slug": "nvdy-etf-dividend-yield-total-return",
+   "keyword": "NVDY ETF",
+   "title": "NVDY ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "NVDY"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to NVDY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax NVDA option income",
+   "status": "pending"
+  },
+  {
+   "slug": "cony-etf-dividend-yield-total-return",
+   "keyword": "CONY ETF",
+   "title": "CONY ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "CONY"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to CONY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax COIN option income",
+   "status": "pending"
+  },
+  {
+   "slug": "tsly-etf-dividend-yield-total-return",
+   "keyword": "TSLY ETF",
+   "title": "TSLY ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "TSLY"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to TSLY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax TSLA option income",
+   "status": "pending"
+  },
+  {
+   "slug": "ymax-etf-dividend-yield-total-return",
+   "keyword": "YMAX ETF",
+   "title": "YMAX ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "YMAX"
+   ],
+   "section": "weekly",
+   "type": "profile",
+   "angle": "Complete plain-English guide to YMAX: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax universe fund of option income ETFs",
+   "status": "pending"
+  },
+  {
+   "slug": "idvo-etf-dividend-yield-total-return",
+   "keyword": "IDVO ETF",
+   "title": "IDVO ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "IDVO"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to IDVO: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Amplify international enhanced dividend income",
+   "status": "pending"
+  },
+  {
+   "slug": "fdvv-etf-dividend-yield-total-return",
+   "keyword": "FDVV ETF",
+   "title": "FDVV ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "FDVV"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to FDVV: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Fidelity high dividend",
+   "status": "pending"
+  },
+  {
+   "slug": "sdy-etf-dividend-yield-total-return",
+   "keyword": "SDY ETF",
+   "title": "SDY ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "SDY"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to SDY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P High Yield Dividend Aristocrats, 20+ year raisers",
+   "status": "pending"
+  },
+  {
+   "slug": "vgt-etf-dividend-yield-total-return",
+   "keyword": "VGT ETF",
+   "title": "VGT ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "VGT"
+   ],
+   "section": "growth",
+   "type": "profile",
+   "angle": "Complete plain-English guide to VGT: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Vanguard info tech sector",
+   "status": "pending"
+  },
+  {
+   "slug": "mgk-etf-dividend-yield-total-return",
+   "keyword": "MGK ETF",
+   "title": "MGK ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "MGK"
+   ],
+   "section": "growth",
+   "type": "profile",
+   "angle": "Complete plain-English guide to MGK: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Vanguard mega cap growth",
+   "status": "pending"
+  },
+  {
+   "slug": "sgov-etf-dividend-yield-total-return",
+   "keyword": "SGOV ETF",
+   "title": "SGOV ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "SGOV"
+   ],
+   "section": "income",
+   "type": "profile",
+   "angle": "Complete plain-English guide to SGOV: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: 0-3 month T-bills, cash alternative, monthly",
+   "status": "pending"
+  },
+  {
+   "slug": "tqqq-etf-dividend-yield-total-return",
+   "keyword": "TQQQ ETF",
+   "title": "TQQQ ETF: Dividend Yield, Total Return and What $10,000 Pays Today",
+   "tickers": [
+    "TQQQ"
+   ],
+   "section": "growth",
+   "type": "profile",
+   "angle": "Complete plain-English guide to TQQQ: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: 3x leveraged Nasdaq, daily reset, volatility decay",
+   "status": "pending"
+  }
+ ]
+}
