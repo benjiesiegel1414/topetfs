@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { buildTools } from "./tools-pages.mjs";
 import { buildPartner } from "./partner-page.mjs";
+import { buildEtfPages, etfPath } from "./etf-pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
@@ -54,7 +55,7 @@ function renderTokens(html){
      const e=ALL[sym]; if(!e) throw new Error("Unknown ticker in article: "+sym);
      let v=e[field]; if(v!=null&&mul) v=v*+mul;
      return `<span class="live" data-live="${sym}:${field}" data-fmt="${fmt}"${mul?` data-mul="${mul}"`:""} title="Live from the TopETFs database">${esc(F[fmt](v))}</span>`;})
-   .replace(/\{\{tkr:([A-Z.]+)\}\}/g,(m,s)=>`<a class="tkr" href="/etf?t=${s}">${s}</a>`)
+   .replace(/\{\{tkr:([A-Z.]+)\}\}/g,(m,s)=>`<a class="tkr" href="${etfPath(s)}">${s}</a>`)
    .replace(/\{\{calc:(\w+):([^}]+)\}\}/g,(m,fmt,expr)=>{
      const js=expr.replace(/\b([A-Z]{2,6})\.(\w+)/g,(mm,s,f)=>{const e=ALL[s];if(!e||e[f]==null)throw new Error("calc missing "+mm);return "("+e[f]+")";});
      const v=Function("return ("+js+")")(); return esc(F[fmt](v));})
@@ -185,7 +186,7 @@ function top(active){
 function tapeStatic(){
   const items=TAPE.split(",").map(s=>{const e=ALL[s];if(!e)return "";const hasY=e.yield!=null&&!e.lists.includes("growth");
     const v=hasY?`${F.pct(e.yield)} <span class="k">yield</span>`:(e.tr!=null?`<span class="${e.tr>=0?"pos":"neg"}">${F.signed(e.tr)}</span> <span class="k">since incep.</span>`:"");
-    return `<a class="tape-item" href="/etf?t=${s}"><b>${s}</b>${v}</a>`;}).join("");
+    return `<a class="tape-item" href="${etfPath(s)}"><b>${s}</b>${v}</a>`;}).join("");
   return items+items;
 }
 function foot(){
@@ -194,7 +195,7 @@ function foot(){
 <footer class="footer"><div class="wrap">
   <div class="foot-grid">
     <div><a class="brand" href="/">${LOGO}<span>Top<b>ETFs</b></span></a><p>Plain-English ETF research with live numbers. Income, weekly pay, growth and the math behind all of it.</p><p><a class="btn btn-gold" href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Try TopDividendETFsPRO</a></p></div>
-    <div><h4>Sections</h4><ul>${NAV.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join("")}</ul></div>
+    <div><h4>Sections</h4><ul>${NAV.map(([n,h])=>`<li><a href="${h}">${n}</a></li>`).join("")}<li><a href="/etfs/">All ETFs A-Z</a></li></ul></div>
     <div><h4>Our network</h4><ul>${NETWORK.map(n=>`<li><a href="https://${n.domain}/" target="_blank" rel="noopener">${n.name}.com</a></li>`).join("")}</ul></div>
     <div><h4>Latest</h4><ul>${arts.map(a=>`<li><a href="/articles/${a.slug}">${esc(a.short||a.title)}</a></li>`).join("")}</ul><h4 style="margin-top:18px">Company</h4><ul><li><a href="/about">About</a></li><li><a href="/author/benjie-siegel">Our founder</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="/partner-with-us">Partner with us</a></li><li><a href="/feed.xml">RSS</a></li></ul></div>
   </div>
@@ -233,7 +234,7 @@ function staticRows(src,cols,sort,n,syms,minAum,exclude){
   const dir=sort==="er"?1:-1;
   list=list.filter(e=>e[sort]!=null).sort((a,b)=>dir*(a[sort]-b[sort])).slice(0,n);
   const fm={yield:F.pct,er:F.pct2,aum:F.aum,tr:F.signed,decay:F.decay,freq:F.text,provider:F.text};
-  return list.map(e=>`<tr><td><a class="tk" href="/etf?t=${e.sym}">${e.sym}</a><span class="fund-name">${esc(e.name)}</span></td>${cols.split(",").map(c=>`<td>${fm[c](e[c])}</td>`).join("")}</tr>`).join("");
+  return list.map(e=>`<tr><td><a class="tk" href="${etfPath(e.sym)}">${e.sym}</a><span class="fund-name">${esc(e.name)}</span></td>${cols.split(",").map(c=>`<td>${fm[c](e[c])}</td>`).join("")}</tr>`).join("");
 }
 const proBand=(h="Screen 160+ income ETFs like a pro",p="TopDividendETFsPRO is our premium terminal: every income ETF we track with advanced filters, fees, AUM, payout schedules, total returns and price decay in one place.")=>`<section class="pro-band"><div><span class="kicker">TopDividendETFsPRO</span><h2>${h}</h2><p>${p}</p></div><a class="btn btn-gold" href="https://topdividendetfspro.com/" target="_blank" rel="noopener">Go PRO &rarr;</a></section>`;
 function networkGrid(){
@@ -349,6 +350,7 @@ hub("learn.html","learn","ETF 101: how ETFs work, explained | TopETFs","ETF 101"
 // Tools: hub + one page per tool (scripts/tools-pages.mjs)
 const TOOL_PAGES=buildTools({page,out,esc,proBand,SITE,ALL,F});
 const PARTNER_PAGES=buildPartner({page,out,esc,SITE,ALL,NETWORK,EMAIL});
+const ETF_PAGES=buildEtfPages({page,out,esc,F,ALL,SITE,ARTICLES,proBand});
 
 export function dripWidget(){ return `<div class="figure" data-w="drip" id="drip"><p class="figure-title">DRIP compounding calculator</p><p class="figure-sub">Reinvesting dividends vs. spending them</p>
  <div class="controls"><div class="field"><label>Starting amount</label><input type="number" name="start" value="10000" min="0" step="500"></div><div class="field"><label>Monthly add</label><input type="number" name="monthly" value="500" min="0" step="50"></div>
@@ -365,7 +367,7 @@ export function feeWidget(){ return `<div class="figure" data-w="fees" id="fees"
 
 // ETF profile
 out["etf.html"]=page({title:"ETF profile | TopETFs",desc:"ETF profile with live yield, total return, expense ratio, AUM and an income calculator.",canonical:"/etf",active:""},
-`<div class="wrap" style="margin-top:30px"><div data-w="profile"><div class="card" style="padding:28px"><span class="skeleton">Loading fund data</span></div></div>
+`<script>(function(){var S=${JSON.stringify(Object.keys(ALL))},t=(new URLSearchParams(location.search).get("t")||"").toUpperCase();if(t&&S.indexOf(t)>-1&&!/[?&]nf=1/.test(location.search))location.replace("/etfs/"+t.toLowerCase().replace(/[^a-z0-9]+/g,"-"));})();</script><div class="wrap" style="margin-top:30px"><div data-w="profile"><div class="card" style="padding:28px"><span class="skeleton">Loading fund data</span></div></div>
 <div class="section-head"><h2>Related stories</h2></div><div class="grid-3" data-related-for=""></div>
 ${proBand()}</div>`);
 
@@ -514,12 +516,45 @@ out["disclaimer.html"]=page({title:"Disclaimer | TopETFs",desc:"Important inform
 <p>Distribution yields shown are based on recent distributions and are not a promise of future income. Option-income and single-stock income ETFs can lose value quickly and are not suitable for every investor. "Price decay" on this site simply means a fund's share price is below its starting price and is not a buy or sell signal.</p></div></div>`);
 
 out["404.html"]=page({title:"Page not found | TopETFs",desc:"That page does not exist.",canonical:"/404"},
-`<div class="wrap center" style="padding:70px 0"><span class="kicker">404</span><h1 class="h-serif" style="font-size:42px;margin:8px 0">That page moved or never existed</h1><p class="muted">Try the search, or head back to the front page.</p><p><a class="btn btn-navy" href="/">Front page</a> <button class="btn btn-ghost" data-open-search>Search ETFs</button></p></div>`);
+`<div class="wrap center" style="padding:70px 0"><span class="kicker">404</span><h1 class="h-serif" style="font-size:42px;margin:8px 0">That page moved or never existed</h1><p class="muted">Try the search, or head back to the front page.</p><p><a class="btn btn-navy" href="/">Front page</a> <button class="btn btn-ghost" data-open-search>Search ETFs</button></p></div><script>(function(){var m=location.pathname.match(/^\/etfs\/([a-z0-9-]+?)(-dividend-calculator|-alternatives)?\/?$/);if(m)location.replace("/etf?nf=1&t="+m[1].toUpperCase());})();</script>`);
+
+
+/* ---------- internal linking for articles ---------- */
+const LINK_STOP=new Set("ETF ETFS USA AUM NAV IRA ROC SEC FAQ DRIP ALL ONE BIG TOP PAY YES AND FOR ARE NOW ANY NEW OUT BUY WIN CASH FUND GOOD BEST HIGH SAFE MORE BOND YEAR FREE LIVE GDP CPI FED IPO EPS USD TAX ROTH HOLD MOAT COST LOW MAX PRO".split(" "));
+function autoLink(html){
+  const seen=new Set();let skip=0;
+  return html.split(/(<[^>]+>)/).map(part=>{
+    if(part.startsWith("<")){const m=part.match(/^<(\/?)\s*([a-zA-Z0-9]+)/);if(m&&["a","h1","h2","h3","h4","script","style","th","button","code","figcaption"].includes(m[2].toLowerCase())&&!/\/>$/.test(part)){skip+=m[1]?-1:1;if(skip<0)skip=0;}return part;}
+    if(skip>0)return part;
+    return part.replace(/(\$?)\b([A-Z]{3,5})\b/g,(m,d,t)=>{if(seen.has(t)||!ALL[t]||LINK_STOP.has(t))return m;seen.add(t);return `<a class="tkr" href="${etfPath(t)}">${d}${t}</a>`;});
+  }).join("");
+}
+function relatedBlock(a,body){
+  const tk=(a.tickers||[]).filter(t=>ALL[t]);
+  const txt=body.replace(/<[^>]+>/g," ").toLowerCase();
+  const L=[];const add=(h,t)=>{if(!L.find(x=>x[0]===h))L.push([h,t]);};
+  if(a.section==="weekly"||/weekly/.test(txt))add("/lists/weekly-dividend-etfs","Weekly dividend ETFs");
+  if(/monthly/.test(txt))add("/lists/monthly-dividend-etfs","Monthly dividend ETFs");
+  if(/covered call|option income|premium income/.test(txt))add("/lists/income-etfs","Income ETFs ranked by yield");
+  if(/price decay/.test(txt))add("/lists/high-yield-etfs-without-price-decay","High yield ETFs without price decay");
+  if(a.section==="growth"||/growth etf/.test(txt))add("/lists/growth-etfs","Growth ETFs ranked");
+  if(/expense ratio|fee/.test(txt))add("/lists/low-expense-ratio-etfs","Lowest-fee ETFs");
+  add("/lists/high-yield-etfs","High yield ETFs (10%+)");add("/lists/largest-etfs","Largest ETFs by assets");
+  const T0=tk[0],T1=tk[1];
+  const tools=[];
+  if(T0&&ALL[T0].yield!=null)tools.push([etfPath(T0)+"-dividend-calculator",T0+" dividend calculator"]);
+  if(T0&&T1)tools.push(["/etf-comparison?t="+tk.slice(0,4).join(","),tk.slice(0,4).join(" vs ")+" comparison"]);
+  tools.push(["/drip-calculator"+(T0?"?t="+T0:""),"DRIP calculator"],["/dividend-income-goal-calculator"+(T0?"?t="+T0:""),"Income goal calculator"],["/dividend-portfolio-calculator","Portfolio income calculator"]);
+  const card=t=>{const e=ALL[t];const v=e.yield!=null&&!(e.lists.includes("growth")&&!e.lists.includes("pro")&&!e.lists.includes("weekly"))?`<span class="live" data-live="${t}:yield" data-fmt="pct">${F.pct(e.yield)}</span> yield`:`<span class="live" data-live="${t}:tr" data-fmt="signed">${F.signed(e.tr)}</span> since inception`;return `<a href="${etfPath(t)}"><b>${t}</b><span>${esc(e.name)}</span><em>${v}</em></a>`;};
+  return `<style>.rel-box{font-family:var(--sans);border:1px solid var(--rule);border-radius:12px;background:var(--paper);padding:18px;margin:2em 0}.rel-box h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}.rel-box h3+div,.rel-box ul{margin-bottom:16px}.rel-funds{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}.rel-funds a{display:flex;flex-direction:column;gap:2px;border:1px solid var(--rule);border-radius:10px;padding:10px 12px;color:var(--ink);text-decoration:none!important}.rel-funds a:hover{border-color:var(--ink)}.rel-funds b{font-size:16px}.rel-funds span{font-size:12.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rel-funds em{font-style:normal;font-size:13px;font-weight:700;color:var(--ink-2)}.rel-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}.rel-cols ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:15px}@media(max-width:560px){.rel-cols{grid-template-columns:1fr}}</style>
+<div class="rel-box">${tk.length?`<h3>ETFs in this story</h3><div class="rel-funds">${tk.slice(0,8).map(card).join("")}</div>`:""}
+<div class="rel-cols"><div><h3>Free tools</h3><ul>${tools.slice(0,5).map(([h,t])=>`<li><a href="${h}">${esc(t)} &rarr;</a></li>`).join("")}</ul></div><div><h3>Related ETF lists</h3><ul>${L.slice(0,5).map(([h,t])=>`<li><a href="${h}">${esc(t)} &rarr;</a></li>`).join("")}</ul></div></div></div>`;
+}
 
 // Articles
 for(const a of ARTICLES){
   const s=SECTIONS[a.section]||SECTIONS.learn;
-  const body=renderTokens(a.body);
+  const body=autoLink(renderTokens(a.body));
   const url="/articles/"+a.slug;
   const keys=(a.keyNumbers||[]).map(([label,token])=>`<div class="kv"><span>${label}</span><span>${renderTokens(token)}</span></div>`).join("");
   const tk=new Set(a.tickers||[]);
@@ -540,6 +575,7 @@ for(const a of ARTICLES){
   <figure class="article-cover"><div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="${esc(a.title)}" width="800" height="450"></div></figure>
   <div class="prose">
 ${body}
+${relatedBlock(a,body)}
   <div class="author-box"><a class="avatar lg" href="${AUTHOR.url}">BS</a><div><div class="kicker">About the author</div><p><a href="${AUTHOR.url}"><strong>${AUTHOR.name}</strong></a> is the founder of Dividend Empire LLC and has been a dividend investor for more than ten years. He built and runs the TopETFs network, including TopDividendETFs.com and TopDividendETFsPRO, and shares daily ETF research with more than 80,000 followers as DevotedDividend. <a href="${AUTHOR.url}">More about Benjie</a></p></div></div>
   <p style="font-family:var(--sans);font-size:13.5px;color:var(--muted);line-height:1.55;margin:0 0 1.2em"><strong style="color:var(--ink-2)">How this article was made:</strong> Benjie picks every topic based on what he finds useful as a dividend investor and what readers ask about. Parts of this article were drafted with help from AI tools, then edited, fact-checked and shaped by Benjie. All fund numbers come from the TopETFs database and update daily.</p>
   <div class="callout"><strong>Keep going</strong>Screen every income ETF we track with filters for yield, fees, AUM and payout schedule on <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>. For the full weekly list see <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>, for monthly payers <a href="https://monthlyetfs.com/">MonthlyETFs.com</a>, and for growth funds <a href="https://growthetfs.com/">GrowthETFs.com</a>.</div>
@@ -618,7 +654,7 @@ ${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
 }
 
 // sitemap, rss, robots, CNAME, favicon
-const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,...PARTNER_PAGES,"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
+const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,...PARTNER_PAGES,...ETF_PAGES,"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
 out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
 out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;

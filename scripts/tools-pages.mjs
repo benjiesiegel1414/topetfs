@@ -79,7 +79,7 @@ const DISC=`<p class="tl-disc"><b>Disclaimer:</b> TopETFs.com tools are provided
 const tk=(n,l,ph,v)=>`<div class="field"><label>${l}</label><input name="${n}" placeholder="${ph}" value="${v||""}" autocomplete="off" spellcheck="false"></div>`;
 const nm=(n,l,v,step="any",extra="")=>`<div class="field"><label>${l}</label><input name="${n}" type="number" inputmode="decimal" step="${step}" value="${v}" ${extra}></div>`;
 const res=items=>`<div class="results">${items.map(([l,k,big])=>`<div><div class="label">${l}</div><div class="value${big?" big":""}" data-o="${k}">&nbsp;</div></div>`).join("")}</div>`;
-const sym=s=>ALL[s]?`<a class="tkr" href="/etf?t=${s}">${s}</a>`:s;
+const sym=s=>ALL[s]?`<a class="tkr" href="/etfs/${s.toLowerCase()}">${s}</a>`:s;
 
 const TOOLS=[
 {slug:"dividend-calculator",card:"ETF Dividend Calculator",icon:"calc",blurb:"See exactly what any ETF pays you per year, month, week and payout at today's yield.",
