@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
@@ -110,7 +111,7 @@ const NETWORK=[
   {name:"DividendProjection",domain:"dividendprojection.com",desc:"Project your future dividend income with live yields from our database.",color:"#0f5f8a",mark:"DP"},
   {name:"PhotonicsETFs",domain:"photonicsetfs.com",desc:"Tracking the ETFs behind lasers, optical networking and the photonics buildout.",color:"#05070E",mark:"PH"}
 ];
-const NAV=[["Latest","/latest"],["Income","/dividend"],["Weekly Pay","/weekly"],["Growth","/growth"],["ETF 101","/learn"],["Tools","/tools"],["Network","/network"]];
+const NAV=[["Latest","/latest"],["Screener","/screener"],["Income","/dividend"],["Weekly Pay","/weekly"],["Growth","/growth"],["ETF 101","/learn"],["Tools","/tools"],["Network","/network"]];
 const TAPE="SCHD,JEPI,JEPQ,QQQI,SPYI,VOO,DIVO,GPIQ,GPIX,VYM,DGRO,QQQ,VUG,SCHG,VGT,QDTE,XDTE,FEPI,QYLD,BALI,IDVO,HDV,NOBL,MSTY,ULTI";
 
 const LOGO=`<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#fff"/><rect x="6" y="17" width="4.5" height="9" rx="1.2" fill="#0e2a4d"/><rect x="13.75" y="12" width="4.5" height="14" rx="1.2" fill="#0e2a4d"/><rect x="21.5" y="6" width="4.5" height="20" rx="1.2" fill="#2a78d6"/></svg>`;
@@ -563,8 +564,64 @@ ${body}
 </div>`);
 }
 
+const SCREENER_PAGES=[];
+// ETF Screener: /screener plus pre-built screen pages (each one a real, indexable URL)
+{
+  const TES=createRequire(import.meta.url)("../assets/js/screener.js");
+  const slug=s=>s.toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+  const PRESETS=[
+    {slug:"high-yield-etfs",chip:"High yield 10%+",d:{ymin:10,sort:"yield"},h1:"High Yield ETFs",t:"High Yield ETFs: Every ETF Yielding 10% or More, Ranked",intro:"Every ETF in our database yielding 10% or more, sorted by yield. Check the price decay and total return columns before you get excited about the payout."},
+    {slug:"monthly-dividend-etfs",chip:"Monthly pay",d:{f:"Monthly",sort:"yield"},h1:"Monthly Dividend ETFs",t:"Monthly Dividend ETFs: Yields, Fees and Total Return, Ranked",intro:"ETFs that pay you every month, ranked by yield, with fees, fund size, total return and price decay side by side."},
+    {slug:"weekly-dividend-etfs",chip:"Weekly pay",d:{f:"Weekly",sort:"yield"},h1:"Weekly Dividend ETFs",t:"Weekly Dividend ETFs: Every Fund That Pays Weekly, Ranked",intro:"Funds that distribute every single week. Most use option strategies to generate the payout, so total return and price decay matter a lot here."},
+    {slug:"quarterly-dividend-etfs",chip:"Quarterly pay",d:{f:"Quarterly",sort:"aum"},h1:"Quarterly Dividend ETFs",t:"Quarterly Dividend ETFs: The Classic Dividend Payers, Ranked",intro:"The traditional dividend ETFs that pay four times a year, sorted by fund size."},
+    {slug:"high-yield-etfs-without-price-decay",chip:"High yield, no decay",d:{ymin:8,decay:"no",sort:"yield"},h1:"High Yield ETFs Without Price Decay",t:"High Yield ETFs Without Price Decay: 8%+ Yield That Held Its Value",intro:"ETFs yielding 8% or more whose share price is not below where it started. Big income without the shrinking share price."},
+    {slug:"largest-etfs",chip:"Largest ETFs",d:{sort:"aum"},h1:"Largest ETFs by Assets",t:"Largest ETFs by Assets Under Management (AUM)",intro:"The biggest funds we track, ranked by assets under management."},
+    {slug:"low-expense-ratio-etfs",chip:"Lowest fees",d:{ermax:0.2,sort:"er",dir:"asc"},h1:"Low Expense Ratio ETFs",t:"Low Expense Ratio ETFs: Funds Charging 0.20% or Less",intro:"ETFs charging 0.20% a year or less, cheapest first. Fees come out of your return every year, so they add up."},
+    {slug:"best-performing-etfs",chip:"Best annualized return",d:{age:3,sort:"ar"},h1:"Best Performing ETFs",t:"Best Performing ETFs by Annualized Return (3+ Year Track Record)",intro:"Funds with at least three years of history, ranked by annualized total return since inception, which levels the playing field between older and newer funds."},
+    {slug:"large-dividend-etfs",chip:"$1B+ income ETFs",d:{u:"income",aum:1e9,sort:"yield"},h1:"Large Dividend ETFs",t:"Dividend and Income ETFs With $1 Billion or More in Assets",intro:"Income ETFs with at least $1 billion in assets, ranked by yield. Bigger funds usually trade with tighter spreads and have longer track records."},
+    {slug:"new-etfs",chip:"New launches",d:{agemax:1,sort:"age",dir:"desc"},h1:"New ETFs",t:"New ETFs: Funds Launched in the Last 12 Months",intro:"Income and growth ETFs that launched within the last year, newest first. Short track records, so treat the numbers with care."},
+    {slug:"growth-etfs",chip:"Growth ETFs",d:{u:"growth",sort:"aum"},h1:"Growth ETFs",t:"Growth ETFs: Total Return and Assets, Ranked",intro:"Growth funds from GrowthETFs.com ranked by size, with total and annualized return since inception."},
+    {slug:"income-etfs",chip:"Income ETFs",d:{u:"income",sort:"yield"},h1:"Income ETFs",t:"Income ETFs: Dividend and Option-Income Funds, Ranked by Yield",intro:"Our full income list: dividend ETFs, covered call funds and option-income strategies, ranked by yield."}
+  ];
+  const pc={};for(const s in ALL){const p=ALL[s].provider;if(p)pc[p]=(pc[p]||0)+1;}
+  const PROV=Object.entries(pc).filter(([,c])=>c>=3).sort((a,b)=>b[1]-a[1]).map(([p,c])=>({slug:slug(p)+"-etfs",chip:p,d:{p,sort:"yield"},h1:`${p} ETFs`,t:`${p} ETFs: Full List With Yields, Fees and Total Returns`,intro:`Every ${p} ETF we track (${c} funds), with live yield, expense ratio, AUM, payout frequency, total return and price decay.`,prov:true}));
+  const ALLP=[...PRESETS,...PROV];
+  const chipbar=cur=>`<div class="chipbar scr-chips">${PRESETS.map(p=>`<a class="chip${cur===p.slug?" on":""}" href="/lists/${p.slug}">${p.chip}</a>`).join("")}</div>`;
+  const linkGrid=cur=>`<div class="section-head"><h2>Popular screens</h2></div><div class="scr-links">${PRESETS.filter(p=>p.slug!==cur).map(p=>`<a href="/lists/${p.slug}">${p.h1}</a>`).join("")}</div>
+<div class="section-head"><h2>ETFs by provider</h2></div><div class="scr-links">${PROV.filter(p=>p.slug!==cur).map(p=>`<a href="/lists/${p.slug}">${esc(p.h1)}</a>`).join("")}</div>`;
+  const GLOSS=[
+    ["What does the ETF screener do?","It filters every ETF in the TopETFs database by yield, payout frequency, fund size (AUM), expense ratio, total return, annualized return, price decay, fund age and provider. Every screen has its own link, so you can bookmark or share it."],
+    ["How often is the data updated?","The numbers come from the same database behind TopDividendETFsPRO, WeeklyETFs.com and GrowthETFs.com and refresh every day."],
+    ["What is price decay?","Price decay means the fund's share price is below where it started. Some high-yield funds pay out more than they earn, which shrinks the share price over time even while the payouts look great."],
+    ["Why look at annualized return instead of total return?","Total return here is since each fund's inception, so a fund from 2011 will usually show a bigger number than one from 2024. Annualized return divides that into a yearly rate, which makes funds of different ages easier to compare."],
+    ["What does the $10K pays per year column mean?","It is what $10,000 would pay over a year at the current yield. Payouts change, so treat it as a snapshot, not a promise."]
+  ];
+  const faqHtml=`<section class="faq scr-faq"><div class="section-head"><h2>How to use the ETF screener</h2></div>${GLOSS.map(([q,a])=>`<h3>${q}</h3><p>${a}</p>`).join("")}</section>`;
+  const faqLd=GLOSS.map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}}));
+  const shell=(base,d,lead,cur)=>{const q=TES.parse("",d);return `${chipbar(cur)}
+<div class="scr" data-screener data-base="${base}" data-defaults='${esc(JSON.stringify(d))}'>
+<div data-screener-formwrap>${TES.form(ALL,q)}</div>
+<div data-screener-out>${TES.render(ALL,q,base,d)}</div>
+</div>`;};
+  const n=Object.keys(ALL).length;
+  out["screener.html"]=page({title:`ETF Screener: Filter ${n}+ ETFs by Yield, AUM, Payout and Fees | TopETFs`,desc:`Free ETF screener. Filter ${n}+ dividend, weekly-pay and growth ETFs by yield, payout frequency, AUM, expense ratio, total return, price decay and provider.`,canonical:"/screener",active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>`,
+    ld:{"@context":"https://schema.org","@type":"WebApplication",name:"TopETFs ETF Screener",url:SITE+"/screener",applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"}}},
+  `<header class="page-head"><div class="wrap"><span class="kicker">Free tool</span><h1>ETF Screener</h1><p>Filter ${n}+ ETFs by yield, payout frequency, fund size, fees, total return, price decay and more. Every screen gets its own link, so bookmark the ones you use.</p></div></header>
+<div class="wrap">${shell("/screener",{},"",null)}
+<aside class="pro-ad scr-pro"><a href="https://topdividendetfspro.com/" target="_blank" rel="noopener" data-ga="screener"><span class="kicker">TopDividendETFsPRO</span><strong>Want ratings, tax grades and alerts on top of this?</strong><span>PRO adds our grades, tax treatment and deeper filters for every income ETF we track. Go PRO &rarr;</span></a></aside>
+${linkGrid(null)}${faqHtml}${proBand()}</div>`);
+  for(const p of ALLP){
+    const base="/lists/"+p.slug;
+    out["lists/"+p.slug+".html"]=page({title:`${p.t} | TopETFs`,desc:p.intro,canonical:base,active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>`,
+      ld:{"@context":"https://schema.org","@type":"CollectionPage",name:p.t,url:SITE+base,description:p.intro,isPartOf:{"@type":"WebSite",name:"TopETFs",url:SITE}}},
+    `<header class="page-head"><div class="wrap"><nav class="crumbs"><a href="/">Home</a> / <a href="/screener">ETF Screener</a></nav><span class="kicker">ETF Screener</span><h1>${esc(p.h1)}</h1><p>${esc(p.intro)} Updated daily. Adjust any filter below to build your own screen.</p></div></header>
+<div class="wrap">${shell(base,p.d,"",p.slug)}${linkGrid(p.slug)}${faqHtml}${proBand()}</div>`);
+  }
+  SCREENER_PAGES.push("/screener",...ALLP.map(p=>"/lists/"+p.slug));
+}
+
 // sitemap, rss, robots, CNAME, favicon
-const pages=["/","/latest","/dividend","/weekly","/growth","/learn","/tools","/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
+const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools","/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
 out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
 out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
