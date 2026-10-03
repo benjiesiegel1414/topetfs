@@ -1,0 +1,84 @@
+<!--meta
+{"title":"SCHD vs JEPI: Yield, Total Return, Fees and Which One Fits You","short":"SCHD vs JEPI","seoTitle":"SCHD vs JEPI: Yield, Total Return, Fees Compared","dek":"SCHD vs JEPI compared head to head: live yield, fees, assets, total return since inception, price decay and what $10,000 pays, plus who each fund fits.","section":"income","date":"2026-10-03","time":"08","read":7,"art":"bars","tickers":["SCHD","JEPI"],"coverLabel":"SCHD  ·  JEPI","keyNumbers":[["SCHD yield","{{live:SCHD:yield}}"],["JEPI yield","{{live:JEPI:yield}}"],["SCHD expense ratio","{{live:SCHD:er:pct2}}"],["JEPI expense ratio","{{live:JEPI:er:pct2}}"],["SCHD total return","{{live:SCHD:tr}}"]],"keyword":"SCHD vs JEPI","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:JEPI}} pays a much higher yield ({{live:JEPI:yield}} vs {{live:SCHD:yield}} for {{tkr:SCHD}}), and it pays monthly. SCHD pays quarterly and charges a far lower fee ({{live:SCHD:er:pct2}} vs {{live:JEPI:er:pct2}}).</li><li>SCHD has a total return of {{live:SCHD:tr}} since {{live:SCHD:inception:text}}. JEPI is at {{live:JEPI:tr}} since {{live:JEPI:inception:text}}. Different start dates, so this is not an apples-to-apples race.</li><li>SCHD fits people who want dividend growth and long-term compounding. JEPI fits people who want bigger monthly cash flow now and accept capped upside.</li></ul></div>
+
+<p class="lede">In the SCHD vs JEPI matchup, JEPI wins on current income and SCHD wins on cost, long-term track record and dividend growth. JEPI yields {{live:JEPI:yield}} today against {{live:SCHD:yield}} for SCHD, which means $10,000 produces about {{calc:usd:10000*JEPI.yield/100}} a year in JEPI versus {{calc:usd:10000*SCHD.yield/100}} in SCHD. The right pick depends on what you need the money to do.</p>
+
+<div class="board" data-w="board" data-syms="SCHD,JEPI,VOO" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>SCHD vs JEPI, with the S&P 500 as a yardstick</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>Two very different ways to get paid</h2>
+<p>These two funds get lumped together because both show up on every "best dividend ETF" list. But they make their money in completely different ways.</p>
+<p>{{tkr:SCHD}} is a plain stock fund. It tracks an index of U.S. companies picked for a record of paying dividends, with screens for financial strength and quality. The fund collects the dividends those companies pay and passes them to you each quarter. The yield is modest, but the payouts tend to grow as the underlying companies grow their dividends.</p>
+<p>{{tkr:JEPI}} is actively managed by JPMorgan. It holds a portfolio of U.S. large-cap stocks chosen to be less volatile than the market, then adds an options-based income layer, using equity-linked notes that behave like selling covered calls. In plain English: the fund sells away some of its upside in exchange for extra cash today. That cash shows up as a high monthly payout. If you want the full mechanics, I broke them down in <a href="/articles/covered-call-etfs-explained">Covered Call ETFs, Explained</a>.</p>
+<p>That one difference drives almost everything else in this comparison.</p>
+
+<h2>Yield and fees: the headline numbers</h2>
+<p>JEPI yields {{live:JEPI:yield}} and pays {{live:JEPI:freq:text}}. SCHD yields {{live:SCHD:yield}} and pays {{live:SCHD:freq:text}}. On pure income, JEPI is not close.</p>
+<p>Fees go the other way. SCHD charges {{live:SCHD:er:pct2}} a year. JEPI charges {{live:JEPI:er:pct2}}. On a $100,000 position, that is {{calc:usd2:100000*SCHD.er/100}} a year for SCHD and {{calc:usd2:100000*JEPI.er/100}} for JEPI. JEPI's fee is higher because it is actively managed and runs an options strategy, and you can argue it earns that. Still, a fee is a guaranteed drag every single year. If you want to see how that adds up over decades, check out <a href="/articles/expense-ratio-math">the expense ratio math</a>.</p>
+<p>One more point on size. SCHD has {{live:SCHD:aum:aum}} in assets and JEPI has {{live:JEPI:aum:aum}}. Both are big, liquid funds, so trading them is easy. Neither is a tiny fund that might disappear next year.</p>
+
+<h2>What each one pays on the same investment</h2>
+<p>Here's the math I always run first. Same money, two funds, current yields.</p>
+<ul>
+<li><strong>$10,000:</strong> about {{calc:usd:10000*SCHD.yield/100}} a year in SCHD, or about {{calc:usd:10000*JEPI.yield/100}} a year in JEPI.</li>
+<li><strong>$100,000:</strong> about {{calc:usd:100000*SCHD.yield/100/12}} a month in SCHD (averaged out), or about {{calc:usd:100000*JEPI.yield/100/12}} a month in JEPI.</li>
+<li><strong>The gap:</strong> on $100,000, JEPI pays roughly {{calc:usd:100000*(JEPI.yield-SCHD.yield)/100}} more per year at today's yields.</li>
+</ul>
+<p>Want $1,000 a month, which is $12,000 a year? At today's yields you would need about {{calc:usd:12000/(SCHD.yield/100)}} in SCHD, or about {{calc:usd:12000/(JEPI.yield/100)}} in JEPI. That is a big difference in required capital. I walked through the SCHD side of this in <a href="/articles/how-much-do-i-need-in-schd-to-make-1000-a-month">How Much Do You Need in SCHD to Make $1,000 a Month?</a></p>
+<p>One caution. JEPI's payout moves around from month to month because it depends on option premiums, which rise and fall with market volatility. SCHD's payout is steadier and has a habit of growing. A yield is a snapshot, not a promise.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="SCHD,JEPI" data-per="year">
+  <p class="figure-title">SCHD vs JEPI: income on the same investment</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<h2>Total return and price decay</h2>
+<p>This is where the shiny yield can mislead you. Total return counts both the dividends you collect and the change in the share price. A high yield means nothing if the share price keeps sinking.</p>
+<p>Since inception, SCHD shows a total return of {{live:SCHD:tr}}. JEPI shows {{live:JEPI:tr}}. Before anyone declares a winner, remember the start dates: SCHD launched on {{live:SCHD:inception:text}} and JEPI on {{live:JEPI:inception:text}}. SCHD has had far more time, and it lived through a long bull market. JEPI is a much younger fund with a shorter record, so its number tells you less about how it behaves across a full market cycle.</p>
+<p>On price decay, our data flags SCHD as "{{live:SCHD:decay:decay}}" and JEPI as "{{live:JEPI:decay:decay}}". Neither fund is showing the steady share price erosion that wrecks a lot of high-yield products. That is a good sign for JEPI in particular, since covered call funds are where I check this first.</p>
+<p>Still, the trade-off is real. Because JEPI gives up some upside, it tends to lag in strong rallies. In a sharp market drop it has been designed to fall a bit less, but it is still stocks, so it still falls. For the bigger picture on this, read <a href="/articles/yield-vs-total-return">The Yield Trap</a>.</p>
+
+<h2>How the S&P 500 and cash change the picture</h2>
+<p>A useful sanity check is to ask what you would give up by choosing either fund over a plain index fund. {{tkr:VOO}} yields {{live:VOO:yield}} with a {{live:VOO:er:pct2}} fee and a total return of {{live:VOO:tr}} since {{live:VOO:inception:text}}. Again, a longer track record than JEPI, and a different starting point than SCHD.</p>
+<p>The point isn't that VOO is better. It is that income funds are making a choice: more cash now, or more growth later. If you do not need the cash flow, you are paying for something you may not use.</p>
+<p>On the other side, {{tkr:SGOV}} holds very short-term Treasuries and yields {{live:SGOV:yield}} right now. That is the "boring" benchmark. If JEPI's extra yield doesn't compensate you for stock market risk compared with a near-cash fund, that is worth thinking about. JEPI is not a savings account, and it can have down months.</p>
+
+<h2>Who SCHD fits</h2>
+<p>SCHD tends to fit investors with a long runway. If you are reinvesting dividends and will not touch the money for a decade or more, a lower yield with growing payouts and a tiny fee is a strong setup. Turning on DRIP matters a lot here, which I covered in <a href="/articles/drip-reinvest-or-spend">Reinvest or Spend?</a></p>
+<p>It also fits people who dislike complexity. You own a basket of dividend-paying U.S. companies. There are no options to understand. The trade-off is lower income today, and you still take full stock market risk.</p>
+
+<h2>Who JEPI fits</h2>
+<p>JEPI tends to fit people who want income now. Think of retirees or near-retirees who want a monthly paycheck from their portfolio, or anyone who simply wants more cash flow per dollar invested. Monthly payments also make budgeting easier.</p>
+<p>The trade-offs are a higher fee, a payout that can fluctuate, limited upside in big rallies, and a much shorter history. Also, because of how option income works, distributions are not all treated like ordinary qualified dividends, so check the tax side with a professional before you build a plan around it.</p>
+<p>If you want an even bigger yield from the same family, JEPQ yields {{live:JEPQ:yield}} with a {{live:JEPQ:er:pct2}} fee, but it leans on the Nasdaq and comes with more volatility.</p>
+
+<h2>Can you own both?</h2>
+<p>Plenty of investors do, and it is a reasonable way to split the difference. SCHD can be the growth-of-income engine, and JEPI can be the higher-yield sleeve that boosts monthly cash. The mix is up to you, and it should match how soon you need the income. If you want to compare SCHD with other dividend growth funds instead, see <a href="/articles/schd-vs-vym-vs-dgro-vs-vig">SCHD vs. VYM vs. DGRO vs. VIG</a>, and for a deeper look at SCHD alone, <a href="/articles/schd-etf-dividend-yield-total-return">here is the full SCHD breakdown</a>.</p>
+<p>To screen more income funds side by side, try <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>. To plan future income, use <a href="https://dividendprojection.com/">Dividend Projection</a> or the calculators in <a href="/tools">our tools</a>.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Is SCHD or JEPI better for income?</h3>
+<p>JEPI pays more today, with a yield of {{live:JEPI:yield}} versus {{live:SCHD:yield}} for SCHD. SCHD's payouts have more room to grow over time, so "better" depends on whether you want income now or growing income later.</p>
+<h3>Does JEPI pay monthly?</h3>
+<p>Yes. JEPI pays {{live:JEPI:freq:text}}. SCHD pays {{live:SCHD:freq:text}}.</p>
+<h3>Which has the lower expense ratio, SCHD or JEPI?</h3>
+<p>SCHD, at {{live:SCHD:er:pct2}}, compared with {{live:JEPI:er:pct2}} for JEPI.</p>
+<h3>Has SCHD or JEPI had better total return?</h3>
+<p>SCHD shows {{live:SCHD:tr}} since {{live:SCHD:inception:text}}, and JEPI shows {{live:JEPI:tr}} since {{live:JEPI:inception:text}}. The funds started years apart, so the totals can't be compared directly.</p>
+<h3>Does JEPI have price decay?</h3>
+<p>Our data shows price decay as "{{live:JEPI:decay:decay}}" for JEPI and "{{live:SCHD:decay:decay}}" for SCHD. That can change, so keep checking.</p>
+<h3>Can I hold SCHD and JEPI together?</h3>
+<p>Yes, many investors do. SCHD brings dividend growth and low cost, while JEPI adds higher monthly income. How much of each depends on your goals.</p>
+</section>
+
+<h2>My bottom line on SCHD vs JEPI</h2>
+<p>If I had to sum it up in one line: SCHD is the compounder and JEPI is the paycheck. SCHD gives you a lower yield, a very low fee, and a long record. JEPI gives you a much bigger monthly payout in exchange for a higher fee, capped upside and a shorter history.</p>
+<p>Neither one is a buy or sell signal, and I'm not telling you what to own. Look at what you need your money to do over the next 5 to 20 years, check the total return and not just the yield, and do your own due diligence. If you want more ideas on the monthly side, browse <a href="https://weeklyetfs.com/">WeeklyETFs</a> and <a href="https://topdividendetfs.com/">the top dividend ETFs list</a>.</p>
