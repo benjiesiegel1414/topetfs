@@ -1,0 +1,102 @@
+<!--meta
+{"title":"JEPI ETF: Dividend Yield, Total Return and What $10,000 Pays Today","short":"JEPI guide","seoTitle":"JEPI ETF: Yield, Total Return and $10,000 Income","dek":"JEPI ETF explained: live yield, fee, total return and what $10,000 pays today, plus how its covered call strategy works and who it fits best.","section":"income","date":"2026-10-04","time":"08","read":8,"art":"bars","tickers":["JEPI"],"coverLabel":"JEPI  ·  Monthly income","keyNumbers":[["JEPI yield","{{live:JEPI:yield}}"],["Expense ratio","{{live:JEPI:er:pct2}}"],["Assets","{{live:JEPI:aum:aum}}"],["Total return since inception","{{live:JEPI:tr}}"],["Price decay flag","{{live:JEPI:decay:decay}}"]],"keyword":"JEPI ETF","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:JEPI}} yields {{live:JEPI:yield}} right now and pays {{live:JEPI:freq:text}}, so $10,000 throws off about {{calc:usd:10000*JEPI.yield/100}} a year at today's rate.</li><li>The income comes from selling covered call options on top of a low-volatility stock portfolio. That is why the yield is high, and also why upside gets capped in strong rallies.</li><li>Total return since inception is {{live:JEPI:tr}} and the price decay flag is {{live:JEPI:decay:decay}}, but the fund is young and has never been tested through a full bear market on its own record.</li></ul></div>
+
+<p class="lede">The {{tkr:JEPI}} ETF currently yields {{live:JEPI:yield}}, charges {{live:JEPI:er:pct2}} a year, manages {{live:JEPI:aum:aum}} in assets and pays {{live:JEPI:freq:text}}. On a $10,000 investment, that works out to roughly {{calc:usd:10000*JEPI.yield/100}} a year, or about {{calc:usd:10000*JEPI.yield/100/12}} a month, at today's yield. Here's what is behind that number and what you give up to get it.</p>
+
+<div class="board" data-w="board" data-syms="JEPI,JEPQ,QQQI,SGOV,SCHD,VOO" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>JEPI vs the funds people compare it to</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>What JEPI actually is</h2>
+<p>JEPI is the JPMorgan Equity Premium Income ETF. It is actively managed, which means a JPMorgan team picks the holdings instead of tracking an index. The fund started on {{live:JEPI:inception:text}}, so it has a short history compared with classic dividend funds.</p>
+<p>The goal is simple: pay a high monthly income while taking less stock market swing than the broad market. It tries to do that with two pieces working together. One is a portfolio of US large-cap stocks chosen for lower volatility. The other is an options overlay that generates extra income.</p>
+<p>If you want the bigger picture on this style of fund, I break it down in <a href="/articles/covered-call-etfs-explained">Covered Call ETFs, Explained</a>.</p>
+
+<h2>How JEPI makes its income</h2>
+<p>A covered call is when you own a stock and sell someone the right to buy it from you at a set price. They pay you a premium for that right. You keep the premium no matter what. In exchange, if the stock shoots well above the set price, you don't get the extra gain.</p>
+<p>JEPI does this on the S&amp;P 500, but not by writing options directly. It uses equity-linked notes, or ELNs. An ELN is a debt note from a bank whose payout is tied to the result of an options position on the index. Think of it as a packaged way to collect option premium inside the fund.</p>
+<p>So the monthly check has two sources: dividends from the stocks the fund holds, and option premium passed through the ELNs. The premium part moves around with market volatility. When markets are choppy, premiums tend to be richer. When markets are calm, they shrink.</p>
+<p>That is the key point: <strong>the payout is variable</strong>. It is not a fixed dividend like a bond coupon. Some months pay more, some pay less.</p>
+
+<h2>The trade-off: capped upside</h2>
+<p>Selling calls is not free money. You are swapping some of the big upside for steady income. In a strong bull market, a covered call fund usually trails the plain index, because the gains above the strike get handed to the option buyer.</p>
+<p>Here's the comparison that makes it clear. {{tkr:VOO}} simply holds the S&amp;P 500 and yields {{live:VOO:yield}}, with a fee of {{live:VOO:er:pct2}}. JEPI yields {{live:JEPI:yield}}. You are getting far more cash now, and you are accepting less participation when stocks run hard.</p>
+<p>On the flip side, because the stock basket leans low-volatility and the premium cushions small drops, JEPI is designed to hold up better than the index in choppy or falling markets. It will not avoid losses. If the market drops sharply, JEPI drops too, just usually by a smaller amount in theory.</p>
+
+<h2>What $10,000 and $100,000 pay today</h2>
+<p>Here is the practical math at JEPI's current yield of {{live:JEPI:yield}}:</p>
+<ul>
+<li><strong>$10,000 invested:</strong> about {{calc:usd:10000*JEPI.yield/100}} a year, or {{calc:usd:10000*JEPI.yield/100/12}} a month.</li>
+<li><strong>$100,000 invested:</strong> about {{calc:usd:100000*JEPI.yield/100}} a year, or {{calc:usd:100000*JEPI.yield/100/12}} a month.</li>
+<li><strong>To target $1,000 a month:</strong> you would need roughly {{calc:usd:12000/(JEPI.yield/100)}} invested at this yield.</li>
+</ul>
+<p>Now compare that with a dividend growth style fund. {{tkr:SCHD}} yields {{live:SCHD:yield}}, so $100,000 pays about {{calc:usd:100000*SCHD.yield/100/12}} a month today, versus {{calc:usd:100000*JEPI.yield/100/12}} for JEPI. For a deeper look at that fund, see <a href="/articles/how-much-do-i-need-in-schd-to-make-1000-a-month">how much you need in SCHD for $1,000 a month</a>.</p>
+<p>One caution. These numbers use today's yield, and JEPI's yield will drift as option premiums and the share price change. Treat them as a snapshot, not a promise.</p>
+
+<h2>Total return and price decay</h2>
+<p>Yield only tells you what the fund pays. Total return tells you what you actually earned once price changes are included. JEPI's total return since inception is {{live:JEPI:tr}}, and our price decay flag reads {{live:JEPI:decay:decay}}. Price decay means the share price has been steadily eroding over time, which is the classic warning sign for some high-yield funds.</p>
+<p>That is a good sign, but keep the context in mind. The fund's inception date is {{live:JEPI:inception:text}}, and that return covers one stretch of market history, not every kind of market.</p>
+<p>Here is a fair comparison. {{tkr:SGOV}} started right around the same time, on {{live:SGOV:inception:text}}, and holds short-term Treasury bills. Its total return since inception is {{live:SGOV:tr}} with a yield of {{live:SGOV:yield}}. JEPI's {{live:JEPI:tr}} over a nearly identical window shows what taking equity risk added. It also came with a lot more day-to-day swings than T-bills.</p>
+<p>Don't compare JEPI's total return to {{tkr:VOO}} at {{live:VOO:tr}} and call it a day. VOO launched on {{live:VOO:inception:text}}, years earlier, through a long bull run. Different start dates, different story. If you want to go further on this idea, read <a href="/articles/yield-vs-total-return">The Yield Trap</a>.</p>
+
+<h2>JEPI vs the close alternatives</h2>
+<h3>JEPI vs JEPQ</h3>
+<p>{{tkr:JEPQ}} is the same idea applied to the Nasdaq 100. It yields {{live:JEPQ:yield}} against JEPI's {{live:JEPI:yield}}, with the same {{live:JEPQ:er:pct2}} fee. The higher yield comes with a more tech-heavy portfolio, which usually means bigger swings. JEPQ also launched later, on {{live:JEPQ:inception:text}}, so its record is shorter.</p>
+<h3>JEPI vs QQQI</h3>
+<p>{{tkr:QQQI}} pushes the income further, yielding {{live:QQQI:yield}}, but it charges {{live:QQQI:er:pct2}} and started on {{live:QQQI:inception:text}}. It has the shortest track record in this group. A bigger yield on a thinner history deserves extra homework.</p>
+<h3>JEPI vs SCHD</h3>
+<p>SCHD pays less today ({{live:SCHD:yield}}) but holds dividend payers and has a total return of {{live:SCHD:tr}} since {{live:SCHD:inception:text}}. It pays {{live:SCHD:freq:text}}, while JEPI pays {{live:JEPI:freq:text}}. I wrote a full head-to-head in <a href="/articles/schd-vs-jepi">SCHD vs JEPI</a>.</p>
+<h3>JEPI vs SGOV</h3>
+<p>If your only goal is safe cash yield, SGOV at {{live:SGOV:yield}} is a different tool. JEPI pays more because it takes stock market risk. That is the whole trade.</p>
+
+<h2>Risks you should know about</h2>
+<ul>
+<li><strong>Variable income.</strong> The monthly payment changes. Don't build a budget that assumes the same amount every month.</li>
+<li><strong>Capped upside.</strong> In big rallies, JEPI will likely lag a plain S&amp;P 500 fund.</li>
+<li><strong>Still a stock fund.</strong> A market drop will hit the share price. The options income softens it but does not stop it.</li>
+<li><strong>Short track record.</strong> The fund only started on {{live:JEPI:inception:text}}. We have not seen how it behaves through a long, grinding bear market.</li>
+<li><strong>Active management and counterparty risk.</strong> Results depend on JPMorgan's stock picks and on the banks that issue the ELNs.</li>
+<li><strong>Tax treatment.</strong> Much of the payout can be taxed differently than ordinary qualified dividends. Check with a tax professional about your situation, especially in a taxable account.</li>
+</ul>
+<p>The fee is worth a look too. At {{live:JEPI:er:pct2}}, JEPI costs far more than {{tkr:VOO}} at {{live:VOO:er:pct2}}. Active management is not free. I cover how fees compound in <a href="/articles/expense-ratio-math">The Fee That Compounds Against You</a>.</p>
+
+<h2>Who JEPI tends to fit, and who might skip it</h2>
+<p>JEPI tends to fit people who want monthly cash flow from stocks, with a calmer ride than a full index fund. Think retirees or near-retirees who want to turn a lump sum into income, or investors who want a smoother core holding and don't mind giving up some upside.</p>
+<p>It tends to fit less well for younger investors with decades to compound and no need for cash now. If you are going to reinvest every payout anyway, a low-cost growth or index fund may do more of the heavy lifting over time. And if you want the highest possible growth, JEPI's capped upside works against you.</p>
+<p>It is also not a substitute for safe money. If you need principal stability, it is not T-bills. This is not a buy or sell signal, just how the trade-offs line up.</p>
+
+<h2>Run your own numbers</h2>
+<p>Change the amount below to see what JEPI and a few alternatives would pay a year at today's yields. If you want to project how income might grow over time, try <a href="https://dividendprojection.com/">Dividend Projection</a> or the calculators in <a href="/tools">our tools</a>.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="JEPI,JEPQ,SCHD,SGOV,VOO" data-per="year">
+  <p class="figure-title">What JEPI and alternatives pay on your amount</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<p>Want to screen every income ETF side by side? Browse the full list at <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Does JEPI pay monthly?</h3>
+<p>Yes. JEPI's payout frequency in our data is {{live:JEPI:freq:text}}. The amount changes from month to month because part of it comes from option premium.</p>
+<h3>What is JEPI's dividend yield today?</h3>
+<p>JEPI currently yields {{live:JEPI:yield}}. That equals about {{calc:usd:10000*JEPI.yield/100}} a year on $10,000, though the yield moves over time.</p>
+<h3>Is JEPI a good investment?</h3>
+<p>It depends on your goal. It can suit someone who wants monthly income and a smoother ride, but it gives up some upside in strong markets and has a short track record since {{live:JEPI:inception:text}}.</p>
+<h3>How does JEPI generate its income?</h3>
+<p>It holds a portfolio of lower-volatility US large-cap stocks and uses equity-linked notes to sell call options tied to the S&amp;P 500. The dividends plus the option premium are paid out to shareholders.</p>
+<h3>JEPI vs JEPQ: which is better?</h3>
+<p>JEPQ yields {{live:JEPQ:yield}} versus {{live:JEPI:yield}} for JEPI, but it is built on the Nasdaq 100 and is usually more volatile. Neither is better for everyone, it comes down to how much swing you can handle.</p>
+<h3>Does JEPI have price decay?</h3>
+<p>Our database flag for price decay on JEPI is {{live:JEPI:decay:decay}}. That is a snapshot, so it is worth rechecking over time.</p>
+</section>
+
+<h2>My bottom line on JEPI</h2>
+<p>JEPI is a real income tool, not just a shiny yield. At {{live:JEPI:yield}} with a {{live:JEPI:er:pct2}} fee, {{live:JEPI:aum:aum}} in assets and a total return of {{live:JEPI:tr}} since {{live:JEPI:inception:text}}, the numbers look solid so far. But you are paying for that income with capped upside, variable payouts and a track record that has not seen every market.</p>
+<p>I would look at it as one piece of a portfolio, not the whole thing. Pair the monthly cash with growth or dividend growth funds, check the total return and not just the yield, and do your own due diligence. This isn't a buy or sell signal. It's the homework I would want done before putting my own money in.</p>
