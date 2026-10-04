@@ -5,6 +5,9 @@ const TES=createRequire(import.meta.url)("../assets/js/screener.js");
 export const etfSlug=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,"-");
 export const etfPath=s=>"/etfs/"+etfSlug(s);
 
+export const SIGNUP=v=>`<!-- EMAIL SIGNUP -->
+<div class="etf-signup" data-variant="${v}" data-color="#0e2a4d" data-accent="#b8860b" data-source="topetfs"></div>
+<script src="/email-signup.js" defer></script>`;
 export function buildEtfPages({page,out,esc,F,ALL,SITE,ARTICLES,proBand}){
 const R=TES.rows(ALL);
 const BY={};R.forEach(r=>BY[r.sym]=r);
@@ -179,6 +182,7 @@ for(const r of R){
 `${head(r,"o")}
 <div class="wrap"><div class="ep-body"><div>
 <div class="ep-stats">${st.map(([k,v,s])=>`<div><div class="k">${k}</div><div class="v">${v}</div>${s?`<div class="s">${s}</div>`:""}</div>`).join("")}</div>
+${SIGNUP("featured")}
 <h2 class="ep-h2">${S} at a glance</h2><div class="ep-prose">${T.join("")}</div>
 ${inc?`<h2 class="ep-h2">How much will ${S} pay you?</h2><div class="ep-calc" data-income-calc data-sym="${S}" data-yield="${r.yield}" data-n="${n}"><div class="field"><label>Amount invested ($)</label><input inputmode="decimal" value="10000"></div>
 <div class="results"><div><div class="label">Per year</div><div class="value" data-c="yr"></div></div><div><div class="label">Per month</div><div class="value" data-c="mo"></div></div><div><div class="label">Per week</div><div class="value" data-c="wk"></div></div><div><div class="label">Per ${esc((r.freq||"quarterly").toLowerCase())} payout</div><div class="value" data-c="per"></div></div></div>
@@ -210,6 +214,7 @@ ${DISC}
 <div class="ep-calc" data-income-calc data-sym="${S}" data-yield="${r.yield}" data-n="${n}"><div class="field"><label>Amount invested in ${S} ($)</label><input inputmode="decimal" value="10000"></div>
 <div class="results"><div><div class="label">Per year</div><div class="value big" data-c="yr"></div></div><div><div class="label">Per month</div><div class="value" data-c="mo"></div></div><div><div class="label">Per week</div><div class="value" data-c="wk"></div></div><div><div class="label">Per ${esc((r.freq||"quarterly").toLowerCase())} payout</div><div class="value" data-c="per"></div></div></div>
 <p class="figure-note">Based on ${S}'s current ${L(S,"yield","pct")} yield, before taxes. Payouts change over time.</p></div>
+${SIGNUP("featured")}
 <h2 class="ep-h2">What different amounts in ${S} pay</h2>
 <div class="tbl-scroll"><table class="data ep-tbl"><thead><tr><th class="l">Invested</th><th>Per year</th><th>Per month</th><th>Per payout</th><th>Yearly fee</th></tr></thead><tbody>
 ${amts.map(a=>`<tr><td class="l"><b>${usd(a,0)}</b></td><td>${usd(a*r.yield/100,0)}</td><td>${usd(a*r.yield/100/12)}</td><td>${usd(a*r.yield/100/n)}</td><td>${r.er!=null?usd(a*r.er/100,0):"n/a"}</td></tr>`).join("")}
@@ -236,6 +241,7 @@ ${DISC}
 <div class="wrap"><div class="ep-body"><div>
 <div class="ep-prose"><p>These are the ETFs in our database that look most like <strong>${S}</strong> (${esc(r.name)}), based on strategy, ${inc?"yield, ":""}payout schedule, provider and fund size. ${S} is shown first so you can see how each one stacks up.</p></div>
 ${peerTable(r,A)}
+${SIGNUP("featured")}
 <h2 class="ep-h2">Head-to-head comparisons</h2><div class="ep-chips">${A.slice(0,10).map(x=>`<a class="chip" href="/etf-comparison?t=${S},${x.sym}">${S} vs ${x.sym}</a>`).join("")}<a class="chip" href="/etf-comparison?t=${[S].concat(A.slice(0,3).map(x=>x.sym)).join(",")}">${S} vs top 3</a></div>
 <h2 class="ep-h2">Quick read on the alternatives</h2><div class="ep-prose">${A.slice(0,6).map(x=>{const bits=[];if(inc&&x.yield!=null&&r.yield!=null)bits.push(x.yield>r.yield?`pays more (${pct(x.yield)} vs ${pct(r.yield)})`:x.yield<r.yield?`pays less (${pct(x.yield)} vs ${pct(r.yield)})`:`pays a similar ${pct(x.yield)}`);if(x.er!=null&&r.er!=null)bits.push(x.er<r.er?`costs less (${pct(x.er,2)})`:x.er>r.er?`costs more (${pct(x.er,2)})`:"charges the same fee");if(x.ar!=null&&r.ar!=null)bits.push(`has returned ${sg(x.ar)} a year vs ${sg(r.ar)} for ${S}`);if(x.decay)bits.push("has price decay");return `<p><a class="tkr" href="${etfPath(x.sym)}">${x.sym}</a> ${esc(x.name)}${bits.length?": "+bits.join(", ")+".":"."}</p>`;}).join("")}</div>
 ${faqHtml(afaq)}
@@ -251,6 +257,7 @@ const letters=Object.keys(groups).sort();
 out["etfs/index.html"]=page({title:`All ETFs A-Z: ${N} ETF Profiles With Live Prices and Yields | TopETFs`,desc:`Browse ${N} ETF profiles from A to Z with live prices, dividend yields, expense ratios, assets and total returns.`,canonical:"/etfs/",active:"",extra:EXTRA},
 `<header class="page-head"><div class="wrap"><span class="kicker">ETF directory</span><h1>All ETFs A-Z</h1><p>${N} ETF profiles with live prices, yields, fees, assets and returns. Pick a ticker, or use the <a href="/screener">screener</a> to filter.</p></div></header>
 <div class="wrap" style="margin-top:20px"><nav class="ep-az" aria-label="Jump to letter">${letters.map(l=>`<a href="#l-${l}">${l}</a>`).join("")}</nav>
+${SIGNUP("featured")}
 ${letters.map(l=>`<h2 class="ep-h2" id="l-${l}" style="scroll-margin-top:70px">${l}</h2><div class="ep-grp">${groups[l].map(s=>`<a href="${etfPath(s)}"><b>${s}</b><span>${esc(BY[s].name)}</span></a>`).join("")}</div>`).join("")}
 ${proBand()}</div>`);
 urls.unshift("/etfs/");

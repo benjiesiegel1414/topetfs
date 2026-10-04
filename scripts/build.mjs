@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { buildTools } from "./tools-pages.mjs";
 import { buildPartner } from "./partner-page.mjs";
-import { buildEtfPages, etfPath } from "./etf-pages.mjs";
+import { buildEtfPages, etfPath, SIGNUP } from "./etf-pages.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
@@ -289,6 +289,8 @@ out["index.html"]=page({title:"TopETFs: ETF news, research and income math with 
   <div class="river">${bySec("income").slice(0,3).map(a=>storyCard(a,{img:false})).join('<hr style="border:0;border-top:1px solid var(--rule);margin:16px 0">')}</div>
 </div>
 
+${SIGNUP("subtle")}
+
 <div class="section-head"><div><h2>Weekly Pay</h2><p>Funds that pay you every week</p></div><a href="/weekly">Weekly hub &rarr;</a></div>
 <div class="grid-2" style="align-items:start">
   <div class="figure" style="margin:0" data-w="income" data-src="weekly" data-default="${D.weekly.some(e=>e.sym==="QDTE")?"QDTE":D.weekly[0].sym}">
@@ -319,6 +321,7 @@ ${networkGrid()}
 out["latest.html"]=page({title:"Latest ETF stories | TopETFs",desc:"Every TopETFs story, newest first: income, weekly-pay and growth ETF research with live data.",canonical:"/latest",active:"/latest"},
 `<header class="page-head"><div class="wrap"><span class="kicker">All stories</span><h1>Latest</h1><p>Every story we publish, newest first. Numbers inside each story update live from our database.</p>
 <div class="chipbar" id="filters"><button class="chip" aria-pressed="true" data-f="all">All</button>${Object.entries(SECTIONS).map(([k,s])=>`<button class="chip" aria-pressed="false" data-f="${k}">${s.name}</button>`).join("")}</div></div></header>
+${SIGNUP("featured")}
 <div class="wrap"><div class="river" id="river">${ARTICLES.map(a=>riverItem(a).replace('class="river-item"',`class="river-item" data-sec="${a.section}"`)).join("")}</div></div>
 <script>document.getElementById("filters").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;this.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b);});var f=b.getAttribute("data-f");document.querySelectorAll("#river [data-sec]").forEach(function(r){r.style.display=f==="all"||r.getAttribute("data-sec")===f?"":"none";});});</script>`);
 
@@ -331,6 +334,7 @@ const hub=(file,key,title,h1,intro,boardHtml,extra="")=>{
 ${list.length?`<div class="section-head"><h2>Stories</h2></div><div class="grid-3">${list.map(a=>storyCard(a)).join("")}</div>`:""}
 <div class="section-head"><div><h2>Live leaderboard</h2><p>Sorted from today's data. Click any fund for its profile.</p></div></div>
 ${boardHtml}
+${SIGNUP("featured")}
 ${extra}
 ${proBand()}
 </div>`);
@@ -575,6 +579,7 @@ for(const a of ARTICLES){
   <figure class="article-cover"><div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="${esc(a.title)}" width="800" height="450"></div></figure>
   <div class="prose">
 ${body}
+${SIGNUP("featured")}
 ${relatedBlock(a,body)}
   <div class="author-box"><a class="avatar lg" href="${AUTHOR.url}">BS</a><div><div class="kicker">About the author</div><p><a href="${AUTHOR.url}"><strong>${AUTHOR.name}</strong></a> is the founder of Dividend Empire LLC and has been a dividend investor for more than ten years. He built and runs the TopETFs network, including TopDividendETFs.com and TopDividendETFsPRO, and shares daily ETF research with more than 80,000 followers as DevotedDividend. <a href="${AUTHOR.url}">More about Benjie</a></p></div></div>
   <p style="font-family:var(--sans);font-size:13.5px;color:var(--muted);line-height:1.55;margin:0 0 1.2em"><strong style="color:var(--ink-2)">How this article was made:</strong> Benjie picks every topic based on what he finds useful as a dividend investor and what readers ask about. Parts of this article were drafted with help from AI tools, then edited, fact-checked and shaped by Benjie. All fund numbers come from the TopETFs database and update daily.</p>
@@ -641,6 +646,7 @@ ${NOTE}
     ld:{"@context":"https://schema.org","@type":"WebApplication",name:"TopETFs ETF Screener",url:SITE+"/screener",applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"}}},
   `<header class="page-head"><div class="wrap"><span class="kicker">Free tool</span><h1>ETF Screener</h1><p>Filter ${n}+ ETFs by yield, payout frequency, fund size, fees, total return, price decay and more. Every screen gets its own link, so bookmark the ones you use.</p></div></header>
 <div class="wrap">${shell("/screener",{},"",null)}
+${SIGNUP("featured")}
 <aside class="pro-ad scr-pro"><a href="https://topdividendetfspro.com/" target="_blank" rel="noopener" data-ga="screener"><span class="kicker">TopDividendETFsPRO</span><strong>Want ratings, tax grades and alerts on top of this?</strong><span>PRO adds our grades, tax treatment and deeper filters for every income ETF we track. Go PRO &rarr;</span></a></aside>
 ${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
   for(const p of ALLP){
@@ -648,7 +654,7 @@ ${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
     out["lists/"+p.slug+".html"]=page({title:`${p.t} | TopETFs`,desc:p.intro,canonical:base,active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>${SCR_CSS}`,
       ld:{"@context":"https://schema.org","@type":"CollectionPage",name:p.t,url:SITE+base,description:p.intro,isPartOf:{"@type":"WebSite",name:"TopETFs",url:SITE}}},
     `<header class="page-head"><div class="wrap"><nav class="crumbs"><a href="/">Home</a> / <a href="/screener">ETF Screener</a></nav><span class="kicker">ETF Screener</span><h1>${esc(p.h1)}</h1><p>${esc(p.intro)} Updated daily. Adjust any filter below to build your own screen.</p></div></header>
-<div class="wrap">${shell(base,p.d,"",p.slug)}${linkGrid(p.slug)}${faqHtml}${DISC}${proBand()}</div>`);
+<div class="wrap">${shell(base,p.d,"",p.slug)}${SIGNUP("featured")}${linkGrid(p.slug)}${faqHtml}${DISC}${proBand()}</div>`);
   }
   SCREENER_PAGES.push("/screener",...ALLP.map(p=>"/lists/"+p.slug));
 }
