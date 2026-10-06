@@ -10,7 +10,7 @@ TQQY,GraniteShares YieldBOOST QQQ ETF,GraniteShares,25%,B,1.15%,5.5M,2%,YES,2/26
 SMYY,GraniteShares YieldBOOST SMCI ETF,GraniteShares,71%,B,1.07%,6M,-28%,YES,9/30/2025,Weekly,C-
 YSPY,GraniteShares YieldBOOST SPY ETF,GraniteShares,10%,B,1.15%,8.3M,17%,YES,2/26/2025,Weekly,C-
 TSYY,GraniteShares YieldBOOST TSLA ETF,GraniteShares,44%,B,1.15%,61M,-32%,YES,12/18/2024,Weekly,C-
-AHD,GraniteShares Autocallable HOOD ETF,GraniteShares,26%,B,1.07%,2.6M,18%,NO,5/16/2026,Weekly,C-
+AHD,GraniteShares Autocallable HOOD ETF,GraniteShares,33%,B,1.07%,2.6M,18%,NO,5/16/2026,Weekly,C-
 CONY,YieldMax COIN Option Income Strategy ETF,YieldMax,66%,B,0.99%,392M,43%,YES,8/14/2023,Weekly,C
 ULTY,YieldMax Ultra Option Income Strategy ETF,YieldMax,61%,B,1.40%,721M,12%,YES,2/28/2024,Weekly,C
 MSTY,YieldMax MSTR Option Income Strategy ETF,YieldMax,100%,B,0.99%,1134M,78%,YES,2/22/2024,Weekly,C+
@@ -29,7 +29,7 @@ BABO,YieldMax BABA Option Income Strategy ETF,YieldMax,34%,B,0.99%,14M,13%,YES,8
 OARK,YieldMax Innovation Option Income Strategy ETF,YieldMax,35%,B,1.00%,33M,63%,YES,11/22/2022,weekly,D
 HOOY,YieldMax HOOD Option Income Strategy ETF,YieldMax,81%,B,0.99%,160M,65%,YES,5/7/2025,weekly,A-
 LFGY,YieldMax Crypto Industry & Tech Portfolio Option Income ETF,YieldMax,41%,B,1.02%,100M,4%,YES,1/13/2025,weekly,D
-CHPY,YieldMax Semiconductor Portfolio Option Income ETF,YieldMax,41%,B,1.03%,1295M,188%,NO,4/2/2025,weekly,B+
+CHPY,YieldMax Semiconductor Portfolio Option Income ETF,YieldMax,43%,B,1.03%,1295M,188%,NO,4/2/2025,weekly,B+
 YMAG,YieldMax Magnificent 7 Fund of Option Income ETFs,YieldMax,36%,B,1.12%,295M,76%,YES,1/29/2024,weekly,F
 FBY,YieldMax META Option Income Strategy ETF,YieldMax,81%,B,0.99%,118M,79%,YES,7/27/2023,weekly,C
 SOXY,YieldMax® Target 12™ Semiconductor Option Income ETF,YieldMax,12%,B,1.06%,70M,145%,NO,12/2/2024,Monthly,B+
@@ -108,9 +108,9 @@ KQQQ,Kurv Technology Titans Select ETF,Kurv,14.48%,A,1.12%,136M,55%,NO,7/22/2024
 FEPI,REX FANG & Innovation Equity Premium Income ETF,REX,25.2%,B,0.65%,727M,74%,YES,10/9/2023,Weekly,B+
 AIPI,REX AI Equity Premium Income ETF,REX,34.8%,B,0.65%,470M,62%,YES,6/4/2024,Weekly,B-
 CEPI,REX Crypto Equity Premium Income ETF,REX,42.0%,B,0.85%,124M,27%,YES,12/4/2024,Weekly,B-
-NVII,REX NVDA Growth & Income ETF,REX,27%,B,0.99%,125M,92%,NO,5/28/2025,Weekly,b
-TSII,REX TSLA Growth And Income ETF,REX,47%,B,0.99%,32M,16%,YES,6/4/2025,Weekly,C
-WMTI ,REX WMT Growth And Income ETF,REX,26%,B,0.99%,13M,-2%,YES,11/4/2025,Weekly,B-
+NVII,REX NVDA Growth & Income ETF,REX,30%,B,0.99%,125M,92%,NO,5/28/2025,Weekly,b
+TSII,REX TSLA Growth And Income ETF,REX,49%,B,0.99%,32M,16%,YES,6/4/2025,Weekly,C
+WMTI ,REX WMT Growth And Income ETF,REX,19%,B,0.99%,13M,-2%,YES,11/4/2025,Weekly,B-
 ULTI,REX IncomeMax Option Strategy ET,REX,67%,A,1.25%,20M,-50%,YES,10/31/2025,Weekly,C+
 GPIQ,Goldman Sachs Nasdaq-100 Premium Income ETF,Goldman Sachs,9.9%,C,0.29%,6125M,105%,NO,10/24/2023,Monthly,A
 TSPY,TappAlpha S&P 500 Growth & Daily Income ETF,TappAlpha,14.1%,B,0.99%,342M,40%,NO,8/14/2024,Monthly,B+
@@ -166,7 +166,7 @@ SPHY,State Street SPDR Portfolio High Yield Bond ETF,State Street,7.43%,D,0.05%,
 TPRY,VistaShares Target 15™ TEPRTantrum Contrarian Distribution ETF,VistaShares,15.00%,B,0.95%,4.3M,6%,YES,2/26/2026,Monthly,C-
 TDVI,FT Vest Technology Dividend Target Income ETF,First Trust,8.07%,B,0.75%,611M,104%,NO,8/9/2023,Monthly,B+
 EGGQ,NestYield Visionary ETF,NestYield,9.49%,B,0.95%,91M,61%,NO,12/26/2024,Monthly,B
-VOOY,XFUNDS Large Cap Income ETF,XFunds,0%,B,0.75%,2.5M,1%,NO,8/31/2026,Monthly,B
+VOOY,XFUNDS Large Cap Income ETF,XFunds,9.0%,B,0.75%,2.5M,1%,NO,8/31/2026,Monthly,B
 WRTH,Worth Charting Options Income ETF ,Worth Charting Group,3.1%,B,1.02%,84M,6%,NO,4/27/2026,Monthly,B
 SEPQ,STF Tactical Growth & Income ETF,Shelton Capital,11%,B,0.65%,93M,88%,NO,5/18/2022,Monthly,B
 HAKY,Amplify HACK Cybersecurity Covered Call ETF,Amplify,15%,B+,0.65%,8.7M,48%,NO,1/20/2026,Monthly,B+

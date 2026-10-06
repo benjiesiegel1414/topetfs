@@ -16,9 +16,9 @@ YSPY,GraniteShares YieldBOOST SPY ETF,10%,YES,17%
 TSYY,GraniteShares YieldBOOST TSLA ETF,44%,YES,-32%
 KYLD,Kurv High Income ETF,24%,YES,4%
 BLOX,Nicholas Crypto Income ETF,36%,YES,13%
-NVII,REX NVDA Growth & Income ETF,27%,NO,92%
-TSII,REX TSLA Growth And Income ETF,47%,YES,16%
-WMTI ,REX WMT Growth And Income ETF,26%,YES,-2%
+NVII,REX NVDA Growth & Income ETF,30%,NO,92%
+TSII,REX TSLA Growth And Income ETF,49%,YES,16%
+WMTI ,REX WMT Growth And Income ETF,19%,YES,-2%
 ULTI,REX IncomeMax Option Strategy ETF,67%,YES,-50%
 AAPW,Roundhill AAPL WeeklyPay ETF,30%,YES,34%
 AMDW,Roundhill AMD WeeklyPay ETF,77%,NO,352%
@@ -88,16 +88,16 @@ XOMO,YieldMax® XOM Option Income Strategy ETF,26%,YES,28%
 XYZY,YieldMax® XYZ Option Income Strategy ETF,32%,YES,33%
 YBIT,YieldMax® Bitcoin Option Income Strategy ETF,40%,YES,-9%
 YQQQ,YieldMax® Short N100 Option Income Strategy ETF,21%,YES,-20%
-CHPY,YieldMax® Semiconductor Portfolio Option Income ETF,41%,NO,188%
+CHPY,YieldMax® Semiconductor Portfolio Option Income ETF,43%,NO,188%
 GPTY,YieldMax® AI & Tech Portfolio Option Income ETF,36%,YES,58%
 LFGY,YieldMax® Crypto Industry & Tech Portfolio Option Income ETF,41%,YES,4%
 MINY,YieldMax® Strategic Metals & Mining Portfolio Option Income ETF,31%,YES,-15%
-QDTY,YieldMax® Nasdaq 100 0DTE Covered Call ETF,29%,YES,31%
-RDTY,YieldMax® R2000 0DTE Covered Call ETF,29%,YES,31%
-SDTY,YieldMax® S&P 500 0DTE Covered Call ETF,19%,YES,24%
+QDTY,YieldMax® Nasdaq 100 0DTE Covered Call ETF,31%,YES,31%
+RDTY,YieldMax® R2000 0DTE Covered Call ETF,36%,YES,31%
+SDTY,YieldMax® S&P 500 0DTE Covered Call ETF,21%,YES,24%
 SLTY,YieldMax® Ultra Short Option Income Strategy ETF,55%,YES,-17%
-ULTY,YieldMax® Ultra Option Income Strategy ETF,60%,YES,12%
-YMAG,YieldMax® Magnificent 7 Fund of Option Income ETFs,36%,YES,76%
+ULTY,YieldMax® Ultra Option Income Strategy ETF,61%,YES,12%
+YMAG,YieldMax® Magnificent 7 Fund of Option Income ETFs,39%,YES,76%
 YMAX,YieldMax® Universe Fund of Option Income ETFs,41%,YES,47%
 TSYX,TSPY LIFT ETF,20%,NO,11%
 TDAX,TDAQ LIFT ETF,24%,NO,20%
