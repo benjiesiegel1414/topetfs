@@ -18,3 +18,9 @@ Benjie Siegel is a self-taught dividend investor with 10+ years of experience wh
 - Total return in our data is since each fund's inception. Funds started on different dates, so always say so when comparing.
 - Do not tell readers to buy or sell anything. Explain who a fund tends to fit and what the trade-offs are.
 - Write for search intent: answer the main question in the first 2 to 3 paragraphs, then go deeper.
+
+## Content mix (daily rotation)
+- The daily article rotates through four sections in order: Income, Weekly Pay, Growth, ETF 101. One per day, so every four days each section gets a new story.
+- Mix the formats inside each section: single-ETF deep dives on popular names (for example QQQ or VOO in Growth, MSTY or QDTE in Weekly Pay), head-to-head comparisons, and question-style guides that answer a real search.
+- Growth articles lead with total return, fees and holdings, not yield. Weekly Pay articles explain where the weekly money comes from and show weekly income math. ETF 101 articles teach one concept in plain English for beginners, using real funds as examples.
+- Every article, in every section, keeps the same format and rules: live data tokens, the live table, the income calculator, the FAQ, internal and network links, no em dashes, and no buy or sell calls.
