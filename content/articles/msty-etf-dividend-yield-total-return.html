@@ -1,0 +1,94 @@
+<!--meta
+{"title":"MSTY ETF: Dividend Yield, Total Return and What $10,000 Pays Today","short":"MSTY deep dive","seoTitle":"MSTY ETF: Yield, Total Return and $10,000 Income","dek":"MSTY ETF pays weekly using MicroStrategy options. See the live yield, fee, total return, price decay flag and what $10,000 pays per week and per year.","section":"weekly","date":"2026-10-07","time":"08","read":7,"art":"bars","tickers":["MSTY"],"coverLabel":"MSTY  ·  WEEKLY PAY","keyNumbers":[["MSTY yield","{{live:MSTY:yield}}"],["Expense ratio","{{live:MSTY:er:pct2}}"],["Assets","{{live:MSTY:aum:aum}}"],["Total return since inception","{{live:MSTY:tr}}"]],"keyword":"MSTY ETF","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:MSTY}} yields {{live:MSTY:yield}} today and pays {{live:MSTY:freq:text}}. On $10,000 that is roughly {{calc:usd:10000*MSTY.yield/100/52}} per week at the current rate, but the payout changes.</li><li>Total return since inception is {{live:MSTY:tr}}, yet our price decay flag reads {{live:MSTY:decay:decay}}. The yield is big, and so is the cost to the share price.</li><li>It is a single-stock options income fund tied to MicroStrategy. That makes it one of the riskiest ways to collect weekly income.</li></ul></div>
+
+<p class="lede">The MSTY ETF is a YieldMax fund that tries to turn the wild price swings of MicroStrategy (MSTR) into weekly cash. Right now it shows a {{live:MSTY:yield}} yield, a {{live:MSTY:er:pct2}} expense ratio and {{live:MSTY:aum:aum}} in assets. A $10,000 position would throw off about {{calc:usd:10000*MSTY.yield/100}} a year at today's rate, if nothing changes. Spoiler: something always changes.</p>
+
+<div class="board" data-w="board" data-syms="MSTY,AMDY,ULTY,CONY,TSLY,CHPY,NVDY,BLOX" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>MSTY vs other weekly payers</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>What MSTY is and who runs it</h2>
+<p>MSTY is the YieldMax MSTR Option Income Strategy ETF. YieldMax is the brand behind a whole family of single-stock option income funds. MSTY started trading on {{live:MSTY:inception:text}}, so it is a young fund with a short track record.</p>
+<p>The stock behind it is MicroStrategy, a software company that is now better known for holding a very large amount of bitcoin on its balance sheet. Because of that, MSTR tends to move hard when bitcoin moves, and often harder. That volatility is the raw material MSTY uses to pay you.</p>
+<p>One thing to know up front: MSTY is not a fund that owns a basket of companies. It is a bet on one stock and the options market around it.</p>
+
+<h2>How the weekly payout is produced</h2>
+<p>MSTY does not simply buy MSTR shares and sell covered calls the way a plain covered call fund would. It uses what is called a synthetic covered call. In plain English, the fund uses options to copy the ups and downs of MSTR, then sells call options against that position and collects the premium (the cash buyers pay for those options).</p>
+<p>The rest of the fund is typically parked in short-term Treasuries and cash as collateral. The option premium, plus that interest, is where the distributions come from. When MSTR is wildly volatile, option premiums are fat, and that is why the yield can look so huge.</p>
+<p>Selling calls has a trade-off. You get paid now, but you give up a chunk of the upside if MSTR rips higher. You still carry most of the downside if it falls. If you want a deeper walkthrough of that mechanism, read my guide on <a href="/articles/covered-call-etfs-explained">where covered call yields actually come from</a>.</p>
+
+<h2>The income math: weekly, monthly and yearly</h2>
+<p>Here is what the current {{live:MSTY:yield}} yield means in dollars. These are estimates at today's rate, not promises.</p>
+<ul>
+<li><strong>$10,000 invested:</strong> about {{calc:usd:10000*MSTY.yield/100/52}} per week, {{calc:usd:10000*MSTY.yield/100/12}} per month and {{calc:usd:10000*MSTY.yield/100}} per year.</li>
+<li><strong>$100,000 invested:</strong> about {{calc:usd:100000*MSTY.yield/100/52}} per week, {{calc:usd:100000*MSTY.yield/100/12}} per month and {{calc:usd:100000*MSTY.yield/100}} per year.</li>
+<li><strong>Target of $1,000 a month:</strong> you would need about {{calc:usd:12000/(MSTY.yield/100)}} invested at this yield.</li>
+</ul>
+<p>Those numbers look amazing. But the payout is not a fixed coupon. It moves with option premiums, which move with MSTR volatility. A calm stretch means smaller checks. A wild stretch means bigger ones. Weekly pay does not mean steady pay.</p>
+<p>Also remember the yield is built from recent distributions and then annualized. It is a snapshot of the past, not a forecast. If you want to see how a bigger weekly stream stacks up across the category, I broke it down in <a href="/articles/weekly-pay-etfs-10000">what $10,000 earns in weekly-pay ETFs</a>.</p>
+
+<h2>Total return since inception and price decay</h2>
+<p>This is the part that matters most. Total return since inception for MSTY is {{live:MSTY:tr}}. That figure counts the distributions you received plus the change in share price. And our database flags price decay as {{live:MSTY:decay:decay}}.</p>
+<p>Price decay means the share price (NAV, or net asset value, the per-share value of the fund's holdings) has drifted down over time. Part of that is the strategy: you sell away the upside, so the fund cannot fully recover after a drop. Part of it is that some of the distribution can be return of capital, which is the fund handing you back some of your own money rather than pure profit. Return of capital is not automatically bad, but it does mean the yield overstates what the fund actually earned.</p>
+<p>Here is how I read it. A positive total return since inception says the payouts have more than offset the price drop so far. It does not say that will keep happening. Also, MSTY launched on {{live:MSTY:inception:text}}, and total return is measured from each fund's own start date. Comparing it to funds that launched earlier or later is not apples to apples.</p>
+<p>For a full explanation of why the biggest payout is not always the best result, see <a href="/articles/yield-vs-total-return">the yield trap article</a>.</p>
+
+<h2>The costs: fees and size</h2>
+<p>MSTY charges a {{live:MSTY:er:pct2}} expense ratio. That is the yearly fee taken from fund assets. On $10,000 that works out to about {{calc:usd:10000*MSTY.er/100}} a year, taken out of the fund before you see anything. It is on the high side for an ETF, though normal for this style of single-stock option fund.</p>
+<p>With {{live:MSTY:aum:aum}} in assets, MSTY is one of the bigger funds in the weekly pay world. That helps with trading liquidity. It does not make the strategy safer. If you want to see what fees do over time, my <a href="/articles/expense-ratio-math">expense ratio math</a> piece shows it visually.</p>
+
+<h2>The main risks</h2>
+<ul>
+<li><strong>Single-stock concentration.</strong> Everything rides on MSTR. There is no diversification inside the fund.</li>
+<li><strong>Bitcoin sensitivity.</strong> MSTR often moves with bitcoin, so a crypto selloff can hit this fund hard.</li>
+<li><strong>Capped upside, open downside.</strong> You give up big rallies but still take most of the losses.</li>
+<li><strong>Variable income.</strong> Weekly distributions can shrink fast if volatility drops or the share price falls.</li>
+<li><strong>NAV erosion.</strong> If you spend every dollar you receive, the share count stays the same but each share can be worth less.</li>
+<li><strong>Tax and classification.</strong> Distributions can be taxed in different ways, including return of capital. Check the fund's own notices and talk to a tax pro.</li>
+</ul>
+
+<h2>How MSTY compares to close alternatives</h2>
+<p>Let me put MSTY next to a few funds that do something similar. Remember that every one of these started on a different date.</p>
+<h3>MSTY vs CONY</h3>
+<p>{{tkr:CONY}} is the YieldMax COIN fund, built on Coinbase. It is another crypto-linked single-stock income fund. CONY yields {{live:CONY:yield}} with a total return since inception of {{live:CONY:tr}}, versus {{live:MSTY:yield}} and {{live:MSTY:tr}} for MSTY. Both carry the price decay flag: CONY shows {{live:CONY:decay:decay}} and MSTY shows {{live:MSTY:decay:decay}}.</p>
+<h3>MSTY vs ULTY</h3>
+<p>{{tkr:ULTY}} spreads its option income across several high-volatility stocks instead of one. It yields {{live:ULTY:yield}} with a {{live:ULTY:er:pct2}} fee and a total return since inception of {{live:ULTY:tr}}. You get more variety than MSTY, but you pay a higher fee.</p>
+<h3>MSTY vs CHPY</h3>
+<p>{{tkr:CHPY}} is a semiconductor-focused weekly payer. It yields {{live:CHPY:yield}}, and our price decay flag shows {{live:CHPY:decay:decay}}. It is far newer (it started {{live:CHPY:inception:text}}), so the track record is short, but it is a lower-yield, more diversified option if you want weekly checks without a single-stock bet. I covered its payouts in <a href="/articles/chpy-dividend-history">every CHPY dividend ever paid</a>.</p>
+<p>For other names in the category, {{tkr:TSLY}} yields {{live:TSLY:yield}} and {{tkr:NVDY}} yields {{live:NVDY:yield}}. You can screen the whole list at <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>, or dig into every income fund at <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="MSTY,CONY,ULTY,TSLY" data-per="year">
+  <p class="figure-title">What your money earns in MSTY and similar weekly payers</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<h2>Who MSTY tends to fit, and who should skip it</h2>
+<p>MSTY tends to fit investors who already understand MSTR and bitcoin risk, can handle large swings, and treat the fund as a small, high-risk income slice rather than a core holding. Some of those investors reinvest the payouts to rebuild shares, which I looked at in <a href="/articles/drip-reinvest-or-spend">reinvest or spend</a>.</p>
+<p>It tends to be a poor fit for retirees who need dependable income, anyone who cannot stomach a large drop in share price, and beginners looking for a simple dividend fund. If you are counting on that weekly check to pay a bill, a fund whose payout floats with a volatile stock is a shaky foundation.</p>
+<p>One more point. If you plan to hold it, size it small enough that a bad year will not change your life.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Does MSTY pay weekly?</h3>
+<p>Yes. Our data shows MSTY pays {{live:MSTY:freq:text}}. The amount is not fixed and changes with option premiums.</p>
+<h3>What is the MSTY dividend yield?</h3>
+<p>The current yield is {{live:MSTY:yield}}. It is based on recent payouts and can move up or down quickly.</p>
+<h3>Is MSTY a good investment?</h3>
+<p>That depends on your risk tolerance. It has a total return since inception of {{live:MSTY:tr}}, but the price decay flag is {{live:MSTY:decay:decay}} and the fund is tied to a single volatile stock.</p>
+<h3>What does MSTY hold?</h3>
+<p>It does not mainly hold MSTR shares. It uses options to get MSTR exposure and sells call options for income, with Treasuries and cash as collateral.</p>
+<h3>How much does $10,000 in MSTY pay?</h3>
+<p>At today's yield, about {{calc:usd:10000*MSTY.yield/100/52}} per week or {{calc:usd:10000*MSTY.yield/100}} per year. Future payouts may be very different.</p>
+<h3>MSTY vs CONY: which is better?</h3>
+<p>They are different bets. MSTY follows MicroStrategy and CONY follows Coinbase. Compare yield, fees and price decay above, and remember they started on different dates.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+<p>MSTY is a powerful income machine with a very sharp edge. A {{live:MSTY:yield}} yield and weekly pay are eye-catching, and a total return since inception of {{live:MSTY:tr}} shows the payouts have counted for something. But the price decay flag, the single-stock risk and the {{live:MSTY:er:pct2}} fee are the other half of the story.</p>
+<p>This isn't a buy or sell signal. If you look at MSTY, look at total return first, size it small, and do your own due diligence. For more weekly payers to compare, head to <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>.</p>

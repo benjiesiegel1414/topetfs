@@ -200,7 +200,9 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to MSTY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax MSTR option income, huge yield, extreme risk, price decay",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-07",
+   "words": 1690
   },
   {
    "slug": "spyi-vs-jepi",
