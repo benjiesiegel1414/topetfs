@@ -43,16 +43,36 @@ const etDate=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"}
 const todayCount=fs.readdirSync(ART_DIR).filter(f=>{const raw=fs.readFileSync(path.join(ART_DIR,f),"utf8");return raw.includes(`"date":"${etDate}"`)&&raw.includes('"auto":true');}).length;
 if (todayCount>0 && !process.argv.includes("--force")) { console.log("An automatic article already exists for "+etDate+". Nothing to do."); process.exit(0); }
 
+/* Section rotation: one article per day, cycling Income -> Weekly Pay -> Growth -> ETF 101 (section "learn").
+   The next section is the one after the most recently published topic's section. If that section has no usable
+   pending topic, the writer moves on to the next section in the rotation so a day is never skipped. */
+const ORDER=Array.isArray(TQ.rotation)&&TQ.rotation.length?TQ.rotation:["income","weekly","growth","learn"];
+function sectionQueue(){
+  const pub=TQ.topics.map((t,i)=>({t,i})).filter(o=>o.t.status==="published"&&o.t.date&&ORDER.includes(o.t.section)).sort((a,b)=>a.t.date===b.t.date?a.i-b.i:a.t.date<b.t.date?-1:1);
+  const last=pub.length?pub[pub.length-1].t.section:ORDER[ORDER.length-1];
+  const start=(ORDER.indexOf(last)+1)%ORDER.length;
+  return ORDER.map((_,k)=>ORDER[(start+k)%ORDER.length]);
+}
 function nextTopic(){
-  for (const t of TQ.topics) {
-    if (t.status!=="pending") continue;
-    if (existing.some(a=>a.slug===t.slug)) { t.status="published"; continue; }
-    t.tickers=(t.tickers||[]).filter(s=>ALL[s]);
-    if (!t.tickers.length) { t.status="failed"; t.error="none of the tickers are in the database"; continue; }
-    return t;
+  for (const sec of sectionQueue()) {
+    for (const t of TQ.topics) {
+      if (t.status!=="pending" || t.section!==sec) continue;
+      if (existing.some(a=>a.slug===t.slug)) { t.status="published"; t.date=t.date||"2000-01-01"; continue; }
+      t.tickers=(t.tickers||[]).filter(s=>ALL[s]);
+      if (!t.tickers.length) { t.status="failed"; t.error="none of the tickers are in the database"; continue; }
+      return t;
+    }
   }
   return null;
 }
+
+/* Section-specific direction layered on top of the shared format rules */
+const SECTION_GUIDE={
+  income:`SECTION FOCUS: INCOME. Dividend and option-income ETFs. Lead with yield, payout schedule and what a real investment pays per month and per year, then check it against total return and price decay. Board: data-sort="yield".`,
+  weekly:`SECTION FOCUS: WEEKLY PAY. Funds that pay every week. Explain how the weekly distribution is produced (options strategy, underlying stock or index), how steady the payouts have been, return of capital, NAV erosion and price decay risk. Show weekly income math, e.g. {{calc:usd:10000*SYM.yield/100/52}} per week on $10,000, plus monthly and yearly. Compare against other weekly payers from DATA. Board: data-sort="yield". Link https://weeklyetfs.com/ as a network link.`,
+  growth:`SECTION FOCUS: GROWTH. Growth and index ETFs where the story is total return, not income. Lead with total return since inception, fees, what the fund holds (style, sector tilt, concentration in the largest names) and how it compares to close alternatives from DATA. Use growth math, e.g. what $10,000 became at the total return: {{calc:usd:10000*(1+SYM.tr/100)}}, and fee drag: {{calc:usd:10000*SYM.er/100}} per year in fees. Mention the small yield only as a side note. The income calculator widget is still required: title it as a reality check on how little income a growth fund throws off. Board: data-sort="tr" with data-cols="tr,er,aum,yield,freq" and the Total return tab pressed. Link https://growthetfs.com/ as a network link.`,
+  learn:`SECTION FOCUS: ETF 101. A beginner-friendly explainer. Teach the concept in plain English first (one simple definition near the top), then show it with real funds from DATA using live tokens, walk through a worked example step by step, cover the common mistakes, and end with what the reader should check before buying any ETF. Assume the reader is new; define every term. Board: pick the sort that best illustrates the concept.`
+};
 
 /* ---------- prompt ---------- */
 const VOICE=fs.readFileSync(path.join(ROOT,"content","voice.md"),"utf8");
@@ -107,6 +127,8 @@ function userPrompt(t){
   const peers=Object.values(ALL).filter(e=>!t.tickers.includes(e.sym)&&e.aum&&(t.section==="growth"?e.lists.includes("growth"):t.section==="weekly"?e.lists.includes("weekly"):e.lists.includes("pro"))).sort((a,b)=>b.aum-a.aum).slice(0,14).map(e=>e.sym);
   const related=existing.filter(a=>a.slug!==t.slug).map(a=>({a,s:a.tickers.filter(x=>t.tickers.includes(x)).length+(a.section===t.section?0.5:0)})).sort((x,y)=>y.s-x.s).slice(0,8).map(o=>`/articles/${o.a.slug} | ${o.a.title}`);
   return `TODAY: ${etDate}
+${SECTION_GUIDE[t.section]||""}
+${t.type==="profile"?"FORMAT: single-fund deep dive. Cover what it is and who runs it, the strategy and holdings style, live numbers, how it has done since inception, the main risks, who it fits and who should skip it, and how it compares to 2 or 3 close alternatives from DATA.\n":""}
 TOPIC: ${t.title}
 PRIMARY KEYWORD: ${t.keyword}
 ANGLE: ${t.angle}
