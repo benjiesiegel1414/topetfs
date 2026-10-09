@@ -1,110 +1,110 @@
 Symbol,ETF Name,Dividend Yield,Price Decay,Total Return
-QLDY,Defiance Nasdaq 100 LightningSpread Income ETF,40%,YES,24%
-QQQY,Defiance Nasdaq 100 Target 30 Income ETF,30%,YES,61%
-USOY,Defiance Oil Enhanced Options Income ETF,50%,YES,61%
-IWMY,Defiance R2000 Enhanced Options Income ETF,30%,YES,40%
-YBST,GraniteShares YieldBOOST Single Stock Universe ETF,44%,YES,-24%
-YBTY,GraniteShares YieldBOOST TopYielders ETF,52%,YES,-32%
-AMYY,GraniteShares YieldBOOST AMD ETF,68%,YES,39%
-XBTY,GraniteShares YieldBOOST Bitcoin ETF,30%,YES,-34%
-COYY,GraniteShares YieldBOOST COIN ETF,63%,YES,-61%
-HOYY,GraniteShares YieldBOOST HOOD ETF,73%,YES,-46%
-NVYY,GraniteShares YieldBOOST NVDA ETF,39%,YES,33%
+QLDY,Defiance Nasdaq 100 LightningSpread Income ETF,40%,YES,23%
+QQQY,Defiance Nasdaq 100 Target 30 Income ETF,30%,YES,60%
+USOY,Defiance Oil Enhanced Options Income ETF,50%,YES,63%
+IWMY,Defiance R2000 Enhanced Options Income ETF,30%,YES,38%
+YBST,GraniteShares YieldBOOST Single Stock Universe ETF,44%,YES,-25%
+YBTY,GraniteShares YieldBOOST TopYielders ETF,52%,YES,-33%
+AMYY,GraniteShares YieldBOOST AMD ETF,68%,YES,34%
+XBTY,GraniteShares YieldBOOST Bitcoin ETF,30%,YES,-35%
+COYY,GraniteShares YieldBOOST COIN ETF,63%,YES,-62%
+HOYY,GraniteShares YieldBOOST HOOD ETF,73%,YES,-47%
+NVYY,GraniteShares YieldBOOST NVDA ETF,39%,YES,31%
 TQQY,GraniteShares YieldBOOST QQQ ETF,25%,YES,2%
-SMYY,GraniteShares YieldBOOST SMCI ETF,71%,YES,-28%
+SMYY,GraniteShares YieldBOOST SMCI ETF,71%,YES,-29%
 YSPY,GraniteShares YieldBOOST SPY ETF,10%,YES,17%
 TSYY,GraniteShares YieldBOOST TSLA ETF,44%,YES,-32%
-KYLD,Kurv High Income ETF,24%,YES,4%
-BLOX,Nicholas Crypto Income ETF,36%,YES,13%
-NVII,REX NVDA Growth & Income ETF,30%,NO,92%
-TSII,REX TSLA Growth And Income ETF,49%,YES,16%
-WMTI ,REX WMT Growth And Income ETF,19%,YES,-2%
-ULTI,REX IncomeMax Option Strategy ETF,67%,YES,-50%
-AAPW,Roundhill AAPL WeeklyPay ETF,30%,YES,34%
-AMDW,Roundhill AMD WeeklyPay ETF,77%,NO,352%
-AMZW,Roundhill AMZN WeeklyPay ETF,31%,YES,14%
-ARMW,Roundhill ARM WeeklyPay ETF,104%,YES,78%
-AVGW,Roundhill AVGO WeeklyPay ETF,39%,NO,22%
-BABW,Roundhill BABA WeeklyPay ETF,35%,YES,-44%
-YBTC,Roundhill Bitcoin Covered Call Strategy ETF,30%,YES,35%
-BRKW,Roundhill BRKB WeeklyPay ETF,14%,YES,-1%
-COIW,Roundhill COIN WeeklyPay ETF,70%,YES,-44%
-COSW,Roundhill COST WeeklyPay ETF,27%,YES,-6%
-YETH,Roundhill Ether Covered Call Strategy ETF,49%,YES,-27%
-GOOW,Roundhill GOOGL WeeklyPay ETF,30%,NO,90%
-HOOW,Roundhill HOOD WeeklyPay ETF,67%,YES,34%
+KYLD,Kurv High Income ETF,24%,YES,3%
+BLOX,Nicholas Crypto Income ETF,36%,YES,6%
+NVII,REX NVDA Growth & Income ETF,30%,NO,86%
+TSII,REX TSLA Growth And Income ETF,49%,YES,18%
+WMTI ,REX WMT Growth And Income ETF,19%,YES,3%
+ULTI,REX IncomeMax Option Strategy ETF,67%,YES,-52%
+AAPW,Roundhill AAPL WeeklyPay ETF,19%,YES,35%
+AMDW,Roundhill AMD WeeklyPay ETF,55%,NO,340%
+AMZW,Roundhill AMZN WeeklyPay ETF,35%,YES,20%
+ARMW,Roundhill ARM WeeklyPay ETF,79%,YES,56%
+AVGW,Roundhill AVGO WeeklyPay ETF,42%,NO,23%
+BABW,Roundhill BABA WeeklyPay ETF,32%,YES,-44%
+YBTC,Roundhill Bitcoin Covered Call Strategy ETF,30%,YES,32%
+BRKW,Roundhill BRKB WeeklyPay ETF,14%,YES,2%
+COIW,Roundhill COIN WeeklyPay ETF,50%,YES,-45%
+COSW,Roundhill COST WeeklyPay ETF,20%,YES,-3%
+YETH,Roundhill Ether Covered Call Strategy ETF,42%,YES,-32%
+GOOW,Roundhill GOOGL WeeklyPay ETF,32%,NO,96%
+HOOW,Roundhill HOOD WeeklyPay ETF,48%,YES,30%
 MAGY,Roundhill Magnificent Seven Covered Call ETF,20%,YES,29%
-METW,Roundhill META WeeklyPay ETF,58%,YES,1%
-MSFW,Roundhill MSFT WeeklyPay ETF,40%,YES,-1%
-MSTW,Roundhill MSTR WeeklyPay ETF,78%,YES,-73%
-NFLW,Roundhill NFLX WeeklyPay ETF,37%,YES,-54%
-NVDW,Roundhill NVDA WeeklyPay ETF,38%,YES,70%
-PLTW,Roundhill PLTR WeeklyPay ETF,73%,YES,57%
-TSLW,Roundhill TSLA WeeklyPay ETF,51%,YES,-7%
-UBEW,Roundhill UBER WeeklyPay ETF,34%,YES,-35%
-QDTE,Roundhill Innovation-100 0DTE Covered Call Strategy ETF,20%,YES,66%
-RDTE,Roundhill Russell 2000 0DTE Covered Call Strategy ETF,26%,YES,39%
+METW,Roundhill META WeeklyPay ETF,30%,YES,-2%
+MSFW,Roundhill MSFT WeeklyPay ETF,30%,YES,1%
+MSTW,Roundhill MSTR WeeklyPay ETF,74%,YES,-74%
+NFLW,Roundhill NFLX WeeklyPay ETF,22%,YES,-51%
+NVDW,Roundhill NVDA WeeklyPay ETF,45%,YES,65%
+PLTW,Roundhill PLTR WeeklyPay ETF,48%,YES,76%
+TSLW,Roundhill TSLA WeeklyPay ETF,39%,YES,-5%
+UBEW,Roundhill UBER WeeklyPay ETF,30%,YES,-32%
+QDTE,Roundhill Innovation-100 0DTE Covered Call Strategy ETF,20%,YES,65%
+RDTE,Roundhill Russell 2000 0DTE Covered Call Strategy ETF,20%,YES,37%
 XDTE,Roundhill S&P 500 0DTE Covered Call Strategy ETF,15%,YES,48%
-WEEK,Roundhill Weekly T-Bill ETF,3.6%,NO,6%
-TOPW,Top WeeklyPay™ ETF,35%,YES,8%
+WEEK,Roundhill Weekly T-Bill ETF,3.7%,NO,6%
+TOPW,Top WeeklyPay™ ETF,38%,YES,8%
 AIYY,YieldMax® AI Option Income Strategy ETF,61%,YES,-75%
-AMDY,YieldMax® AMD Option Income Strategy ETF,100%,YES,284%
-AMZY,YieldMax® AMZN Option Income Strategy ETF,26%,YES,88%
-APLY,YieldMax® AAPL Option Income Strategy ETF,26%,YES,53%
+AMDY,YieldMax® AMD Option Income Strategy ETF,100%,YES,274%
+AMZY,YieldMax® AMZN Option Income Strategy ETF,26%,YES,92%
+APLY,YieldMax® AAPL Option Income Strategy ETF,26%,YES,54%
 BABO,YieldMax® BABA Option Income Strategy,31%,YES,13%
-BRKC,YieldMax® BRKB Option Income Strategy ETF,13%,YES,2%
-CONY,YieldMax® COIN Option Income Strategy ETF,58%,YES,43%
-CRCO,YieldMax® CRCL Option Income Strategy ETF,70%,YES,-33%
+BRKC,YieldMax® BRKB Option Income Strategy ETF,13%,YES,3%
+CONY,YieldMax® COIN Option Income Strategy ETF,58%,YES,40%
+CRCO,YieldMax® CRCL Option Income Strategy ETF,70%,YES,-31%
 CRSH,YieldMax® Short TSLA Option Income Strategy ETF,45%,YES,-54%
-CVNY,YieldMax® CVNA Option Income Strategy ETF,59%,YES,27%
-DIPS,YieldMax® Short NVDA Option Income Strategy ETF,34%,YES,-57%
+CVNY,YieldMax® CVNA Option Income Strategy ETF,59%,YES,28%
+DIPS,YieldMax® Short NVDA Option Income Strategy ETF,34%,YES,-56%
 DRAY,YieldMax® DKNG Option Income Strategy ETF,41%,YES,-53%
-FBY,YieldMax® META Option Income Strategy ETF,61%,YES,79%
-FIAT,YieldMax® Short COIN Option Income Strategy ETF,55%,YES,-48%
-GDXY,YieldMax® Gold Miners Option Income Strategy ETF,40%,YES,56%
-GMEY,YieldMax® GME Option Income Strategy ETF,86%,YES,-12%
-GOOY,YieldMax® GOOGL Option Income Strategy ETF,25%,YES,84%
-HIYY,YieldMax® HIMS Option Income Strategy ETF,65%,YES,-44%
-HOOY,YieldMax® HOOD Option Income Strategy ETF,66%,YES,65%
-INYY,YieldMax INTC Option Income Strategy ETF,86%,YES,2%
+FBY,YieldMax® META Option Income Strategy ETF,61%,YES,76%
+FIAT,YieldMax® Short COIN Option Income Strategy ETF,55%,YES,-46%
+GDXY,YieldMax® Gold Miners Option Income Strategy ETF,40%,YES,59%
+GMEY,YieldMax® GME Option Income Strategy ETF,86%,YES,-11%
+GOOY,YieldMax® GOOGL Option Income Strategy ETF,25%,YES,88%
+HIYY,YieldMax® HIMS Option Income Strategy ETF,65%,YES,-43%
+HOOY,YieldMax® HOOD Option Income Strategy ETF,66%,YES,61%
+INYY,YieldMax INTC Option Income Strategy ETF,86%,YES,-8%
 JPO,YieldMax® JPM Option Income Strategy ETF,19%,YES,51%
-MARO,YieldMax® MARA Option Income Strategy ETF,65%,YES,-60%
-MRNY,YieldMax® MRNA Option Income Strategy ETF,100%,YES,65%
-MSFO,YieldMax® MSFT Option Income Strategy ETF,25%,YES,63%
-MSTY,YieldMax® MSTR Option Income Strategy ETF,76%,YES,79%
-NFLY,YieldMax® NFLX Option Income Strategy ETF,26%,YES,30%
-NVDY,YieldMax® NVDA Option Income Strategy ETF,30%,YES,382%
-OARK,YieldMax® Innovation Option Income Strategy ETF,29%,YES,63%
-PLTY,YieldMax® PLTR Option Income Strategy ETF,40%,YES,197%
-PYPY,YieldMax® PYPL Option Income Strategy ETF,25%,YES,-3%
-RBLY,YieldMax® RBLX Option Income Strategy ETF,60%,YES,-61%
-RDYY,YieldMax® RDDT Option Income Strategy ETF,55%,YES,-32%
-SMCY,YieldMax® SMCI Option Income Strategy ETF,76%,YES,-28%
-SNOY,YieldMax® SNOW Option Income Strategy ETF,45%,YES,145%
+MARO,YieldMax® MARA Option Income Strategy ETF,65%,YES,-64%
+MRNY,YieldMax® MRNA Option Income Strategy ETF,100%,YES,73%
+MSFO,YieldMax® MSFT Option Income Strategy ETF,25%,YES,65%
+MSTY,YieldMax® MSTR Option Income Strategy ETF,76%,YES,75%
+NFLY,YieldMax® NFLX Option Income Strategy ETF,26%,YES,34%
+NVDY,YieldMax® NVDA Option Income Strategy ETF,30%,YES,371%
+OARK,YieldMax® Innovation Option Income Strategy ETF,29%,YES,61%
+PLTY,YieldMax® PLTR Option Income Strategy ETF,40%,YES,214%
+PYPY,YieldMax® PYPL Option Income Strategy ETF,25%,YES,-2%
+RBLY,YieldMax® RBLX Option Income Strategy ETF,60%,YES,-58%
+RDYY,YieldMax® RDDT Option Income Strategy ETF,55%,YES,-29%
+SMCY,YieldMax® SMCI Option Income Strategy ETF,76%,YES,-31%
+SNOY,YieldMax® SNOW Option Income Strategy ETF,45%,YES,154%
 TSLY,YieldMax® TSLA Option Income Strategy ETF,50%,YES,43%
-TSMY,YieldMax® TSM Option Income Strategy ETF,41%,YES,128%
-WNTR,YieldMax® Short MSTR Option Income Strategy ETF,65%,YES,7%
-XOMO,YieldMax® XOM Option Income Strategy ETF,30%,YES,28%
-XYZY,YieldMax® XYZ Option Income Strategy ETF,30%,YES,33%
-YBIT,YieldMax® Bitcoin Option Income Strategy ETF,41%,YES,-9%
+TSMY,YieldMax® TSM Option Income Strategy ETF,41%,YES,115%
+WNTR,YieldMax® Short MSTR Option Income Strategy ETF,65%,YES,9%
+XOMO,YieldMax® XOM Option Income Strategy ETF,30%,YES,30%
+XYZY,YieldMax® XYZ Option Income Strategy ETF,30%,YES,35%
+YBIT,YieldMax® Bitcoin Option Income Strategy ETF,41%,YES,-11%
 YQQQ,YieldMax® Short N100 Option Income Strategy ETF,19%,YES,-20%
-CHPY,YieldMax® Semiconductor Portfolio Option Income ETF,43%,NO,188%
-GPTY,YieldMax® AI & Tech Portfolio Option Income ETF,36%,YES,58%
-LFGY,YieldMax® Crypto Industry & Tech Portfolio Option Income ETF,41%,YES,4%
+CHPY,YieldMax® Semiconductor Portfolio Option Income ETF,43%,NO,176%
+GPTY,YieldMax® AI & Tech Portfolio Option Income ETF,36%,YES,56%
+LFGY,YieldMax® Crypto Industry & Tech Portfolio Option Income ETF,41%,YES,0%
 MINY,YieldMax® Strategic Metals & Mining Portfolio Option Income ETF,31%,YES,-15%
-QDTY,YieldMax® Nasdaq 100 0DTE Covered Call ETF,31%,YES,31%
-RDTY,YieldMax® R2000 0DTE Covered Call ETF,36%,YES,31%
+QDTY,YieldMax® Nasdaq 100 0DTE Covered Call ETF,31%,YES,30%
+RDTY,YieldMax® R2000 0DTE Covered Call ETF,36%,YES,30%
 SDTY,YieldMax® S&P 500 0DTE Covered Call ETF,21%,YES,24%
 SLTY,YieldMax® Ultra Short Option Income Strategy ETF,55%,YES,-17%
 ULTY,YieldMax® Ultra Option Income Strategy ETF,61%,YES,12%
 YMAG,YieldMax® Magnificent 7 Fund of Option Income ETFs,39%,YES,76%
 YMAX,YieldMax® Universe Fund of Option Income ETFs,41%,YES,47%
 TSYX,TSPY LIFT ETF,20%,NO,11%
-TDAX,TDAQ LIFT ETF,24%,NO,20%
-ODTE,ODTE  VegaShares SPX NDX RTY Premium Income ETF,14%,NO,8%
-SPCI,Tuttle Capital Space Industry Income Blast ETF,28%,YES,-4%
+TDAX,TDAQ LIFT ETF,24%,NO,19%
+ODTE,ODTE  VegaShares SPX NDX RTY Premium Income ETF,14%,NO,7%
+SPCI,Tuttle Capital Space Industry Income Blast ETF,28%,YES,-11%
 VAIE,VegaShares US Equity Autocallable Income ETF,17%,YES,5%
-FEPI,Rex Fang & Innovation Equity Premium Income ETF,25%,YES,74%
+FEPI,Rex Fang & Innovation Equity Premium Income ETF,25%,YES,75%
 AIPI,REX AI Equity Premium Income ETF,35%,YES,62%
-CEPI,REX Crypto Equity Premium Income ETF,42%,YES,27%
-MEMY,Tuttle Capital Meme Stock Income Blast ETF,25%,YES,-23%
+CEPI,REX Crypto Equity Premium Income ETF,42%,YES,25%
+MEMY,Tuttle Capital Meme Stock Income Blast ETF,25%,YES,-24%
