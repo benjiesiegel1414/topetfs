@@ -287,7 +287,9 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-09",
+   "words": 1984
   },
   {
    "slug": "voo-vs-qqq",
