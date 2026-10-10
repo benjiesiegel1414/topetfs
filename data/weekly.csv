@@ -1,7 +1,7 @@
 Symbol,ETF Name,Dividend Yield,Price Decay,Total Return
 QLDY,Defiance Nasdaq 100 LightningSpread Income ETF,40%,YES,23%
 QQQY,Defiance Nasdaq 100 Target 30 Income ETF,30%,YES,60%
-USOY,Defiance Oil Enhanced Options Income ETF,50%,YES,63%
+USOY,Defiance Oil Enhanced Options Income ETF,45%,YES,63%
 IWMY,Defiance R2000 Enhanced Options Income ETF,30%,YES,38%
 YBST,GraniteShares YieldBOOST Single Stock Universe ETF,44%,YES,-25%
 YBTY,GraniteShares YieldBOOST TopYielders ETF,52%,YES,-33%
@@ -100,9 +100,9 @@ ULTY,YieldMax® Ultra Option Income Strategy ETF,61%,YES,12%
 YMAG,YieldMax® Magnificent 7 Fund of Option Income ETFs,39%,YES,76%
 YMAX,YieldMax® Universe Fund of Option Income ETFs,41%,YES,47%
 TSYX,TSPY LIFT ETF,20%,NO,11%
-TDAX,TDAQ LIFT ETF,24%,NO,19%
+TDAX,TDAQ LIFT ETF,18%,NO,19%
 ODTE,ODTE  VegaShares SPX NDX RTY Premium Income ETF,14%,NO,7%
-SPCI,Tuttle Capital Space Industry Income Blast ETF,28%,YES,-11%
+SPCI,Tuttle Capital Space Industry Income Blast ETF,35%,YES,-11%
 VAIE,VegaShares US Equity Autocallable Income ETF,17%,YES,5%
 FEPI,Rex Fang & Innovation Equity Premium Income ETF,25%,YES,75%
 AIPI,REX AI Equity Premium Income ETF,35%,YES,62%
