@@ -101,7 +101,9 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to JEPQ: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Nasdaq-100 covered call income, monthly pay, tech-heavy",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-10",
+   "words": 1514
   },
   {
    "slug": "how-much-does-100-000-in-schd-pay",

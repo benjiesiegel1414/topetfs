@@ -1,0 +1,85 @@
+<!--meta
+{"title":"JEPQ ETF: Dividend Yield, Total Return and What $10,000 Pays Today","short":"JEPQ guide","seoTitle":"JEPQ ETF: Yield, Total Return and $10,000 Income","dek":"JEPQ pays monthly income from Nasdaq-100 covered calls. See live yield, fee, total return, price decay and what $10,000 pays, plus who should skip it.","section":"income","date":"2026-10-10","time":"08","read":7,"art":"bars","tickers":["JEPQ"],"coverLabel":"JEPQ  ·  Monthly income","keyNumbers":[["JEPQ yield","{{live:JEPQ:yield}}"],["Expense ratio","{{live:JEPQ:er:pct2}}"],["Assets","{{live:JEPQ:aum:aum}}"],["Total return since inception","{{live:JEPQ:tr}}"],["Price decay flag","{{live:JEPQ:decay:decay}}"]],"keyword":"JEPQ ETF","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:JEPQ}} currently yields {{live:JEPQ:yield}} and pays {{live:JEPQ:freq:text}}, which works out to about {{calc:usd:10000*JEPQ.yield/100}} a year on $10,000 at today's yield.</li><li>The income comes from selling call options on the Nasdaq-100, and that caps your upside in strong tech rallies. Since its {{live:JEPQ:inception:text}} launch, total return is {{live:JEPQ:tr}}.</li><li>It fits investors who want high monthly cash flow with tech exposure. It is a poor fit if you want maximum growth or a stable payout you can count on to the dollar.</li></ul></div>
+
+<p class="lede">JEPQ is a monthly-pay, Nasdaq-100 covered call ETF from JPMorgan. Right now it yields {{live:JEPQ:yield}} with a {{live:JEPQ:er:pct2}} expense ratio, so $10,000 would throw off roughly {{calc:usd:10000*JEPQ.yield/100/12}} a month at today's rate. Here is where that money comes from, and what it costs you in upside.</p>
+
+<div class="board" data-w="board" data-syms="JEPQ,JEPI,QQQI,SGOV,SCHD,VOO" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>JEPQ vs close alternatives</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>What JEPQ is and who runs it</h2>
+<p>JEPQ is the JPMorgan NASDAQ Equity Premium Income ETF. JPMorgan Asset Management runs it, and it is actively managed, so a team picks the holdings instead of copying an index. It launched on {{live:JEPQ:inception:text}} and has grown to {{live:JEPQ:aum:aum}} in assets. That is a big number for a fund that young.</p>
+<p>Think of it as the Nasdaq version of JPMorgan's older income fund, {{tkr:JEPI}}. Same issuer, same monthly payout idea, but pointed at large tech and growth stocks instead of the broad S&amp;P 500. I cover the two side by side in <a href="/articles/jepi-vs-jepq">JEPI vs JEPQ</a>.</p>
+
+<h2>How JEPQ makes its money</h2>
+<p>There are two engines under the hood. First, the fund owns a portfolio of large Nasdaq-100 style stocks, chosen with a rules-based process that tends to lean toward steadier names. Second, it sells call options on the Nasdaq-100 using equity-linked notes (ELNs), which are debt instruments that package the option income for the fund.</p>
+<p>A covered call is simple. You collect cash up front (the premium) in exchange for giving up gains above a certain price. If tech stays flat or drifts up slowly, you keep the premium and most of the move. If tech rips higher, your gain is capped. If tech falls, the premium cushions the drop a little, but only a little.</p>
+<p>That premium is what funds the monthly distribution. Option premiums are bigger when markets are jumpy, which is why the yield moves around from month to month. If you want the full mechanics, my guide on <a href="/articles/covered-call-etfs-explained">where covered call yields come from</a> walks through it.</p>
+
+<h2>What $10,000 and $100,000 pay</h2>
+<p>Here is the real-world math at today's {{live:JEPQ:yield}} yield. Treat it as a snapshot, not a promise.</p>
+<ul>
+<li><strong>$10,000 invested:</strong> about {{calc:usd:10000*JEPQ.yield/100}} per year, or about {{calc:usd:10000*JEPQ.yield/100/12}} per month.</li>
+<li><strong>$100,000 invested:</strong> about {{calc:usd:100000*JEPQ.yield/100}} per year, or about {{calc:usd:100000*JEPQ.yield/100/12}} per month.</li>
+<li><strong>Target of $1,000 a month:</strong> you would need roughly {{calc:usd:12000/(JEPQ.yield/100)}} invested at the current yield.</li>
+</ul>
+<p>Compare that with the safer end of the shelf. The same $100,000 in {{tkr:SGOV}}, a 0 to 3 month Treasury bill fund, would pay about {{calc:usd:100000*SGOV.yield/100/12}} a month. In {{tkr:SCHD}}, a quality dividend fund, it would pay about {{calc:usd:100000*SCHD.yield/100/12}} a month. JEPQ pays far more cash today, but it asks you to take stock market risk and give up upside to get it.</p>
+<p>The monthly amount is not fixed. JEPQ's distributions rise and fall with option premiums and market conditions, so a bill you plan around should use a conservative estimate. If you want to model it, try the <a href="/tools">TopETFs calculators</a> or <a href="https://dividendprojection.com/">project future income</a> over several years.</p>
+
+<h2>Total return and price decay</h2>
+<p>A big yield means little if the share price erodes. So here is the check I always run. Since inception on {{live:JEPQ:inception:text}}, JEPQ's total return is {{live:JEPQ:tr}}, and our price decay flag reads {{live:JEPQ:decay:decay}}. Total return counts both price change and reinvested distributions, which is the number that tells you whether the income was real or just your own capital coming back.</p>
+<p>Now the caveat. That period is short, and it began in a stretch where tech did well. JEPQ has not been tested through a long, grinding tech bear market. A clean result on a short record is encouraging, not proof.</p>
+<p>Context also matters when you compare it to others. {{tkr:JEPI}} shows a total return of {{live:JEPI:tr}}, but it launched on {{live:JEPI:inception:text}}, so it has had much more time. {{tkr:QQQI}} is at {{live:QQQI:tr}} since {{live:QQQI:inception:text}}, the youngest of the group. {{tkr:VOO}} shows {{live:VOO:tr}}, but that runs from {{live:VOO:inception:text}}, so it is not a fair race against JEPQ. Different start dates mean you cannot read these numbers as a scoreboard.</p>
+<p>What you can say is this: income funds like JEPQ tend to give you a smoother ride and more cash, but they usually trail the plain index in big up markets. That is the trade.</p>
+
+<h2>How JEPQ compares to close alternatives</h2>
+<h3>JEPQ vs JEPI</h3>
+<p>JEPI yields {{live:JEPI:yield}} against JEPQ's {{live:JEPQ:yield}}, and both charge {{live:JEPQ:er:pct2}} and {{live:JEPI:er:pct2}} respectively. JEPI is built on the S&amp;P 500 and tends to hold more defensive sectors. JEPQ is more tech-heavy, which usually means bigger swings and a bigger payout. See my full <a href="/articles/jepi-etf-dividend-yield-total-return">JEPI breakdown</a> if you want the other side.</p>
+<h3>JEPQ vs QQQI</h3>
+<p>QQQI, from NEOS, also targets the Nasdaq-100 and pays monthly. It yields {{live:QQQI:yield}} with a {{live:QQQI:er:pct2}} expense ratio, higher than JEPQ's fee. A higher yield with a higher fee and a much shorter track record is worth looking at carefully. Higher yield usually means giving up more upside or taking more risk somewhere.</p>
+<h3>JEPQ vs plain index funds and T-bills</h3>
+<p>VOO yields {{live:VOO:yield}} with a {{live:VOO:er:pct2}} fee, so you get very little cash but full market upside. SGOV yields {{live:SGOV:yield}} with almost no price risk. JEPQ sits in the middle: lots of income, real equity risk, capped upside. Many people mix these instead of choosing one.</p>
+
+<h2>The main risks</h2>
+<ul>
+<li><strong>Capped upside.</strong> When the Nasdaq-100 surges, JEPQ will lag it, sometimes by a lot.</li>
+<li><strong>Variable payouts.</strong> The monthly check changes. A calm market can mean lower option premiums and a smaller distribution.</li>
+<li><strong>Tech concentration.</strong> The fund is tied to the Nasdaq-100, so a sharp drop in big tech hurts it. The premium only cushions part of the fall.</li>
+<li><strong>Short history.</strong> It has not lived through a full cycle yet.</li>
+<li><strong>Taxes.</strong> Much of the income from this type of strategy is generally taxed as ordinary income rather than qualified dividends, so it can fit better in a tax-advantaged account. Talk to a tax professional about your own situation.</li>
+<li><strong>Active management.</strong> You are trusting JPMorgan's process, and the fee is higher than index funds.</li>
+</ul>
+
+<h2>Who JEPQ tends to fit, and who should skip it</h2>
+<p>It tends to fit people who want strong monthly cash flow now and still want some Nasdaq exposure. Retirees topping up income, or anyone building a paycheck from a portfolio, may find it useful as one piece of a mix, not the whole thing.</p>
+<p>It tends not to fit younger investors with decades to grow, because the capped upside can cost a lot over time. Growth-focused readers may be better served looking at <a href="https://growthetfs.com/">growth ETFs</a>. It is also a poor match if you need a fixed, predictable payout, or if you are not comfortable with large tech swings.</p>
+<p>This is not a buy or sell signal. It is a way to see which side of the trade you are on.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="JEPQ,JEPI,QQQI,SCHD,SGOV" data-per="year">
+  <p class="figure-title">What your money pays in JEPQ and close alternatives</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Does JEPQ pay monthly?</h3>
+<p>Yes. JEPQ pays {{live:JEPQ:freq:text}}, but the amount changes from month to month because it depends on option premiums and market conditions.</p>
+<h3>What is the JEPQ dividend yield?</h3>
+<p>JEPQ's current yield is {{live:JEPQ:yield}}. That is a trailing snapshot, so it can move up or down as markets and distributions change.</p>
+<h3>How much do I need in JEPQ to make $1,000 a month?</h3>
+<p>At today's yield you would need roughly {{calc:usd:12000/(JEPQ.yield/100)}}. For a similar walkthrough on another fund, see <a href="/articles/how-much-do-i-need-in-jepi-to-make-1000-a-month">how much you need in JEPI</a>.</p>
+<h3>Does JEPQ have price decay?</h3>
+<p>Our price decay flag for JEPQ currently reads {{live:JEPQ:decay:decay}}, with a total return of {{live:JEPQ:tr}} since inception. The track record is short, so keep watching it.</p>
+<h3>Is JEPQ better than JEPI?</h3>
+<p>It depends on what you want. JEPQ is more tech-focused and currently yields {{live:JEPQ:yield}} against JEPI's {{live:JEPI:yield}}, but it likely swings more. Read <a href="/articles/jepi-vs-jepq">JEPI vs JEPQ</a> for the full comparison.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+<p>JEPQ is a clean way to turn Nasdaq-100 exposure into monthly cash, and the numbers so far look solid: a {{live:JEPQ:yield}} yield, a {{live:JEPQ:er:pct2}} fee, and a {{live:JEPQ:tr}} total return since {{live:JEPQ:inception:text}}. But the record is short, the payout moves, and you give up big upside in strong tech years.</p>
+<p>Do your own due diligence, and compare it against the full list on <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a> before you decide how it fits your plan. Nothing here is a recommendation, just the homework I would want done.
