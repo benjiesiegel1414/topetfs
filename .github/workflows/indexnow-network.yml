@@ -1,0 +1,56 @@
+name: IndexNow (whole network)
+
+# Sends every URL in each site's sitemap to IndexNow (Bing, Yandex, Seznam, Naver and others share it).
+# Each site hosts the key file /0cfadbd6b0e93fdb783aaccafc907e0a.txt at its root.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 13 * * 1"   # Mondays, ~9am ET
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemaps to IndexNow
+        run: |
+          cat > submit.mjs <<'JS'
+          const KEY = "0cfadbd6b0e93fdb783aaccafc907e0a";
+          const SITES = {
+            "topdividendetfs.com": ["sitemap.xml"],
+            "weeklyetfs.com": ["sitemap.xml", "sitemap-yield.xml"],
+            "monthlyetfs.com": ["sitemap.xml"],
+            "growthetfs.com": ["sitemap.xml"],
+            "etftotalreturns.com": ["sitemap-etf.xml", "sitemap-matchups.xml"],
+            "topdividendtools.com": ["sitemap.xml"],
+            "photonicsetfs.com": ["sitemap.xml"],
+            "topetfs.com": ["sitemap.xml"],
+            "dividendprojection.com": ["sitemap.xml"],
+            "topdividendetfspro.com": []   // no sitemap; public pages listed below
+          };
+          const EXTRA = { "topdividendetfspro.com": ["/", "/free.html", "/video-demo.html"] };
+          async function locs(url, depth = 0) {
+            const r = await fetch(url); if (!r.ok) { console.log(`  ${url}: HTTP ${r.status}`); return []; }
+            const xml = await r.text();
+            const found = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map(m => m[1].replace(/&amp;/g, "&"));
+            if (/<sitemapindex/i.test(xml) && depth < 2) { let all = []; for (const u of found) all = all.concat(await locs(u, depth + 1)); return all; }
+            return found;
+          }
+          let failed = 0;
+          for (const [host, maps] of Object.entries(SITES)) {
+            const keyRes = await fetch(`https://${host}/${KEY}.txt`);
+            const keyOk = keyRes.ok && (await keyRes.text()).trim() === KEY;
+            if (!keyOk) { console.log(`${host}: key file missing (HTTP ${keyRes.status}), skipped`); failed++; continue; }
+            let urls = (EXTRA[host] || []).map(p => `https://${host}${p}`);
+            for (const m of maps) urls = urls.concat(await locs(`https://${host}/${m}`));
+            urls = [...new Set(urls)].filter(u => { try { return new URL(u).hostname.replace(/^www\./, "") === host; } catch { return false; } });
+            if (!urls.length) { console.log(`${host}: no URLs found`); failed++; continue; }
+            for (let i = 0; i < urls.length; i += 10000) {
+              const body = { host, key: KEY, keyLocation: `https://${host}/${KEY}.txt`, urlList: urls.slice(i, i + 10000) };
+              const r = await fetch("https://api.indexnow.org/indexnow", { method: "POST", headers: { "Content-Type": "application/json; charset=utf-8" }, body: JSON.stringify(body) });
+              console.log(`${host}: ${body.urlList.length} URLs -> HTTP ${r.status} ${r.status === 200 || r.status === 202 ? "OK" : await r.text()}`);
+              if (r.status !== 200 && r.status !== 202) failed++;
+            }
+          }
+          if (failed) { console.log(`${failed} site(s) had problems`); process.exitCode = 1; }
+          JS
+          node submit.mjs
