@@ -465,8 +465,8 @@ function renderSearch(q){
   if(!searchIdx){ box.innerHTML='<div class="search-empty">Loading ETFs...</div>'; return; }
   var res=searchIdx.filter(function(e){ return !q||e.sym.indexOf(q)===0||e.name.toUpperCase().indexOf(q)>-1; })
     .sort(function(a,b){ var ax=a.sym===q?0:a.sym.indexOf(q)===0?1:2, bx=b.sym===q?0:b.sym.indexOf(q)===0?1:2; return ax-bx||((b.aum||0)-(a.aum||0)); }).slice(0,q?10:8);
-  var html=arts.map(function(a){ return '<a href="/articles/'+a.slug+'"><span class="type">Story</span><span>'+esc(a.title)+'</span><span></span></a>'; }).join("")+
-    res.map(function(e){ return '<a href="'+etfUrl(e.sym)+'"><span class="tk">'+esc(e.sym)+'</span><span class="fund-name" style="max-width:none">'+esc(e.name)+'</span><span class="num">'+(e.yield!=null&&e.lists.indexOf("growth")<0?F.pct(e.yield)+" yld":(e.tr!=null?F.signed(e.tr):""))+'</span></a>'; }).join("");
+  var html=res.map(function(e){ return '<a href="'+etfUrl(e.sym)+'"><span class="tk">'+esc(e.sym)+'</span><span class="fund-name" style="max-width:none">'+esc(e.name)+'</span><span class="num">'+(e.yield!=null&&e.lists.indexOf("growth")<0?F.pct(e.yield)+" yld":(e.tr!=null?F.signed(e.tr):""))+'</span></a>'; }).join("")+
+    arts.map(function(a){ return '<a href="/articles/'+a.slug+'"><span class="type">Story</span><span>'+esc(a.title)+'</span><span></span></a>'; }).join("");
   box.innerHTML=html||'<div class="search-empty">No matches. Try a ticker like SCHD or JEPI.</div>';
   var first=box.querySelector("a"); if(first) first.classList.add("active");
 }
