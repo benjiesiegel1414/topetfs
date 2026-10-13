@@ -1,0 +1,631 @@
+{
+ "provider": "JP Morgan",
+ "asOf": "2026-10-13",
+ "note": "Full JP Morgan ETF lineup snapshot. ETNs excluded.",
+ "funds": [
+  {
+   "sym": "JEPI",
+   "name": "JPMorgan Equity Premium Income ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 45530000000.0,
+   "yield": 8.03,
+   "er": 0.35
+  },
+  {
+   "sym": "JEPQ",
+   "name": "JPMorgan Nasdaq Equity Premium Income ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 44560000000.0,
+   "yield": 11.31,
+   "er": 0.35
+  },
+  {
+   "sym": "JPST",
+   "name": "JPMorgan Ultra-Short Income ETF",
+   "cat": "Bonds & cash",
+   "aum": 42400000000.0,
+   "yield": 4.14,
+   "er": 0.18
+  },
+  {
+   "sym": "BBJP",
+   "name": "JPMorgan BetaBuilders Japan ETF",
+   "cat": "International stocks",
+   "aum": 19460000000.0,
+   "yield": 4.51,
+   "er": 0.19
+  },
+  {
+   "sym": "JCPB",
+   "name": "JPMorgan Core Plus Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 14690000000.0,
+   "yield": 5.06,
+   "er": 0.37
+  },
+  {
+   "sym": "BBCA",
+   "name": "JPMorgan BetaBuilders Canada ETF",
+   "cat": "International stocks",
+   "aum": 10990000000.0,
+   "yield": 1.71,
+   "er": 0.19
+  },
+  {
+   "sym": "JPIE",
+   "name": "JPMorgan Income ETF",
+   "cat": "Bonds & cash",
+   "aum": 10950000000.0,
+   "yield": 5.72,
+   "er": 0.39
+  },
+  {
+   "sym": "JIRE",
+   "name": "JPMorgan International Research Enhanced Equity ETF",
+   "cat": "International stocks",
+   "aum": 10850000000.0,
+   "yield": 2.74,
+   "er": 0.24
+  },
+  {
+   "sym": "JGRO",
+   "name": "JPMorgan Active Growth ETF",
+   "cat": "U.S. stocks",
+   "aum": 10130000000.0,
+   "yield": 0.15,
+   "er": 0.44
+  },
+  {
+   "sym": "BBUS",
+   "name": "JPMorgan BetaBuilders U.S. Equity ETF",
+   "cat": "U.S. stocks",
+   "aum": 9610000000.0,
+   "yield": 0.98,
+   "er": 0.02
+  },
+  {
+   "sym": "JQUA",
+   "name": "JPMorgan U.S. Quality Factor ETF",
+   "cat": "U.S. stocks",
+   "aum": 9210000000.0,
+   "yield": 1.05,
+   "er": 0.12
+  },
+  {
+   "sym": "JBND",
+   "name": "JPMorgan Active Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 8860000000.0,
+   "yield": 4.65,
+   "er": 0.25
+  },
+  {
+   "sym": "BBEU",
+   "name": "JPMorgan BetaBuilders Europe ETF",
+   "cat": "International stocks",
+   "aum": 8780000000.0,
+   "yield": 3.07,
+   "er": 0.09
+  },
+  {
+   "sym": "JMUB",
+   "name": "JPMorgan Municipal ETF",
+   "cat": "Municipal bonds",
+   "aum": 8510000000.0,
+   "yield": 3.84,
+   "er": 0.18
+  },
+  {
+   "sym": "JMST",
+   "name": "JPMorgan Ultra-Short Municipal Income ETF",
+   "cat": "Municipal bonds",
+   "aum": 7420000000.0,
+   "yield": 2.57,
+   "er": 0.18
+  },
+  {
+   "sym": "JAVA",
+   "name": "JPMorgan Active Value ETF",
+   "cat": "U.S. stocks",
+   "aum": 7110000000.0,
+   "yield": 1.16,
+   "er": 0.44
+  },
+  {
+   "sym": "JMTG",
+   "name": "JPMorgan Mortgage-Backed Securities ETF",
+   "cat": "Bonds & cash",
+   "aum": 6750000000.0,
+   "yield": 4.56,
+   "er": 0.24
+  },
+  {
+   "sym": "BBAX",
+   "name": "JPMorgan BetaBuilders Developed Asia Pacific ex-Japan ETF",
+   "cat": "International stocks",
+   "aum": 6500000000.0,
+   "yield": 3.81,
+   "er": 0.19
+  },
+  {
+   "sym": "BBIN",
+   "name": "JPMorgan BetaBuilders International Equity ETF",
+   "cat": "International stocks",
+   "aum": 6440000000.0,
+   "yield": 3.75,
+   "er": 0.07
+  },
+  {
+   "sym": "JGLO",
+   "name": "JPMorgan Global Select Equity ETF",
+   "cat": "International stocks",
+   "aum": 6360000000.0,
+   "yield": 1.11,
+   "er": 0.47
+  },
+  {
+   "sym": "HELO",
+   "name": "JPMorgan Hedged Equity Laddered Overlay ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 4890000000.0,
+   "yield": 0.56,
+   "er": 0.5
+  },
+  {
+   "sym": "JTEK",
+   "name": "JPMorgan U.S. Tech Leaders ETF",
+   "cat": "U.S. stocks",
+   "aum": 4810000000.0,
+   "yield": null,
+   "er": 0.65
+  },
+  {
+   "sym": "JIVE",
+   "name": "JPMorgan International Value ETF",
+   "cat": "International stocks",
+   "aum": 4210000000.0,
+   "yield": 2.44,
+   "er": 0.55
+  },
+  {
+   "sym": "JPLD",
+   "name": "JPMorgan Limited Duration Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 4019999999.9999995,
+   "yield": 4.35,
+   "er": 0.24
+  },
+  {
+   "sym": "JMEE",
+   "name": "JPMorgan Small & Mid Cap Enhanced Equity ETF",
+   "cat": "U.S. stocks",
+   "aum": 2900000000.0,
+   "yield": 0.98,
+   "er": 0.24
+  },
+  {
+   "sym": "JMOM",
+   "name": "JPMorgan U.S. Momentum Factor ETF",
+   "cat": "U.S. stocks",
+   "aum": 2800000000.0,
+   "yield": 0.74,
+   "er": 0.12
+  },
+  {
+   "sym": "JPIB",
+   "name": "JPMorgan International Bond Opportunities ETF",
+   "cat": "Bonds & cash",
+   "aum": 2230000000.0,
+   "yield": 4.67,
+   "er": 0.5
+  },
+  {
+   "sym": "JPRF",
+   "name": "JPMorgan Preferred and Income Securities ETF",
+   "cat": "Bonds & cash",
+   "aum": 2220000000.0,
+   "yield": 1.44,
+   "er": 0.55
+  },
+  {
+   "sym": "JPHY",
+   "name": "JPMorgan Active High Yield ETF",
+   "cat": "Bonds & cash",
+   "aum": 2220000000.0,
+   "yield": 6.58,
+   "er": 0.45
+  },
+  {
+   "sym": "BBMC",
+   "name": "JPMorgan BetaBuilders U.S. Mid Cap Equity ETF",
+   "cat": "U.S. stocks",
+   "aum": 2089999999.9999998,
+   "yield": 1.16,
+   "er": 0.07
+  },
+  {
+   "sym": "JPEF",
+   "name": "JPMorgan Equity Focus ETF",
+   "cat": "U.S. stocks",
+   "aum": 2049999999.9999998,
+   "yield": 0.63,
+   "er": 0.44
+  },
+  {
+   "sym": "JSCP",
+   "name": "JPMorgan Short Duration Core Plus ETF",
+   "cat": "Bonds & cash",
+   "aum": 1830000000.0,
+   "yield": 4.53,
+   "er": 0.33
+  },
+  {
+   "sym": "JEMA",
+   "name": "JPMorgan ActiveBuilders Emerging Markets Equity ETF",
+   "cat": "International stocks",
+   "aum": 1740000000.0,
+   "yield": 2.35,
+   "er": 0.33
+  },
+  {
+   "sym": "JFLX",
+   "name": "JPMorgan Flexible Debt ETF",
+   "cat": "Bonds & cash",
+   "aum": 1600000000.0,
+   "yield": 4.7,
+   "er": 0.45
+  },
+  {
+   "sym": "BBRE",
+   "name": "JPMorgan BetaBuilders MSCI US REIT ETF",
+   "cat": "Real estate",
+   "aum": 1220000000.0,
+   "yield": 2.92,
+   "er": 0.11
+  },
+  {
+   "sym": "LGDS",
+   "name": "JPMorgan Fundamental Data Science Large Growth ETF",
+   "cat": "U.S. stocks",
+   "aum": 1150000000.0,
+   "yield": null,
+   "er": 0.3
+  },
+  {
+   "sym": "JVAL",
+   "name": "JPMorgan U.S. Value Factor ETF",
+   "cat": "U.S. stocks",
+   "aum": 1010000000.0,
+   "yield": 1.58,
+   "er": 0.12
+  },
+  {
+   "sym": "BBAG",
+   "name": "JPMorgan BetaBuilders U.S. Aggregate Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 972730000.0,
+   "yield": 4.56,
+   "er": 0.03
+  },
+  {
+   "sym": "JCPI",
+   "name": "JPMorgan Inflation Managed Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 896740000.0,
+   "yield": 4.23,
+   "er": 0.25
+  },
+  {
+   "sym": "BBEM",
+   "name": "JPMorgan BetaBuilders Emerging Markets Equity ETF",
+   "cat": "International stocks",
+   "aum": 864800000.0,
+   "yield": 4.69,
+   "er": 0.15
+  },
+  {
+   "sym": "ROCY",
+   "name": "JPMorgan Equity Premium Yield ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 808400000.0,
+   "yield": 3.81,
+   "er": 0.35
+  },
+  {
+   "sym": "JUSA",
+   "name": "JPMorgan U.S. Research Enhanced Large Cap ETF",
+   "cat": "U.S. stocks",
+   "aum": 735850000.0,
+   "yield": 0.95,
+   "er": 0.12
+  },
+  {
+   "sym": "ROCQ",
+   "name": "JPMorgan Nasdaq Equity Premium Yield ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 730730000.0,
+   "yield": 6.02,
+   "er": 0.35
+  },
+  {
+   "sym": "BBSC",
+   "name": "JPMorgan BetaBuilders U.S. Small Cap Equity ETF",
+   "cat": "U.S. stocks",
+   "aum": 729900000.0,
+   "yield": 1.07,
+   "er": 0.09
+  },
+  {
+   "sym": "BBHY",
+   "name": "JPMorgan BetaBuilders USD High Yield Corporate Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 701520000.0,
+   "yield": 7.23,
+   "er": 0.07
+  },
+  {
+   "sym": "JPSE",
+   "name": "JPMorgan Diversified Return U.S. Small Cap Equity ETF",
+   "cat": "U.S. stocks",
+   "aum": 571200000.0,
+   "yield": 1.44,
+   "er": 0.29
+  },
+  {
+   "sym": "JIG",
+   "name": "JPMorgan International Growth ETF",
+   "cat": "International stocks",
+   "aum": 545750000.0,
+   "yield": 1.99,
+   "er": 0.55
+  },
+  {
+   "sym": "JCAL",
+   "name": "JPMorgan California Tax Free Bond ETF",
+   "cat": "Municipal bonds",
+   "aum": 505520000.0,
+   "yield": 1.18,
+   "er": 0.34
+  },
+  {
+   "sym": "JPME",
+   "name": "JPMorgan Diversified Return U.S. Mid Cap Equity ETF",
+   "cat": "U.S. stocks",
+   "aum": 471280000.0,
+   "yield": 1.83,
+   "er": 0.24
+  },
+  {
+   "sym": "JPUS",
+   "name": "JPMorgan Diversified Return U.S. Equity ETF",
+   "cat": "U.S. stocks",
+   "aum": 452830000.0,
+   "yield": 2.06,
+   "er": 0.18
+  },
+  {
+   "sym": "JPRE",
+   "name": "JPMorgan Realty Income ETF",
+   "cat": "Real estate",
+   "aum": 449930000.0,
+   "yield": 2.4,
+   "er": 0.5
+  },
+  {
+   "sym": "JTNY",
+   "name": "JPMorgan New York Tax Free Bond ETF",
+   "cat": "Municipal bonds",
+   "aum": 419870000.0,
+   "yield": 1.27,
+   "er": 0.34
+  },
+  {
+   "sym": "JPIN",
+   "name": "JPMorgan Diversified Return International Equity ETF",
+   "cat": "International stocks",
+   "aum": 378770000.0,
+   "yield": 4.28,
+   "er": 0.37
+  },
+  {
+   "sym": "JPEM",
+   "name": "JPMorgan Diversified Return Emerging Markets Equity ETF",
+   "cat": "International stocks",
+   "aum": 377480000.0,
+   "yield": 4.46,
+   "er": 0.44
+  },
+  {
+   "sym": "JMSI",
+   "name": "JPMorgan Sustainable Municipal Income ETF",
+   "cat": "Municipal bonds",
+   "aum": 357520000.0,
+   "yield": 3.88,
+   "er": 0.18
+  },
+  {
+   "sym": "JMHI",
+   "name": "JPMorgan High Yield Municipal ETF",
+   "cat": "Municipal bonds",
+   "aum": 294780000.0,
+   "yield": 4.68,
+   "er": 0.35
+  },
+  {
+   "sym": "HOLA",
+   "name": "JPMorgan International Hedged Equity Laddered Overlay ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 282700000.0,
+   "yield": 2.86,
+   "er": 0.5
+  },
+  {
+   "sym": "JPFP",
+   "name": "JPMorgan Managed Futures Plus ETF",
+   "cat": "Alternatives",
+   "aum": 129120000.0,
+   "yield": null,
+   "er": 0.59
+  },
+  {
+   "sym": "JOYT",
+   "name": "JPMorgan Equity and Options Total Return ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 113910000.0,
+   "yield": 0.75,
+   "er": 0.35
+  },
+  {
+   "sym": "LVDS",
+   "name": "JPMorgan Fundamental Data Science Large Value ETF",
+   "cat": "U.S. stocks",
+   "aum": 112720000.0,
+   "yield": 7.38,
+   "er": 0.3
+  },
+  {
+   "sym": "JMMF",
+   "name": "JPMorgan 100% U.S. Treasury Securities Money Market ETF",
+   "cat": "Bonds & cash",
+   "aum": 97160000.0,
+   "yield": 2.88,
+   "er": 0.16
+  },
+  {
+   "sym": "JPMB",
+   "name": "JPMorgan USD Emerging Markets Sovereign Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 94600000.0,
+   "yield": 5.99,
+   "er": 0.39
+  },
+  {
+   "sym": "BBIB",
+   "name": "JPMorgan BetaBuilders U.S. Treasury Bond 3-10 Year ETF",
+   "cat": "Bonds & cash",
+   "aum": 75230000.0,
+   "yield": 4.1,
+   "er": 0.04
+  },
+  {
+   "sym": "BBSB",
+   "name": "JPMorgan BetaBuilders U.S. Treasury Bond 1-3 Year ETF",
+   "cat": "Bonds & cash",
+   "aum": 54650000.0,
+   "yield": 3.8,
+   "er": 0.04
+  },
+  {
+   "sym": "BBCB",
+   "name": "JPMorgan BetaBuilders USD Investment Grade Corporate Bond ETF",
+   "cat": "Bonds & cash",
+   "aum": 52700000.0,
+   "yield": 5.27,
+   "er": 0.04
+  },
+  {
+   "sym": "JFLI",
+   "name": "JPMorgan Flexible Income ETF",
+   "cat": "Bonds & cash",
+   "aum": 47480000.0,
+   "yield": 8.05,
+   "er": 0.35
+  },
+  {
+   "sym": "BBLB",
+   "name": "JPMorgan BetaBuilders U.S. Treasury Bond 20+ Year ETF",
+   "cat": "Bonds & cash",
+   "aum": 33980000.0,
+   "yield": 5.26,
+   "er": 0.04
+  },
+  {
+   "sym": "HEQQ",
+   "name": "JPMorgan Nasdaq Hedged Equity Laddered Overlay ETF",
+   "cat": "Options income & hedged equity",
+   "aum": 31290000.0,
+   "yield": 0.16,
+   "er": 0.5
+  },
+  {
+   "sym": "JADE",
+   "name": "JPMorgan Active Developing Markets Equity ETF",
+   "cat": "International stocks",
+   "aum": 31250000.0,
+   "yield": 1.84,
+   "er": 0.65
+  },
+  {
+   "sym": "JPSV",
+   "name": "JPMorgan Active Small Cap Value ETF",
+   "cat": "U.S. stocks",
+   "aum": 28370000.0,
+   "yield": 1.24,
+   "er": 0.55
+  },
+  {
+   "sym": "JIDE",
+   "name": "JPMorgan International Dynamic ETF",
+   "cat": "International stocks",
+   "aum": 28270000.0,
+   "yield": null,
+   "er": 0.55
+  },
+  {
+   "sym": "JLVP",
+   "name": "JPMorgan U.S. Large Cap Value Plus ETF",
+   "cat": "U.S. stocks",
+   "aum": 27710000.0,
+   "yield": null,
+   "er": 1.05
+  },
+  {
+   "sym": "LCDS",
+   "name": "JPMorgan Fundamental Data Science Large Core ETF",
+   "cat": "U.S. stocks",
+   "aum": 16719999.999999998,
+   "yield": 0.84,
+   "er": 0.3
+  },
+  {
+   "sym": "JCHI",
+   "name": "JPMorgan Active China ETF",
+   "cat": "International stocks",
+   "aum": 13910000.0,
+   "yield": 1.94,
+   "er": 0.15
+  },
+  {
+   "sym": "JDIV",
+   "name": "JPMorgan Dividend Leaders ETF",
+   "cat": "U.S. stocks",
+   "aum": 12690000.0,
+   "yield": 2.68,
+   "er": 0.47
+  },
+  {
+   "sym": "SCDS",
+   "name": "JPMorgan Fundamental Data Science Small Core ETF",
+   "cat": "U.S. stocks",
+   "aum": 9320000.0,
+   "yield": 1.12,
+   "er": 0.4
+  },
+  {
+   "sym": "JDOC",
+   "name": "JPMorgan Healthcare Leaders ETF",
+   "cat": "U.S. stocks",
+   "aum": 8940000.0,
+   "yield": 0.85,
+   "er": 0.65
+  },
+  {
+   "sym": "MCDS",
+   "name": "JPMorgan Fundamental Data Science Mid Core ETF",
+   "cat": "U.S. stocks",
+   "aum": 7950000.0,
+   "yield": 1.03,
+   "er": 0.35
+  }
+ ]
+}
