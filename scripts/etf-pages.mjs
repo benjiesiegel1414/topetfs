@@ -1,6 +1,12 @@
 // Static ETF pages: /etfs/<ticker> (overview + live price), /etfs/<ticker>-dividend-calculator,
 // /etfs/<ticker>-alternatives and the /etfs/ A-Z directory. Rebuilt daily with fresh data.
 import { createRequire } from "node:module";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+// Per-share dividend history, refreshed daily by scripts/fetch-dividends.mjs (Nasdaq.com, Yahoo Finance fallback)
+const DIVF=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..","data","dividends.json");
+const DIVS=fs.existsSync(DIVF)?JSON.parse(fs.readFileSync(DIVF,"utf8")):{funds:{}};
 const TES=createRequire(import.meta.url)("../assets/js/screener.js");
 export const etfSlug=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,"-");
 export const etfPath=s=>"/etfs/"+etfSlug(s);
@@ -20,6 +26,34 @@ const usd=(v,d)=>v==null||isNaN(v)?"n/a":"$"+v.toLocaleString("en-US",{minimumFr
 const L=(sym,f,fmt,mul)=>{const r=BY[sym];let v=f==="inc10"?r.yield:r[f];const src=f==="inc10"?"yield":f;if(v==null)return "n/a";if(mul)v=v*mul;return `<span class="live" data-live="${sym}:${src}" data-fmt="${fmt}"${mul?` data-mul="${mul}"`:""}>${esc(F[fmt](v))}</span>`;};
 const PER={Weekly:52,Monthly:12,Quarterly:4,"Semi-annual":2,"Semi-Annual":2,Annual:1};
 const perN=r=>PER[r.freq]||4;
+const DV=s=>{const f=DIVS.funds&&DIVS.funds[s];return f&&f.rows&&f.rows.length?f:null;};
+const DREF=new Date((DIVS.updated||new Date().toISOString().slice(0,10))+"T12:00:00Z");
+const dday=d=>new Date(d+"T12:00:00Z");
+const dfmt=(d,long)=>d?dday(d).toLocaleDateString("en-US",{month:long?"long":"short",day:"numeric",year:"numeric",timeZone:"UTC"}):"-";
+const amt=v=>{if(v==null)return "-";let x=v.toFixed(v<1?4:3).replace(/0+$/,"");if(!/\.\d\d/.test(x))x=(+x).toFixed(2);return "$"+x;};
+const SRC={nasdaq:"Nasdaq.com",yahoo:"Yahoo Finance"};
+function divStats(f){
+  const rows=f.rows, ago=n=>new Date(DREF.getTime()-n*864e5);
+  const t12=rows.filter(x=>dday(x[0])>ago(365)), p12=rows.filter(x=>dday(x[0])>ago(730)&&dday(x[0])<=ago(365));
+  const sum=a=>a.reduce((t,x)=>t+x[1],0);
+  const s12=sum(t12), sp=sum(p12);
+  const chg=p12.length&&p12.length>=t12.length*.75&&sp>0?(s12/sp-1)*100:null;
+  const last=rows[0], prior=rows[1]||null;
+  const lchg=prior&&prior[1]>0?(last[1]/prior[1]-1)*100:null;
+  const Y={};rows.forEach(x=>{const y=x[0].slice(0,4);(Y[y]=Y[y]||{n:0,t:0}).n++;Y[y].t+=x[1];});
+  const years=Object.keys(Y).sort().reverse().map(y=>({y,n:Y[y].n,t:Y[y].t}));
+  years.forEach((o,i)=>{const p=years[i+1];o.c=p&&p.t>0&&i+2<years.length&&o.y!==String(DREF.getUTCFullYear())?(o.t/p.t-1)*100:null;});
+  const first=rows[rows.length-1][0];
+  return {rows,last,prior,lchg,t12,s12,chg,years,first,total:sum(rows),src:SRC[f.src]||f.src};
+}
+const divChart=(S,rows)=>{const L=rows.slice(0,36).reverse(),mx=Math.max(...L.map(x=>x[1])),W=720,H=190,pad=26,bw=(W-pad)/L.length;
+  return `<figure class="ep-dchart"><svg viewBox="0 0 ${W} ${H+24}" role="img" aria-label="${S} dividend per share, last ${L.length} payouts"><line x1="${pad}" x2="${W}" y1="${H}" y2="${H}" stroke="var(--rule-strong)"/><text x="0" y="12" font-size="11" fill="var(--muted)">${amt(mx)}</text>
+${L.map((x,i)=>{const h=Math.max(1.5,x[1]/mx*(H-20));return `<rect x="${(pad+i*bw+bw*.15).toFixed(1)}" y="${(H-h).toFixed(1)}" width="${(bw*.7).toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="var(--series-1)"><title>${dfmt(x[0])}: ${amt(x[1])}</title></rect>`;}).join("")}
+<text x="${pad}" y="${H+18}" font-size="11" fill="var(--muted)">${dfmt(L[0][0])}</text><text x="${W}" y="${H+18}" font-size="11" fill="var(--muted)" text-anchor="end">${dfmt(L[L.length-1][0])}</text></svg>
+<figcaption class="figure-note">${S} dividend per share, last ${L.length} payouts. Hover a bar for the date and amount.</figcaption></figure>`;};
+const hasD=rows=>rows.some(x=>x[2]), hasK=rows=>rows.some(x=>x[4]);
+const divRow=(x,i,rows)=>{const p=rows[i+1],c=p&&p[1]>0?(x[1]/p[1]-1)*100:null;return `<tr><td class="l">${dfmt(x[0])}</td><td><b>${amt(x[1])}</b></td><td class="${c==null||Math.abs(c)<.05?"":c>0?"pos":"neg"}">${c==null?"-":sg(c)}</td>${hasD(rows)?`<td>${dfmt(x[2])}</td><td>${dfmt(x[3])}</td>${hasK(rows)?`<td>${dfmt(x[4])}</td>`:""}`:""}</tr>`;};
+const DTH=rows=>`<thead><tr><th class="l">Ex-dividend date</th><th>Amount per share</th><th>Change</th>${hasD(rows)?"<th>Pay date</th><th>Record date</th>"+(hasK(rows)?"<th>Declared</th>":""):""}</tr></thead>`;
 const incDate=r=>r.inception?r.inception.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"}):null;
 const yrs=r=>r.age!=null?(r.age>=2?Math.floor(r.age)+" years":r.age>=1?"about a year":Math.max(1,Math.round(r.age*12))+" months"):null;
 function rank(list,sym,key,asc){const l=list.filter(x=>x[key]!=null).sort((a,b)=>asc?a[key]-b[key]:b[key]-a[key]);const i=l.findIndex(x=>x.sym===sym);return i<0?null:{n:i+1,of:l.length,pctl:Math.round((1-i/Math.max(1,l.length-1))*100)};}
@@ -95,6 +129,10 @@ const CSS=`<style>
 .ep-nav a:last-child{text-align:right}
 .ep-note{font-size:12.5px;color:var(--muted);line-height:1.6;margin:26px 0 0}
 .ep-tbl td{white-space:nowrap;font-variant-numeric:tabular-nums}
+.ep-dchart{margin:0;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:14px 14px 6px}
+.ep-dchart svg{width:100%;height:auto;display:block}
+.ep-dchart rect:hover{opacity:.75}
+.ep-more summary{cursor:pointer;font-weight:800;margin:12px 0;color:var(--link)}
 .ep-az{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px;position:sticky;top:0;background:var(--canvas);padding:10px 0;z-index:2}
 .ep-az a{min-width:34px;text-align:center;padding:6px 8px;border:1px solid var(--rule-strong);border-radius:8px;font-weight:800;color:var(--ink-2);background:var(--paper)}
 .ep-grp{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-bottom:22px}
@@ -108,7 +146,7 @@ const CSS=`<style>
 const EXTRA=`<script src="/assets/js/etf-page.js" defer></script>${CSS}`;
 const DISC=`<p class="ep-note"><strong>Disclaimer:</strong> For educational purposes only, not financial advice or a recommendation to buy or sell. ETF data comes from the TopETFs database, refreshes daily and may be delayed, incomplete or outdated. Yields are trailing distribution yields and payouts can change or stop. Total return is since the fund's inception. Price chart and quote provided by TradingView and may be delayed. Always check the fund issuer's website and prospectus before investing. <a href="/disclaimer">Full disclaimer</a>.</p>`;
 const prevNext=sym=>{const i=SYMS.indexOf(sym),p=SYMS[(i-1+SYMS.length)%SYMS.length],n=SYMS[(i+1)%SYMS.length];return `<nav class="ep-nav" aria-label="More ETFs"><a href="${etfPath(p)}"><span>&larr; Previous ETF</span><b>${p}</b> ${esc(BY[p].name)}</a><a href="${etfPath(n)}"><span>Next ETF &rarr;</span><b>${n}</b> ${esc(BY[n].name)}</a></nav>`;};
-const tabs=(r,cur)=>`<nav class="ep-tabs" aria-label="${r.sym} pages"><a href="${etfPath(r.sym)}"${cur==="o"?' aria-current="page"':""}>Overview</a>${r.yield!=null?`<a href="${etfPath(r.sym)}-dividend-calculator"${cur==="d"?' aria-current="page"':""}>Dividend calculator</a>`:""}<a href="${etfPath(r.sym)}-alternatives"${cur==="a"?' aria-current="page"':""}>Alternatives</a><a href="/etf-comparison?t=${r.sym},${peers(r,1)[0]?.sym||"VOO"}">Compare</a></nav>`;
+const tabs=(r,cur)=>`<nav class="ep-tabs" aria-label="${r.sym} pages"><a href="${etfPath(r.sym)}"${cur==="o"?' aria-current="page"':""}>Overview</a>${r.yield!=null?`<a href="${etfPath(r.sym)}-dividend-calculator"${cur==="d"?' aria-current="page"':""}>Dividend calculator</a>`:""}${DV(r.sym)?`<a href="${etfPath(r.sym)}-dividend-history"${cur==="h"?' aria-current="page"':""}>Dividend history</a>`:""}<a href="${etfPath(r.sym)}-alternatives"${cur==="a"?' aria-current="page"':""}>Alternatives</a><a href="/etf-comparison?t=${r.sym},${peers(r,1)[0]?.sym||"VOO"}">Compare</a></nav>`;
 const head=(r,cur)=>{
   const badges=[r.freq?`<span class="ep-badge">${esc(r.freq)} payouts</span>`:"",r.provider?`<a class="ep-badge" href="/lists/${r.provider.toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"")}-etfs">${esc(r.provider)}</a>`:"",r.decay===false?`<span class="ep-badge good">No price decay</span>`:r.decay?`<span class="ep-badge bad">Price decay</span>`:"",r.age!=null&&r.age<1?`<span class="ep-badge">New fund</span>`:""].join("");
   const hl=r.yield!=null?`<div><b>${L(r.sym,"yield","pct")}</b><span>Dividend yield</span></div><div><b>${L(r.sym,"inc10","usd",100)}</b><span>$10K pays / yr</span></div><div><b>${L(r.sym,"er","pct2")}</b><span>Expense ratio</span></div>`:`<div><b>${L(r.sym,"tr","signed")}</b><span>Total return</span></div><div><b>${sg(r.ar)}</b><span>Annualized</span></div><div><b>${L(r.sym,"aum","aum")}</b><span>Assets</span></div>`;
@@ -123,7 +161,7 @@ const side=(r)=>`<aside class="ep-side">
 <p style="margin:12px 0;font-size:14px;color:rgba(255,255,255,.8)">Unlock grades, tax treatment and advanced filters for ${r.sym} and 160+ income ETFs.</p><a class="btn btn-gold" style="width:100%" href="${PRO}" target="_blank" rel="noopener" data-ga="etf-page-pro">Unlock with PRO &rarr;</a></div>
 <div class="aside-card"><h3>Free tools for ${r.sym}</h3><ul class="rank-list" style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
 ${r.yield!=null?`<li><a href="${etfPath(r.sym)}-dividend-calculator">${r.sym} dividend calculator</a></li><li><a href="/drip-calculator?t=${r.sym}">${r.sym} DRIP calculator</a></li><li><a href="/dividend-income-goal-calculator?t=${r.sym}">How much ${r.sym} for $1,000/month?</a></li>`:""}
-<li><a href="${etfPath(r.sym)}-alternatives">ETFs like ${r.sym}</a></li><li><a href="/expense-ratio-calculator?a=${r.sym}&b=VOO">${r.sym} fee calculator</a></li><li><a href="/screener">Full ETF screener</a></li></ul></div>
+${DV(r.sym)?`<li><a href="${etfPath(r.sym)}-dividend-history">${r.sym} dividend history</a></li>`:""}<li><a href="${etfPath(r.sym)}-alternatives">ETFs like ${r.sym}</a></li><li><a href="/expense-ratio-calculator?a=${r.sym}&b=VOO">${r.sym} fee calculator</a></li><li><a href="/screener">Full ETF screener</a></li></ul></div>
 </aside>`;
 const peerTable=(r,list)=>`<div class="tbl-scroll"><table class="data ep-tbl"><thead><tr><th class="l">ETF</th>${r.yield!=null?"<th>Yield</th><th>$10K / yr</th>":""}<th>Expense</th><th>AUM</th><th>Annualized</th><th>Price decay</th><th></th></tr></thead><tbody>
 ${[r].concat(list).map((x,i)=>`<tr${i===0?' style="background:color-mix(in srgb,var(--link) 6%,transparent)"':""}><td class="l"><a class="tk" href="${etfPath(x.sym)}">${x.sym}</a><span class="fund-name">${esc(x.name)}</span></td>${r.yield!=null?`<td><b>${pct(x.yield)}</b></td><td>${x.yield!=null?usd(x.yield*100,0):"n/a"}</td>`:""}<td>${pct(x.er,2)}</td><td>${aum(x.aum)}</td><td class="${x.ar==null?"":x.ar>=0?"pos":"neg"}">${sg(x.ar)}</td><td>${x.decay==null?"n/a":x.decay?'<span class="tl-flag bad" style="color:var(--neg)">Yes</span>':'<span style="color:var(--pos);font-weight:800">No</span>'}</td><td>${i?`<a href="/etf-comparison?t=${r.sym},${x.sym}">Compare</a>`:"<b>This fund</b>"}</td></tr>`).join("")}
@@ -137,7 +175,7 @@ const faqHtml=list=>`<h2 class="ep-h2">${"Frequently asked questions"}</h2><div 
 const urls=[];
 
 for(const r of R){
-  const S=r.sym, url=etfPath(S), inc=r.yield!=null, P=peers(r,8), n=perN(r);
+  const S=r.sym, url=etfPath(S), inc=r.yield!=null, P=peers(r,8), n=perN(r), dvf=DV(S), dv=dvf?divStats(dvf):null;
   const rk={y:inc?rank(INC,S,"yield"):null,e:rank(R,S,"er",true),a:rank(R,S,"aum"),r:rank(R.filter(x=>x.age!=null&&x.age>=1),S,"ar")};
   // ---------- quick take ----------
   const T=[];
@@ -184,6 +222,8 @@ for(const r of R){
 <div class="ep-stats">${st.map(([k,v,s])=>`<div><div class="k">${k}</div><div class="v">${v}</div>${s?`<div class="s">${s}</div>`:""}</div>`).join("")}</div>
 ${SIGNUP("featured")}
 <h2 class="ep-h2">${S} at a glance</h2><div class="ep-prose">${T.join("")}</div>
+${dv?`<h2 class="ep-h2">Recent ${S} dividends</h2><div class="tbl-scroll"><table class="data ep-tbl">${DTH(dv.rows)}<tbody>${dv.rows.slice(0,6).map((x,i)=>divRow(x,i,dv.rows)).join("")}</tbody></table></div>
+<p style="margin-top:10px">${S} has paid <b>${amt(dv.s12)}</b> per share over the last 12 months across ${dv.t12.length} payout${dv.t12.length===1?"":"s"}. <a href="${url}-dividend-history">See the full ${S} dividend history &rarr;</a></p>`:""}
 ${inc?`<h2 class="ep-h2">How much will ${S} pay you?</h2><div class="ep-calc" data-income-calc data-sym="${S}" data-yield="${r.yield}" data-n="${n}"><div class="field"><label>Amount invested ($)</label><input inputmode="decimal" value="10000"></div>
 <div class="results"><div><div class="label">Per year</div><div class="value" data-c="yr"></div></div><div><div class="label">Per month</div><div class="value" data-c="mo"></div></div><div><div class="label">Per week</div><div class="value" data-c="wk"></div></div><div><div class="label">Per ${esc((r.freq||"quarterly").toLowerCase())} payout</div><div class="value" data-c="per"></div></div></div>
 <p class="figure-note">At today's yield, before taxes. <a href="${url}-dividend-calculator">Open the full ${S} dividend calculator &rarr;</a></p></div>`:""}
@@ -203,7 +243,7 @@ ${DISC}
     const amts=[1000,5000,10000,25000,50000,100000,250000,500000,1000000];
     const goals=[100,500,1000,2000,5000];
     const dfaq=[
-      [`How much does ${S} pay per share?`,`Payouts per share change over time. At the current ${pct(r.yield)} yield, every $1,000 invested in ${S} earns about ${usd(r.yield*10)} a year. Check the issuer's website for the latest per-share distribution.`],
+      [`How much does ${S} pay per share?`,dv?`${S}'s most recent payout was ${amt(dv.last[1])} per share (ex-dividend ${dfmt(dv.last[0],1)}), and it has paid ${amt(dv.s12)} per share over the last 12 months. <a href="${url}-dividend-history">See every ${S} payout</a>.`:`Payouts per share change over time. At the current ${pct(r.yield)} yield, every $1,000 invested in ${S} earns about ${usd(r.yield*10)} a year. Check the issuer's website for the latest per-share distribution.`],
       [`How much do I need in ${S} to make $1,000 a month?`,`About ${usd(12000/(r.yield/100),0)} at the current ${pct(r.yield)} yield, before taxes.`],
       [`How much does $100,000 in ${S} pay?`,`About ${usd(r.yield*1000,0)} a year, or ${usd(r.yield*1000/12,0)} a month, at today's yield.`],
       [`Is ${S}'s dividend guaranteed?`,`No. ETF distributions depend on what the fund earns and can rise, fall or stop. The numbers here are estimates based on the current yield.`]];
@@ -231,6 +271,43 @@ ${prevNext(S).replace(/href="\/etfs\/([a-z0-9-]+)"/g,(m,s)=>BY[s.toUpperCase()]&
 ${DISC}
 </div>${side(r)}</div>${proBand()}</div>`);
     urls.push(durl);
+  }
+
+  // ---------- dividend history page ----------
+  if(dv){
+    const hurl=url+"-dividend-history", d=dv, y1=d.first.slice(0,4), freqTxt=r.freq?r.freq.toLowerCase():null;
+    const P2=[];
+    P2.push(`${S}'s most recent dividend was <strong>${amt(d.last[1])} per share</strong>, with an ex-dividend date of ${dfmt(d.last[0],1)}${d.last[2]?` and a pay date of ${dfmt(d.last[2],1)}`:""}.${d.lchg!=null&&Math.abs(d.lchg)>=.05?` That is ${d.lchg>0?"up":"down"} ${pct(Math.abs(d.lchg))} from the payout before it (${amt(d.prior[1])}).`:d.prior?" That matches the payout before it.":""}`);
+    P2.push(`Over the last 12 months ${S} paid <strong>${amt(d.s12)} per share</strong> across ${d.t12.length} payout${d.t12.length===1?"":"s"}${d.chg!=null?`, ${Math.abs(d.chg)<.5?"about the same as":d.chg>0?`up ${pct(d.chg)} from`:`down ${pct(-d.chg)} from`} the 12 months before that`:""}.${freqTxt?` ${S} pays ${freqTxt}.`:""}`);
+    P2.push(`Our records go back to ${dfmt(d.first,1)} and cover ${d.rows.length} payouts totaling ${amt(d.total)} per share. ${r.decay===true?`Keep in mind that ${S} is flagged for price decay, so a big payout has come with a falling share price. Look at total return (${sg(r.tr)} since inception) alongside the dividends.`:inc?`Payouts change over time, so use the history to judge how steady ${S}'s income has been rather than as a promise of future payments.`:`${S} is mainly a growth fund, so most of its return comes from price rather than dividends.`}`);
+    const hst=[["Latest dividend",amt(d.last[1]),"Ex-date "+dfmt(d.last[0])],d.last[2]?["Pay date",dfmt(d.last[2]),d.last[3]?"Record "+dfmt(d.last[3]):""]:["Average payout",amt(d.s12/Math.max(1,d.t12.length)),"Last 12 months"],["Last 12 months",amt(d.s12),d.t12.length+" payout"+(d.t12.length===1?"":"s")],
+      ["12-month change",d.chg==null?"n/a":`<span class="${d.chg>=0?"pos":"neg"}" style="color:var(--${d.chg>=0?"pos":"neg"})">${sg(d.chg)}</span>`,"vs. the prior 12 months"],["Payouts on record",String(d.rows.length),"Since "+y1],inc?["Current yield",L(S,"yield","pct"),"Trailing distribution yield"]:["Total on record",amt(d.total),"Per share since "+y1]];
+    const hfaq=[
+      [`What was ${S}'s last dividend?`,`${S}'s last dividend was ${amt(d.last[1])} per share, with an ex-dividend date of ${dfmt(d.last[0],1)}${d.last[2]?` and a payment date of ${dfmt(d.last[2],1)}`:""}.`],
+      [`How much has ${S} paid in dividends over the last year?`,`${S} paid ${amt(d.s12)} per share over the last 12 months across ${d.t12.length} payouts.${d.chg!=null?` That is ${d.chg>=0?"up":"down"} ${pct(Math.abs(d.chg))} from the 12 months before.`:""}`],
+      [`How often does ${S} pay dividends?`,r.freq?`${S} pays ${r.freq.toLowerCase()}. It made ${d.t12.length} payouts in the last 12 months.`:`${S} made ${d.t12.length} payouts in the last 12 months.`],
+      [`What is an ex-dividend date?`,`To receive a dividend you need to own the shares before the ex-dividend date. If you buy on or after the ex-date, the seller gets that payout. The pay date is when the cash actually lands in your account.`],
+      [`Where does this ${S} dividend data come from?`,`Payout history is pulled from ${d.src} and refreshed daily. Always confirm upcoming distributions on the fund issuer's website.`]];
+    const yrs_=d.years.slice(0,12);
+    out["etfs/"+etfSlug(S)+"-dividend-history.html"]=page(ld(r,"h",hurl,`${S} Dividend History: Every Payout, Ex-Dates and Amounts`,`${S} dividend history: all ${d.rows.length} payouts since ${y1} with ex-dividend dates, pay dates and amounts per share. Latest ${amt(d.last[1])}, ${amt(d.s12)} over the last 12 months. Updated daily.`,faqLd(hfaq)),
+`${head(r,"h")}
+<div class="wrap"><div class="ep-body"><div>
+<div class="ep-stats">${hst.map(([k,v,s])=>`<div><div class="k">${k}</div><div class="v">${v}</div>${s?`<div class="s">${s}</div>`:""}</div>`).join("")}</div>
+<h2 class="ep-h2">${S} dividend history at a glance</h2><div class="ep-prose">${P2.map(x=>`<p>${x}</p>`).join("")}</div>
+<h2 class="ep-h2">${S} dividend per share</h2>${divChart(S,d.rows)}
+${SIGNUP("featured")}
+<h2 class="ep-h2">All ${S} dividend payments</h2>
+<div class="tbl-scroll"><table class="data ep-tbl">${DTH(d.rows)}<tbody>${d.rows.slice(0,24).map((x,i)=>divRow(x,i,d.rows)).join("")}</tbody></table></div>
+${d.rows.length>24?`<details class="ep-more"><summary>Show ${d.rows.length-24} older payouts</summary><div class="tbl-scroll"><table class="data ep-tbl">${DTH(d.rows)}<tbody>${d.rows.slice(24).map((x,i)=>divRow(x,i+24,d.rows)).join("")}</tbody></table></div></details>`:""}
+<h2 class="ep-h2">${S} dividends by year</h2>
+<div class="tbl-scroll"><table class="data ep-tbl"><thead><tr><th class="l">Year</th><th>Payouts</th><th>Total per share</th><th>Change</th></tr></thead><tbody>${yrs_.map(o=>`<tr><td class="l"><b>${o.y}</b>${o.y===String(DREF.getUTCFullYear())?' <span class="muted">(so far)</span>':""}</td><td>${o.n}</td><td><b>${amt(o.t)}</b></td><td class="${o.c==null?"":o.c>=0?"pos":"neg"}">${o.c==null?"-":sg(o.c)}</td></tr>`).join("")}</tbody></table></div>
+${inc?`<p style="margin-top:12px"><a href="${url}-dividend-calculator">How much will ${S} pay you? Open the ${S} dividend calculator &rarr;</a></p>`:""}
+${faqHtml(hfaq)}
+${prevNext(S).replace(/href="\/etfs\/([a-z0-9-]+)"/g,(m,s)=>DV(s.toUpperCase())?`href="/etfs/${s}-dividend-history"`:m)}
+<p class="ep-note">Dividend data source: ${d.src}, refreshed daily (last update ${dfmt(DIVS.updated||DREF.toISOString().slice(0,10),1)}). Amounts are per share before taxes and may be adjusted for splits. Some payouts include return of capital or capital gains.</p>
+${DISC}
+</div>${side(r)}</div>${proBand()}</div>`);
+    urls.push(hurl);
   }
 
   // ---------- alternatives page ----------
