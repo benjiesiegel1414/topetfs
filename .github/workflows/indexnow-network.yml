@@ -25,9 +25,9 @@ jobs:
             "photonicsetfs.com": ["sitemap.xml"],
             "topetfs.com": ["sitemap.xml"],
             "dividendprojection.com": ["sitemap.xml"],
-            "topdividendetfspro.com": []   // no sitemap; public pages listed below
+            "topdividendetfspro.com": ["sitemap.xml"]
           };
-          const EXTRA = { "topdividendetfspro.com": ["/", "/free.html", "/video-demo.html"] };
+          const EXTRA = {};   // extra paths per host, if a site has pages outside its sitemap
           async function locs(url, depth = 0) {
             const r = await fetch(url); if (!r.ok) { console.log(`  ${url}: HTTP ${r.status}`); return []; }
             const xml = await r.text();
