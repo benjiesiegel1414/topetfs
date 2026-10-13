@@ -131,7 +131,7 @@ const DISCLAIMER=`<strong>Disclaimer:</strong> TopETFs.com is published by Divid
 
 const OG_IMAGE=SITE+"/assets/og/topetfs-card.png";
 const OG_ALT="TopETFs: ETF news, research and income math with live data";
-function head({title,desc,canonical,type="website",extra="",ld,faq,image=OG_IMAGE,imageAlt=OG_ALT}){
+function head({title,desc,canonical,type="website",extra="",ld,faq,image=OG_IMAGE,imageAlt=OG_ALT,robots="index,follow,max-image-preview:large"}){
   const url=SITE+canonical;
   return `<!doctype html>
 <html lang="en">
@@ -141,7 +141,7 @@ function head({title,desc,canonical,type="website",extra="",ld,faq,image=OG_IMAG
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="robots" content="${robots}">
 <meta property="og:type" content="${type}">
 <meta property="og:site_name" content="TopETFs">
 <meta property="og:title" content="${esc(title)}">
@@ -370,7 +370,7 @@ export function feeWidget(){ return `<div class="figure" data-w="fees" id="fees"
  <p class="figure-note">Illustration only. Fees are deducted monthly from a steady return. Actual fund returns vary.</p></div>`; }
 
 // ETF profile
-out["etf.html"]=page({title:"ETF profile | TopETFs",desc:"ETF profile with live yield, total return, expense ratio, AUM and an income calculator.",canonical:"/etf",active:""},
+out["etf.html"]=page({title:"ETF profile | TopETFs",desc:"ETF profile with live yield, total return, expense ratio, AUM and an income calculator.",canonical:"/etf",active:"",robots:"noindex,follow"},
 `<script>(function(){var S=${JSON.stringify(Object.keys(ALL))},t=(new URLSearchParams(location.search).get("t")||"").toUpperCase();if(t&&S.indexOf(t)>-1&&!/[?&]nf=1/.test(location.search))location.replace("/etfs/"+t.toLowerCase().replace(/[^a-z0-9]+/g,"-"));})();</script><div class="wrap" style="margin-top:30px"><div data-w="profile"><div class="card" style="padding:28px"><span class="skeleton">Loading fund data</span></div></div>
 <div class="section-head"><h2>Related stories</h2></div><div class="grid-3" data-related-for=""></div>
 ${proBand()}</div>`);
@@ -619,6 +619,17 @@ const SCREENER_PAGES=[];
   ];
   const pc={};for(const s in ALL){const p=ALL[s].provider;if(p)pc[p]=(pc[p]||0)+1;}
   const PROV=Object.entries(pc).filter(([,c])=>c>=3).sort((a,b)=>b[1]-a[1]).map(([p,c])=>({slug:slug(p)+"-etfs",chip:p,d:{p,sort:"yield"},h1:`${p} ETFs`,t:`${p} ETFs: Full List With Yields, Fees and Total Returns`,intro:`Every ${p} ETF we track (${c} funds), with live yield, expense ratio, AUM, payout frequency, total return and price decay.`,prov:true}));
+  // Full provider lineups (static snapshot) shown under the live list, e.g. data/lineup-jp-morgan.json
+  const LINEUP={};for(const p of PROV){const f=path.join(ROOT,"data","lineup-"+p.slug.replace(/-etfs$/,"")+".json");if(fs.existsSync(f))LINEUP[p.slug]=JSON.parse(fs.readFileSync(f,"utf8"));}
+  for(const p of PROV){const L=LINEUP[p.slug];if(!L)continue;const N=L.funds.length;const top=[...L.funds].sort((a,b)=>b.aum-a.aum).slice(0,3).map(x=>x.sym);
+    p.t=`${p.chip} ETFs: Full List of All ${N} Funds (${top.join(", ")} and More)`;p.h1=`${p.chip} ETFs: The Full List`;
+    p.intro=`Every ${p.chip} ETF in one place: all ${N} funds by category with assets, expense ratio and yield, plus live data on the ${p.chip} income funds we track daily.`;}
+  const lineupHtml=slug=>{const L=LINEUP[slug];if(!L)return "";const fmtA=v=>v>=1e9?"$"+(v/1e9).toFixed(1)+"B":"$"+Math.round(v/1e6)+"M";
+    const cats=[...new Set(L.funds.map(x=>x.cat))];const asOf=new Date(L.asOf+"T12:00:00Z").toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});
+    return `<section class="lineup"><div class="section-head"><h2>All ${L.funds.length} ${esc(L.provider)} ETFs by category</h2></div><p class="muted">The complete ${esc(L.provider)} ETF lineup, largest funds first in each group. Funds we track daily link to their full profile. Assets, fees and yields are a snapshot as of ${asOf}.</p>
+${cats.map(c=>{const fs_=L.funds.filter(x=>x.cat===c).sort((a,b)=>b.aum-a.aum);return `<h3 class="lineup-h">${esc(c)} <span class="muted">(${fs_.length})</span></h3><div class="table-scroll"><table class="data lineup-t"><thead><tr><th>Ticker</th><th class="l">Fund</th><th>Assets</th><th>Expense ratio</th><th>Yield</th></tr></thead><tbody>${fs_.map(x=>`<tr><td>${ALL[x.sym]?`<a class="tk" href="${etfPath(x.sym)}">${x.sym}</a>`:`<b>${x.sym}</b>`}</td><td class="l">${esc(x.name)}</td><td>${fmtA(x.aum)}</td><td>${x.er.toFixed(2)}%</td><td>${x.yield==null?"-":x.yield.toFixed(2)+"%"}</td></tr>`).join("")}</tbody></table></div>`;}).join("")}
+<p class="muted" style="font-size:13px">${esc(L.note)} Always confirm current figures on the issuer's website.</p></section>`;};
+  const LINEUP_CSS=`<style>.lineup{margin:34px 0 0}.lineup-h{font-size:17px;margin:22px 0 8px}.lineup-t td:nth-child(2){min-width:240px}.table-scroll{overflow-x:auto}</style>`;
   const ALLP=[...PRESETS,...PROV];
   const chipbar=cur=>`<div class="chipbar scr-chips">${PRESETS.map(p=>`<a class="chip${cur===p.slug?" on":""}" href="/lists/${p.slug}">${p.chip}</a>`).join("")}</div>`;
   const linkGrid=cur=>`<div class="section-head"><h2>Popular screens</h2></div><div class="scr-links">${PRESETS.filter(p=>p.slug!==cur).map(p=>`<a href="/lists/${p.slug}">${p.h1}</a>`).join("")}</div>
@@ -654,13 +665,13 @@ ${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
     out["lists/"+p.slug+".html"]=page({title:`${p.t} | TopETFs`,desc:p.intro,canonical:base,active:"/screener",faq:faqLd,extra:`<script src="/assets/js/screener.js" defer></script>${SCR_CSS}`,
       ld:{"@context":"https://schema.org","@type":"CollectionPage",name:p.t,url:SITE+base,description:p.intro,isPartOf:{"@type":"WebSite",name:"TopETFs",url:SITE}}},
     `<header class="page-head"><div class="wrap"><nav class="crumbs"><a href="/">Home</a> / <a href="/screener">ETF Screener</a></nav><span class="kicker">ETF Screener</span><h1>${esc(p.h1)}</h1><p>${esc(p.intro)} Updated daily. Adjust any filter below to build your own screen.</p></div></header>
-<div class="wrap">${shell(base,p.d,"",p.slug)}${SIGNUP("featured")}${linkGrid(p.slug)}${faqHtml}${DISC}${proBand()}</div>`);
+<div class="wrap">${shell(base,p.d,"",p.slug)}${LINEUP[p.slug]?lineupHtml(p.slug)+LINEUP_CSS:""}${SIGNUP("featured")}${linkGrid(p.slug)}${faqHtml}${DISC}${proBand()}</div>`);
   }
   SCREENER_PAGES.push("/screener",...ALLP.map(p=>"/lists/"+p.slug));
 }
 
 // sitemap, rss, robots, CNAME, favicon
-const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,...PARTNER_PAGES,...ETF_PAGES,"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
+const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,...PARTNER_PAGES,...ETF_PAGES.filter(u=>!/-(alternatives|dividend-calculator)$/.test(u)),"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
 out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
 out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
