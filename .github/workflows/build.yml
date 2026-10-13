@@ -40,6 +40,10 @@ jobs:
           fetch pro    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxCiod-Cwry7E6k9Un9dgrM_ANymC36_IO_wLyNj-YDo2KI7mp_1ZzyNBnBGZOxT48QPM8TCwtsmA4/pub?gid=0&single=true&output=csv"
           fetch weekly "https://docs.google.com/spreadsheets/d/e/2PACX-1vT1P00pQ6hNvYolxzrKYIuxC-AH1xFBpMtsn-NwC17W4vQazk3ql69ZmSmW8J-jp7OaUmKLV5v2KPI3/pub?gid=0&single=true&output=csv"
           fetch growth "https://docs.google.com/spreadsheets/d/e/2PACX-1vQgB3eBiOxZ6CoBjVvi9Rm3PmJDssWCsHWuVG4YgCPnXLG02u0tQxoR055J-e21MYbXJES1UpPTy7h9/pub?gid=0&single=true&output=csv"
+      - name: Pull dividend history (Nasdaq.com, Yahoo Finance fallback)
+        run: node scripts/fetch-dividends.mjs
+        continue-on-error: true
+        timeout-minutes: 20
       - name: Build
         run: node scripts/build.mjs
       - name: Commit
