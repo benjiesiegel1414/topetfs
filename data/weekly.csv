@@ -16,7 +16,7 @@ YSPY,GraniteShares YieldBOOST SPY ETF,10%,YES,17%
 TSYY,GraniteShares YieldBOOST TSLA ETF,44%,YES,-32%
 KYLD,Kurv High Income ETF,24%,YES,2%
 BLOX,Nicholas Crypto Income ETF,36%,YES,5%
-NVII,REX NVDA Growth & Income ETF,31%,NO,86%
+NVII,REX NVDA Growth & Income ETF,31%,YES,86%
 TSII,REX TSLA Growth And Income ETF,44%,YES,15%
 WMTI ,REX WMT Growth And Income ETF,18%,YES,4%
 ULTI,REX IncomeMax Option Strategy ETF,67%,YES,-55%
@@ -24,7 +24,7 @@ AAPW,Roundhill AAPL WeeklyPay ETF,19%,YES,38%
 AMDW,Roundhill AMD WeeklyPay ETF,57%,NO,336%
 AMZW,Roundhill AMZN WeeklyPay ETF,35%,YES,18%
 ARMW,Roundhill ARM WeeklyPay ETF,88%,YES,49%
-AVGW,Roundhill AVGO WeeklyPay ETF,43%,NO,21%
+AVGW,Roundhill AVGO WeeklyPay ETF,43%,YES,21%
 BABW,Roundhill BABA WeeklyPay ETF,30%,YES,-43%
 YBTC,Roundhill Bitcoin Covered Call Strategy ETF,31%,YES,33%
 BRKW,Roundhill BRKB WeeklyPay ETF,14%,YES,4%
@@ -99,9 +99,9 @@ SLTY,YieldMax® Ultra Short Option Income Strategy ETF,55%,YES,-17%
 ULTY,YieldMax® Ultra Option Income Strategy ETF,61%,YES,11%
 YMAG,YieldMax® Magnificent 7 Fund of Option Income ETFs,35%,YES,78%
 YMAX,YieldMax® Universe Fund of Option Income ETFs,41%,YES,47%
-TSYX,TSPY LIFT ETF,20%,NO,11%
-TDAX,TDAQ LIFT ETF,18%,NO,18%
-ODTE,ODTE  VegaShares SPX NDX RTY Premium Income ETF,14%,NO,7%
+TSYX,TSPY LIFT ETF,20%,YES,11%
+TDAX,TDAQ LIFT ETF,18%,YES,18%
+ODTE,ODTE  VegaShares SPX NDX RTY Premium Income ETF,14%,YES,7%
 SPCI,Tuttle Capital Space Industry Income Blast ETF,37%,YES,-15%
 VAIE,VegaShares US Equity Autocallable Income ETF,16%,YES,6%
 FEPI,Rex Fang & Innovation Equity Premium Income ETF,25%,YES,74%
