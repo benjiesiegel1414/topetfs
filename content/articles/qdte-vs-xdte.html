@@ -1,0 +1,84 @@
+<!--meta
+{"title":"QDTE vs XDTE: Yield, Total Return, Fees and Which One Fits You","short":"QDTE vs XDTE","seoTitle":"QDTE vs XDTE: Yield, Fees, Total Return Compared","dek":"QDTE vs XDTE compared head to head: live yield, fees, assets, total return since inception, price decay and weekly income on the same investment.","section":"weekly","date":"2026-10-15","time":"08","read":8,"art":"bars","tickers":["QDTE","XDTE"],"coverLabel":"QDTE  ·  XDTE","keyNumbers":[["QDTE yield","{{live:QDTE:yield}}"],["XDTE yield","{{live:XDTE:yield}}"],["QDTE total return","{{live:QDTE:tr}}"],["XDTE total return","{{live:XDTE:tr}}"],["Expense ratio (both)","{{live:QDTE:er:pct2}}"]],"keyword":"QDTE vs XDTE","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:QDTE}} yields {{live:QDTE:yield}} today and {{tkr:XDTE}} yields {{live:XDTE:yield}}. Same issuer, same fee ({{live:QDTE:er:pct2}} vs {{live:XDTE:er:pct2}}), same weekly payout. The real difference is the index underneath.</li><li>Both launched on the same day, so the total return comparison is fair: {{live:QDTE:tr}} for QDTE and {{live:XDTE:tr}} for XDTE since inception.</li><li>Both carry a price decay flag of {{live:QDTE:decay:decay}} in our data. The high yield is partly paid out of the fund's own value, so total return matters more than the yield number.</li></ul></div>
+
+<p class="lede">QDTE vs XDTE comes down to Nasdaq-100 versus S&amp;P 500. QDTE currently pays {{live:QDTE:yield}} and has returned {{live:QDTE:tr}} since inception, while XDTE pays {{live:XDTE:yield}} and has returned {{live:XDTE:tr}}. Both charge {{live:QDTE:er:pct2}} and both pay every week. QDTE gives you more income and more return so far, and it comes with a more tech-heavy ride.</p>
+
+<div class="board" data-w="board" data-syms="QDTE,XDTE,FEPI,AIPI,NVDY,GOOY,YMAG,CHPY" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>QDTE and XDTE vs other weekly payers</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>How QDTE and XDTE make their weekly money</h2>
+<p>Both funds come from Roundhill and use the same playbook. They aim to give you exposure to an index, then sell call options that expire within a day (that is what "0DTE" means: zero days to expiration). The premium collected from selling those options is the main fuel for the distributions.</p>
+<p>A covered call is simple in concept. You sell someone the right to buy the index at a set price. They pay you up front for that right. If the index rips higher, your gains above that price are capped. If the index falls, you still own the downside, minus the premium you kept.</p>
+<p>Selling options daily means the fund collects premium over and over, then pays it out weekly. That is how a fund tied to a normal index can show a yield far above what the index itself pays.</p>
+
+<h2>The real difference: Nasdaq-100 vs S&amp;P 500</h2>
+<p>{{tkr:QDTE}} is built around the Nasdaq-100, which is concentrated in large technology and growth companies. {{tkr:XDTE}} is built around the S&amp;P 500, a broader index across many more companies and sectors.</p>
+<p>That matters for two reasons. First, the Nasdaq-100 tends to swing harder than the S&amp;P 500. Bigger swings generally mean richer option premiums, which is a big reason QDTE's yield sits above XDTE's at {{live:QDTE:yield}} vs {{live:XDTE:yield}}. Second, you take on more concentration risk with QDTE. If big tech has a rough stretch, QDTE feels it more.</p>
+<p>Here's the thing: a higher yield is not a free upgrade. It is partly payment for taking more volatility.</p>
+
+<h2>Fees, size and launch dates</h2>
+<p>Fees are a tie. Both funds charge {{live:QDTE:er:pct2}}, which is on the high side compared to a plain index fund, but normal for active options strategies that trade daily.</p>
+<p>Size is not a tie. QDTE manages {{live:QDTE:aum:aum}} and XDTE manages {{live:XDTE:aum:aum}}. More assets usually means easier trading and less risk of a fund being closed down. XDTE is smaller, but not tiny.</p>
+<p>Both funds started on {{live:QDTE:inception:text}} (QDTE) and {{live:XDTE:inception:text}} (XDTE). Same start date means we can compare their total returns directly. Most comparisons in the weekly-pay world are not this clean.</p>
+
+<h2>Weekly income math on the same investment</h2>
+<p>Let's put real dollars on it. These numbers use today's yield, so they will move as the funds' payouts change.</p>
+<p>On $10,000 in {{tkr:QDTE}}, the math at a {{live:QDTE:yield}} yield looks like this:</p>
+<ul><li>Per week: about {{calc:usd2:10000*QDTE.yield/100/52}}</li><li>Per month: about {{calc:usd2:10000*QDTE.yield/100/12}}</li><li>Per year: about {{calc:usd:10000*QDTE.yield/100}}</li></ul>
+<p>On $10,000 in {{tkr:XDTE}}, at a {{live:XDTE:yield}} yield:</p>
+<ul><li>Per week: about {{calc:usd2:10000*XDTE.yield/100/52}}</li><li>Per month: about {{calc:usd2:10000*XDTE.yield/100/12}}</li><li>Per year: about {{calc:usd:10000*XDTE.yield/100}}</li></ul>
+<p>The gap is about {{calc:usd:10000*(QDTE.yield-XDTE.yield)/100}} per year on $10,000. Scale to $100,000 and QDTE would pay roughly {{calc:usd:100000*QDTE.yield/100/12}} a month versus about {{calc:usd:100000*XDTE.yield/100/12}} for XDTE.</p>
+<p>Want $1,000 a month? At today's yields you would need roughly {{calc:usd:12000/(QDTE.yield/100)}} in QDTE or {{calc:usd:12000/(XDTE.yield/100)}} in XDTE. That is a snapshot, not a promise. Weekly payouts from options funds are not fixed and can change a lot from week to week.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="QDTE,XDTE,FEPI" data-per="year">
+  <p class="figure-title">QDTE vs XDTE vs FEPI: estimated income on your amount</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<h2>Total return and price decay: the part that matters</h2>
+<p>Yield only tells you what the fund pays out. Total return tells you what you actually ended up with, because it counts both the distributions and the change in share price.</p>
+<p>Since inception, QDTE shows {{live:QDTE:tr}} and XDTE shows {{live:XDTE:tr}}. Both are positive, and QDTE is ahead. That tracks with its more volatile index and higher payout over the period.</p>
+<p>Now the warning label. Our database flags both funds with price decay: {{live:QDTE:decay:decay}} for QDTE and {{live:XDTE:decay:decay}} for XDTE. In plain English, the share price has trended down over time, and some of what you receive as income is really your own capital coming back. This is often called return of capital, and the lower share price it leaves behind is NAV erosion (NAV is the fund's net asset value per share).</p>
+<p>That is not automatically bad. If the total return is still positive after the decay, the payouts have more than offset it. But it does mean you should never treat the yield as pure profit. A rule I follow: look at the yield and the total return together, every time.</p>
+<p>Also remember the cap. Because both funds sell calls on the index, they give up some gains in strong rallies. In a roaring bull market, a plain index fund can leave them behind. In a sideways market, the premiums can help a lot. In a sharp selloff, both still lose value.</p>
+
+<h2>How steady are the weekly payouts?</h2>
+<p>Both funds pay on a {{live:QDTE:freq:text}} schedule, so you get a deposit every week. Regular timing is not the same as a regular amount, though.</p>
+<p>Because the premium depends on how the market moves that week, distributions can go up and down. Quiet, volatile or choppy markets all change how much the option sales bring in. Expect variation, and don't plan a fixed budget around any one week's payment. If you need a deeper walkthrough of how that plays out across the category, check out <a href="/articles/weekly-pay-etfs-10000">what $10,000 earns in weekly-pay ETFs</a>.</p>
+
+<h2>How they compare to other weekly payers</h2>
+<p>QDTE and XDTE sit at the calmer end of the weekly-pay world. Single-stock funds from YieldMax chase much bigger yields, but they are tied to one company. For example, {{tkr:NVDY}} yields {{live:NVDY:yield}}, {{tkr:GOOY}} yields {{live:GOOY:yield}}, and {{tkr:MSTY}} sits at {{live:MSTY:yield}}. Those are higher numbers, with the extra risk of putting everything on one stock. I broke down that one in my <a href="/articles/msty-etf-dividend-yield-total-return">MSTY yield and total return guide</a>.</p>
+<p>If you want something closer to QDTE, look at index or basket style funds. {{tkr:FEPI}} yields {{live:FEPI:yield}} with a lower fee of {{live:FEPI:er:pct2}}, and {{tkr:AIPI}} yields {{live:AIPI:yield}} at {{live:AIPI:er:pct2}}. {{tkr:YMAG}} spreads across Magnificent 7 income funds at {{live:YMAG:yield}}, but with a fee of {{live:YMAG:er:pct2}}. {{tkr:CHPY}} yields {{live:CHPY:yield}} and does not carry the price decay flag, though it is much younger (see my <a href="/articles/chpy-dividend-history">CHPY dividend history</a>). For the full list, the <a href="https://weeklyetfs.com/">weekly payers on WeeklyETFs.com</a> is a good place to browse.</p>
+
+<h2>Who each fund tends to fit</h2>
+<p><strong>QDTE tends to fit</strong> someone who wants the higher weekly income, is comfortable with tech-heavy swings, and accepts that the share price can drift lower. It has the bigger yield ({{live:QDTE:yield}}), the bigger asset base ({{live:QDTE:aum:aum}}) and the stronger return so far ({{live:QDTE:tr}}).</p>
+<p><strong>XDTE tends to fit</strong> someone who prefers the broader S&amp;P 500 as the base and is willing to take a lower yield ({{live:XDTE:yield}}) for what is generally a less concentrated portfolio. Its return so far is {{live:XDTE:tr}}.</p>
+<p><strong>Neither tends to fit</strong> someone who needs their principal to stay steady, or who wants to hold a core long-term position for growth. A plain index fund is a better tool for that. Many people use funds like these as a smaller income sleeve alongside a core portfolio, and you can model that mix with <a href="/tools">our calculators</a> or project it with <a href="https://dividendprojection.com/">Dividend Projection</a>.</p>
+
+<h2>Main risks to keep in mind</h2>
+<ul><li><strong>Capped upside.</strong> Selling calls limits gains when the index jumps.</li><li><strong>Full downside.</strong> You still own the index exposure when it drops.</li><li><strong>Variable income.</strong> Weekly payments change. Today's yield is not next month's yield.</li><li><strong>Short track record.</strong> Both launched on {{live:QDTE:inception:text}}, so neither has been through a full market cycle.</li><li><strong>Tax treatment.</strong> Distributions can be classified in different ways, so check with a tax professional about your situation.</li></ul>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Does QDTE pay weekly?</h3>
+<p>Yes. QDTE pays on a {{live:QDTE:freq:text}} schedule, and so does XDTE. The amount changes from week to week.</p>
+<h3>Which is better, QDTE or XDTE?</h3>
+<p>It depends on what you want. QDTE has the higher yield ({{live:QDTE:yield}} vs {{live:XDTE:yield}}) and higher total return so far, while XDTE is built on the broader S&amp;P 500. Neither is a buy or sell signal.</p>
+<h3>What does 0DTE mean in an ETF?</h3>
+<p>It stands for zero days to expiration. The fund sells options that expire within the day, collecting premium again and again to fund its weekly payouts.</p>
+<h3>Do QDTE and XDTE lose value over time?</h3>
+<p>Our database flags both with price decay: {{live:QDTE:decay:decay}} for each. That means share price has trended lower while paying high income, so always judge them by total return and not yield alone.</p>
+<h3>How much does $10,000 in QDTE or XDTE pay?</h3>
+<p>At today's yields, about {{calc:usd:10000*QDTE.yield/100}} per year for QDTE and about {{calc:usd:10000*XDTE.yield/100}} per year for XDTE. Actual payments will vary.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+<p>QDTE and XDTE are close cousins. Same issuer, same fee, same weekly schedule, same launch date. The choice is mostly Nasdaq-100 growth tilt with more income and more volatility, or S&amp;P 500 breadth with a lower payout.</p>
+<p>What I would not do is pick on yield alone. Both show price decay, both cap upside, and both are young. Look at the total return, think about how much of a share price drop you can live with, and size the position so a bad stretch won't hurt. This isn't a buy or sell signal, and you should do your own due diligence. If you want to compare more options, <a href="https://topdividendetfspro.com/">screen every income ETF on TopDividendETFsPRO</a> or start with my list of the <a href="/articles/best-weekly-dividend-etfs">best weekly dividend ETFs</a>.</p>

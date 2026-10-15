@@ -584,7 +584,9 @@
    "section": "weekly",
    "type": "vs",
    "angle": "Head-to-head between QDTE and XDTE: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-15",
+   "words": 1737
   },
   {
    "slug": "spyi-vs-qqqi",
