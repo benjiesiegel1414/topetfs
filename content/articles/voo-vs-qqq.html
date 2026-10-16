@@ -1,0 +1,79 @@
+<!--meta
+{"title":"VOO vs QQQ: Yield, Total Return, Fees and Which One Fits You","short":"VOO vs QQQ","seoTitle":"VOO vs QQQ: Yield, Returns, Fees Compared","dek":"VOO vs QQQ head to head: live yield, fees, assets, total return since inception, income on $10,000 and which type of investor each fund tends to fit.","section":"growth","date":"2026-10-16","time":"08","read":6,"art":"line","tickers":["VOO","QQQ"],"coverLabel":"VOO  ·  QQQ","keyNumbers":[["VOO total return","{{live:VOO:tr}}"],["QQQ total return","{{live:QQQ:tr}}"],["VOO expense ratio","{{live:VOO:er:pct2}}"],["VOO yield","{{live:VOO:yield}}"],["QQQ assets","{{live:QQQ:aum:aum}}"]],"keyword":"VOO vs QQQ","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:QQQ}} has the higher total return since inception at {{live:QQQ:tr}}, versus {{live:VOO:tr}} for {{tkr:VOO}}, but QQQ has a much longer history, so the two numbers are not a fair race.</li><li>VOO charges just {{live:VOO:er:pct2}} a year and holds the broad S&P 500. QQQ is more concentrated in big tech and generally costs more.</li><li>Neither is an income fund. VOO yields {{live:VOO:yield}}, so $10,000 throws off about {{calc:usd:10000*VOO.yield/100}} a year.</li></ul></div>
+
+<p class="lede">In the VOO vs QQQ debate, VOO is the cheap, broad, "own the whole US market" fund, and QQQ is the more aggressive, tech-heavy bet that has produced a bigger total return since inception ({{live:QQQ:tr}} versus {{live:VOO:tr}}). VOO costs {{live:VOO:er:pct2}} a year and yields {{live:VOO:yield}}. Both are huge, with {{live:VOO:aum:aum}} in VOO and {{live:QQQ:aum:aum}} in QQQ.</p>
+
+<div class="board" data-w="board" data-syms="VOO,QQQ,VUG,VGT,SCHG,VOOG" data-cols="tr,er,aum,yield,freq" data-sort="tr" data-n="8">
+  <div class="board-head"><div><h3>VOO, QQQ and close growth alternatives</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="false">Yield</button><button type="button" data-view="tr" aria-pressed="true">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>What each fund actually owns</h2>
+<p>VOO tracks the S&P 500, which is roughly 500 of the largest US companies weighted by market value. That means the biggest companies get the biggest slices. It is a blend of growth and value, across every major sector, though technology is the largest piece today.</p>
+<p>QQQ tracks the Nasdaq-100, the 100 largest non-financial companies listed on the Nasdaq. No banks, no insurers. It leans hard into technology and tech-adjacent names, and the top handful of holdings carry a lot of the weight. If you are hunting for diversification across sectors, this is the key difference.</p>
+<p>Here's the thing: the two funds overlap more than most people expect. Many of the biggest names in VOO are also the biggest names in QQQ. So owning both does not give you two different portfolios. It gives you one portfolio with an extra tech tilt.</p>
+
+<h2>Total return since inception: read it carefully</h2>
+<p>QQQ shows {{live:QQQ:tr}} since inception. VOO shows {{live:VOO:tr}}. On the surface that looks like a blowout. But our total return numbers run from each fund's own start date, and they did not start together.</p>
+<p>VOO launched on {{live:VOO:inception:text}}. QQQ has been trading since the late 1990s, which is a far longer stretch and includes the dot-com boom and bust. So QQQ's figure covers many more years. That alone changes the math.</p>
+<p>Here is what $10,000 became at each fund's total return since its own inception:</p>
+<ul>
+<li><strong>VOO:</strong> {{calc:usd:10000*(1+VOO.tr/100)}}</li>
+<li><strong>QQQ:</strong> {{calc:usd:10000*(1+QQQ.tr/100)}}</li>
+</ul>
+<p>Those two investments did not run over the same dates, so treat this as a rough scale of what each fund has done, not a clean scoreboard. If you want a true head-to-head, you would compare both over the same window, such as the last 10 or 15 years. Even then, past results do not predict what comes next.</p>
+
+<h2>Fees: small number, big effect over time</h2>
+<p>VOO's expense ratio is {{live:VOO:er:pct2}}. On $10,000, that is {{calc:usd:10000*VOO.er/100}} per year in fees. That is among the cheapest you can find for a major US fund.</p>
+<p>QQQ generally charges more than VOO. Check the live table above for the current figure. A higher fee is not automatically a bad deal if the fund earns it back in return, but it is a real, guaranteed drag every year, while the extra return is never guaranteed. I walk through how that compounds in <a href="/articles/expense-ratio-math">the expense ratio math article</a>.</p>
+
+<h2>The yield: a side note, not the story</h2>
+<p>VOO yields {{live:VOO:yield}} and pays {{live:VOO:freq:text}}. The price decay flag for VOO is {{live:VOO:decay:decay}}, which means the share price has not been eroding over time. That is the normal picture for a plain index fund.</p>
+<p>QQQ's yield is also small, since Nasdaq-100 companies tend to reinvest profits rather than pay them out. If you are buying either fund for cash flow, you will probably be disappointed.</p>
+<p>The math on VOO makes the point. To collect $1,000 a month from VOO's yield alone, you would need about {{calc:usd:12000/(VOO.yield/100)}} invested. That is why these are growth funds first.</p>
+
+<h2>How VOO and QQQ compare to other growth funds</h2>
+<p>These two are not the only options. {{tkr:VUG}} (Vanguard Growth) shows {{live:VUG:tr}} since inception. {{tkr:VOOG}} (S&P 500 Growth) shows {{live:VOOG:tr}}. {{tkr:SCHG}} (Schwab U.S. Growth) shows {{live:SCHG:tr}} with a {{live:SCHG:er:pct2}} fee and a {{live:SCHG:yield}} yield.</p>
+<p>Then there is {{tkr:VGT}}, a pure technology fund, at {{live:VGT:tr}}. That is the highest of this group, but it is also the narrowest bet. It is a good reminder that more concentration has produced higher returns here, and also means more pain if tech stumbles. Each of these funds started on a different date, so use the numbers for scale, not ranking. For a wider scan, see <a href="/articles/best-growth-etfs">the best growth ETFs by total return, fees and size</a> and <a href="/articles/growth-etf-scoreboard">the growth ETF scoreboard</a>, or browse <a href="https://growthetfs.com/">GrowthETFs.com</a>.</p>
+
+<h2>The risks on each side</h2>
+<p><strong>VOO risks:</strong> It is a stock fund, so it falls when the US market falls. It is also market-cap weighted, so a few giant companies drive a big share of results. It is broad, but not bulletproof.</p>
+<p><strong>QQQ risks:</strong> Everything above applies, with more intensity. A heavy tech tilt means sharper drops when growth stocks sell off, and the fund has had deep drawdowns in the past. The higher total return came with a rougher ride.</p>
+<p>Neither fund is a guarantee of anything. A big number since inception says what happened, not what will happen.</p>
+
+<h2>Which one fits which investor</h2>
+<ul>
+<li><strong>VOO tends to fit</strong> someone who wants a core, low-cost, set-and-forget holding across the broad US market, and who values a very low fee and wide diversification.</li>
+<li><strong>QQQ tends to fit</strong> someone with a long time horizon who is comfortable with bigger swings and wants extra exposure to large technology and growth companies.</li>
+<li><strong>Both together</strong> can work for people who want a broad core with a tech tilt on top, as long as they understand the overlap.</li>
+<li><strong>Neither fits well</strong> if your main goal is monthly income. In that case, look at income-focused funds instead, such as those screened on <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>.</li>
+</ul>
+<p>For a deeper look at the S&P 500 side, read my <a href="/articles/voo-etf-review-total-return-fees">VOO ETF review</a>.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="VOO,SCHG" data-per="year">
+  <p class="figure-title">Reality check: how little income growth funds throw off</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Is VOO or QQQ better?</h3>
+<p>Neither is better for everyone. VOO is broader and cheaper at {{live:VOO:er:pct2}}, while QQQ has a higher total return since inception ({{live:QQQ:tr}} versus {{live:VOO:tr}}) but a much longer track record and more tech concentration.</p>
+<h3>Does VOO pay dividends?</h3>
+<p>Yes. VOO currently yields {{live:VOO:yield}} and pays {{live:VOO:freq:text}}. On $10,000 that is about {{calc:usd:10000*VOO.yield/100}} per year.</p>
+<h3>Why is QQQ's total return higher than VOO's?</h3>
+<p>Partly because of its heavy tech tilt, and partly because its history is much longer. Our numbers run from each fund's own inception, so the periods do not match.</p>
+<h3>Can I own both VOO and QQQ?</h3>
+<p>You can, but they overlap heavily in the largest US companies. Owning both mostly adds a bigger tech tilt to a broad S&P 500 core.</p>
+<h3>Is VOO's price decaying?</h3>
+<p>No. Our price decay flag for VOO reads {{live:VOO:decay:decay}}, which is typical for a broad index fund.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+<p>VOO and QQQ are two different levels of risk wrapped in the same simple idea: own great US companies and let them compound. VOO gives you breadth at a very low cost. QQQ gives you more of the tech engine, with higher highs and rougher lows.</p>
+<p>Before you compare the headline numbers, check the dates, the fees and your own stomach for volatility. If you want to project what a position could mean for your own cash flow, try the <a href="/tools">calculators on TopETFs</a>. This isn't a buy or sell signal. Do your own due diligence.</p>
