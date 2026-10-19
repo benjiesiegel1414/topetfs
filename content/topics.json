@@ -698,7 +698,9 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to ULTY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax Ultra option income, weekly pay",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-19",
+   "words": 1829
   },
   {
    "slug": "schd-dividend-growth-rate",

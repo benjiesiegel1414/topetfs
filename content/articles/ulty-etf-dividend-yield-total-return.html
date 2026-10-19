@@ -1,0 +1,95 @@
+<!--meta
+{"title":"ULTY ETF: Dividend Yield, Total Return and What $10,000 Pays Today","short":"ULTY ETF guide","seoTitle":"ULTY ETF: Yield, Total Return and $10,000 Income","dek":"ULTY ETF explained in plain English: live yield, fee, total return, price decay risk, and what $10,000 pays each week, month and year today.","section":"weekly","date":"2026-10-19","time":"08","read":8,"art":"bars","tickers":["ULTY"],"coverLabel":"ULTY  ·  WEEKLY PAY","keyNumbers":[["ULTY yield","{{live:ULTY:yield}}"],["Expense ratio","{{live:ULTY:er:pct2}}"],["Assets","{{live:ULTY:aum:aum}}"],["Total return since inception","{{live:ULTY:tr}}"],["Price decay flag","{{live:ULTY:decay:decay}}"]],"keyword":"ULTY ETF","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:ULTY}} pays every week and currently shows a yield of {{live:ULTY:yield}}, which works out to about {{calc:usd:10000*ULTY.yield/100/52}} a week on $10,000.</li><li>Its total return since inception is only {{live:ULTY:tr}}, and our database flags price decay as: {{live:ULTY:decay:decay}}. The big yield has been offset by a falling share price.</li><li>It fits investors who want high cash flow and accept that the fund can lose principal. It is a poor fit for anyone who needs stable capital.</li></ul></div>
+
+<p class="lede">The ULTY ETF is YieldMax's Ultra Option Income Strategy ETF, and it pays a distribution every week. Right now it yields {{live:ULTY:yield}} with an expense ratio of {{live:ULTY:er:pct2}}, and $10,000 invested would produce roughly {{calc:usd:10000*ULTY.yield/100}} a year at today's yield. The catch is that total return since inception is just {{live:ULTY:tr}}, so the income number alone does not tell you whether you actually made money.</p>
+
+<div class="board" data-w="board" data-syms="ULTY,MSTY,CHPY,QDTE,FEPI,YMAX" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>ULTY vs other weekly payers</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>What ULTY is and who runs it</h2>
+<p>ULTY is issued by YieldMax, the same company behind funds like {{tkr:MSTY}}, {{tkr:TSLY}} and {{tkr:CONY}}. It launched on {{live:ULTY:inception:text}} and pays on a {{live:ULTY:freq:text}} schedule. Today it manages {{live:ULTY:aum:aum}} in assets.</p>
+<p>Most YieldMax funds are built around one stock. MSTY is tied to MicroStrategy, TSLY to Tesla, CONY to Coinbase. ULTY is different. It spreads the strategy across a basket of high-volatility stocks instead of betting on a single name. Think of it as a multi-stock version of the YieldMax playbook.</p>
+<p>That basket is actively managed, so the holdings can change over time. I would not rely on any fixed list from an old article. Check the fund's current holdings page on the YieldMax site before drawing conclusions about what is inside.</p>
+
+<h2>How ULTY produces a weekly payout</h2>
+<p>The weekly money comes from options. A call option is a contract that gives the buyer the right to purchase a stock at a set price. When a fund sells those contracts, it collects cash up front, called a premium. That premium is the main fuel for the distribution.</p>
+<p>ULTY uses a covered call style approach on its basket of volatile stocks. In plain English: it collects premium by selling calls, and in exchange it gives up some of the upside if those stocks rally hard. If the stocks fall, the fund still owns the downside. That is the core trade-off of every income fund like this.</p>
+<p>Why is the yield so high? Volatile stocks have expensive options. The more a stock swings, the more a buyer will pay for a call on it. ULTY leans on that. It is also why the yield can move around a lot from one period to the next, because premiums rise and fall with market volatility.</p>
+<p>One more thing worth knowing: the yield you see is a snapshot based on recent payouts. It is not a promise. Weekly distribution amounts from funds like this can change, and they have changed meaningfully across the YieldMax lineup over time.</p>
+
+<h2>The income math: what $10,000 pays</h2>
+<p>Here is the simple version at today's yield of {{live:ULTY:yield}}:</p>
+<ul>
+<li><strong>Per week on $10,000:</strong> about {{calc:usd:10000*ULTY.yield/100/52}}</li>
+<li><strong>Per month on $10,000:</strong> about {{calc:usd:10000*ULTY.yield/100/12}}</li>
+<li><strong>Per year on $10,000:</strong> about {{calc:usd:10000*ULTY.yield/100}}</li>
+<li><strong>Per month on $100,000:</strong> about {{calc:usd:100000*ULTY.yield/100/12}}</li>
+</ul>
+<p>Flip it around. If you wanted $1,000 a month from ULTY at the current yield, you would need roughly {{calc:usd:12000/(ULTY.yield/100)}} invested. That sounds efficient, and on paper it is. But it only works if the yield holds and the share price holds, and neither is guaranteed.</p>
+<p>I always tell people to treat this as a today-only estimate. If the yield drops by a third, your income drops by a third too. You can test other scenarios with the <a href="/tools">calculators on TopETFs</a> or project longer-term income at <a href="https://dividendprojection.com/">DividendProjection.com</a>.</p>
+
+<h2>Total return and price decay: the part that matters</h2>
+<p>Here is the number I care about most. Since inception on {{live:ULTY:inception:text}}, ULTY's total return is {{live:ULTY:tr}}. Total return counts both the price change and the distributions you received, assuming they were reinvested. If you had put $10,000 in at the start, that would be about {{calc:usd:10000*(1+ULTY.tr/100)}} today.</p>
+<p>Now compare that to the income number. A {{live:ULTY:yield}} yield sounds like a fortune, yet the total return since launch is {{live:ULTY:tr}}. Where did the rest go? Into falling share price. The fund paid out a lot of cash, and the net asset value (NAV, the per-share value of what the fund owns) dropped along the way. Our database flags price decay for ULTY as: {{live:ULTY:decay:decay}}.</p>
+<p>That is what NAV erosion looks like. You collect big checks, but each share is worth less than before. If you spend all the distributions and the price keeps sliding, your original principal shrinks. If you reinvest, you are fighting that decline with every payment.</p>
+<p>Return of capital is part of this conversation too. Return of capital (ROC) means some of the distribution is classified as a return of your own money rather than income earned by the fund. It is not automatically bad, and it can have tax effects, but it is a reminder that a high payout is not the same as high profit. Look at the fund's distribution notices for the actual breakdown, and talk to a tax professional about what applies to you.</p>
+<p>One fair caveat: total return is measured since inception, and funds launched on different dates. ULTY started in early 2024, so its record covers a specific stretch of market conditions. A different starting point could look different.</p>
+
+<h2>The main risks</h2>
+<ul>
+<li><strong>Price decay.</strong> The flag is {{live:ULTY:decay:decay}} and the weak total return backs it up. This is the biggest risk by far.</li>
+<li><strong>Capped upside.</strong> Selling calls means you will not fully participate when the underlying stocks surge.</li>
+<li><strong>Full downside.</strong> You still take losses when the stocks drop. Premium only cushions part of a fall.</li>
+<li><strong>Variable payouts.</strong> The weekly amount is not fixed. Your income can shrink even if the fund keeps paying every week.</li>
+<li><strong>Higher fees.</strong> The expense ratio of {{live:ULTY:er:pct2}} is on the pricey side compared with plain index funds, and it is higher than most single-stock YieldMax funds below.</li>
+<li><strong>Volatile holdings.</strong> The strategy depends on swingy stocks, so it can behave badly in sharp market selloffs.</li>
+</ul>
+
+<h2>How ULTY compares to close alternatives</h2>
+<p>Let's put ULTY next to a few other weekly payers from the table above. Remember, these launched on different dates, so total returns are not a perfectly fair race.</p>
+<h3>ULTY vs MSTY</h3>
+<p>MSTY yields {{live:MSTY:yield}} and has a total return of {{live:MSTY:tr}} since {{live:MSTY:inception:text}}, with a lower fee of {{live:MSTY:er:pct2}}. It launched just days before ULTY, so this is one of the more comparable pairs. The difference is concentration. MSTY rides one stock, so it swings with that single company. ULTY spreads the exposure out. I dug into the single-stock version in my <a href="/articles/msty-etf-dividend-yield-total-return">MSTY ETF guide</a>.</p>
+<h3>ULTY vs CHPY</h3>
+<p>{{tkr:CHPY}} yields {{live:CHPY:yield}}, charges {{live:CHPY:er:pct2}}, and our price decay flag reads {{live:CHPY:decay:decay}}. Its total return is {{live:CHPY:tr}}, but it only started on {{live:CHPY:inception:text}}, so it has had much less time to be tested. It focuses on semiconductors, a narrower theme. If you like a lower yield with a better track record so far, it is worth a look. My <a href="/articles/chpy-dividend-history">CHPY payout history</a> breaks down every payment.</p>
+<h3>ULTY vs FEPI and QDTE</h3>
+<p>{{tkr:FEPI}} from REX yields {{live:FEPI:yield}} with a lower {{live:FEPI:er:pct2}} fee. {{tkr:QDTE}} from Roundhill yields {{live:QDTE:yield}} at {{live:QDTE:er:pct2}}. Both sit at far lower yields than ULTY, and both are also flagged for price decay ({{live:FEPI:decay:decay}} and {{live:QDTE:decay:decay}}). The trade is simple: less income, but each one has posted a stronger total return since launch ({{live:FEPI:tr}} and {{live:QDTE:tr}}). For a closer look at the Roundhill side, see <a href="/articles/qdte-vs-xdte">QDTE vs XDTE</a>.</p>
+<p>There is also {{tkr:YMAX}}, a YieldMax fund that holds other YieldMax funds. It yields {{live:YMAX:yield}} with a higher {{live:YMAX:er:pct2}} fee. For the full weekly universe, my list of the <a href="/articles/best-weekly-dividend-etfs">best weekly dividend ETFs</a> is a good next stop.</p>
+
+<h2>Who ULTY fits, and who should skip it</h2>
+<p><strong>It may fit you if</strong> you want high weekly cash flow, you understand that the principal can erode, and you treat it as a small, speculative slice of a bigger portfolio. Some investors use it as a satellite position and pull income out to put into steadier funds.</p>
+<p><strong>You should probably skip it if</strong> you need your capital to stay intact, you are retired and rely on every dollar, or you are new to investing and just want a simple core holding. If you are starting out, my <a href="/articles/best-dividend-etfs-for-beginners">beginner dividend ETF lineup</a> is a calmer place to begin.</p>
+<p>One habit I recommend with any fund like this: track your total return, not just the checks. If you add up distributions and your account value is still lower than what you put in, the yield was not telling the full story.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="ULTY,MSTY,CHPY,QDTE,FEPI" data-per="year">
+  <p class="figure-title">ULTY income vs other weekly payers</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<p>Want to see every weekly payer side by side? Browse <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>, or screen all income funds with <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>. For dollar examples across the group, read <a href="/articles/weekly-pay-etfs-10000">what $10,000 earns in weekly-pay ETFs</a>.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Does ULTY pay weekly?</h3>
+<p>Yes. ULTY pays on a {{live:ULTY:freq:text}} schedule, so you receive a distribution every week. The amount can change from one week to the next.</p>
+<h3>What is the ULTY dividend yield?</h3>
+<p>ULTY's current yield is {{live:ULTY:yield}}. That figure moves with recent payouts, so check it again before making decisions.</p>
+<h3>How much does $10,000 in ULTY pay?</h3>
+<p>At today's yield, about {{calc:usd:10000*ULTY.yield/100/52}} per week, {{calc:usd:10000*ULTY.yield/100/12}} per month and {{calc:usd:10000*ULTY.yield/100}} per year. These are estimates, not guarantees.</p>
+<h3>Is ULTY a good investment?</h3>
+<p>It depends on your goal. The income is large, but total return since inception is only {{live:ULTY:tr}} and the price decay flag is {{live:ULTY:decay:decay}}. It suits speculative income seekers more than cautious investors, and this is not a buy or sell signal.</p>
+<h3>What is the ULTY expense ratio?</h3>
+<p>The expense ratio is {{live:ULTY:er:pct2}}, which is the yearly fee taken out of fund assets. That is higher than many single-stock YieldMax funds.</p>
+<h3>ULTY vs MSTY: which pays more?</h3>
+<p>MSTY currently shows a yield of {{live:MSTY:yield}} against ULTY's {{live:ULTY:yield}}. Yield is only half the picture, so compare total return and concentration risk too.</p>
+</section>
+
+<h2>My bottom line on ULTY</h2>
+<p>ULTY does what it says. It turns volatile stocks into a big weekly paycheck, and the {{live:ULTY:yield}} yield is real cash landing in your account. But the {{live:ULTY:tr}} total return since {{live:ULTY:inception:text}} shows what that paycheck can cost in share price.</p>
+<p>If you are drawn to it, size it small, track total return and not just income, and read the fund's own documents before you invest. Do your own due diligence. This is education, not advice.</p>
