@@ -355,7 +355,9 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on QQQ: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: Nasdaq-100 growth, tech concentration, low yield",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-20",
+   "words": 1734
   },
   {
    "slug": "dgro-etf-dividend-yield-total-return",
