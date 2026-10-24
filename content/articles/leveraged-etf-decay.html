@@ -1,0 +1,87 @@
+<!--meta
+{"title":"Leveraged ETF Decay: Why TQQQ Can Lose Money Even When QQQ Rises","short":"Leveraged ETF decay","seoTitle":"Leveraged ETF Decay: TQQQ vs QQQ Explained","dek":"Leveraged ETF decay explained with real numbers: how TQQQ can lose money while QQQ rises, what daily resets do, and who these funds actually fit.","section":"growth","date":"2026-10-24","time":"08","read":7,"art":"line","tickers":["TQQQ","QQQ"],"coverLabel":"TQQQ  ·  QQQ","keyNumbers":[["TQQQ total return","{{live:TQQQ:tr}}"],["QQQ total return","{{live:QQQ:tr}}"],["TQQQ assets","{{live:TQQQ:aum:aum}}"],["QQQ assets","{{live:QQQ:aum:aum}}"]],"keyword":"leveraged ETF decay","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:TQQQ}} aims for three times the daily move of the Nasdaq-100, and it resets every day. That reset is why it can lose money over a stretch where {{tkr:QQQ}} finishes higher.</li><li>Since inception, TQQQ's total return is {{live:TQQQ:tr}} versus {{live:QQQ:tr}} for QQQ. Those numbers are real, but the funds started at very different times, so they are not a fair race.</li><li>Decay is not a fee. It is math that hurts you most when markets chop sideways and swing up and down, and helps you when a trend runs in one direction.</li></ul></div>
+
+<p class="lede">Leveraged ETF decay is the slow erosion that happens because a leveraged fund rebuilds its exposure every single day. If the Nasdaq-100 swings up and down, TQQQ can end a period lower even though QQQ ended it higher. Since inception TQQQ's total return is {{live:TQQQ:tr}} against {{live:QQQ:tr}} for QQQ, so the long-run story can look amazing. The path you take to get there is the part that bites.</p>
+
+<div class="board" data-w="board" data-syms="TQQQ,QQQ,VUG,VGT,SCHG,VOO" data-cols="tr,er,aum,yield,freq" data-sort="tr" data-n="8">
+  <div class="board-head"><div><h3>TQQQ vs QQQ and plain growth funds</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="false">Yield</button><button type="button" data-view="tr" aria-pressed="true">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>What TQQQ actually promises</h2>
+<p>TQQQ is built to deliver roughly three times the one-day return of the Nasdaq-100, the same index QQQ tracks. Notice the words "one-day." The fund does not promise three times the return over a week, a month or a year. It promises three times each day, and then it starts over.</p>
+<p>To do that, the fund uses derivatives such as swaps and futures to get leveraged exposure, and it rebalances daily. Borrowing costs and fund expenses sit on top. Those costs are real, but they are not the main source of decay.</p>
+<p>QQQ is the plain version. It holds the Nasdaq-100 stocks with no leverage and no daily reset. If you want the full breakdown of that fund, I covered it in the <a href="/articles/qqq-etf-review-total-return-fees">QQQ ETF review</a>.</p>
+
+<h2>Why decay happens: the math in plain English</h2>
+<p>Gains and losses do not add up the way your gut thinks they do. Fall from 100 to 90 and you need to climb back more than 10 points, because you are now climbing from a smaller base. Leverage magnifies that problem because the swings are three times bigger.</p>
+<p>Here is a made-up example. It is not fund data, just a clean illustration. Say the index starts at 100, has a strong up day that takes it to 110, then has a down day that brings it right back to 100.</p>
+<table><thead><tr><th>Path</th><th>Index (starts at 100)</th><th>3x daily fund (starts at 100)</th></tr></thead><tbody><tr><td>Day 1: strong up day</td><td>110</td><td>130</td></tr><tr><td>Day 2: index falls back to its start</td><td>100</td><td>About 94.5</td></tr><tr><td>Net result</td><td>Flat, back at 100</td><td>About 5.5 points below where it began</td></tr></tbody></table>
+<p>The index is right back where it started. The leveraged fund is more than five points underwater. Same two days, same path for the index, very different outcome for the fund.</p>
+<p>Now repeat that up-and-down pattern one more time. The index is still sitting at 100. The 3x fund is down to roughly 89. That is decay compounding on itself.</p>
+
+<h2>It cuts both ways</h2>
+<p>Here's the part people skip when they only warn about decay. In a steady trend, the same math works in your favor. Say the index climbs from 100 to 110 and then to 121 over two days. It gained 21 points. A 3x daily fund goes from 100 to 130 and then to 169, a gain of 69 points, which is more than three times the index's gain.</p>
+<p>That explains the huge number you see in the table. TQQQ's total return since inception is {{live:TQQQ:tr}}. Put in dollars, $10,000 invested at the start and held would now be {{calc:usd:10000*(1+TQQQ.tr/100)}}. The same $10,000 in QQQ over its own, much longer history would be {{calc:usd:10000*(1+QQQ.tr/100)}}.</p>
+<p>Please read those two figures carefully. QQQ has been around far longer than TQQQ, so the clocks are different. And TQQQ's run happened during a long stretch where the Nasdaq-100 mostly trended up. That is the best environment a leveraged fund can get. It does not tell you what happens in a choppy or falling market.</p>
+
+<h2>The drawdown problem</h2>
+<p>Decay is annoying. A big drawdown is dangerous. When a fund loses half its value, it needs to double just to get back to where it started. A 3x fund falls much faster than the index does in a bad stretch, so the hole gets deep quickly.</p>
+<p>A steep, sustained decline in the Nasdaq-100 can wipe out most of a leveraged fund's value. And because of the daily reset, the fund does not bounce back in a straight line when the index recovers. You can watch QQQ climb back toward its old high while TQQQ is still well below its own.</p>
+<p>That is the real answer to the search question. TQQQ can lose money when QQQ rises because of volatility and sequence of returns, not because anyone is hiding a fee from you.</p>
+
+<h2>TQQQ vs QQQ: size, scale and what the numbers say</h2>
+<p>Both funds are big. TQQQ has {{live:TQQQ:aum:aum}} in assets, while QQQ has {{live:QQQ:aum:aum}}. Plenty of people are using TQQQ, which is exactly why it is worth understanding before you do.</p>
+<p>On total return since inception, TQQQ shows {{live:TQQQ:tr}} and QQQ shows {{live:QQQ:tr}}. Remember that these figures start on different dates. For a head-to-head on the unleveraged side, see <a href="/articles/voo-vs-qqq">VOO vs QQQ</a>.</p>
+<p>Both hold the same kind of stocks, which means the same tilt: large technology and growth companies, with a handful of mega-cap names carrying a lot of the weight. Leverage does not diversify that. It just turns the volume up on the same concentration.</p>
+
+<h2>How plain growth funds compare</h2>
+<p>If your goal is long-term growth without the daily-reset problem, there are many unleveraged options in our database. {{tkr:VUG}} has a total return of {{live:VUG:tr}} since inception, and {{tkr:VGT}}, the tech-heavy one, shows {{live:VGT:tr}}. {{tkr:SCHG}} shows {{live:SCHG:tr}}, and {{tkr:VOO}}, the broad S&amp;P 500 fund, shows {{live:VOO:tr}}. Again, each started in a different year.</p>
+<p>Fees are another place where plain funds win clearly. VOO charges {{live:VOO:er:pct2}}, which is about {{calc:usd:10000*VOO.er/100}} per year on $10,000. SCHG charges {{live:SCHG:er:pct2}}, or {{calc:usd:10000*SCHG.er/100}} per $10,000. Leveraged funds generally charge noticeably more than that, and they carry financing costs on top. Check TQQQ's current fee on its fund page before you compare.</p>
+<p>For a bigger scoreboard, look at <a href="/articles/growth-etf-scoreboard">what $10,000 became in the biggest growth funds</a> and our list of the <a href="/articles/best-growth-etfs">best growth ETFs</a>. You can also browse more at <a href="https://growthetfs.com/">GrowthETFs.com</a>.</p>
+
+<h2>A quick income reality check</h2>
+<p>Growth funds are not income funds, and leveraged ones even less so. Yield is a side note here. VOO yields {{live:VOO:yield}}, which is only {{calc:usd:10000*VOO.yield/100}} a year on $10,000. SCHG yields {{live:SCHG:yield}}, or {{calc:usd:10000*SCHG.yield/100}} a year on the same amount. Both pay {{live:VOO:freq:text}} distributions.</p>
+<p>If you want a paycheck from your portfolio, a leveraged growth fund is the wrong tool. Whatever small distribution it makes does not offset the swings in the share price.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="VOO,SCHG" data-per="year">
+  <p class="figure-title">Reality check: how little income growth funds throw off</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<h2>Risks to be honest about</h2>
+<ul>
+<li><strong>Volatility drag:</strong> choppy markets erode a daily-reset fund even when the index is flat or slightly up.</li>
+<li><strong>Big drawdowns:</strong> three times the downside means a bad stretch can do severe, sometimes permanent damage.</li>
+<li><strong>Concentration:</strong> the Nasdaq-100 leans on a small group of huge technology names, and leverage amplifies that.</li>
+<li><strong>Holding period mismatch:</strong> these funds are designed around a single day. Holding for years is a different bet than the fund is built to match.</li>
+<li><strong>Backward-looking totals:</strong> a huge since-inception return does not mean a buyer today will see the same thing.</li>
+</ul>
+
+<h2>Who leveraged funds tend to fit</h2>
+<p>These funds tend to fit experienced, active traders who watch positions closely, understand the daily reset and size their positions small enough that a large loss will not hurt. They are a tool, not a core holding.</p>
+<p>Long-term buy-and-hold investors usually look at plain index funds like QQQ, VOO or VUG instead. They are cheaper, simpler and do not need babysitting. If you want to learn how ETFs work under the hood first, start with <a href="/articles/how-etfs-work">ETFs 101</a>.</p>
+<p>None of this is a buy or sell signal. It is just how the math works, so you can decide with your eyes open.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Can TQQQ lose money when QQQ goes up?</h3>
+<p>Yes. Because TQQQ resets its leverage daily, a volatile path can leave it lower even if QQQ finishes higher over the same period. The up-and-down swings compound against it.</p>
+<h3>Is leveraged ETF decay a fee?</h3>
+<p>No. Decay comes from daily compounding in a volatile market, not from a charge on your account. Fund expenses and borrowing costs exist too, but they are separate from the compounding effect.</p>
+<h3>Is TQQQ a good long-term investment?</h3>
+<p>It depends on your goals and risk tolerance. TQQQ's total return since inception is {{live:TQQQ:tr}}, but it came with severe drawdowns and the path matters a lot. Many long-term investors prefer unleveraged funds.</p>
+<h3>TQQQ vs QQQ: which has the higher total return?</h3>
+<p>Since inception TQQQ shows {{live:TQQQ:tr}} and QQQ shows {{live:QQQ:tr}}. The funds launched at different times, so it is not a like-for-like comparison.</p>
+<h3>Does TQQQ pay a meaningful dividend?</h3>
+<p>Income is not the point of this fund. Any distribution is small compared with the swings in the share price, so check the current figures on its fund page.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+<p>Leveraged ETF decay is real, but it is not a trick. It is what happens when you rebuild three times the exposure every day and the market zigzags. The same math that grinds a leveraged fund down in a choppy market can supercharge it in a clean trend.</p>
+<p>My take: understand the daily reset before you ever touch one of these, and never judge it by the since-inception number alone. For a simple look at plain alternatives, run the numbers in our <a href="/tools">calculators</a> and do your own due diligence. This isn't financial advice.</p>

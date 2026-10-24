@@ -384,7 +384,9 @@
    "section": "growth",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-24",
+   "words": 1694
   },
   {
    "slug": "schg-vs-qqq",
