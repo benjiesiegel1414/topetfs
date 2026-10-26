@@ -213,6 +213,7 @@ table.data th:first-child,table.data td:first-child{text-align:left}
 table.data th.l,table.data td.l{text-align:left}
 table.data th button{all:unset;cursor:pointer}
 table.data th button:hover{color:var(--ink)}
+table.data th.rk,table.data td.rk{width:34px;text-align:left;padding-right:0;font-weight:800;color:var(--muted)}table.data th.rk+th,table.data td.rk+td{text-align:left}
 table.data th[aria-sort] button::after{content:" \2193";color:var(--ink)}
 table.data th[aria-sort="ascending"] button::after{content:" \2191"}
 table.data td{padding:10px 14px;border-bottom:1px solid var(--rule);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
