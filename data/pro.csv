@@ -1,176 +1,177 @@
 Symbol,Name,Fund Provider,Dividend Yield,Tax Treatment Grade,Expense Ratio,AUM ,Total Return,Price Decay,Inception Date,Payout Frequency,Rating
 YBST,GraniteShares YieldBOOST Single Stock Universe ETF,GraniteShares,42%,B,1.38%,0.9M,-28%,YES,12/16/2025,Weekly,C+
-YBTY,GraniteShares YieldBOOST TopYielders ETF,GraniteShares,49%,B,1.38%,1.5M,-35%,YES,12/16/2025,Weekly,C-
-AMYY,GraniteShares YieldBOOST AMD ETF,GraniteShares,70%,B,1.07%,9.2M,27%,YES,9/16/2025,Weekly,C+
-XBTY,GraniteShares YieldBOOST Bitcoin ETF,GraniteShares,31%,B,1.15%,9.3M,-34%,YES,5/12/2025,Weekly,C-
-COYY,GraniteShares YieldBOOST COIN ETF,GraniteShares,66%,B,1.07%,15M,-62%,YES,7/28/2025,Weekly,C-
-HOYY,GraniteShares YieldBOOST HOOD ETF,GraniteShares,77%,B,1.07%,8.2M,-49%,YES,9/30/2025,Weekly,F
-NVYY,GraniteShares YieldBOOST NVDA ETF,GraniteShares,31%,B,1.07%,23M,25%,YES,5/12/2025,Weekly,F
-TQQY,GraniteShares YieldBOOST QQQ ETF,GraniteShares,26%,B,1.15%,5.3M,-3%,YES,2/26/2025,Weekly,F
-SMYY,GraniteShares YieldBOOST SMCI ETF,GraniteShares,73%,B,1.07%,5.6M,-31%,YES,9/30/2025,Weekly,C-
+YBTY,GraniteShares YieldBOOST TopYielders ETF,GraniteShares,49%,B,1.38%,1.5M,-36%,YES,12/16/2025,Weekly,C-
+AMYY,GraniteShares YieldBOOST AMD ETF,GraniteShares,70%,B,1.07%,9.1M,28%,YES,9/16/2025,Weekly,C+
+XBTY,GraniteShares YieldBOOST Bitcoin ETF,GraniteShares,31%,B,1.15%,9.2M,-35%,YES,5/12/2025,Weekly,C-
+COYY,GraniteShares YieldBOOST COIN ETF,GraniteShares,66%,B,1.07%,15M,-63%,YES,7/28/2025,Weekly,C-
+HOYY,GraniteShares YieldBOOST HOOD ETF,GraniteShares,77%,B,1.07%,8.3M,-50%,YES,9/30/2025,Weekly,F
+NVYY,GraniteShares YieldBOOST NVDA ETF,GraniteShares,31%,B,1.07%,22M,26%,YES,5/12/2025,Weekly,F
+TQQY,GraniteShares YieldBOOST QQQ ETF,GraniteShares,26%,B,1.15%,5.2M,-2%,YES,2/26/2025,Weekly,F
+SMYY,GraniteShares YieldBOOST SMCI ETF,GraniteShares,73%,B,1.07%,5.8M,-30%,YES,9/30/2025,Weekly,C-
 YSPY,GraniteShares YieldBOOST SPY ETF,GraniteShares,10%,B,1.15%,7.7M,17%,YES,2/26/2025,Weekly,C-
-TSYY,GraniteShares YieldBOOST TSLA ETF,GraniteShares,45%,B,1.15%,58M,-32%,YES,12/18/2024,Weekly,C-
-AHD,GraniteShares Autocallable HOOD ETF,GraniteShares,33%,B,1.07%,5.4M,19%,NO,5/16/2026,Weekly,C-
-CONY,YieldMax COIN Option Income Strategy ETF,YieldMax,55%,B,0.99%,361M,33%,YES,8/14/2023,Weekly,C
-ULTY,YieldMax Ultra Option Income Strategy ETF,YieldMax,61%,B,1.40%,652M,2%,YES,2/28/2024,Weekly,C
-MSTY,YieldMax MSTR Option Income Strategy ETF,YieldMax,60%,B,0.99%,1069M,66%,YES,2/22/2024,Weekly,C+
-SMCY,YieldMax SMCI Option Income Strategy ETF,YieldMax,61%,B,0.99%,116M,-43%,YES,9/11/2024,Weekly,D
-TSLY,YieldMax TSLA Option Income Strategy ETF,YieldMax,46%,B,0.99%,652M,39%,YES,10/22/2022,Weekly,D+
-YBIT,YieldMax Bitcoin Option Income Strategy ETF,YieldMax,40%,B,0.99%,63M,-11%,YES,4/22/2024,Weekly,C-
-PLTY,YieldMax PLTR Option Income Strategy ETF,YieldMax,37%,B,0.99%,362M,197%,YES,10/7/2024,Weekly,F
-NVDY,YieldMax NVDA Option Income Strategy ETF,YieldMax,25%,B,0.99%,1341M,340%,YES,5/10/2023,Weekly,C
-AMDY,YieldMax AMD Option Income Strategy ETF,YieldMax,41%,B,0.99%,463M,221%,YES,9/18/2023,Weekly,F
-SNOY,YieldMax SNOW Option Income Strategy ETF,YieldMax,38%,B,0.99%,63M,126%,YES,6/10/2024,Weekly,C-
-YMAX,YieldMax Universe Fund of Option Income ETFs,YieldMax,40%,B,1.28%,359M,40%,YES,1/16/2024,weekly,C-
-PYPY,YieldMax PYPL Option Income Strategy ETF,YieldMax,36%,B,0.99%,24M,0%,YES,9/25/2023,weekly,C
-AMZY,YieldMax AMZN Option Income Strategy ETF,YieldMax,26%,B,0.99%,228M,85%,YES,6/24/2023,weekly,F
-GOOY,YieldMax GOOGL Option Income Strategy ETF,YieldMax,25%,B,0.99%,231M,74%,YES,6/27/2023,weekly,B-
-BABO,YieldMax BABA Option Income Strategy ETF,YieldMax,37%,B,0.99%,13M,4%,YES,8/7/2024,weekly,C-
-OARK,YieldMax Innovation Option Income Strategy ETF,YieldMax,28%,B,1.00%,40M,48%,YES,11/22/2022,weekly,D
-HOOY,YieldMax HOOD Option Income Strategy ETF,YieldMax,58%,B,0.99%,123M,45%,YES,5/7/2025,weekly,A-
-LFGY,YieldMax Crypto Industry & Tech Portfolio Option Income ETF,YieldMax,41%,B,1.02%,70M,-9%,YES,1/13/2025,weekly,D
-CHPY,YieldMax Semiconductor Portfolio Option Income ETF,YieldMax,40%,B,1.03%,1283M,139%,NO,4/2/2025,weekly,B+
-YMAG,YieldMax Magnificent 7 Fund of Option Income ETFs,YieldMax,36%,B,1.12%,289M,69%,YES,1/29/2024,weekly,F
-FBY,YieldMax META Option Income Strategy ETF,YieldMax,41%,B,0.99%,109M,58%,YES,7/27/2023,weekly,C
-SOXY,YieldMax® Target 12™ Semiconductor Option Income ETF,YieldMax,12%,B,1.06%,65M,101%,NO,12/2/2024,Monthly,B+
-IWMY,Defiance R2000 Enhanced Options & 0DTE Income ETF,Defiance,30.0%,B,1.05%,80M,36%,YES,10/30/2023,Monthly,C-
-QQQY,Definance Nasdaq 100 Enhanced Options & 0DTE Income ETF,Defiance,30.0%,B,1.01%,186M,51%,YES,9/14/2023,Monthly,C+
-SPYI,NEOS S&P 500 High Income ETF,NEOS,12.15%,B,0.68%,12628M,77%,NO,8/30/2022,Monthly,A-
-QQQI,NEOS Nasdaq 100 High Income ETF,NEOS,14.3%,B,0.68%,15260M,56%,NO,1/20/2024,Monthly,A-
-BTCI,NEOS Bitcoin High Income ETF,NEOS,28.0%,B,0.98%,1441M,17%,YES,10/17/2024,Monthly,C-
-CSHI,NEOS Enhanced Income 1-3 Month T-Bill ETF,NEOS,5.0%,B,0.38%,2073M,24%,NO,8/30/2022,Monthly,A-
-QQQH,NEOS Nasdaq 100 Hedged Equity Income ETF,NEOS,9.1%,B,0.68%,377M,22%,NO,12/19/2019,Monthly,A-
-IWMI,NEOS Russell 2000 High Income ETF,NEOS,14.6%,B,0.68%,1306M,36%,YES,6/25/2024,Monthly,B+
-IYRI,NEOS Real Estate High Income ETF,NEOS,11.0%,C,0.68%,303M,12%,YES,1/14/2025,Monthly,F
-IAUI,NEOS Gold High Income ETF,NEOS,12.2%,B,0.78%,659M,11%,YES,6/5/2025,Monthly,B+
-BNDI,NEOS Enhanced Income Aggregate Bond ETF,NEOS,5.8%,B,0.58%,191M,15%,YES,8/30/2022,Monthly,A-
+TSYY,GraniteShares YieldBOOST TSLA ETF,GraniteShares,45%,B,1.15%,58M,-30%,YES,12/18/2024,Weekly,C-
+AHD,GraniteShares Autocallable HOOD ETF,GraniteShares,33%,B,1.07%,5.4M,18%,NO,5/16/2026,Weekly,C-
+CONY,YieldMax COIN Option Income Strategy ETF,YieldMax,55%,B,0.99%,354M,26%,YES,8/14/2023,Weekly,C
+ULTY,YieldMax Ultra Option Income Strategy ETF,YieldMax,61%,B,1.40%,626M,2%,YES,2/28/2024,Weekly,C
+MSTY,YieldMax MSTR Option Income Strategy ETF,YieldMax,60%,B,0.99%,1077M,58%,YES,2/22/2024,Weekly,C+
+SMCY,YieldMax SMCI Option Income Strategy ETF,YieldMax,61%,B,0.99%,119M,-44%,YES,9/11/2024,Weekly,D
+TSLY,YieldMax TSLA Option Income Strategy ETF,YieldMax,46%,B,0.99%,648M,46%,YES,10/22/2022,Weekly,D+
+YBIT,YieldMax Bitcoin Option Income Strategy ETF,YieldMax,40%,B,0.99%,62M,-13%,YES,4/22/2024,Weekly,C-
+PLTY,YieldMax PLTR Option Income Strategy ETF,YieldMax,37%,B,0.99%,374M,198%,YES,10/7/2024,Weekly,F
+NVDY,YieldMax NVDA Option Income Strategy ETF,YieldMax,25%,B,0.99%,1316M,343%,YES,5/10/2023,Weekly,C
+AMDY,YieldMax AMD Option Income Strategy ETF,YieldMax,41%,B,0.99%,444M,221%,YES,9/18/2023,Weekly,F
+SNOY,YieldMax SNOW Option Income Strategy ETF,YieldMax,38%,B,0.99%,63M,130%,YES,6/10/2024,Weekly,C-
+YMAX,YieldMax Universe Fund of Option Income ETFs,YieldMax,40%,B,1.28%,350M,39%,YES,1/16/2024,weekly,C-
+PYPY,YieldMax PYPL Option Income Strategy ETF,YieldMax,36%,B,0.99%,24M,-1%,YES,9/25/2023,weekly,C
+AMZY,YieldMax AMZN Option Income Strategy ETF,YieldMax,26%,B,0.99%,219M,86%,YES,6/24/2023,weekly,F
+GOOY,YieldMax GOOGL Option Income Strategy ETF,YieldMax,25%,B,0.99%,219M,72%,YES,6/27/2023,weekly,B-
+BABO,YieldMax BABA Option Income Strategy ETF,YieldMax,37%,B,0.99%,12M,4%,YES,8/7/2024,weekly,C-
+OARK,YieldMax Innovation Option Income Strategy ETF,YieldMax,28%,B,1.00%,39M,48%,YES,11/22/2022,weekly,D
+HOOY,YieldMax HOOD Option Income Strategy ETF,YieldMax,58%,B,0.99%,120M,38%,YES,5/7/2025,weekly,A-
+LFGY,YieldMax Crypto Industry & Tech Portfolio Option Income ETF,YieldMax,41%,B,1.02%,69M,-14%,YES,1/13/2025,weekly,D
+CHPY,YieldMax Semiconductor Portfolio Option Income ETF,YieldMax,40%,B,1.03%,1247M,140%,NO,4/2/2025,weekly,B+
+YMAG,YieldMax Magnificent 7 Fund of Option Income ETFs,YieldMax,36%,B,1.12%,281M,70%,YES,1/29/2024,weekly,F
+FBY,YieldMax META Option Income Strategy ETF,YieldMax,41%,B,0.99%,101M,55%,YES,7/27/2023,weekly,C
+SOXY,YieldMax® Target 12™ Semiconductor Option Income ETF,YieldMax,12%,B,1.06%,62M,103%,NO,12/2/2024,Monthly,B+
+IWMY,Defiance R2000 Enhanced Options & 0DTE Income ETF,Defiance,30.0%,B,1.05%,79M,37%,YES,10/30/2023,Monthly,C-
+QQQY,Definance Nasdaq 100 Enhanced Options & 0DTE Income ETF,Defiance,30.0%,B,1.01%,183M,52%,YES,9/14/2023,Monthly,C+
+SPYI,NEOS S&P 500 High Income ETF,NEOS,12.15%,B,0.68%,12549M,78%,NO,8/30/2022,Monthly,A-
+QQQI,NEOS Nasdaq 100 High Income ETF,NEOS,14.3%,B,0.68%,15046M,57%,NO,1/20/2024,Monthly,A-
+BTCI,NEOS Bitcoin High Income ETF,NEOS,28.0%,B,0.98%,1394M,14%,YES,10/17/2024,Monthly,C-
+CSHI,NEOS Enhanced Income 1-3 Month T-Bill ETF,NEOS,5.0%,B,0.38%,2087M,24%,NO,8/30/2022,Monthly,A-
+QQQH,NEOS Nasdaq 100 Hedged Equity Income ETF,NEOS,9.1%,B,0.68%,373M,22%,NO,12/19/2019,Monthly,A-
+IWMI,NEOS Russell 2000 High Income ETF,NEOS,14.6%,B,0.68%,1298M,38%,YES,6/25/2024,Monthly,B+
+IYRI,NEOS Real Estate High Income ETF,NEOS,11.0%,C,0.68%,301M,12%,YES,1/14/2025,Monthly,F
+IAUI,NEOS Gold High Income ETF,NEOS,12.2%,B,0.78%,649M,11%,YES,6/5/2025,Monthly,B+
+BNDI,NEOS Enhanced Income Aggregate Bond ETF,NEOS,5.8%,B,0.58%,192M,15%,YES,8/30/2022,Monthly,A-
 SPYH,NEOS S&P 500 Hedged Equity Income ETF,NEOS,7.9%,B,0.68%,36M,31%,NO,4/2/2025,Monthly,B
-NIHI,NEOS MSCI EAFE High Income ETF,NEOS,9.7%,B,0.68%,213M,13%,NO,9/17/2025,Monthly,C
-MLPI,MLP & Energy Infrastructure High Income ETF,NEOS,14.3%,B,0.68%,926M,19%,NO,12/17/2025,Monthly,B+
-XSPI,NEOS Boosted S&P 500 High Income ETF,NEOS,17.1%,B,0.98%,132M,12%,YES,1/29/2026,Monthly,C
-XQQI,NEOS Boosted Nasdaq-100 High Income ETF,NEOS,21.0%,B,0.98%,396M,11%,YES,1/29/2026,Monthly,B
-XBCI,NEOS Boosted Bitcoin High Income ETF,NEOS,41%,B,0.98%,236M,5%,YES,2/3/2026,Monthly,C
-DIVO,Amplify CWP Enhanced Dividend Income ETF,Amplify,4.9%,B,0.56%,8064M,223%,NO,12/14/2016,Monthly,A
-YYY,Amplify High Income ETF,Amplify,13.9%,B,0.50%,657M,76%,YES,6/12/2013,Monthly,B-
-IDVO,Amplify CWP International Enhanced Dividend Income ETF,Amplify,6.1%,B,0.65%,1410M,104%,NO,9/8/2022,Monthly,A-
-QDVO,Amplify CWP Growth & Income ETF,Amplify,11.2%,B,0.56%,763M,46%,NO,8/22/2024,Monthly,B
-GPIX,Goldman Sachs S&P 500 Premium Income ETF,Goldman Sachs,8.2%,B,0.29%,6340M,81%,NO,10/24/23,Monthly,A-
-SCHD,Schwab U.S. Dividend Equity ETF,Schwab,3.2%,A,0.06%,116429M,579%,NO,10/20/2011,Quarterly,A+
-DGRO,iShares Core Dividend Growth ETF,iShares,2.0%,A,0.08%,44196M,329%,NO,6/10/2014,Quarterly,A+
-DGRW,WisdomTree U.S. Quality Dividend Growth Fund,WisdomTree,2.1%,B,0.28%,17105M,413%,NO,5/22/2013,Monthly,A+
-VIG,Vanguard Dividend Appreciation ETF,Vanguard,1.5%,A,0.04%,113559M,628%,NO,4/21/2006,Quarterly,A+
-VYM,Vanguard High Dividend Yield ETF,Vanguard,2.3%,A,0.04%,81901M,486%,NO,11/10/2006,Quarterly,A+
-SPHD,Invesco S&P 500 High Dividend Low Volatility ETF,Invesco,5.0%,B,0.30%,3315M,254%,NO,10/18/2012,Monthly,A
-FDVV,Fidelity High Dividend ETF,Fidelity,2.8%,A,0.15%,10397M,251%,NO,9/12/2016,Quarterly,A
-BATT,Amplify Lithium & Battery Technology ETF,Amplify,1.8%,A,0.59%,103M,-25%,YES,6/6/2018,Annual,B+
-COWS,Amplify Cash Flow Dividend Leaders ETF,Amplify,1.4%,A,0.39%,42M,68%,NO,9/13/2023,Monthly,B+
-BITY,Amplify Bitcoin 2% Monthly Option Income ETF,Amplify,24.6%,B,0.65%,13M,-23%,YES,4/29/2025,Monthly,B
-BAGY,Amplify Bitcoin Max Income Covered Call ETF,Amplify,33.0%,B,0.65%,10M,-26%,YES,4/29/2025,Monthly,B-
-HCOW,Amplify COWS Covered Call ETF,Amplify,10.3%,A,0.65%,17M,39%,NO,9/20/2023,Monthly,B-
-QDTE,Roundhill Innovation-100 0DTE Covered Call Strategy ETF,Roundhill,21.4%,B,0.97%,913M,56%,YES,3/7/2024,Weekly,B+
-XDTE,Roundhill S&P 500 0DTE Covered Call Strategy ETF,Roundhill,15.4%,B,0.97%,326M,45%,YES,3/7/2024,Weekly,B+
-YBTC,Roundhill Bitcoin Covered Call Strategy ETF,Roundhill,41.0%,B,0.96%,142M,32%,YES,1/18/2024,Weekly,B-
-PLTW,Roundhill PLTR WeeklyPay ETF,Roundhill,24.1%,B,0.99%,131M,65%,YES,2/19/2025,Weekly,B-
-YETH,Roundhill Ether Covered Call Strategy ETF,Roundhill,52.8%,B,0.96%,59M,-34%,YES,9/3/2024,Weekly,D
-COIW,Roundhill COIN WeeklyPay ETF,Roundhill,58.6%,B,0.99%,43M,-50%,YES,2/19/2025,Weekly,D
-RDTE,Roundhill Russell 2000 0DTE Covered Call Strategy ETF,Roundhill,20.5%,B,0.97%,158M,34%,YES,9/10/2024,Weekly,B-
-WEEK,Roundhill Weekly T-Bill ETF,Roundhill,3.8%,B,0.19%,183M,6%,NO,3/6/2025,Weekly,A
-MAGY,Roundhill Magnificent Seven Covered Call ETF,Roundhill,20.6%,B,0.99%,96M,24%,YES,4/23/2025,Weekly,B+
-TSLW,Roundhill TSLA WeeklyPay ETF,Roundhill,22.2%,B,0.99%,75M,-10%,YES,2/19/2025,Weekly,C+
-GOOW,Roundhill GOOGL WeeklyPay ETF,Roundhill,26.9%,B,0.99%,81M,74%,NO,7/24/2025,Weekly,B
-TOPW,Roundhill Top Weeklypay ETF,Roundhill,38.0%,B,0.99%,136M,2%,YES,9/4/2025,Weekly,C+
-AMDW,AMDW AMD WeeklyPay ETF,Roundhill,19.0%,B,0.99%,143M,255%,NO,7/24/2025,Weekly,B+
-ACKY,VistaShares Target 15 ACKtivist Distribution ETF,VistaShares,15.0%,B,0.95%,46M,1%,YES,9/9/2025,Monthly,B
-OMAH,VistaShares Target 15 Berkshire Select Income ETF,VistaShares,15.0%,B,0.95%,1118M,17%,YES,3/5/2025,Monthly,B
-DRKY,VistaShares Target 15™ DRUKMacro Distribution ETF,VistaShares,15.0%,B,0.95%,21M,20%,NO,10/8/2025,Monthly,B
-QUSA,VistaShares Target 15™ USA Quality Income ETF,VistaShares,15.0%,B,0.95%,21M,4%,YES,5/6/2025,Monthly,B
-SIOO,VistaShares Target 15™ S&P 100 Distribution ETF,VistaShares,15.0%,B,0.95%,24M,11%,YES,12/11/2025,Monthly,B-
-XYLD,Global X S&P 500 Covered Call ETF,Global X,8.9%,B,0.60%,3377M,104%,YES,6/24/2013,Monthly,B
-HDV,iShares Core High Dividend ETF,iShares,3.1%,B,0.08%,15691M,416%,NO,3/29/2011,Quarterly,A+
-DVY,iShares Select Dividend ETF,iShares,3.5%,B,0.38%,23268M,622%,NO,11/3/2003,Quarterly,A+
-SDY,SPDR S&P Dividend ETF,State Street,2.4%,A,0.35%,21662M,514%,NO,11/8/2005,Quarterly,A+
-BALI,iShares US Large Cap Premium Income Active ETF,iShares,6.1%,B,0.35%,1545M,77%,NO,9/26/2023,Monthly,A-
-NOBL,ProShares S&P 500 Dividend Aristocrats ETF,ProShares,2.2%,B,0.35%,11568M,274%,NO,10/9/2013,Quarterly,A+
-IDV,iShares International Select Dividend ETF,iShares,5.7%,B,0.50%,8315M,145%,YES,6/11/2007,Quarterly,A
-VYMI,Vanguard International High Dividend Yield ETF,Vanguard,3.7%,B,0.07%,21681M,196%,NO,2/25/2016,Quarterly,A
-SCHP,Schwab U.S. TIPS ETF,Schwab,5.1%,B,0.03%,16283M,53%,NO,8/5/2010,Monthly,A
-SCHG,Schwab U.S. Growth ETF,Schwab,0.4%,A,0.04%,63643M,1152%,NO,12/11/2009,Quarterly,A-
-RYLD,Global X Russell 2000 Covered Call ETF,Global X,11.4%,B,0.60%,1289M,47%,YES,4/17/2019,Monthly,C+
-QYLD,Global X Nasdaq 100 Covered Call ETF,Global X,11.9%,B,0.60%,8362M,195%,YES,12/12/2013,Monthly,C+
-JEPI,JPMorgan Equity Premium Income ETF,JP Morgan,8.0%,C,0.35%,45989M,95%,NO,5/20/2020,Monthly,A
-JEPQ,JPMorgan NASDAQ Equity Premium Income ETF,JP Morgan,11.6%,C,0.35%,43886M,88%,NO,5/3/2022,Monthly,A
-MAXI,Simplify Bitcoin Strategy PLUS Income ETF,Simplify,4.0%,C,1.00%,36M,196%,NO,9/29/2022,Monthly,C+
-BLOX,Nicholas Crypto Income ETF,XFunds,36.0%,B,0.99%,262M,-5%,YES,6/17/2025,Weekly,B+
-GIAX,Nicholas Global Equity and Income ETF,XFunds,24.0%,B,1.03%,110M,26%,YES,7/29/2024,Weekly,C+
-SVOL,Simplify Volatility Premium ETF,Simplify,20.6%,C,0.66%,522M,60%,YES,5/12/2021,Monthly,C-
-BITO,ProShares Bitcoin ETF,ProShares,38.2%,C,0.95%,1591M,-3%,YES,10/18/2021,Monthly,C-
-KQQQ,Kurv Technology Titans Select ETF,Kurv,14.48%,A,1.12%,131M,44%,NO,7/22/2024,Monthly,A-
-FEPI,REX FANG & Innovation Equity Premium Income ETF,REX,25.2%,B,0.65%,724M,64%,YES,10/9/2023,Weekly,B+
-AIPI,REX AI Equity Premium Income ETF,REX,34.8%,B,0.65%,486M,53%,YES,6/4/2024,Weekly,B-
-CEPI,REX Crypto Equity Premium Income ETF,REX,41.8%,B,0.85%,122M,17%,YES,12/4/2024,Weekly,B-
-NVII,REX NVDA Growth & Income ETF,REX,37%,B,0.99%,113M,71%,YES,5/28/2025,Weekly,b
-TSII,REX TSLA Growth And Income ETF,REX,51%,B,0.99%,31M,14%,YES,6/4/2025,Weekly,C
-WMTI ,REX WMT Growth And Income ETF,REX,18%,B,0.99%,13M,11%,YES,11/4/2025,Weekly,B-
-ULTI,REX IncomeMax Option Strategy ET,REX,75%,A,1.25%,16M,-59%,YES,10/31/2025,Weekly,C+
-GPIQ,Goldman Sachs Nasdaq-100 Premium Income ETF,Goldman Sachs,10.1%,C,0.29%,6358M,94%,NO,10/24/2023,Monthly,A
-TSPY,TappAlpha S&P 500 Growth & Daily Income ETF,TappAlpha,13.9%,B,0.99%,389M,38%,NO,8/14/2024,Monthly,B+
-TDAQ,TappAlpha Innovation 100 Growth & Daily Income ETF,TappAlpha,17.6%,B,0.68%,453M,24%,NO,9/4/2025,Monthly,B+
-SPYT,Defiance S&P 500 Income Target ETF,Defiance,20.0%,C,0.87%,168M,42%,YES,3/7/2024,Monthly,B-
-ISPY,ProShares S&P 500 High Income ETF,ProShares,5.6%,C,0.56%,1162M,52%,NO,12/18/2023,Monthly,B+
-KGLD,Kurv Gold Enhanced Income ETF,Kurv,16.6%,B,1.00%,163M,17%,YES,7/8/2025,Monthly,B+
-TSYX,TappAlpha TSPY LIFT ETF,TappAlpha,20%,A,0.98%,20M,8%,YES,1/7/2025,Weekly,C+
-TDAX, TappAlpha TDAQ LIFT ETF,TappAlpha,22%,B,0.98%,72M,10%,YES,1/7/2026,Weekly,C+
-FTHI,First Trust BuyWrite Income ETF,First Trust,9.1%,B,0.76%,2577M,156%,NO,1/6/2014,Monthly,C+
-BUYW,Main BuyWrite ETF,Main Managment,5.9%,B,0.99%,1468M,46%,NO,12/29/2015,Monthly,C+
-XLEI,State Street Energy Select Sector SPDR Premium Income ETF ,State Street,21.1%,B,0.35%,180M,50%,NO,7/29/2025,Monthly,B-
-XLKI,State Street Technology Select Sector SPDR Premium Income ETF,State Street,14.4%,B,0.35%,31M,26%,NO,7/29/2025,Monthly,B-
-KNG,FT Vest S&P 500 Dividend Aristocrats Target Income ETF,First Trust,9%,B,0.74%,3370M,112%,NO,3/26/2018,Monthly,B-
-OVL,Overlay Shares Large Cap Equity ETF,Liquid Strategies,10.5%,B,0.79%,502M,201%,NO,9/30/2019,Monthly,A+
+NIHI,NEOS MSCI EAFE High Income ETF,NEOS,9.7%,B,0.68%,214M,14%,NO,9/17/2025,Monthly,C
+MLPI,MLP & Energy Infrastructure High Income ETF,NEOS,14.3%,B,0.68%,935M,20%,NO,12/17/2025,Monthly,B+
+XSPI,NEOS Boosted S&P 500 High Income ETF,NEOS,17.1%,B,0.98%,140M,12%,YES,1/29/2026,Monthly,C
+XQQI,NEOS Boosted Nasdaq-100 High Income ETF,NEOS,21.0%,B,0.98%,384M,11%,YES,1/29/2026,Monthly,B
+XBCI,NEOS Boosted Bitcoin High Income ETF,NEOS,41%,B,0.98%,237M,1%,YES,2/3/2026,Monthly,C
+DIVO,Amplify CWP Enhanced Dividend Income ETF,Amplify,4.9%,B,0.56%,8163M,224%,NO,12/14/2016,Monthly,A
+YYY,Amplify High Income ETF,Amplify,13.9%,B,0.50%,662M,77%,YES,6/12/2013,Monthly,B-
+IDVO,Amplify CWP International Enhanced Dividend Income ETF,Amplify,6.1%,B,0.65%,1389M,102%,NO,9/8/2022,Monthly,A-
+QDVO,Amplify CWP Growth & Income ETF,Amplify,11.2%,B,0.56%,767M,46%,NO,8/22/2024,Monthly,B
+GPIX,Goldman Sachs S&P 500 Premium Income ETF,Goldman Sachs,8.2%,B,0.29%,6353M,82%,NO,10/24/23,Monthly,A-
+SCHD,Schwab U.S. Dividend Equity ETF,Schwab,3.2%,A,0.06%,119130M,583%,NO,10/20/2011,Quarterly,A+
+DGRO,iShares Core Dividend Growth ETF,iShares,2.0%,A,0.08%,44836M,332%,NO,6/10/2014,Quarterly,A+
+DGRW,WisdomTree U.S. Quality Dividend Growth Fund,WisdomTree,2.1%,B,0.28%,17049M,415%,NO,5/22/2013,Monthly,A+
+VIG,Vanguard Dividend Appreciation ETF,Vanguard,1.5%,A,0.04%,114547M,632%,NO,4/21/2006,Quarterly,A+
+VYM,Vanguard High Dividend Yield ETF,Vanguard,2.3%,A,0.04%,82688M,491%,NO,11/10/2006,Quarterly,A+
+SPHD,Invesco S&P 500 High Dividend Low Volatility ETF,Invesco,5.0%,B,0.30%,3381M,255%,NO,10/18/2012,Monthly,A
+FDVV,Fidelity High Dividend ETF,Fidelity,2.8%,A,0.15%,10496M,254%,NO,9/12/2016,Quarterly,A
+BATT,Amplify Lithium & Battery Technology ETF,Amplify,1.8%,A,0.59%,98M,-24%,YES,6/6/2018,Annual,B+
+COWS,Amplify Cash Flow Dividend Leaders ETF,Amplify,1.4%,A,0.39%,44M,69%,NO,9/13/2023,Monthly,B+
+BITY,Amplify Bitcoin 2% Monthly Option Income ETF,Amplify,24.6%,B,0.65%,13M,-20%,YES,4/29/2025,Monthly,B
+BAGY,Amplify Bitcoin Max Income Covered Call ETF,Amplify,33.0%,B,0.65%,10M,-29%,YES,4/29/2025,Monthly,B-
+HCOW,Amplify COWS Covered Call ETF,Amplify,10.3%,A,0.65%,18M,39%,NO,9/20/2023,Monthly,B-
+QDTE,Roundhill Innovation-100 0DTE Covered Call Strategy ETF,Roundhill,21.4%,B,0.97%,893M,57%,YES,3/7/2024,Weekly,B+
+XDTE,Roundhill S&P 500 0DTE Covered Call Strategy ETF,Roundhill,15.5%,B,0.97%,318M,46%,YES,3/7/2024,Weekly,B+
+YBTC,Roundhill Bitcoin Covered Call Strategy ETF,Roundhill,41.0%,B,0.96%,139M,29%,YES,1/18/2024,Weekly,B-
+PLTW,Roundhill PLTR WeeklyPay ETF,Roundhill,24.0%,B,0.99%,134M,65%,YES,2/19/2025,Weekly,B-
+YETH,Roundhill Ether Covered Call Strategy ETF,Roundhill,52.6%,B,0.96%,58M,-37%,YES,9/3/2024,Weekly,D
+COIW,Roundhill COIN WeeklyPay ETF,Roundhill,60.6%,B,0.99%,43M,-54%,YES,2/19/2025,Weekly,D
+RDTE,Roundhill Russell 2000 0DTE Covered Call Strategy ETF,Roundhill,20.5%,B,0.97%,151M,36%,YES,9/10/2024,Weekly,B-
+WEEK,Roundhill Weekly T-Bill ETF,Roundhill,3.7%,B,0.19%,183M,6%,NO,3/6/2025,Weekly,A
+MAGY,Roundhill Magnificent Seven Covered Call ETF,Roundhill,20.8%,B,0.99%,94M,25%,YES,4/23/2025,Weekly,B+
+TSLW,Roundhill TSLA WeeklyPay ETF,Roundhill,22.4%,B,0.99%,74M,-2%,YES,2/19/2025,Weekly,C+
+GOOW,Roundhill GOOGL WeeklyPay ETF,Roundhill,27.3%,B,0.99%,78M,72%,NO,7/24/2025,Weekly,B
+TOPW,Roundhill Top Weeklypay ETF,Roundhill,25.2%,B,0.99%,133M,2%,YES,9/4/2025,Weekly,C+
+AMDW,AMDW AMD WeeklyPay ETF,Roundhill,18.6%,B,0.99%,135M,258%,NO,7/24/2025,Weekly,B+
+ACKY,VistaShares Target 15 ACKtivist Distribution ETF,VistaShares,15.0%,B,0.95%,45M,0%,YES,9/9/2025,Monthly,B
+OMAH,VistaShares Target 15 Berkshire Select Income ETF,VistaShares,15.0%,B,0.95%,1135M,16%,YES,3/5/2025,Monthly,B
+DRKY,VistaShares Target 15™ DRUKMacro Distribution ETF,VistaShares,15.0%,B,0.95%,22M,17%,NO,10/8/2025,Monthly,B
+QUSA,VistaShares Target 15™ USA Quality Income ETF,VistaShares,15.0%,B,0.95%,21M,2%,YES,5/6/2025,Monthly,B
+SIOO,VistaShares Target 15™ S&P 100 Distribution ETF,VistaShares,15.2%,B,0.95%,24M,10%,YES,12/11/2025,Monthly,B-
+XYLD,Global X S&P 500 Covered Call ETF,Global X,9.0%,B,0.60%,3365M,104%,YES,6/24/2013,Monthly,B
+HDV,iShares Core High Dividend ETF,iShares,3.1%,B,0.08%,16044M,419%,NO,3/29/2011,Quarterly,A+
+DVY,iShares Select Dividend ETF,iShares,3.5%,B,0.38%,23739M,628%,NO,11/3/2003,Quarterly,A+
+SDY,SPDR S&P Dividend ETF,State Street,2.4%,A,0.35%,22181M,517%,NO,11/8/2005,Quarterly,A+
+BALI,iShares US Large Cap Premium Income Active ETF,iShares,6.2%,B,0.35%,1546M,77%,NO,9/26/2023,Monthly,A-
+NOBL,ProShares S&P 500 Dividend Aristocrats ETF,ProShares,2.2%,B,0.35%,11843M,276%,NO,10/9/2013,Quarterly,A+
+IDV,iShares International Select Dividend ETF,iShares,5.7%,B,0.50%,8261M,146%,YES,6/11/2007,Quarterly,A
+VYMI,Vanguard International High Dividend Yield ETF,Vanguard,3.7%,B,0.07%,21614M,196%,NO,2/25/2016,Quarterly,A
+SCHP,Schwab U.S. TIPS ETF,Schwab,5.1%,B,0.03%,16466M,53%,NO,8/5/2010,Monthly,A
+SCHG,Schwab U.S. Growth ETF,Schwab,0.4%,A,0.04%,62754M,1159%,NO,12/11/2009,Quarterly,A-
+RYLD,Global X Russell 2000 Covered Call ETF,Global X,11.5%,B,0.60%,1292M,48%,YES,4/17/2019,Monthly,C+
+QYLD,Global X Nasdaq 100 Covered Call ETF,Global X,11.9%,B,0.60%,8282M,196%,YES,12/12/2013,Monthly,C+
+JEPI,JPMorgan Equity Premium Income ETF,JP Morgan,8.0%,C,0.35%,45970M,97%,NO,5/20/2020,Monthly,A
+JEPQ,JPMorgan NASDAQ Equity Premium Income ETF,JP Morgan,11.6%,C,0.35%,42753M,89%,NO,5/3/2022,Monthly,A
+MAXI,Simplify Bitcoin Strategy PLUS Income ETF,Simplify,4.0%,C,1.00%,34M,179%,NO,9/29/2022,Monthly,C+
+BLOX,Nicholas Crypto Income ETF,XFunds,36.0%,B,0.99%,256M,-7%,YES,6/17/2025,Weekly,B+
+GIAX,Nicholas Global Equity and Income ETF,XFunds,24.0%,B,1.03%,109M,26%,YES,7/29/2024,Weekly,C+
+SVOL,Simplify Volatility Premium ETF,Simplify,20.6%,C,0.66%,516M,61%,YES,5/12/2021,Monthly,C-
+BITO,ProShares Bitcoin ETF,ProShares,38.2%,C,0.95%,1580M,-5%,YES,10/18/2021,Monthly,C-
+KQQQ,Kurv Technology Titans Select ETF,Kurv,14.48%,A,1.12%,128M,44%,NO,7/22/2024,Monthly,A-
+FEPI,REX FANG & Innovation Equity Premium Income ETF,REX,25.2%,B,0.65%,707M,64%,YES,10/9/2023,Weekly,B+
+AIPI,REX AI Equity Premium Income ETF,REX,34.8%,B,0.65%,475M,54%,YES,6/4/2024,Weekly,B-
+CEPI,REX Crypto Equity Premium Income ETF,REX,41.8%,B,0.85%,119M,13%,YES,12/4/2024,Weekly,B-
+NVII,REX NVDA Growth & Income ETF,REX,37%,B,0.99%,110M,73%,YES,5/28/2025,Weekly,b
+TSII,REX TSLA Growth And Income ETF,REX,51%,B,0.99%,31M,22%,YES,6/4/2025,Weekly,C
+WMTI ,REX WMT Growth And Income ETF,REX,18%,B,0.99%,13M,12%,YES,11/4/2025,Weekly,B-
+ULTI,REX IncomeMax Option Strategy ET,REX,75%,A,1.25%,15M,-59%,YES,10/31/2025,Weekly,C+
+GPIQ,Goldman Sachs Nasdaq-100 Premium Income ETF,Goldman Sachs,10.1%,C,0.29%,6321M,95%,NO,10/24/2023,Monthly,A
+TSPY,TappAlpha S&P 500 Growth & Daily Income ETF,TappAlpha,13.9%,B,0.99%,391M,38%,NO,8/14/2024,Monthly,B+
+TDAQ,TappAlpha Innovation 100 Growth & Daily Income ETF,TappAlpha,17.6%,B,0.68%,454M,24%,NO,9/4/2025,Monthly,B+
+SPYT,Defiance S&P 500 Income Target ETF,Defiance,20.0%,C,0.87%,167M,42%,YES,3/7/2024,Monthly,B-
+ISPY,ProShares S&P 500 High Income ETF,ProShares,5.6%,C,0.56%,1155M,53%,NO,12/18/2023,Monthly,B+
+KGLD,Kurv Gold Enhanced Income ETF,Kurv,16.6%,B,1.00%,159M,17%,YES,7/8/2025,Monthly,B+
+TSYX,TappAlpha TSPY LIFT ETF,TappAlpha,20%,A,0.98%,20M,9%,YES,1/7/2025,Weekly,C+
+TDAX, TappAlpha TDAQ LIFT ETF,TappAlpha,22%,B,0.98%,70M,10%,YES,1/7/2026,Weekly,C+
+FTHI,First Trust BuyWrite Income ETF,First Trust,9.1%,B,0.76%,2564M,157%,NO,1/6/2014,Monthly,C+
+BUYW,Main BuyWrite ETF,Main Managment,5.9%,B,0.99%,1471M,46%,NO,12/29/2015,Monthly,C+
+XLEI,State Street Energy Select Sector SPDR Premium Income ETF ,State Street,21.2%,B,0.35%,185M,51%,NO,7/29/2025,Monthly,B-
+XLKI,State Street Technology Select Sector SPDR Premium Income ETF,State Street,14.8%,B,0.35%,33M,27%,NO,7/29/2025,Monthly,B-
+KNG,FT Vest S&P 500 Dividend Aristocrats Target Income ETF,First Trust,9%,B,0.74%,3408M,112%,NO,3/26/2018,Monthly,B-
+OVL,Overlay Shares Large Cap Equity ETF,Liquid Strategies,10.5%,B,0.79%,512M,203%,NO,9/30/2019,Monthly,A+
 KHPI,Kensington Hedged Premium Income ETF,Kensington,9.0%,B,0.96%,457M,26%,NO,9/3/2024,Monthly,B-
-VOO,Vanguard S&P 500 ETF,Vanguard,1.1%,A,0.03%,1054677M,823%,NO,9/7/2010,Quarterly,A+
-QDPL,Pacer Metaurus US Large Cap Dividend Multiplier 400 ETF,Pacer ETFs,4.50%,B,0.60%,1846M,79%,NO,6/12/2021,Monthly,A
-QSIX,Pacer Metaurus Nasdaq 100 Dividend Multiplier 600 ETF,Pacer ETFs,3.70%,B,0.60%,21M,41%,NO,7/12/2021,Monthly,A
-TYLG,Information Technology Covered Call & Growth ETF,Global X,11.4%,B,0.60%,15M,137%,NO,11/21/2022,Monthly,B-
-EGGY,NestYield Dynamic Income ETF,NestYield,34%,A,0.95%,162M,15%,YES,12/26/2024,Monthly,A-
-EGGS,NestYield Total Return ETF,NestYield,22.44%,B,0.95%,58M,9%,YES,12/26/2024,Monthly,B+
-ODTE,ODTE  VegaShares SPX NDX RTY Premium Income ETF,VegaShares,14.30%,B,0.76%,2.2M,4%,YES,4/2/2026,Weekly,B+
-SPCI,Tuttle Capital Space Industry Income Blast ETF,Tuttle Capital,34%,B,0.99%,6M,-26%,YES,3/12/2026,Weekly,A-
-VAIE,VegaShares US Equity Autocallable Income ETF,VegaShares,17%,B,0.74%,70M,1%,YES,5/11/2026,Weekly,A-
-ROCY,JPMorgan Equity Premium Yield ETF,JP Morgan,5.8%,B,0.35%,847M,14%,NO,3/18/2026,Monthly,B
-OVS,Overlay Shares Small Cap Equity ETF (OVS),Liquid Strategies,10.82%,B,0.83%,42M,110%,NO,9/30/2019,Monthly,A-
-OVF,Overlay Shares Foreign Equity ETF (OVF),Liquid Strategies,10.82%,B,0.83%,65M,76%,NO,9/30/2019,Monthly,A-
-ISBG,IncomeSTKd 1X Bitcoin & 1X Gold Premium ETF,Quantify Funds,17%,B,1.14%,7.8M,-38%,YES,1/20/2026,Weekly,C
-ISSB,IncomeSTKd 1X US Stocks & 1X Bitcoin Premium ETF,Quantify Funds,17%,B,1.14%,2.3M,-1%,YES,1/20/2026,Weekly,C
-TMGN,TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF,TappAlpha,21%,B,0.88%,40M,7%,NO,7/15/2026,Monthly,B
-SEPI,Shelton Equity Premium Income ETF,Shelton Capital,8.30%,B,0.54%,198M,23%,NO,9/8/2025,Monthly,B
-SPUC,Simplify US Equity Income ETF,Simplify,15%,B,0.53%,264M,141%,NO,9/3/2020,Monthly,B
-QVOL,Infrastructure Capital Nasdaq Option Income ETF,Infrastructure Capital,13.1%,B,0.82%,57M,-2%,YES,5/12/2026,Monthly,B
-VFLO,VictoryShares Free Cash Flow ETF,Victory Shares,0.8%,B,0.39%,12165M,130%,NO,8/7/2023,Monthly,B
-FOXY,Simplify Currency Strategy ETF,Simplify,10.30%,C,0.81%,215M,22%,NO,2/3/2025,Monthly,B
-DRMP ,Tuttle Capital Memory Stack Income Blast ETF,Tuttle Capital,31%,B,0.95%,5.1M,-34%,YES,6/10/2026,Weekly,B
+VOO,Vanguard S&P 500 ETF,Vanguard,1.1%,A,0.03%,1051656M,829%,NO,9/7/2010,Quarterly,A+
+QDPL,Pacer Metaurus US Large Cap Dividend Multiplier 400 ETF,Pacer ETFs,4.50%,B,0.60%,1835M,79%,NO,6/12/2021,Monthly,A
+QSIX,Pacer Metaurus Nasdaq 100 Dividend Multiplier 600 ETF,Pacer ETFs,3.70%,B,0.60%,21M,42%,NO,7/12/2021,Monthly,A
+TYLG,Information Technology Covered Call & Growth ETF,Global X,11.3%,B,0.60%,15M,138%,NO,11/21/2022,Monthly,B-
+EGGY,NestYield Dynamic Income ETF,NestYield,34%,A,0.95%,156M,15%,YES,12/26/2024,Monthly,A-
+EGGS,NestYield Total Return ETF,NestYield,22.44%,B,0.95%,56M,9%,YES,12/26/2024,Monthly,B+
+ODTE,ODTE  VegaShares SPX NDX RTY Premium Income ETF,VegaShares,14.20%,B,0.76%,2.2M,4%,YES,4/2/2026,Weekly,B+
+SPCI,Tuttle Capital Space Industry Income Blast ETF,Tuttle Capital,34%,B,0.99%,6M,-25%,YES,3/12/2026,Weekly,A-
+VAIE,VegaShares US Equity Autocallable Income ETF,VegaShares,17%,B,0.74%,69M,2%,YES,5/11/2026,Weekly,A-
+ROCY,JPMorgan Equity Premium Yield ETF,JP Morgan,5.8%,B,0.35%,863M,14%,NO,3/18/2026,Monthly,B
+OVS,Overlay Shares Small Cap Equity ETF (OVS),Liquid Strategies,10.82%,B,0.83%,42M,114%,NO,9/30/2019,Monthly,A-
+OVF,Overlay Shares Foreign Equity ETF (OVF),Liquid Strategies,10.82%,B,0.83%,66M,77%,NO,9/30/2019,Monthly,A-
+ISBG,IncomeSTKd 1X Bitcoin & 1X Gold Premium ETF,Quantify Funds,17%,B,1.14%,7.7M,-41%,YES,1/20/2026,Weekly,C
+ISSB,IncomeSTKd 1X US Stocks & 1X Bitcoin Premium ETF,Quantify Funds,17%,B,1.14%,2.2M,-2%,YES,1/20/2026,Weekly,C
+TMGN,TappAlpha Cboe Magnificent 10 Growth & Daily Income ETF,TappAlpha,21%,B,0.88%,41M,7%,NO,7/15/2026,Monthly,B
+SEPI,Shelton Equity Premium Income ETF,Shelton Capital,8.30%,B,0.54%,196M,23%,NO,9/8/2025,Monthly,B
+SPUC,Simplify US Equity Income ETF,Simplify,15%,B,0.53%,263M,142%,NO,9/3/2020,Monthly,B
+QVOL,Infrastructure Capital Nasdaq Option Income ETF,Infrastructure Capital,13.1%,B,0.82%,57M,-3%,YES,5/12/2026,Monthly,B
+VFLO,VictoryShares Free Cash Flow ETF,Victory Shares,0.8%,B,0.39%,12364M,130%,NO,8/7/2023,Monthly,B
+FOXY,Simplify Currency Strategy ETF,Simplify,10.30%,C,0.81%,213M,20%,NO,2/3/2025,Monthly,B
+DRMP ,Tuttle Capital Memory Stack Income Blast ETF,Tuttle Capital,31%,B,0.95%,4.7M,-34%,YES,6/10/2026,Weekly,B
 MEMY,Tuttle Capital Meme Stock Income Blast ETF,Tuttle Capital,28.20%,B,0.99%,1.2M,-32%,YES,1/20/2026,Weekly,B
-IACL,GraniteShares US 100 Autocallable Income ETF,GraniteShares,9%,B,0.55%,4M,1%,NO,8/18/2026,Monthly,B
-PDI,PIMCO Dynamic Income Fund ,Pimco,17.40%,C,1.10%,6840M,255%,YES,5/25/2012,Monthly,B
-PTY,PIMCO Corporate & Income Opportunity Fund ,Pimco,12.10%,C,1.27%,2260M,946%,YES,12/27/2002,Monthly,B
-AMZP,Kurv Yield Premium Strategy Amazon ETF,Kurv,17.06%,A,0.99%,18M,68%,YES,10/31/2023,Monthly,C+
+IACL,GraniteShares US 100 Autocallable Income ETF,GraniteShares,9%,B,0.55%,4.2M,1%,NO,8/18/2026,Monthly,B
+PDI,PIMCO Dynamic Income Fund ,Pimco,17.40%,C,1.10%,6730M,250%,YES,5/25/2012,Monthly,B
+PTY,PIMCO Corporate & Income Opportunity Fund ,Pimco,12.10%,C,1.27%,2250M,945%,YES,12/27/2002,Monthly,B
+AMZP,Kurv Yield Premium Strategy Amazon ETF,Kurv,17.06%,A,0.99%,17M,69%,YES,10/31/2023,Monthly,C+
 BIGY,YieldMax® Target 12™ Big 50 Option Income ETF,YieldMax,12%,B,1.09%,32M,27%,NO,10/20/2024,Monthly,B-
-FTQI,First Trust Nasdaq BuyWrite Income ETF,First Trust,12%,B,0.75%,1027M,141%,NO,1/6/2014,Monthly,A-
-JPIE,JPMorgan Income ETF,JP Morgan,6%,C,0.39%,11178M,17%,YES,10/28/2021,Monthly,B-
-OVB,Overlay Shares Core Bond ETF,Liquid Strategies,6.35%,C,0.79%,47M,11%,YES,9/30/2019,Monthly,C+
+FTQI,First Trust Nasdaq BuyWrite Income ETF,First Trust,12%,B,0.75%,1012M,143%,NO,1/6/2014,Monthly,A-
+JPIE,JPMorgan Income ETF,JP Morgan,6%,C,0.39%,11227M,17%,YES,10/28/2021,Monthly,B-
+OVB,Overlay Shares Core Bond ETF,Liquid Strategies,6.35%,C,0.79%,48M,11%,YES,9/30/2019,Monthly,C+
 OVM,Overlay Shares Municipal Bond ETF,Liquid Strategies,5.50%,A,0.81%,44M,16%,YES,9/30/2019,Monthly,C
-OVT,Overlay Shares Short Term Bond ETF,Liquid Strategies,6.78%,C,0.79%,61M,17%,YES,1/14/2021,Monthly,C
-RDVI,FT Vest Rising Dividend Achievers Target Income ETF,First Trust,8.62%,B,0.75%,3817M,100%,NO,10/19/2022,Monthly,A-
-RNTY,YieldMax® Target 12™ Real Estate Option Income ETF,YieldMax,12.00%,C,0.99%,5.8M,9%,YES,4/16/2025,Monthly,C
-SGOV,iShares 0-3 Month Treasury Bond ETF,iShares,3.60%,C,0.09%,116658M,21%,NO,5/26/2020,Monthly,A
-SPHY,State Street SPDR Portfolio High Yield Bond ETF,State Street,7.43%,D,0.05%,11665M,93%,YES,6/18/2012,Monthly,B
-TPRY,VistaShares Target 15™ TEPRTantrum Contrarian Distribution ETF,VistaShares,15.00%,B,0.95%,4.1M,-4%,YES,2/26/2026,Monthly,C-
-TDVI,FT Vest Technology Dividend Target Income ETF,First Trust,8.07%,B,0.75%,646M,99%,NO,8/9/2023,Monthly,B+
-EGGQ,NestYield Visionary ETF,NestYield,8.70%,B,0.95%,76M,23%,NO,12/26/2024,Monthly,B
+OVT,Overlay Shares Short Term Bond ETF,Liquid Strategies,6.78%,C,0.79%,62M,17%,YES,1/14/2021,Monthly,C
+RDVI,FT Vest Rising Dividend Achievers Target Income ETF,First Trust,8.62%,B,0.75%,3806M,102%,NO,10/19/2022,Monthly,A-
+RNTY,YieldMax® Target 12™ Real Estate Option Income ETF,YieldMax,12.00%,C,0.99%,5.9M,10%,YES,4/16/2025,Monthly,C
+SGOV,iShares 0-3 Month Treasury Bond ETF,iShares,3.60%,C,0.09%,116742M,21%,NO,5/26/2020,Monthly,A
+SPHY,State Street SPDR Portfolio High Yield Bond ETF,State Street,7.43%,D,0.05%,11737M,94%,YES,6/18/2012,Monthly,B
+TPRY,VistaShares Target 15™ TEPRTantrum Contrarian Distribution ETF,VistaShares,15.00%,B,0.95%,3.5M,-5%,YES,2/26/2026,Monthly,C-
+TDVI,FT Vest Technology Dividend Target Income ETF,First Trust,8.07%,B,0.75%,652M,100%,NO,8/9/2023,Monthly,B+
+EGGQ,NestYield Visionary ETF,NestYield,8.70%,B,0.95%,72M,25%,NO,12/26/2024,Monthly,B
 VOOY,XFUNDS Large Cap Income ETF,XFunds,9.0%,B,0.75%,2.5M,0%,NO,8/31/2026,Monthly,B
 WRTH,Worth Charting Options Income ETF ,Worth Charting Group,14.6%,B,1.02%,101M,5%,NO,4/27/2026,Monthly,B
-SEPQ,STF Tactical Growth & Income ETF,Shelton Capital,11%,B,0.65%,95M,79%,NO,5/18/2022,Monthly,B
-HAKY,Amplify HACK Cybersecurity Covered Call ETF,Amplify,15%,B+,0.65%,12M,44%,NO,1/20/2026,Monthly,B+
-ITWO,ProShares Russell 2000 High Income ETF ,ProShares,8%,B-,0.55%,181M,35%,NO,9/4/2024,Monthly,B+
-ICAP,InfraCap Equity Income Fund ETF,Infrastructure Capital,11.20%,B,2.47%,115M,36%,YES,12/29/2021,Monthly,B
-DIVB,iShares Core Dividend ETF,iShares,2.30%,A,0.05%,2187M,252%,NO,11/7/2017,Quarterly,A
+SEPQ,STF Tactical Growth & Income ETF,Shelton Capital,11%,B,0.65%,93M,79%,NO,5/18/2022,Monthly,B
+HAKY,Amplify HACK Cybersecurity Covered Call ETF,Amplify,15%,B+,0.65%,12M,48%,NO,1/20/2026,Monthly,B+
+ITWO,ProShares Russell 2000 High Income ETF ,ProShares,8%,B-,0.55%,180M,36%,NO,9/4/2024,Monthly,B+
+ICAP,InfraCap Equity Income Fund ETF,Infrastructure Capital,11.20%,B,2.47%,114M,37%,YES,12/29/2021,Monthly,B
+DIVB,iShares Core Dividend ETF,iShares,2.30%,A,0.05%,2266M,255%,NO,11/7/2017,Quarterly,A
 OVQ,Overlay Shares Nasdaq 100 Income ETF,Liquid Strategies,12%,A+,0.97%,TBD,0%,NO,10/23/2026,Monthly,A+
+QVAL,Alpha Architect US Quantitative Value ETF,Alpha Architect,1.50%,A,0.28%,658M,208%,NO,10/22/2014,Quarterly,A
