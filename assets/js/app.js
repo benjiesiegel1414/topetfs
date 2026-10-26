@@ -267,6 +267,9 @@ W.board=function(el,d){
   var minAum=+(el.getAttribute("data-min-aum")||0); if(minAum) list=list.filter(function(e){return (e.aum||0)>=minAum;});
   var excl=(el.getAttribute("data-exclude")||"").split(",").map(function(s){return s.trim();});
   list=list.filter(function(e){return excl.indexOf(e.sym)<0;});
+  var dec=el.getAttribute("data-decay"); if(dec) list=list.filter(function(e){return e.decay===(dec==="yes");});
+  var minDays=+(el.getAttribute("data-min-days")||0); if(minDays) list=list.filter(function(e){var t=Date.parse(e.inception);return !isNaN(t)&&(Date.now()-t)/864e5>=minDays;});
+  var ranked=el.hasAttribute("data-rank");
   var cols=(el.getAttribute("data-cols")||"yield,er,aum,tr").split(",");
   var labels={yield:"Yield",er:"Exp. ratio",aum:"AUM",tr:"Total return",decay:"Price decay",freq:"Pays",provider:"Issuer"};
   var fmts={yield:F.pct,er:F.pct2,aum:F.aum,tr:F.signed,decay:F.decay,freq:F.text,provider:F.text};
@@ -274,9 +277,9 @@ W.board=function(el,d){
   var tbody, thead;
   function render(){
     var rows=list.filter(function(e){return e[sort]!=null;}).sort(function(a,b){ var x=a[sort],y=b[sort]; if(typeof x==="string") return dir*x.localeCompare(y); return dir*(x-y); }).slice(0,n);
-    thead.innerHTML="<tr><th>Fund</th>"+cols.map(function(c){ return '<th'+(c===sort?' aria-sort="'+(dir>0?"ascending":"descending")+'"':'')+(c==="provider"||c==="freq"?' class="l"':'')+'><button data-k="'+c+'">'+labels[c]+'</button></th>'; }).join("")+"</tr>";
-    tbody.innerHTML=rows.map(function(e){
-      return '<tr><td><a class="tk" href="'+etfUrl(e.sym)+'">'+esc(e.sym)+'</a><span class="fund-name" title="'+esc(e.name)+'">'+esc(e.name)+'</span></td>'+cols.map(function(c){
+    thead.innerHTML="<tr>"+(ranked?'<th class="rk">#</th>':"")+"<th>Fund</th>"+cols.map(function(c){ return '<th'+(c===sort?' aria-sort="'+(dir>0?"ascending":"descending")+'"':'')+(c==="provider"||c==="freq"?' class="l"':'')+'><button data-k="'+c+'">'+labels[c]+'</button></th>'; }).join("")+"</tr>";
+    tbody.innerHTML=rows.map(function(e,i){
+      return '<tr>'+(ranked?'<td class="rk">'+(i+1)+'</td>':'')+'<td><a class="tk" href="'+etfUrl(e.sym)+'">'+esc(e.sym)+'</a><span class="fund-name" title="'+esc(e.name)+'">'+esc(e.name)+'</span></td>'+cols.map(function(c){
         var v=e[c], cls=c==="provider"||c==="freq"?"l":"";
         if(c==="tr"&&v!=null) cls+=v>=0?" pos":" neg";
         if(c==="decay"&&v!=null) return '<td>'+(v?'<span class="flag neg">Yes</span>':'<span class="flag pos">No</span>')+'</td>';
