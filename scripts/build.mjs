@@ -49,8 +49,34 @@ const today=BUILD_DATE.toLocaleDateString("en-US",{weekday:"long",month:"long",d
    {{live:SYM:field:fmt:mul}}  live-updating number, pre-rendered from snapshot
    {{tkr:SYM}}                 ticker link to the ETF profile
    {{calc:expr}}               computed value from snapshot, e.g. {{calc:usd:10000*JEPI.yield/100}}  */
+/* Ranked list of high-yield funds with NO price decay (PRO database), used by
+   {{nodecay:...}} tokens. Funds need at least NODECAY_MIN_DAYS of history so a
+   brand-new fund can't qualify on a few days of data. Matches the live board
+   (data-src="pro" data-decay="no" data-min-days="90" data-sort="yield"). */
+const NODECAY_MIN_DAYS=90;
+function nodecayList(){
+  return D.pro.filter(e=>e.decay===false&&e.yield!=null&&(()=>{const t=Date.parse(e.inception);return !isNaN(t)&&(BUILD_DATE-t)/864e5>=NODECAY_MIN_DAYS;})())
+    .sort((a,b)=>b.yield-a.yield);
+}
+const BOARD_FMT={yield:v=>F.pct(v),er:v=>F.pct2(v),aum:v=>F.aum(v),tr:v=>F.signed(v),decay:v=>F.decay(v),freq:v=>F.text(v),provider:v=>F.text(v)};
+function nodecayToken(kind,arg,arg2){
+  const L=nodecayList();
+  if(kind==="count") return String(L.length);
+  if(kind==="rows"){ const n=+arg||20, cols=(arg2||"yield,tr,er,aum,freq").split(",");
+    return L.slice(0,n).map((e,i)=>`<tr><td class="rk">${i+1}</td><td><a class="tk" href="${etfPath(e.sym)}">${esc(e.sym)}</a><span class="fund-name" title="${esc(e.name)}">${esc(e.name)}</span></td>${cols.map(c=>{const v=e[c];let cls=c==="provider"||c==="freq"?"l":"";if(c==="tr"&&v!=null)cls+=v>=0?" pos":" neg";if(c==="decay"&&v!=null)return `<td>${v?'<span class="flag neg">Yes</span>':'<span class="flag pos">No</span>'}</td>`;return `<td class="${cls.trim()}">${esc(BOARD_FMT[c](v))}</td>`;}).join("")}</tr>`).join(""); }
+  if(kind==="avg"){ const n=+arg||20, s=L.slice(0,n); return F.pct(s.reduce((t,e)=>t+e.yield,0)/s.length); }
+  if(kind==="list"){ const n=+arg||5; return L.slice(0,n).map(e=>`<a class="tkr" href="${etfPath(e.sym)}">${e.sym}</a>`).join(", "); }
+  const e=L[(+arg||1)-1]; if(!e) return "n/a";
+  if(kind==="sym") return `<a class="tkr" href="${etfPath(e.sym)}">${e.sym}</a>`;
+  if(kind==="name") return esc(e.name);
+  if(kind==="yield") return F.pct(e.yield);
+  if(kind==="tr") return F.signed(e.tr);
+  if(kind==="income") return F.usd(+arg2*e.yield/100);
+  throw new Error("Unknown nodecay token "+kind);
+}
 function renderTokens(html){
   return html
+   .replace(/\{\{nodecay:(\w+)(?::([\w.]+))?(?::([\w.,]+))?\}\}/g,(m,k,a,b)=>nodecayToken(k,a,b))
    .replace(/\{\{live:([A-Z.]+):(\w+)(?::(\w+))?(?::([\d.]+))?\}\}/g,(m,sym,field,fmt="pct",mul)=>{
      const e=ALL[sym]; if(!e) throw new Error("Unknown ticker in article: "+sym);
      let v=e[field]; if(v!=null&&mul) v=v*+mul;
@@ -564,7 +590,7 @@ for(const a of ARTICLES){
   const tk=new Set(a.tickers||[]);
   const more=ARTICLES.filter(x=>x!==a).map((x,i)=>({x,i,s:(x.tickers||[]).filter(t=>tk.has(t)).length})).sort((p,q)=>(q.s-p.s)||(p.i-q.i)).slice(0,5).map(o=>o.x);
   const faqs=[...body.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)].filter(()=>/<section class="faq"/.test(body)).filter(m=>body.indexOf(m[0])>body.indexOf('<section class="faq"')).map(m=>({"@type":"Question",name:m[1].replace(/<[^>]+>/g,"").trim(),acceptedAnswer:{"@type":"Answer",text:m[2].replace(/<[^>]+>/g,"").trim()}}));
-  out["articles/"+a.slug+".html"]=page({title:(a.seoTitle||a.title)+" | TopETFs",desc:a.dek,canonical:url,type:"article",active:s.path,slug:a.slug,
+  out["articles/"+a.slug+".html"]=page({title:(a.seoTitle||a.title)+" | TopETFs",desc:a.dek,canonical:url,type:"article",active:s.path,slug:a.slug,...(a.ogImage?{image:SITE+a.ogImage,imageAlt:a.ogAlt||a.title}:{}),
     ld:{"@context":"https://schema.org","@type":"Article",headline:a.title,description:a.dek,datePublished:a.date,dateModified:BUILD_DATE.toISOString().slice(0,10),author:{"@type":"Person",name:AUTHOR.name,url:SITE+AUTHOR.url,jobTitle:AUTHOR.title},publisher:{"@type":"Organization",name:"Dividend Empire LLC"},mainEntityOfPage:SITE+url,...(a.tickers&&a.tickers.length?{about:a.tickers.map(t=>({"@type":"Thing",name:t+(ALL[t]?" ("+ALL[t].name+")":"")}))}:{})},faq:faqs},
 `<div class="wrap"><div class="article-wrap">
 <article>
@@ -576,7 +602,7 @@ for(const a of ARTICLES){
     <div class="byline"><a class="avatar" href="${AUTHOR.url}" aria-label="About ${AUTHOR.name}">BS</a><span>By <a href="${AUTHOR.url}"><strong>${AUTHOR.name}</strong></a>, ${AUTHOR.title}<br>${fmtDate(a.date)}<span class="dot">&middot;</span>${a.read} min read<span class="dot">&middot;</span><span class="live-dot"></span>Live data</span>
       <span class="share"><a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(SITE+url)}&text=${encodeURIComponent(a.title)}" target="_blank" rel="noopener">Share on X</a><button type="button" data-copy-link>Copy link</button></span></div>
   </header>
-  <figure class="article-cover"><div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="${esc(a.title)}" width="800" height="450"></div></figure>
+  ${a.ogImage?`<figure class="article-cover"><img src="${a.ogImage}" alt="${esc(a.ogAlt||a.title)}" width="1200" height="630" style="display:block;width:100%;height:auto;border-radius:12px"></figure>`:`<figure class="article-cover"><div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="${esc(a.title)}" width="800" height="450"></div></figure>`}
   <div class="prose">
 ${body}
 ${SIGNUP("featured")}
