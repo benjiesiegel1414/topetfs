@@ -1,0 +1,102 @@
+<!--meta
+{"title":"QQQI vs JEPQ: Yield, Total Return, Fees and Which One Fits You","short":"QQQI vs JEPQ","seoTitle":"QQQI vs JEPQ: Yield, Fees and Total Return","dek":"QQQI vs JEPQ compared head to head: live yield, fees, total return since inception, price decay and what the same investment pays each month.","section":"income","date":"2026-10-26","time":"08","read":8,"art":"bars","tickers":["QQQI","JEPQ"],"coverLabel":"QQQI  ·  JEPQ","keyNumbers":[["QQQI yield","{{live:QQQI:yield}}"],["JEPQ yield","{{live:JEPQ:yield}}"],["QQQI expense ratio","{{live:QQQI:er:pct2}}"],["JEPQ expense ratio","{{live:JEPQ:er:pct2}}"],["JEPQ total return","{{live:JEPQ:tr}}"]],"keyword":"QQQI vs JEPQ","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:QQQI}} yields {{live:QQQI:yield}} and {{tkr:JEPQ}} yields {{live:JEPQ:yield}}. Both pay monthly and both track a Nasdaq-100 style portfolio with an options overlay.</li><li>QQQI costs {{live:QQQI:er:pct2}} a year versus {{live:JEPQ:er:pct2}} for JEPQ, but QQQI pays more cash today. JEPQ has the bigger asset base and the longer track record.</li><li>Total return since inception favors JEPQ on paper ({{live:JEPQ:tr}} vs {{live:QQQI:tr}}), but the funds started on different dates, so that is not a clean race.</li></ul></div>
+
+<p class="lede">In the QQQI vs JEPQ matchup, QQQI pays the higher yield at {{live:QQQI:yield}} against {{live:JEPQ:yield}} for JEPQ, while JEPQ charges the lower fee at {{live:JEPQ:er:pct2}} against {{live:QQQI:er:pct2}}. On $100,000, that works out to about {{calc:usd:100000*QQQI.yield/100/12}} a month from QQQI and {{calc:usd:100000*JEPQ.yield/100/12}} a month from JEPQ at today's yields. Neither fund is currently flagged for price decay in our data.</p>
+
+<div class="board" data-w="board" data-syms="QQQI,JEPQ,JEPI,SCHD,SGOV" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>QQQI vs JEPQ and a few income alternatives</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>How QQQI and JEPQ actually make their money</h2>
+<p>Both funds own exposure to big Nasdaq-100 type companies, and both sell options against that exposure to generate extra income. That is the basic idea behind a covered call strategy: you collect cash (option premium) in exchange for giving up some of the upside if the market rips higher. If you want the full explainer, I wrote one on <a href="/articles/covered-call-etfs-explained">where covered call ETF yields actually come from</a>.</p>
+<p>The difference is in the plumbing. {{tkr:QQQI}}, from NEOS, sells call options on the Nasdaq-100 index itself. Index options like these can qualify for a special tax treatment under Section 1256 of the tax code, which is a big part of why people like this fund in taxable accounts. I cover that in <a href="/articles/section-1256-etfs-taxes">Section 1256 ETFs and taxes</a>. Tax outcomes depend on your situation, so check with a professional.</p>
+<p>{{tkr:JEPQ}}, from JPMorgan, is actively managed. It holds a portfolio of Nasdaq-100 style stocks picked by the manager, then gets its options income mostly through equity-linked notes (ELNs). An ELN is a debt instrument from a bank whose payout is tied to written call options. The result is similar income, just delivered through a different structure. Its distributions are generally taxed as ordinary income for most holders.</p>
+<p>So you have a rules-based index approach on one side and an actively managed stock selection on the other. Both are trying to give you a high monthly paycheck with Nasdaq-style growth exposure on top.</p>
+
+<h2>Yield and payout schedule</h2>
+<p>QQQI shows a yield of {{live:QQQI:yield}} right now. JEPQ shows {{live:JEPQ:yield}}. Both pay on a {{live:QQQI:freq:text}} schedule (QQQI) and a {{live:JEPQ:freq:text}} schedule (JEPQ), so you get a paycheck every month instead of waiting a quarter.</p>
+<p>Here's the thing about yields on funds like these: they move. Option premiums depend on market volatility, so when markets are calm the payouts tend to shrink, and when markets are jumpy they tend to grow. Treat today's yield as a snapshot, not a promise.</p>
+<p>It also helps to know that the expense ratio is already baked into the fund's price. You do not get a separate bill. The yield you see is what the fund distributes after its costs come out of the portfolio. Still, a fee matters over time, and I'll come back to it below.</p>
+
+<h2>What the same investment pays</h2>
+<p>Let's put real money on it. Here is annual income on $10,000 at each fund's current yield:</p>
+<ul>
+<li>QQQI: about {{calc:usd:10000*QQQI.yield/100}} per year</li>
+<li>JEPQ: about {{calc:usd:10000*JEPQ.yield/100}} per year</li>
+</ul>
+<p>Scale that to $100,000 and the monthly paychecks look like this:</p>
+<ul>
+<li>QQQI: about {{calc:usd:100000*QQQI.yield/100/12}} per month</li>
+<li>JEPQ: about {{calc:usd:100000*JEPQ.yield/100/12}} per month</li>
+</ul>
+<p>Now flip it around. If your goal is $1,000 a month, which is $12,000 a year, here is roughly what you would need invested at today's yields:</p>
+<ul>
+<li>QQQI: about {{calc:usd:12000/(QQQI.yield/100)}}</li>
+<li>JEPQ: about {{calc:usd:12000/(JEPQ.yield/100)}}</li>
+</ul>
+<p>That gap is real. The higher yield on QQQI means you need a smaller pile to hit the same monthly target. But a higher yield is not automatically better, and that is where total return comes in. If you want to see the same math on a lower-yield fund, check <a href="/articles/how-much-do-i-need-in-jepi-to-make-1000-a-month">how much you need in JEPI for $1,000 a month</a>.</p>
+
+<h2>Fees: small gap, real money</h2>
+<p>QQQI charges {{live:QQQI:er:pct2}} and JEPQ charges {{live:JEPQ:er:pct2}}. On $100,000, that is roughly {{calc:usd:100000*QQQI.er/100}} a year in fund costs for QQQI and {{calc:usd:100000*JEPQ.er/100}} a year for JEPQ.</p>
+<p>So JEPQ is cheaper by a wide margin in percentage terms. The question is whether QQQI's extra payout and tax angle outweigh the higher fee for you. For plenty of income investors they do. For others, paying less is the whole point. Both are far pricier than a plain index fund like {{tkr:VOO}} at {{live:VOO:er:pct2}}, which is the price of getting that options income engine.</p>
+
+<h2>Total return and price decay</h2>
+<p>This is the check I never skip. A big yield means nothing if the share price slides and eats your income.</p>
+<p>Since inception, JEPQ shows a total return of {{live:JEPQ:tr}} and QQQI shows {{live:QQQI:tr}}. Total return includes both the price change and the dividends you collected. Our price decay flag reads {{live:QQQI:decay:decay}} for QQQI and {{live:JEPQ:decay:decay}} for JEPQ.</p>
+<p>Now the important caveat. JEPQ launched on {{live:JEPQ:inception:text}} and QQQI launched on {{live:QQQI:inception:text}}. JEPQ has had a much longer runway, which means more time to compound and a different stretch of market conditions. You cannot read JEPQ's higher number as proof that it is the better fund. Different start dates, different markets, different results.</p>
+<p>What I take from it: both funds have grown the investor's total value since they started, and neither shows the kind of erosion that makes some high-yield products dangerous. That is encouraging. It is not a guarantee. Covered call funds give up part of the upside in strong rallies, and in a sharp selloff they still fall along with the Nasdaq, just with a small cushion from the option income.</p>
+
+<h2>Size and track record</h2>
+<p>JEPQ manages {{live:JEPQ:aum:aum}} in assets. QQQI manages {{live:QQQI:aum:aum}}. Both are large enough that liquidity and trading costs are not a worry for most investors.</p>
+<p>The bigger difference is history. JEPQ has been around since {{live:JEPQ:inception:text}}, so it has more time under its belt. QQQI is newer, and a newer fund simply has less data behind it. Strong early growth in assets tells you people like the product, but it does not tell you how the strategy behaves across every market. Keep that in mind when you compare the two.</p>
+
+<h2>Who each fund tends to fit</h2>
+<h3>QQQI tends to fit you if</h3>
+<ul>
+<li>You want the highest cash payout from a Nasdaq-100 based fund and need a smaller balance to hit an income target.</li>
+<li>You hold it in a taxable account and the Section 1256 treatment of index options matters to you (talk to a tax pro).</li>
+<li>You are comfortable with a newer fund and a higher fee.</li>
+</ul>
+<h3>JEPQ tends to fit you if</h3>
+<ul>
+<li>You prefer a lower expense ratio and a longer track record from a large issuer.</li>
+<li>You like the idea of an active manager choosing the stock portfolio.</li>
+<li>You hold it in a tax-advantaged account where ordinary income treatment is less of a concern. See <a href="/articles/best-dividend-etfs-for-roth-ira">best dividend ETFs for a Roth IRA</a>.</li>
+</ul>
+<p>Some people hold both and split the difference. That spreads out the structural risk of any single fund, though they still lean on the same part of the market.</p>
+
+<h2>Risks you should not skip</h2>
+<p>Both funds are concentrated in large technology and growth names, so they will swing with the Nasdaq. The options overlay softens some of the drop but caps the upside, which means you can trail a plain Nasdaq fund badly in a roaring bull market.</p>
+<p>Income is variable. Monthly payouts will rise and fall with volatility, so do not build a budget that assumes today's yield lasts forever. Some of the distributions can also be classified as return of capital, which just means part of the payout is a return of your own money rather than earnings. That is not automatically bad, but it is worth understanding.</p>
+<p>If you want to compare these against safer income, look at a Treasury fund like {{tkr:SGOV}} at {{live:SGOV:yield}} or a traditional dividend fund like {{tkr:SCHD}} at {{live:SCHD:yield}}. Lower yield, different risk. For a similar but broader option-income fund, see {{tkr:JEPI}} at {{live:JEPI:yield}}, and my breakdown in <a href="/articles/jepi-vs-jepq">JEPI vs JEPQ</a>. For more on JEPQ itself, check the <a href="/articles/jepq-etf-dividend-yield-total-return">JEPQ deep dive</a>.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="QQQI,JEPQ" data-per="year">
+  <p class="figure-title">QQQI vs JEPQ income calculator</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<p>Want to screen the full list of income funds? Use <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a> to filter by yield, fees and price decay, or browse more <a href="/articles/best-monthly-dividend-etfs">monthly dividend ETFs</a>. To project what your payouts could grow into, try <a href="https://dividendprojection.com/">Dividend Projection</a>.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Which pays more, QQQI or JEPQ?</h3>
+<p>QQQI pays more at today's numbers, with a yield of {{live:QQQI:yield}} versus {{live:JEPQ:yield}} for JEPQ. Yields change with market volatility, so the gap can move.</p>
+<h3>Do QQQI and JEPQ pay monthly?</h3>
+<p>Yes. QQQI pays {{live:QQQI:freq:text}} and JEPQ pays {{live:JEPQ:freq:text}}, so both send income every month.</p>
+<h3>Is QQQI or JEPQ cheaper?</h3>
+<p>JEPQ is cheaper at {{live:JEPQ:er:pct2}} per year, compared with {{live:QQQI:er:pct2}} for QQQI. The fee is already reflected in the fund's price and yield.</p>
+<h3>Do QQQI or JEPQ have price decay?</h3>
+<p>Our data currently shows price decay as {{live:QQQI:decay:decay}} for QQQI and {{live:JEPQ:decay:decay}} for JEPQ. That can change, so it is worth rechecking over time.</p>
+<h3>Which has the better total return, QQQI or JEPQ?</h3>
+<p>JEPQ shows {{live:JEPQ:tr}} since inception and QQQI shows {{live:QQQI:tr}}, but JEPQ started on {{live:JEPQ:inception:text}} and QQQI on {{live:QQQI:inception:text}}. The different start dates make a direct comparison unfair.</p>
+</section>
+
+<h2>My bottom line</h2>
+<p>QQQI vs JEPQ is a trade between a bigger paycheck and a lower fee with a longer record. QQQI gives you more cash per dollar invested and a tax angle some investors care about. JEPQ gives you a cheaper fund, a bigger asset base and more history.</p>
+<p>Neither one is a free lunch. You are swapping some of the Nasdaq's upside for monthly income, and your payouts will move around. Look at total return, not just yield, and match the fund to your account type and goals. This isn't a buy or sell signal, so do your own due diligence before you invest.</p>
