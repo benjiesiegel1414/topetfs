@@ -1,0 +1,48 @@
+<!--meta
+{"title":"Top 20 Highest Yield ETFs With NO Price Decay (Updated Daily)","short":"Top 20 Highest Yield ETFs, No Price Decay","seoTitle":"Top 20 Highest Yield ETFs With No Price Decay (2026)","dek":"The 20 highest-yielding ETFs in our database whose share price has NOT decayed since launch. Big income without a shrinking share price, ranked live and updated every day.","section":"income","date":"2026-10-26","time":"15","read":7,"art":"bars","tickers":["QQQI","SPYI","JEPQ","FTQI","CHPY","KQQQ"],"coverLabel":"TOP 20  ·  HIGH YIELD  ·  NO DECAY","ogImage":"/assets/og/highest-yield-etfs-no-price-decay.png","ogAlt":"Top 20 highest yield ETFs with no price decay, ranked live on TopETFs","keyNumbers":[["Funds that qualify today","{{nodecay:count}}"],["#1 yield right now","{{nodecay:yield:1}}"],["Average yield of the top 20","{{nodecay:avg:20}}"],["$100K in the #1 fund pays","{{nodecay:income:1:100000}}/yr"]],"keyword":"highest yield ETFs no price decay"}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>These are the 20 highest-yielding ETFs in the TopETFs database whose share price is <strong>not</strong> below where it started. Right now the #1 fund is {{nodecay:sym:1}} at {{nodecay:yield:1}}.</li><li>The top 20 average a {{nodecay:avg:20}} yield, and every one of them still has a share price at or above its launch price.</li><li>The table is live. It pulls from our database every time you load the page, so the ranking moves as yields and prices move.</li></ul></div>
+
+<p class="lede">Here's the list I wish I had when I started chasing yield: the highest-paying ETFs that did <strong>not</strong> pay me with my own money. Every fund below has a big distribution yield and a share price that is still at or above where it launched. Today the leaders are {{nodecay:list:5}}, and {{nodecay:count}} funds in our database pass the test.</p>
+
+<div class="board" data-w="board" data-src="pro" data-decay="no" data-min-days="90" data-rank data-cols="yield,tr,er,aum,freq" data-sort="yield" data-n="20"><div class="board-head"><div><h3>Top 20 highest yield ETFs with no price decay</h3><p class="meta">Live from the TopETFs database. Click a column to re-sort.</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div><div class="tbl-scroll"><table class="data"><thead><tr><th class="rk">#</th><th>Fund</th><th aria-sort="descending">Yield</th><th>Total return</th><th>Exp. ratio</th><th>AUM</th><th class="l">Pays</th></tr></thead><tbody>{{nodecay:rows:20:yield,tr,er,aum,freq}}</tbody></table></div><div class="board-foot"><span>No price decay = share price at or above its launch price. Funds need at least 90 days of history. Total return is since each fund's inception.</span><span>Source: TopETFs database</span></div></div>
+
+<h2>What "no price decay" actually means</h2>
+<p>Price decay is when an ETF's share price keeps sliding while it pays you. You collect a fat distribution, but the fund is worth less every month. A lot of the time, that "income" is really just your own money coming back to you.</p>
+<p>So here's the simple test I use. If a fund's share price is still at or above where it started, it passes. If it's below, it gets flagged. Every fund in this table passes today.</p>
+<p>That one check filters out a huge chunk of the high-yield world. Plenty of funds advertise 50%, 80%, even 100%+ yields while the share price melts. I break that down in <a href="/articles/price-decay-etf-meaning">What Price Decay Means in an ETF</a>.</p>
+
+<h2>How I built this list</h2>
+<ul><li><strong>Start with the whole database:</strong> every income ETF we track for TopDividendETFsPRO.</li><li><strong>Keep only "no price decay" funds:</strong> share price at or above where it launched.</li><li><strong>Require at least 90 days of history:</strong> a fund that launched last week hasn't had time to decay yet, so it doesn't count.</li><li><strong>Sort by distribution yield:</strong> highest first, top 20 shown.</li></ul>
+<p>That's it. No sponsor picks, no hand-tweaking. The list updates on its own as the numbers change.</p>
+
+<h2>What the top of this list pays</h2>
+<p>This is the part people actually care about, so let's do the math. At today's yield, $100,000 in the #1 fund, {{nodecay:sym:1}}, would pay about {{nodecay:income:1:100000}} a year. The #2 fund, {{nodecay:sym:2}} at {{nodecay:yield:2}}, would pay about {{nodecay:income:2:100000}}.</p>
+<p>Spread across the whole top 20, the average yield is {{nodecay:avg:20}}. That's real income, and it's coming from funds that, so far, have held their value while paying it.</p>
+<p>Want to run your own numbers? Plug any of these into the <a href="/dividend-calculator">dividend calculator</a> or the <a href="/dividend-income-goal-calculator">income goal calculator</a>.</p>
+
+<h2>Don't skip this part: the catches</h2>
+<p>I love this list. I also want you to read it with your eyes open.</p>
+<ul><li><strong>Young funds are on here.</strong> A fund with a year of history that hasn't decayed is good news, not proof. Check the launch date on each fund's page before you trust the track record.</li><li><strong>Yields move.</strong> Most of these funds sell options for income, so the payout rises and falls with market volatility. Today's yield is a snapshot.</li><li><strong>"No decay" can flip.</strong> A rough stretch for the market can push a fund below its launch price. That's exactly why the table is live.</li><li><strong>Some payouts may be return of capital.</strong> That's not always bad, but you should know what it is. Here's my explainer: <a href="/articles/what-is-return-of-capital-etf">What Is Return of Capital in an ETF?</a></li><li><strong>Total return beats yield.</strong> Use the Total return tab in the table. A fund with a slightly lower yield and a much higher total return has done more for its holders. More on that in <a href="/articles/yield-vs-total-return">The Yield Trap</a>.</li></ul>
+
+<h2>How I'd actually use this list</h2>
+<p>I treat it as a shortlist, not a shopping list. Pick a few names that fit what you want (Nasdaq exposure, S&amp;P exposure, weekly or monthly pay), then open each fund's page and check the total return, assets and fees.</p>
+<p>Assets matter more than people think. A tiny fund can close. Fees matter too, because a 1% expense ratio comes straight out of your return every year.</p>
+<p>If you want to filter all of this yourself (yield, decay, fees, AUM, payout schedule), that's exactly what <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a> is built for. You can also see the broader <a href="/lists/high-yield-etfs-without-price-decay">high yield ETFs without price decay</a> list, the full <a href="/screener">ETF screener</a>, or the <a href="https://topdividendetfs.com/10-highest-yield-etfs">top 10 version on TopDividendETFs.com</a>. Weekly payers live on <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>What is the highest yield ETF with no price decay?</h3>
+<p>Right now it's {{nodecay:sym:1}} ({{nodecay:name:1}}) at a {{nodecay:yield:1}} distribution yield, with a share price still at or above where it launched. The ranking is live, so check the table for today's leader.</p>
+<h3>What does price decay mean for an ETF?</h3>
+<p>Price decay means the share price keeps falling over time while the fund pays distributions, so part of your income is offset by a shrinking investment. A fund with no price decay has a share price at or above its launch price.</p>
+<h3>How many high-yield ETFs have no price decay?</h3>
+<p>Today {{nodecay:count}} funds in the TopETFs database pass the no-decay test with at least 90 days of history. The top 20 by yield are shown in the table.</p>
+<h3>How much does $100,000 pay in the top no-decay ETF?</h3>
+<p>At today's yield, about {{nodecay:income:1:100000}} a year in {{nodecay:sym:1}}. Distributions change, so that number moves with the yield.</p>
+<h3>Are high-yield ETFs with no price decay safe?</h3>
+<p>No ETF is risk-free. These funds still hold stocks and can fall with the market, their payouts can change, and young funds have short track records. No price decay so far is a good sign, not a guarantee.</p>
+</section>
+
+<h2>My bottom line</h2>
+<p>High yield on its own is easy to find. High yield that hasn't eaten your principal is much harder, and that's the whole point of this list. Use it to find candidates, then do your homework on each one.</p>
+<p>This isn't a buy or sell signal. Check total return, fees and the launch date, and do your own due diligence. Bookmark this page, because the ranking updates every day.</p>
