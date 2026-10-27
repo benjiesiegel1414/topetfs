@@ -48,7 +48,7 @@ jobs:
         run: node scripts/build.mjs
       - name: Render article cards
         run: |
-          npm i --no-save --silent --prefix /tmp/fonts @fontsource/inter@5.1.0 || true
+          npm i --no-save --silent --prefix /tmp/fonts @fontsource/inter@5.1.0 @fontsource/source-serif-4@5.1.0 || true
           node scripts/render-cards.mjs
         continue-on-error: true
       - name: Commit
