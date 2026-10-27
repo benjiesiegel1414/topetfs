@@ -1,0 +1,122 @@
+<!--meta
+{"title":"MSTY vs ULTY: Yield, Total Return, Fees and Which Fits You","short":"MSTY vs ULTY","seoTitle":"MSTY vs ULTY: Yield, Fees, Total Return Compared","dek":"MSTY vs ULTY head to head: live yield, fees, assets, total return, price decay and weekly income on $10,000, plus which investor each one fits.","section":"weekly","date":"2026-10-27","time":"08","read":8,"art":"bars","tickers":["MSTY","ULTY"],"coverLabel":"MSTY  ·  ULTY","keyNumbers":[["MSTY yield","{{live:MSTY:yield}}"],["ULTY yield","{{live:ULTY:yield}}"],["MSTY total return","{{live:MSTY:tr}}"],["ULTY total return","{{live:ULTY:tr}}"],["ULTY expense ratio","{{live:ULTY:er:pct2}}"]],"keyword":"MSTY vs ULTY","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:MSTY}} and {{tkr:ULTY}} pay almost the same headline yield today ({{live:MSTY:yield}} vs {{live:ULTY:yield}}), but they get there in very different ways.</li><li>Since inception, MSTY has a total return of {{live:MSTY:tr}} while ULTY sits at {{live:ULTY:tr}}. They launched about a week apart, so this is close to an apples to apples comparison.</li><li>Both carry a price decay flag. MSTY costs {{live:MSTY:er:pct2}} a year and ULTY costs {{live:ULTY:er:pct2}}.</li></ul></div>
+
+<p class="lede">MSTY vs ULTY comes down to concentration versus spread. MSTY sells options on a single stock, MicroStrategy, and yields {{live:MSTY:yield}}. ULTY spreads its option income across a basket of volatile stocks and yields {{live:ULTY:yield}}. On $10,000, that is roughly {{calc:usd:10000*MSTY.yield/100/52}} a week from MSTY and {{calc:usd:10000*ULTY.yield/100/52}} a week from ULTY, before any price change.</p>
+
+<p>Here's the thing: that is only half the story. The yields look nearly identical, but total return since inception is not even close. Let's walk through why.</p>
+
+<div class="board" data-w="board" data-syms="MSTY,ULTY,CONY,TSLY,NVDY,CHPY,QDTE,FEPI" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>MSTY and ULTY vs other weekly payers</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>How each fund makes its weekly payout</h2>
+
+<p>Both funds are issued by YieldMax, and both use the same basic idea: collect option premium and pass it to shareholders. Option premium is the cash a buyer pays you for the right to profit if a stock moves a certain way. When you sell that right, you keep the cash.</p>
+
+<p><strong>MSTY</strong> targets MicroStrategy (MSTR). Instead of simply owning the stock, the fund uses options to build what's called a synthetic covered call. In plain English, that means it keeps much of the downside of the stock, gives up a chunk of the upside, and collects premium along the way. MSTR is a very volatile stock, and volatility is what makes option premium large. That is where the big yield comes from.</p>
+
+<p><strong>ULTY</strong> uses a similar options approach, but not on one name. It works across a rotating group of high-volatility stocks, and the manager can change what it targets over time. So the premium comes from many sources instead of one.</p>
+
+<p>The fund pays {{live:MSTY:freq:text}} for MSTY and {{live:ULTY:freq:text}} for ULTY. Weekly sounds smooth, but the amount is not fixed. Each payout moves with how much premium the fund collected, so some weeks pay more and some pay less.</p>
+
+<h2>Yield, fees and assets side by side</h2>
+
+<p>MSTY yields {{live:MSTY:yield}} and ULTY yields {{live:ULTY:yield}}. That is a thin gap at the headline level. The fee gap is bigger. MSTY charges {{live:MSTY:er:pct2}} and ULTY charges {{live:ULTY:er:pct2}}.</p>
+
+<p>On $10,000, the annual fee works out to {{calc:usd:10000*MSTY.er/100}} for MSTY and {{calc:usd:10000*ULTY.er/100}} for ULTY. Fees come out of the fund's returns, so a higher fee means a higher hurdle before you break even. If you want the long version of why this matters, I covered it in <a href="/articles/expense-ratio-math">the expense ratio math article</a>.</p>
+
+<p>On size, MSTY holds {{live:MSTY:aum:aum}} in assets and ULTY holds {{live:ULTY:aum:aum}}. Both are large enough to trade easily, which matters for funds that people buy and sell actively.</p>
+
+<h2>The weekly, monthly and yearly income math</h2>
+
+<p>Let's put real money on it. These numbers use today's yield and assume it stays constant, which it won't. Treat it as a snapshot.</p>
+
+<ul>
+<li><strong>$10,000 in MSTY:</strong> about {{calc:usd:10000*MSTY.yield/100/52}} per week, {{calc:usd:10000*MSTY.yield/100/12}} per month, {{calc:usd:10000*MSTY.yield/100}} per year.</li>
+<li><strong>$10,000 in ULTY:</strong> about {{calc:usd:10000*ULTY.yield/100/52}} per week, {{calc:usd:10000*ULTY.yield/100/12}} per month, {{calc:usd:10000*ULTY.yield/100}} per year.</li>
+<li><strong>$100,000 in MSTY:</strong> about {{calc:usd:100000*MSTY.yield/100/12}} per month.</li>
+<li><strong>$100,000 in ULTY:</strong> about {{calc:usd:100000*ULTY.yield/100/12}} per month.</li>
+</ul>
+
+<p>Want $1,000 a month? At today's yields that takes about {{calc:usd:12000/(MSTY.yield/100)}} in MSTY or about {{calc:usd:12000/(ULTY.yield/100)}} in ULTY. Those are big numbers for a small position, which is exactly why the yield is attractive and exactly why you need to look at what happens to the share price.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="MSTY,ULTY,CONY,NVDY" data-per="year">
+  <p class="figure-title">What your money earns in MSTY, ULTY and two other weekly payers</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<h2>Total return: where the two funds split</h2>
+
+<p>Yield only tells you what the fund paid out. Total return adds the change in share price, so it tells you what you actually ended up with. Our data measures it since each fund's inception.</p>
+
+<p>MSTY launched on {{live:MSTY:inception:text}} and shows a total return of {{live:MSTY:tr}}. ULTY launched on {{live:ULTY:inception:text}} and shows {{live:ULTY:tr}}. Because the start dates are only days apart, the gap of {{calc:pct:MSTY.tr-ULTY.tr}} is a fair read on how the two have done over roughly the same stretch.</p>
+
+<p>Two things stand out. First, ULTY's total return is close to flat despite a yield of {{live:ULTY:yield}}. That means the share price losses have eaten up most of the income it paid. Second, MSTY's higher total return comes from a single-stock bet that has been rewarded so far. That can reverse. A fund tied to one volatile stock is only as good as that stock's path.</p>
+
+<p>Past performance is not a forecast. But it is a useful reality check on the headline yield. I wrote more on this in <a href="/articles/yield-vs-total-return">why the biggest payout isn't always the best return</a>.</p>
+
+<h2>Price decay and return of capital</h2>
+
+<p>Both funds carry a price decay flag in our data: MSTY shows {{live:MSTY:decay:decay}} and ULTY shows {{live:ULTY:decay:decay}}. Price decay means the share price (the NAV, or net asset value) has trended down over time. For an income fund, that is a warning sign, because you are being paid partly with your own principal shrinking.</p>
+
+<p>It happens for a simple reason. A covered call style fund caps the upside but keeps the downside. In strong markets it misses gains. In weak markets it still falls. The premium helps cushion the drop, but over time the cap on upside can pull the share price lower while the payouts continue.</p>
+
+<p>Related to this is return of capital, or ROC. That is when part of the distribution is technically a return of your own money instead of earnings. It is not automatically bad, and it can defer taxes in some cases, but it can also mean the fund is paying out more than it is truly earning. Tax treatment depends on your situation, so check with a professional. For the basics, see <a href="/articles/what-is-return-of-capital-etf">what return of capital means in an ETF</a> and <a href="/articles/price-decay-etf-meaning">what price decay is</a>.</p>
+
+<h2>Risks you should know about</h2>
+
+<ul>
+<li><strong>MSTY concentration risk:</strong> everything rides on one stock. If MSTR has a rough stretch, there is no other holding to soften it.</li>
+<li><strong>ULTY manager risk:</strong> the basket and the strategy can change over time. You are trusting the manager's choices, and the higher fee reflects that active approach.</li>
+<li><strong>Payout variability:</strong> weekly distributions can fall as volatility falls. The yield you see today is not a promise.</li>
+<li><strong>Capped upside:</strong> in a big rally for the underlying stocks, you will not get the full move.</li>
+<li><strong>Short track record:</strong> both funds are only a couple of years old, so we have not seen how they behave across a full market cycle.</li>
+</ul>
+
+<h2>How they compare to other weekly payers</h2>
+
+<p>Both funds sit at the top of the yield range among weekly payers. CONY, which writes options on Coinbase, shows {{live:CONY:yield}}. TSLY, tied to Tesla, shows {{live:TSLY:yield}}. Then it drops: NVDY shows {{live:NVDY:yield}} and the Roundhill fund QDTE shows {{live:QDTE:yield}}.</p>
+
+<p>Lower yield is not automatically worse. NVDY's total return since inception is {{live:NVDY:tr}}, though it launched on {{live:NVDY:inception:text}}, well before MSTY and ULTY, so the comparison is not fair. CHPY, a semiconductor focused fund, yields {{live:CHPY:yield}} and shows a price decay flag of {{live:CHPY:decay:decay}}, but it launched on {{live:CHPY:inception:text}}, so it has a much shorter history. FEPI charges only {{live:FEPI:er:pct2}}, which is a lot lower than either fund in this matchup.</p>
+
+<p>The pattern I keep seeing: the highest yields tend to come with the most single-name concentration and the most price risk. For a wider look, see <a href="/articles/best-weekly-dividend-etfs">the best weekly dividend ETFs</a>, and you can browse every weekly payer at <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>.</p>
+
+<h2>Which type of investor each one fits</h2>
+
+<p>This isn't a buy or sell signal. It's a way to see which trade-offs match your situation.</p>
+
+<p><strong>MSTY tends to fit</strong> someone who already has a view on MicroStrategy, understands that the fund is a single stock bet with options layered on top, and can stomach large swings. The fee is lower, and the track record so far is stronger, but that is no guarantee. Size it as a small slice, not the core of a portfolio.</p>
+
+<p><strong>ULTY tends to fit</strong> someone who wants high weekly income but does not want to depend on one company. The spread is a plus. The trade-off is a higher fee and a total return that has been close to flat so far. If your goal is cash flow and you plan to track NAV closely, it can make sense. If your goal is growth, the numbers so far are not encouraging.</p>
+
+<p><strong>Neither fits</strong> someone who needs stable income, a steady share price, or a place to park money they cannot afford to see drop. If that is you, look at lower yielding options with a cleaner record. You can screen the full list at <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>.</p>
+
+<p>If you are planning around these payouts, run your own numbers in the <a href="/articles/weekly-pay-etfs-10000">weekly pay $10,000 breakdown</a>. For single fund detail, see the <a href="/articles/msty-etf-dividend-yield-total-return">MSTY deep dive</a> and the <a href="/articles/ulty-etf-dividend-yield-total-return">ULTY deep dive</a>.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Is MSTY or ULTY the better investment?</h3>
+<p>It depends on what you want. MSTY has the higher total return since inception ({{live:MSTY:tr}} vs {{live:ULTY:tr}}) and the lower fee, but it relies on one stock. ULTY is more spread out, but it has returned much less so far.</p>
+<h3>Which pays more, MSTY or ULTY?</h3>
+<p>Right now they are very close: {{live:MSTY:yield}} for MSTY and {{live:ULTY:yield}} for ULTY. Both numbers change as option premiums and share prices move.</p>
+<h3>Do MSTY and ULTY pay weekly?</h3>
+<p>Per our data, MSTY pays {{live:MSTY:freq:text}} and ULTY pays {{live:ULTY:freq:text}}. The amount varies from week to week.</p>
+<h3>Do MSTY and ULTY have price decay?</h3>
+<p>Yes, both are flagged for price decay in our database. That means the share price has trended lower over time, which can offset part of the income you receive.</p>
+<h3>What does $10,000 earn in MSTY vs ULTY?</h3>
+<p>At current yields, about {{calc:usd:10000*MSTY.yield/100}} a year in MSTY and about {{calc:usd:10000*ULTY.yield/100}} a year in ULTY, before any change in share price. Yields are not guaranteed.</p>
+<h3>Which has the lower expense ratio?</h3>
+<p>MSTY charges {{live:MSTY:er:pct2}} and ULTY charges {{live:ULTY:er:pct2}}, so MSTY is cheaper to hold.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+
+<p>The yields on MSTY and ULTY look like twins. The results do not. One has delivered a total return of {{live:MSTY:tr}} and the other {{live:ULTY:tr}} over close to the same period, and both are flagged for price decay. That tells you the yield is only the starting point.</p>
+
+<p>If you use either one, size the position small, watch total return instead of just the payout, and be honest about whether you are collecting income or slowly returning your own capital to yourself. Do your own due diligence, and remember that this is not a recommendation to buy or sell anything. For more weekly payers to compare, head to <a href="https://weeklyetfs.com/">WeeklyETFs.com</a>.</p>
