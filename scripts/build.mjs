@@ -8,6 +8,8 @@ import { createRequire } from "node:module";
 import { buildTools } from "./tools-pages.mjs";
 import { buildPartner } from "./partner-page.mjs";
 import { buildEtfPages, etfPath, SIGNUP } from "./etf-pages.mjs";
+import { cardFor } from "./cards.mjs";
+import crypto from "node:crypto";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://topetfs.com";
@@ -97,6 +99,24 @@ const ARTICLES=fs.readdirSync(artDir).filter(f=>f.endsWith(".html")).map(f=>{
   return meta;
 }).sort((a,b)=>(b.date+(b.time||"")).localeCompare(a.date+(a.time||"")) || (a.order||0)-(b.order||0));
 
+/* Auto-generated article cards (scripts/cards.mjs). The HTML goes to .cards/ and
+   scripts/render-cards.mjs renders it to assets/cards/<slug>.jpg after this build. */
+const CARD_DIR=path.join(ROOT,".cards");
+fs.rmSync(CARD_DIR,{recursive:true,force:true}); fs.mkdirSync(CARD_DIR,{recursive:true});
+const CARD_LOG=(()=>{try{return JSON.parse(fs.readFileSync(path.join(ROOT,"data","cards.json"),"utf8"));}catch(e){return {};}})();
+const CARD_MANIFEST={};
+for(const a of ARTICLES){
+  const c=cardFor(a,ALL); if(!c) continue;
+  const hash=crypto.createHash("sha1").update(c.html).digest("hex").slice(0,10);
+  fs.writeFileSync(path.join(CARD_DIR,a.slug+".html"),c.html);
+  CARD_MANIFEST[a.slug]={kind:c.kind,hash};
+  const v=(CARD_LOG[a.slug]&&CARD_LOG[a.slug].hash)||hash;
+  a.card_img="/assets/cards/"+a.slug+".jpg?v="+v;
+  if(!a.ogImage){a.ogImage=a.card_img;a.ogAlt=a.ogAlt||a.title;}
+}
+fs.writeFileSync(path.join(CARD_DIR,"manifest.json"),JSON.stringify(CARD_MANIFEST,null,1));
+const thumb=a=>a.ogImage||("/assets/covers/"+a.slug+".svg");
+
 const SECTIONS={
   income:{name:"Income",path:"/dividend",hue:["#0e2a4d","#1b4478"],accent:"#8fb8ff"},
   weekly:{name:"Weekly Pay",path:"/weekly",hue:["#1d2733","#2e4256"],accent:"#f0a36b"},
@@ -157,7 +177,7 @@ const DISCLAIMER=`<strong>Disclaimer:</strong> TopETFs.com is published by Divid
 
 const OG_IMAGE=SITE+"/assets/og/topetfs-card.png";
 const OG_ALT="TopETFs: ETF news, research and income math with live data";
-function head({title,desc,canonical,type="website",extra="",ld,faq,image=OG_IMAGE,imageAlt=OG_ALT,robots="index,follow,max-image-preview:large"}){
+function head({title,desc,canonical,type="website",extra="",ld,faq,image=OG_IMAGE,imageAlt=OG_ALT,imageType="image/png",robots="index,follow,max-image-preview:large"}){
   const url=SITE+canonical;
   return `<!doctype html>
 <html lang="en">
@@ -175,7 +195,7 @@ function head({title,desc,canonical,type="website",extra="",ld,faq,image=OG_IMAG
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${image}">
 <meta property="og:image:secure_url" content="${image}">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image:type" content="${imageType}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${esc(imageAlt)}">
@@ -241,11 +261,11 @@ function page(opts,body){
 /* ---------------- components ---------------- */
 function storyCard(a,{cls="",dek=true,img=true,size}={}){
   const s=SECTIONS[a.section]||SECTIONS.learn;
-  return `<a class="story ${cls}" href="/articles/${a.slug}">${img?`<div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="" width="800" height="450" loading="lazy"></div>`:""}<span class="kicker">${s.name}</span><h3 class="story-title"${size?` style="font-size:${size}px"`:""}>${esc(a.title)}</h3>${dek?`<p class="story-dek">${esc(a.dek)}</p>`:""}<span class="meta">${fmtDate(a.date)}<span class="dot">&middot;</span>${a.read} min read</span></a>`;
+  return `<a class="story ${cls}" href="/articles/${a.slug}">${img?`<div class="cover"><img src="${thumb(a)}" alt="" width="800" height="450" loading="lazy"></div>`:""}<span class="kicker">${s.name}</span><h3 class="story-title"${size?` style="font-size:${size}px"`:""}>${esc(a.title)}</h3>${dek?`<p class="story-dek">${esc(a.dek)}</p>`:""}<span class="meta">${fmtDate(a.date)}<span class="dot">&middot;</span>${a.read} min read</span></a>`;
 }
 function riverItem(a){
   const s=SECTIONS[a.section]||SECTIONS.learn;
-  return `<a class="river-item" href="/articles/${a.slug}"><div class="cover"><img src="/assets/covers/${a.slug}.svg" alt="" width="800" height="450" loading="lazy"></div><div class="story"><span class="kicker">${s.name}</span><h3 class="story-title">${esc(a.title)}</h3><p class="story-dek">${esc(a.dek)}</p><span class="meta">${fmtDate(a.date)}<span class="dot">&middot;</span>${a.read} min read</span></div></a>`;
+  return `<a class="river-item" href="/articles/${a.slug}"><div class="cover"><img src="${thumb(a)}" alt="" width="800" height="450" loading="lazy"></div><div class="story"><span class="kicker">${s.name}</span><h3 class="story-title">${esc(a.title)}</h3><p class="story-dek">${esc(a.dek)}</p><span class="meta">${fmtDate(a.date)}<span class="dot">&middot;</span>${a.read} min read</span></div></a>`;
 }
 function board({title,sub,src="pro",cols="yield,er,aum,tr",sort,n=10,views,syms,minAum,exclude,foot}){
   return `<div class="board" data-w="board" data-src="${src}" data-cols="${cols}" data-sort="${sort||cols.split(",")[0]}" data-n="${n}"${syms?` data-syms="${syms}"`:""}${minAum?` data-min-aum="${minAum}"`:""}${exclude?` data-exclude="${exclude}"`:""}>
@@ -590,7 +610,7 @@ for(const a of ARTICLES){
   const tk=new Set(a.tickers||[]);
   const more=ARTICLES.filter(x=>x!==a).map((x,i)=>({x,i,s:(x.tickers||[]).filter(t=>tk.has(t)).length})).sort((p,q)=>(q.s-p.s)||(p.i-q.i)).slice(0,5).map(o=>o.x);
   const faqs=[...body.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)].filter(()=>/<section class="faq"/.test(body)).filter(m=>body.indexOf(m[0])>body.indexOf('<section class="faq"')).map(m=>({"@type":"Question",name:m[1].replace(/<[^>]+>/g,"").trim(),acceptedAnswer:{"@type":"Answer",text:m[2].replace(/<[^>]+>/g,"").trim()}}));
-  out["articles/"+a.slug+".html"]=page({title:(a.seoTitle||a.title)+" | TopETFs",desc:a.dek,canonical:url,type:"article",active:s.path,slug:a.slug,...(a.ogImage?{image:SITE+a.ogImage,imageAlt:a.ogAlt||a.title}:{}),
+  out["articles/"+a.slug+".html"]=page({title:(a.seoTitle||a.title)+" | TopETFs",desc:a.dek,canonical:url,type:"article",active:s.path,slug:a.slug,...(a.ogImage?{image:SITE+a.ogImage,imageAlt:a.ogAlt||a.title}:{}),...(a.card_img&&a.ogImage===a.card_img?{imageType:"image/jpeg"}:{}),
     ld:{"@context":"https://schema.org","@type":"Article",headline:a.title,description:a.dek,datePublished:a.date,dateModified:BUILD_DATE.toISOString().slice(0,10),author:{"@type":"Person",name:AUTHOR.name,url:SITE+AUTHOR.url,jobTitle:AUTHOR.title},publisher:{"@type":"Organization",name:"Dividend Empire LLC"},mainEntityOfPage:SITE+url,...(a.tickers&&a.tickers.length?{about:a.tickers.map(t=>({"@type":"Thing",name:t+(ALL[t]?" ("+ALL[t].name+")":"")}))}:{})},faq:faqs},
 `<div class="wrap"><div class="article-wrap">
 <article>
