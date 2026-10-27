@@ -1,52 +1,122 @@
 {
  "price-decay-etf-meaning": {
-  "hash": "88183eed1c",
+  "hash": "9f166d272d",
   "kind": "bars",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "schd-vs-voo": {
-  "hash": "d5a4c42c2c",
+  "hash": "527a17eb01",
   "kind": "vs",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "how-much-does-100-000-in-schd-pay": {
-  "hash": "65f276b476",
+  "hash": "2569ba7aec",
   "kind": "income",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "best-growth-etfs": {
-  "hash": "09a1ceac76",
+  "hash": "d24b60435a",
   "kind": "table",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "best-weekly-dividend-etfs": {
-  "hash": "05652858d7",
+  "hash": "11a0e2247b",
   "kind": "table",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "voo-etf-review-total-return-fees": {
-  "hash": "1b6478feb4",
+  "hash": "60e3603def",
   "kind": "single",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "msty-etf-dividend-yield-total-return": {
-  "hash": "0df83580dd",
+  "hash": "d539c82c77",
   "kind": "single",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "jepi-vs-jepq": {
-  "hash": "fcac293f5a",
+  "hash": "b5c4aa3e8c",
   "kind": "vs",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "how-much-do-i-need-in-jepi-to-make-1000-a-month": {
-  "hash": "24c60c033a",
+  "hash": "513fed23c4",
   "kind": "need",
+  "style": 2,
   "rendered": "2026-10-27"
  },
  "yield-vs-total-return": {
-  "hash": "27dcb16ad2",
+  "hash": "4469b1f2bd",
   "kind": "bars",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "qqqi-vs-jepq": {
+  "hash": "d0d45688e7",
+  "kind": "vs",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "qqq-etf-review-total-return-fees": {
+  "hash": "031b67785c",
+  "kind": "single",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "ulty-etf-dividend-yield-total-return": {
+  "hash": "96fe31f81b",
+  "kind": "single",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "voo-vs-qqq": {
+  "hash": "d2b1ac5bc2",
+  "kind": "vs",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "qdte-vs-xdte": {
+  "hash": "3e09233a09",
+  "kind": "vs",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "jepq-etf-dividend-yield-total-return": {
+  "hash": "01b2017d6e",
+  "kind": "single",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "jepi-etf-dividend-yield-total-return": {
+  "hash": "cfb1b48843",
+  "kind": "single",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "schd-vs-jepi": {
+  "hash": "c345fa4c64",
+  "kind": "vs",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "how-much-do-i-need-in-schd-to-make-1000-a-month": {
+  "hash": "a04030fa23",
+  "kind": "need",
+  "style": 2,
+  "rendered": "2026-10-27"
+ },
+ "schd-etf-dividend-yield-total-return": {
+  "hash": "b98fa1412f",
+  "kind": "single",
+  "style": 2,
   "rendered": "2026-10-27"
  }
 }
