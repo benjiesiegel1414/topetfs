@@ -45,6 +45,11 @@ jobs:
         run: node scripts/write-article.mjs ${{ inputs.force && '--force' || '' }}
       - name: Build site
         run: node scripts/build.mjs
+      - name: Render article cards
+        run: |
+          npm i --no-save --silent --prefix /tmp/fonts @fontsource/inter@5.1.0 || true
+          node scripts/render-cards.mjs
+        continue-on-error: true
       - name: Commit and push
         run: |
           git config user.name "topetfs-bot"
@@ -54,7 +59,7 @@ jobs:
           if [ -f .new-article-url ]; then MSG="New article: $(basename $(cat .new-article-url)) [skip ci]"; else MSG="Daily article run [skip ci]"; fi
           git rm -q --cached .new-article-url 2>/dev/null || true
           git commit -m "$MSG"
-          git push
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
       - name: Ping search engines (IndexNow + sitemap)
         if: always()
         run: |

@@ -46,6 +46,11 @@ jobs:
         timeout-minutes: 20
       - name: Build
         run: node scripts/build.mjs
+      - name: Render article cards
+        run: |
+          npm i --no-save --silent --prefix /tmp/fonts @fontsource/inter@5.1.0 || true
+          node scripts/render-cards.mjs
+        continue-on-error: true
       - name: Commit
         run: |
           git config user.name "topetfs-bot"
@@ -53,4 +58,4 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Daily data refresh and rebuild [skip ci]"
-          git push
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
