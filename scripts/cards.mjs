@@ -6,14 +6,7 @@
 // thumbnails crop the 1200x630 card to 16:9.
 
 // Which articles get a card. "all" turns them on everywhere.
-export const CARD_SLUGS = [
-  "jepi-vs-jepq", "schd-vs-voo", "msty-etf-dividend-yield-total-return", "voo-etf-review-total-return-fees",
-  "how-much-does-100-000-in-schd-pay", "how-much-do-i-need-in-jepi-to-make-1000-a-month", "best-weekly-dividend-etfs",
-  "best-growth-etfs", "yield-vs-total-return", "price-decay-etf-meaning",
-  "schd-vs-jepi", "qqqi-vs-jepq", "qdte-vs-xdte", "voo-vs-qqq", "jepi-etf-dividend-yield-total-return",
-  "jepq-etf-dividend-yield-total-return", "ulty-etf-dividend-yield-total-return", "schd-etf-dividend-yield-total-return",
-  "qqq-etf-review-total-return-fees", "how-much-do-i-need-in-schd-to-make-1000-a-month"
-];
+export const CARD_SLUGS = "all";
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const n = v => v != null && !isNaN(v);
@@ -51,7 +44,18 @@ function brand(e) {
 const shade = (hex, f) => "#" + hex.slice(1).match(/../g).map(h => Math.max(0, Math.min(255, Math.round(parseInt(h, 16) * f)))).map(v => v.toString(16).padStart(2, "0")).join("");
 
 const FONT = `@font-face{font-family:"Source Serif 4";src:url(__SERIF__/source-serif-4-latin-700-normal.woff2);font-weight:700}@font-face{font-family:"Source Serif 4";src:url(__SERIF__/source-serif-4-latin-600-normal.woff2);font-weight:600}@font-face{font-family:Inter;src:url(__FONT__/inter-latin-400-normal.woff2);font-weight:400}@font-face{font-family:Inter;src:url(__FONT__/inter-latin-700-normal.woff2);font-weight:700}@font-face{font-family:Inter;src:url(__FONT__/inter-latin-800-normal.woff2);font-weight:800}@font-face{font-family:Inter;src:url(__FONT__/inter-latin-900-normal.woff2);font-weight:900}`;
-const doc = (css, body) => `<!doctype html><html><head><meta charset="utf-8"><style>${FONT}*{box-sizing:border-box;margin:0;padding:0}html,body{width:1200px;height:630px;overflow:hidden}body{font-family:Inter,"Liberation Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased;position:relative}.sf{font-family:"Source Serif 4",Georgia,"DejaVu Serif",serif;font-weight:700}${css}</style></head><body>${body}</body></html>`;
+/* "Futuristic" finish shared by every card (inspired by micro1.ai): soft blurred light
+   orbs behind the content, a progressive blur + fade toward the bottom edge, frosted
+   glass panels, and a fine film grain on top. */
+const GRAIN = "data:image/svg+xml;utf8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>');
+const FX_CSS = `.orb{position:absolute;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none}
+.mist{position:absolute;left:0;right:0;bottom:0;height:260px;z-index:1;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 75%);mask-image:linear-gradient(to bottom,transparent,#000 75%)}
+.grain{position:absolute;inset:0;z-index:9;background-image:url("${GRAIN}");background-size:300px;opacity:.17;mix-blend-mode:overlay;pointer-events:none}
+.glass{background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 30px 60px rgba(0,0,0,.35);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-radius:26px}
+body>*:not(.orb):not(.mist):not(.grain){z-index:2}`;
+const orbs = list => list.map(([c, x, y, r, o]) => `<div class="orb" style="left:${x - r}px;top:${y - r}px;width:${2 * r}px;height:${2 * r}px;background:${c};opacity:${o ?? .7}"></div>`).join("");
+const fx = (orbList, mist = true) => orbs(orbList) + (mist ? '<div class="mist"></div>' : "");
+const doc = (css, body) => `<!doctype html><html><head><meta charset="utf-8"><style>${FONT}*{box-sizing:border-box;margin:0;padding:0}html,body{width:1200px;height:630px;overflow:hidden}body{font-family:Inter,"Liberation Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased;position:relative}.sf{font-family:"Source Serif 4",Georgia,"DejaVu Serif",serif;font-weight:700}${FX_CSS}${css}</style></head><body>${body}<div class="grain"></div></body></html>`;
 
 /* ---- 1. VS: two funds head to head ---- */
 function vs(A, B) {
@@ -66,12 +70,12 @@ function vs(A, B) {
 .l,.r{position:absolute;top:0;bottom:0;width:600px}.l{left:0;background:linear-gradient(160deg,${ba.c},${ba.d})}.r{right:0;background:linear-gradient(200deg,${bb.c},${bb.d})}
 .tk{position:absolute;top:52px;width:600px;text-align:center;font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:150px;letter-spacing:-.02em;line-height:1}.l .tk{left:0}.r .tk{right:0}
 .vs{position:absolute;left:530px;top:70px;width:140px;height:140px;border-radius:50%;background:#ffd23f;color:#0a0f1c;font-weight:900;font-size:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px rgba(0,0,0,.35);z-index:3;letter-spacing:-.04em}
-.stats{position:absolute;left:60px;right:60px;top:268px;z-index:2}
-.row{display:grid;grid-template-columns:1fr 260px 1fr;align-items:center;height:108px;border-top:2px solid rgba(255,255,255,.14)}
+.stats{position:absolute;left:46px;right:46px;top:268px;z-index:2;padding:0 14px}.stats.glass{border-radius:26px}
+.row{display:grid;grid-template-columns:1fr 260px 1fr;align-items:center;height:106px;border-top:1px solid rgba(255,255,255,.12)}.row:first-child{border-top:0}
 .v{text-align:center;font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:78px;letter-spacing:-.01em;color:rgba(255,255,255,.6)}.v.w{color:#3dff8f;text-shadow:0 0 30px rgba(61,255,143,.35)}
 .lab{text-align:center;font-weight:800;font-size:22px;letter-spacing:.14em;color:rgba(255,255,255,.75);text-transform:uppercase}.lab small{display:block;font-size:15px;letter-spacing:.08em;margin-top:4px;color:rgba(255,255,255,.5);font-weight:700}`;
-  return doc(css, `<div class="l"><div class="tk">${esc(A.sym)}</div></div><div class="r"><div class="tk">${esc(B.sym)}</div></div><div class="vs">VS</div>
-<div class="stats" style="top:${268 + (3 - rowsN) * 54}px">${[["Yield", A.yield, B.yield, pct], ["Total return", A.tr, B.tr, signed], ["Fee", A.er, B.er, v => v.toFixed(2) + "%", true]].filter(r => n(r[1]) && n(r[2])).map(r => row(...r)).join("")}</div>`);
+  return doc(css, `<div class="l"><div class="tk">${esc(A.sym)}</div></div><div class="r"><div class="tk">${esc(B.sym)}</div></div>${fx([[shade(ba.c, 1.6), 140, 520, 260, .55], [shade(bb.c, 1.6), 1060, 520, 260, .55], ["#ffd23f", 600, 140, 120, .25]])}<div class="vs">VS</div>
+<div class="stats glass" style="top:${256 + (3 - rowsN) * 54}px">${[["Yield", A.yield, B.yield, pct], ["Total return", A.tr, B.tr, signed], ["Fee", A.er, B.er, v => v.toFixed(2) + "%", true]].filter(r => n(r[1]) && n(r[2])).map(r => row(...r)).join("")}</div>`);
 }
 
 /* ---- 2. SINGLE: one fund, one giant number ---- */
@@ -86,7 +90,7 @@ function single(E, growth) {
 .lab{position:absolute;left:66px;top:462px;font-weight:800;font-size:30px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7)}
 .pay{position:absolute;left:66px;top:524px;font-size:36px;font-weight:700;color:rgba(255,255,255,.85)}.pay b{color:#ffd23f;font-weight:900}
 .chip{position:absolute;right:60px;top:70px;font-weight:900;font-size:28px;padding:16px 24px;border-radius:14px;letter-spacing:.04em}.chip.ok{background:#1fd270;color:#04170b}.chip.bad{background:#ff3b4f;color:#fff}`;
-  return doc(css, `<div class="tk">${esc(E.sym)}</div>${decay}<div class="big" style="color:${big.c}">${big.v}</div><div class="lab">${big.l}</div><div class="pay">${pay}</div>`);
+  return doc(css, `${fx([[shade(b.c, 1.7), 1000, 160, 300, .6], [big.c, 330, 360, 220, .18], [shade(b.c, 1.3), 120, 40, 180, .35]])}<div class="tk">${esc(E.sym)}</div>${decay}<div class="big" style="color:${big.c}">${big.v}</div><div class="lab">${big.l}</div><div class="pay">${pay}</div>`);
 }
 
 /* ---- 3. INCOME: "$100,000 in SCHD pays..." / "$1,000 a month needs..." ---- */
@@ -103,7 +107,7 @@ function income(E, mode) {
 .top{position:absolute;left:64px;top:80px;font-family:"Source Serif 4",Georgia,serif;font-size:56px;font-weight:600;color:rgba(255,255,255,.9)}.top b{font-weight:900;color:#fff;background:rgba(0,0,0,.25);padding:2px 14px;border-radius:10px}
 .big{position:absolute;left:56px;top:172px;font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:236px;letter-spacing:-.03em;line-height:1;color:#ffd23f;text-shadow:0 10px 40px rgba(0,0,0,.35)}
 .sub{position:absolute;left:66px;top:450px;font-size:44px;font-weight:800;color:rgba(255,255,255,.88)}`;
-  return doc(css, `<div class="coins"></div><div class="top">${top}</div><div class="big">${big}</div><div class="sub">${sub}</div>`);
+  return doc(css, `${fx([["#ffd23f", 950, 120, 260, .35], [shade(b.c, 1.8), 200, 560, 260, .45]])}<div class="coins"></div><div class="top">${top}</div><div class="big">${big}</div><div class="sub">${sub}</div>`);
 }
 
 /* ---- 4. TABLE: blurred-ticker leaderboard ---- */
@@ -117,14 +121,17 @@ function table(list, growth) {
 .r:nth-child(even){background:#f4fafb}
 .tk{height:100%;display:flex;align-items:center;justify-content:center;background:#d6f1f6}.tk span{font-weight:900;color:#0e7490;font-size:28px;filter:blur(7px)}
 .y{font-weight:900;color:#111827;font-size:29px}.g{font-weight:900;color:#16a34a;font-size:30px}.neg{font-weight:900;color:#dc2626;font-size:30px}
-.no{font-weight:900;color:#16a34a}.yes{font-weight:900;color:#dc2626}.mu{color:#374151}`;
+.no{font-weight:900;color:#16a34a}.yes{font-weight:900;color:#dc2626}.mu{color:#374151}
+.wfade{position:absolute;left:0;right:0;bottom:0;height:200px;z-index:3;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.85));backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000);mask-image:linear-gradient(to bottom,transparent,#000)}.grain{opacity:.06;mix-blend-mode:multiply}`;
   if (growth) {
     const gcss = css.replace("grid-template-columns:160px 150px 190px 140px 140px 170px 250px", "grid-template-columns:220px 330px 380px 270px").replace(".g{font-weight:900;color:#16a34a;font-size:30px}", ".g{font-weight:900;color:#16a34a;font-size:40px}.k{font-weight:900;color:#111827;font-size:34px}").replace("font-size:26px;text-align:center", "font-size:30px;text-align:center");
-    const gbody = rows.map(e => `<div class="r"><div class="tk"><span>${esc(e.sym)}</span></div><div class="${n(e.tr) && e.tr < 0 ? "neg" : "g"}">${signed(e.tr)}</div><div class="k">${n(e.tr) ? "$10K &#8594; " + usd(10000 * (1 + e.tr / 100)) : "n/a"}</div><div class="mu">${aum(e.aum)}</div></div>`).join("");
-    return doc(gcss, `<div class="t">${gbody}</div>`);
+    const fadeG = i => { const k = rows.length >= 6 ? i - (rows.length - 3) : 0; return k > 0 ? ` style="filter:blur(${k * 1.6}px);opacity:${1 - k * .22}"` : ""; };
+    const gbody = rows.map((e, i) => `<div class="r"${fadeG(i)}><div class="tk"><span>${esc(e.sym)}</span></div><div class="${n(e.tr) && e.tr < 0 ? "neg" : "g"}">${signed(e.tr)}</div><div class="k">${n(e.tr) ? "$10K &#8594; " + usd(10000 * (1 + e.tr / 100)) : "n/a"}</div><div class="mu">${aum(e.aum)}</div></div>`).join("");
+    return doc(gcss, `<div class="t">${gbody}</div><div class="wfade"></div>`);
   }
-  const body = rows.map(e => `<div class="r"><div class="tk"><span>${esc(e.sym)}</span></div><div class="y">${pct(e.yield)}</div><div class="${n(e.tr) && e.tr < 0 ? "neg" : "g"}">${signed(e.tr)}</div><div class="mu">${n(e.er) ? e.er.toFixed(2) + "%" : "n/a"}</div><div class="mu">${aum(e.aum)}</div>${e.decay == null ? '<div class="mu">n/a</div>' : e.decay ? '<div class="yes">YES</div>' : '<div class="no">NO</div>'}<div class="mu">${esc(cap(e.freq) || (e.inception || ""))}</div></div>`).join("");
-  return doc(css, `<div class="t">${body}</div>`);
+  const fade = i => { const k = rows.length >= 6 ? i - (rows.length - 3) : 0; return k > 0 ? ` style="filter:blur(${k * 1.6}px);opacity:${1 - k * .22}"` : ""; };
+  const body = rows.map((e, i) => `<div class="r"${fade(i)}><div class="tk"><span>${esc(e.sym)}</span></div><div class="y">${pct(e.yield)}</div><div class="${n(e.tr) && e.tr < 0 ? "neg" : "g"}">${signed(e.tr)}</div><div class="mu">${n(e.er) ? e.er.toFixed(2) + "%" : "n/a"}</div><div class="mu">${aum(e.aum)}</div>${e.decay == null ? '<div class="mu">n/a</div>' : e.decay ? '<div class="yes">YES</div>' : '<div class="no">NO</div>'}<div class="mu">${esc(cap(e.freq) || (e.inception || ""))}</div></div>`).join("");
+  return doc(css, `<div class="t">${body}</div><div class="wfade"></div>`);
 }
 
 /* ---- 5. BARS: yield vs total return, the "yield trap" picture ---- */
@@ -140,7 +147,7 @@ function bars(list) {
 .b{height:38px;border-radius:0 8px 8px 0;display:flex;align-items:center;margin:4px 0;font-weight:900;font-size:28px;white-space:nowrap}
 .b span{margin-left:14px}`;
   const body = rows.map(e => `<div class="row"><div class="tk">${esc(e.sym)}</div><div><div class="b" style="width:${scale(e.yield)}px;background:#ffd23f;color:#0b1020"><span style="margin-left:${scale(e.yield) + 14}px;color:#ffd23f">${pct(e.yield)}</span></div><div class="b" style="width:${scale(e.tr)}px;background:${e.tr < 0 ? "#ff3b4f" : "#2ee07d"}"><span style="margin-left:${scale(e.tr) + 14}px;color:${e.tr < 0 ? "#ff6b7a" : "#2ee07d"}">${signed(e.tr)}</span></div></div></div>`).join("");
-  return doc(css, `<div class="legend"><span><i style="background:#ffd23f"></i>YIELD</span><span><i style="background:#2ee07d"></i>TOTAL RETURN</span></div><div class="wrap">${body}</div>`);
+  return doc(css, `${fx([["#2ee07d", 900, 520, 260, .22], ["#ffd23f", 300, 80, 200, .18]])}<div class="legend"><span><i style="background:#ffd23f"></i>YIELD</span><span><i style="background:#2ee07d"></i>TOTAL RETURN</span></div><div class="wrap">${body}</div>`);
 }
 
 /* Pick a template for an article. Returns {kind, html} or null (keep the old cover). */
@@ -156,10 +163,20 @@ export function cardFor(a, ALL) {
     tk.length === 1 || /etf-review|dividend-yield-total-return/.test(a.slug) ? "single" :
     /yield-vs|price-decay|return-of-capital|explained|1256/.test(a.slug) ? "bars" : "table");
   const withData = tk.filter(e => n(e.tr) || n(e.yield));
+  if (!withData.length) return null;
   if (kind === "vs") return { kind, html: vs(tk[0], tk[1]) };
   if ((kind === "income" || kind === "need") && n(tk[0].yield)) return { kind, html: income(tk[0], kind === "need" ? "need" : "pay") };
   if (kind === "single") return { kind, html: single(tk[0], growth) };
-  if (kind === "bars") return { kind, html: bars(withData.filter(e => n(e.yield) && n(e.tr)).sort((x, y) => y.yield - x.yield)) };
-  const sorted = withData.slice().sort((x, y) => growth ? (y.tr ?? -1e9) - (x.tr ?? -1e9) : (y.yield ?? -1) - (x.yield ?? -1));
+  if (kind === "bars" && withData.filter(e => n(e.yield) && n(e.tr)).length >= 3) return { kind, html: bars(withData.filter(e => n(e.yield) && n(e.tr)).sort((x, y) => y.yield - x.yield)) };
+  // Tables need enough rows to look like a leaderboard; otherwise fall back to a better fit.
+  const rowsT = withData.filter(e => growth ? n(e.tr) : n(e.yield));
+  const both = withData.filter(e => n(e.yield) && n(e.tr));
+  if (rowsT.length < 5) {
+    if (withData.length === 2) return { kind: "vs", html: vs(withData[0], withData[1]) };
+    if (both.length >= 3) return { kind: "bars", html: bars(both.sort((x, y) => y.yield - x.yield)) };
+    if (withData.length >= 2) return { kind: "vs", html: vs(withData[0], withData[1]) };
+    return { kind: "single", html: single(withData[0], growth) };
+  }
+  const sorted = rowsT.slice().sort((x, y) => growth ? y.tr - x.tr : y.yield - x.yield);
   return { kind: "table", html: table(sorted, growth) };
 }

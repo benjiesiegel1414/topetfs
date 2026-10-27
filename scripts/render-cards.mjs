@@ -12,7 +12,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, ".cards"), OUT = path.join(ROOT, "assets", "cards"), LOG = path.join(ROOT, "data", "cards.json");
 const REFRESH_DAYS = 7, FORCE = process.argv.includes("--force");
 // Bump STYLE whenever the card designs in cards.mjs change, so every card is redrawn once.
-const STYLE = 2;
+const STYLE = 3;
 const FONT_DIR = process.env.FONT_DIR || "/tmp/fonts/node_modules/@fontsource/inter/files";
 const SERIF_DIR = process.env.SERIF_DIR || "/tmp/fonts/node_modules/@fontsource/source-serif-4/files";
 const today = new Date().toISOString().slice(0, 10);
