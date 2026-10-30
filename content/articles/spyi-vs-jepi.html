@@ -1,0 +1,84 @@
+<!--meta
+{"title":"SPYI vs JEPI: Yield, Total Return, Fees and Which One Fits You","short":"SPYI vs JEPI","seoTitle":"SPYI vs JEPI: Yield, Fees, Total Return Compared","dek":"SPYI vs JEPI compared with live yield, fees, assets, total return since inception, price decay and what each pays on the same investment.","section":"income","date":"2026-10-30","time":"08","read":7,"art":"bars","tickers":["SPYI","JEPI"],"coverLabel":"SPYI  ·  JEPI","keyNumbers":[["SPYI yield","{{live:SPYI:yield}}"],["JEPI yield","{{live:JEPI:yield}}"],["SPYI expense ratio","{{live:SPYI:er:pct2}}"],["JEPI expense ratio","{{live:JEPI:er:pct2}}"],["JEPI assets","{{live:JEPI:aum:aum}}"]],"keyword":"SPYI vs JEPI","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:SPYI}} yields {{live:SPYI:yield}} and {{tkr:JEPI}} yields {{live:JEPI:yield}}, so SPYI pays more cash today, but it also costs {{live:SPYI:er:pct2}} versus {{live:JEPI:er:pct2}} for JEPI.</li><li>JEPI has a higher total return since inception ({{live:JEPI:tr}} vs {{live:SPYI:tr}}), but it launched more than two years earlier, so the comparison is not apples to apples.</li><li>Both are monthly payers and neither is flagged for price decay right now. SPYI tends to fit people who want maximum income, JEPI tends to fit people who want a lower fee and a smoother ride.</li></ul></div>
+
+<p class="lede">In the SPYI vs JEPI matchup, SPYI pays the bigger yield ({{live:SPYI:yield}} vs {{live:JEPI:yield}}), while JEPI is cheaper ({{live:JEPI:er:pct2}} vs {{live:SPYI:er:pct2}}), much larger ({{live:JEPI:aum:aum}} vs {{live:SPYI:aum:aum}}) and has the higher total return since inception ({{live:JEPI:tr}} vs {{live:SPYI:tr}}). Both pay monthly and both are built on S&amp;P 500 style stock exposure plus option income.</p>
+
+<div class="board" data-w="board" data-syms="SPYI,JEPI,JEPQ,SCHD,SGOV,VOO" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>SPYI vs JEPI next to close alternatives</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>How SPYI and JEPI make their income</h2>
+<p>Both funds are covered call style income funds. In plain English, that means they hold stocks and also sell call options, which are contracts that pay the fund a premium upfront in exchange for giving up some of the stock market's upside. That premium is a big part of what gets paid out to you. If you want the full breakdown, I wrote about it in <a href="/articles/covered-call-etfs-explained">Covered Call ETFs, Explained</a>.</p>
+<p>The way they do it is different, though.</p>
+<h3>SPYI: S&amp;P 500 exposure with index options</h3>
+<p>{{tkr:SPYI}} is run by NEOS. It holds a portfolio of large U.S. stocks that tracks the S&amp;P 500 and writes call options on the S&amp;P 500 index itself. Index options of that type can qualify for Section 1256 tax treatment, which is the reason a lot of investors in taxable accounts look at it. Tax outcomes depend on your situation, so read <a href="/articles/section-1256-etfs-taxes">Section 1256 ETFs and Taxes</a> and check with a tax professional.</p>
+<h3>JEPI: a defensive stock basket plus equity-linked notes</h3>
+<p>{{tkr:JEPI}} comes from JPMorgan. It is actively managed. It holds a portfolio of U.S. large caps that is selected to be less volatile than the broad market, then gets its option income through equity-linked notes (ELNs), which are debt instruments that bundle in the option exposure. The result is a fund that usually behaves a bit more defensively than a plain S&amp;P 500 fund, and that gives up more of the upside in strong rallies.</p>
+<p>The practical takeaway: neither fund is a pure S&amp;P 500 tracker, and neither will fully keep up when the market rips higher. That is the price of the income.</p>
+
+<h2>Yield, fees and size side by side</h2>
+<p>Here is how the basics stack up today. SPYI yields {{live:SPYI:yield}} and JEPI yields {{live:JEPI:yield}}. SPYI's expense ratio (the yearly fund fee taken out of assets) is {{live:SPYI:er:pct2}}, and JEPI's is {{live:JEPI:er:pct2}}. On a $10,000 position, that works out to about {{calc:usd:10000*SPYI.er/100}} a year in fees for SPYI and {{calc:usd:10000*JEPI.er/100}} for JEPI.</p>
+<p>Fees are already baked into the share price and the payout, so you will never see them as a bill. But they do matter over time, and SPYI's higher yield is partly the reward for taking its particular strategy, not a free lunch.</p>
+<p>Size is another difference. JEPI manages {{live:JEPI:aum:aum}} and SPYI manages {{live:SPYI:aum:aum}}. Bigger is not automatically better, but JEPI's scale and longer track record give it a bit more of a "proven" feel, while SPYI has grown quickly since it launched on {{live:SPYI:inception:text}}.</p>
+<p>Both pay on a monthly schedule (SPYI: {{live:SPYI:freq:text}}, JEPI: {{live:JEPI:freq:text}}). One thing to know about JEPI: because part of its income comes from ELNs, its monthly payment can swing noticeably from month to month, depending on market volatility. Don't plan on a perfectly flat check from either fund.</p>
+
+<h2>What each fund pays on the same investment</h2>
+<p>This is where the yield gap becomes real money. Here is the math at today's yields.</p>
+<table class="data"><thead><tr><th>Investment math</th><th>SPYI</th><th>JEPI</th></tr></thead><tbody><tr><td>Yearly income on $10,000</td><td>{{calc:usd:10000*SPYI.yield/100}}</td><td>{{calc:usd:10000*JEPI.yield/100}}</td></tr><tr><td>Yearly income on $100,000</td><td>{{calc:usd:100000*SPYI.yield/100}}</td><td>{{calc:usd:100000*JEPI.yield/100}}</td></tr><tr><td>Monthly income on $100,000</td><td>{{calc:usd:100000*SPYI.yield/100/12}}</td><td>{{calc:usd:100000*JEPI.yield/100/12}}</td></tr><tr><td>Needed for $1,000 a month</td><td>{{calc:usd:12000/(SPYI.yield/100)}}</td><td>{{calc:usd:12000/(JEPI.yield/100)}}</td></tr></tbody></table>
+<p>So to target $1,000 a month, you would need roughly {{calc:usd:12000/(SPYI.yield/100)}} in SPYI or {{calc:usd:12000/(JEPI.yield/100)}} in JEPI at today's yields. That is a big difference in required capital. If you want the JEPI side in more detail, I walked through it in <a href="/articles/how-much-do-i-need-in-jepi-to-make-1000-a-month">How Much Do You Need in JEPI to Make $1,000 a Month?</a></p>
+<p>One caution: these are today's yields applied forward. Option income depends on market conditions, and yields can and do change. It is a snapshot, not a promise.</p>
+
+<h2>Total return and price decay: the reality check</h2>
+<p>A high yield means nothing if the share price keeps sliding and eats your payouts. That is why I always look at total return, which combines price change and the income you collect.</p>
+<p>Since inception, JEPI shows a total return of {{live:JEPI:tr}} and SPYI shows {{live:SPYI:tr}}. Before you call a winner, remember the dates. JEPI launched on {{live:JEPI:inception:text}} and SPYI on {{live:SPYI:inception:text}}. JEPI has had more time to compound, and it also covers a different stretch of market conditions. So this is a reference point, not a verdict.</p>
+<p>On the decay front, our data flags SPYI as price decay: {{live:SPYI:decay:decay}}, and JEPI as price decay: {{live:JEPI:decay:decay}}. That is a good sign for both. But it is a snapshot, and covered call funds can still lag a rising market by a wide margin.</p>
+<p>For perspective, look at a plain index fund. {{tkr:VOO}} shows a total return of {{live:VOO:tr}} since {{live:VOO:inception:text}}, with a yield of just {{live:VOO:yield}}. That is a much longer window, so the numbers are not comparable. But the lesson holds: high-income funds trade upside for cash flow. I go deeper on that trade-off in <a href="/articles/yield-vs-total-return">The Yield Trap</a>.</p>
+
+<h2>Risks you should know about</h2>
+<ul>
+<li><strong>Capped upside.</strong> When the market surges, both funds will usually trail a plain S&amp;P 500 fund.</li>
+<li><strong>Downside is still real.</strong> Selling options only gives a modest cushion. If stocks drop hard, both funds can fall with them.</li>
+<li><strong>Variable payouts.</strong> Monthly distributions move with volatility and market levels. Do not treat either yield as a fixed rate.</li>
+<li><strong>Tax treatment varies.</strong> Distributions can be a mix of ordinary income and other types. The right account (taxable, IRA, Roth) matters, so run your own numbers.</li>
+<li><strong>Active management.</strong> Both funds rely on the manager's choices. Results depend on those decisions, not just an index rule.</li>
+</ul>
+
+<h2>Which one fits which investor</h2>
+<h3>SPYI tends to fit if</h3>
+<p>You want the highest cash flow of the two, you are comfortable paying a higher fee for it, and you hold it in a taxable account where its option structure may help on taxes. It also suits people who want clear S&amp;P 500 style stock exposure while still collecting a big monthly check.</p>
+<h3>JEPI tends to fit if</h3>
+<p>You prefer a lower expense ratio, a larger fund with a longer record, and a more defensive stock basket. It is often a pick for people who want steady-ish income with a bit less volatility, and who are fine with a lower yield in exchange.</p>
+<h3>Neither may fit if</h3>
+<p>You are still in the growth phase and don't need the income yet. In that case, a low-cost fund like {{tkr:VOO}} or a dividend growth fund may line up better. If you want to compare against traditional dividend payers, look at {{tkr:SCHD}} (yield {{live:SCHD:yield}}, fee {{live:SCHD:er:pct2}}), or at cash-like {{tkr:SGOV}} (yield {{live:SGOV:yield}}) if safety comes first. And if you like the covered call idea with Nasdaq exposure, {{tkr:JEPQ}} yields {{live:JEPQ:yield}} with the same {{live:JEPQ:er:pct2}} fee as JEPI.</p>
+<p>You can also split the difference and hold both. Plenty of income investors do that to spread out strategy and structure risk. That is a choice, not a recommendation.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="SPYI,JEPI,SCHD,SGOV" data-per="year">
+  <p class="figure-title">SPYI vs JEPI income on your investment</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<p>Want to screen more options like these? The full list lives at <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>, and you can model future payouts with <a href="https://dividendprojection.com/">Dividend Projection</a>.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Is SPYI better than JEPI?</h3>
+<p>It depends on what you want. SPYI yields {{live:SPYI:yield}} versus {{live:JEPI:yield}} for JEPI, but it charges {{live:SPYI:er:pct2}} compared with {{live:JEPI:er:pct2}}. Higher income and lower fees point in different directions.</p>
+<h3>Do SPYI and JEPI pay monthly?</h3>
+<p>Yes. SPYI pays {{live:SPYI:freq:text}} and JEPI pays {{live:JEPI:freq:text}}. The amount can change from month to month.</p>
+<h3>Which has the higher total return, SPYI or JEPI?</h3>
+<p>JEPI shows {{live:JEPI:tr}} since inception and SPYI shows {{live:SPYI:tr}}. JEPI launched on {{live:JEPI:inception:text}} and SPYI on {{live:SPYI:inception:text}}, so JEPI has had more time.</p>
+<h3>Do SPYI or JEPI have price decay?</h3>
+<p>Our data currently shows price decay: {{live:SPYI:decay:decay}} for SPYI and {{live:JEPI:decay:decay}} for JEPI. That can change, so keep checking total return, not just yield.</p>
+<h3>How much would I need to make $1,000 a month from SPYI?</h3>
+<p>At today's yield, about {{calc:usd:12000/(SPYI.yield/100)}}. For JEPI it would be about {{calc:usd:12000/(JEPI.yield/100)}}. Yields move, so treat these as estimates.</p>
+</section>
+
+<h2>My bottom line on SPYI vs JEPI</h2>
+<p>SPYI is the bigger payer, JEPI is the cheaper and larger fund with the longer track record. Neither is a free lunch. Both give up some upside in exchange for monthly cash, and both can drop if the market does.</p>
+<p>Before you choose, decide what the money is for. If you need the most income per dollar, SPYI's yield stands out. If you want lower costs and a more defensive feel, JEPI is the one to study. Either way, check total return and not only the headline yield. This isn't a buy or sell signal, so do your own due diligence and use the tools at <a href="/tools">our calculators page</a> to run your own numbers.</p>
