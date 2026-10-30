@@ -532,6 +532,7 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
 (function(){
   try{var until=+localStorage.getItem("te-pro-bar-off")||0;if(until>Date.now())return;}catch(e){}
   if(/topdividendetfspro\.com/.test(location.host))return;
+  if(/^\/(partner-with-us|about|contact|disclaimer|privacy|network|404|author)(\/|\.html|$)/.test(location.pathname)||document.title.indexOf("Page not found")>-1)return;
   var css=".pro-sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:34px 16px 14px;pointer-events:none;opacity:0;transform:translateY(24px);transition:opacity .45s ease,transform .45s cubic-bezier(.2,.8,.2,1)}"+
   ".pro-sticky::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,.97) 0%,rgba(11,31,58,.9) 48%,rgba(11,31,58,.55) 74%,rgba(11,31,58,0) 100%);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(to top,#000 55%,transparent);mask-image:linear-gradient(to top,#000 55%,transparent)}"+
   ".pro-sticky.on{opacity:1;transform:none}.pro-sticky.on .ps-in{pointer-events:auto}"+
