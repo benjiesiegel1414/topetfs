@@ -527,3 +527,33 @@ window.TopETFs={ready:ready,F:F,charts:{bar:barChart,scatter:scatter,line:lineCh
 
 /* GA click tracking for house ads */
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-ga]");if(a&&typeof gtag==="function"){try{gtag("event","pro_ad_click",{placement:a.getAttribute("data-ga")});}catch(_){}}});
+
+/* PRO sticky bar (bottom, fades in on scroll, fades out at footer, dismissible) */
+(function(){
+  try{var until=+localStorage.getItem("te-pro-bar-off")||0;if(until>Date.now())return;}catch(e){}
+  if(/topdividendetfspro\.com/.test(location.host))return;
+  var css=".pro-sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:34px 16px 14px;pointer-events:none;opacity:0;transform:translateY(24px);transition:opacity .45s ease,transform .45s cubic-bezier(.2,.8,.2,1)}"+
+  ".pro-sticky::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,.97) 0%,rgba(11,31,58,.9) 48%,rgba(11,31,58,.55) 74%,rgba(11,31,58,0) 100%);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(to top,#000 55%,transparent);mask-image:linear-gradient(to top,#000 55%,transparent)}"+
+  ".pro-sticky.on{opacity:1;transform:none}.pro-sticky.on .ps-in{pointer-events:auto}"+
+  ".ps-in{position:relative;max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:14px;color:#fff;font-size:14px;line-height:1.35}"+
+  ".ps-dot{flex:none;width:9px;height:9px;border-radius:50%;background:#f2c14e;box-shadow:0 0 0 0 rgba(242,193,78,.6);animation:psPulse 2.2s infinite}"+
+  "@keyframes psPulse{0%{box-shadow:0 0 0 0 rgba(242,193,78,.55)}70%{box-shadow:0 0 0 10px rgba(242,193,78,0)}100%{box-shadow:0 0 0 0 rgba(242,193,78,0)}}"+
+  ".ps-txt{flex:1;min-width:0}.ps-txt b{color:#f2c14e;font-weight:800;letter-spacing:.01em}.ps-txt span{color:rgba(255,255,255,.82)}.ps-txt em{font-style:normal;color:rgba(255,255,255,.6);margin-left:6px;font-size:12.5px}"+
+  ".ps-go{flex:none;display:inline-flex;align-items:center;gap:6px;background:#f2c14e;color:#1a1400;font-weight:800;font-size:14px;padding:10px 16px;border-radius:9px;white-space:nowrap;text-decoration:none;box-shadow:0 4px 18px rgba(242,193,78,.35);transition:transform .15s,background .15s}"+
+  ".ps-go:hover{background:#f6cf6d;color:#1a1400;text-decoration:none;transform:translateY(-1px)}"+
+  ".ps-x{flex:none;background:none;border:0;color:rgba(255,255,255,.55);font-size:22px;line-height:1;cursor:pointer;padding:4px 2px}.ps-x:hover{color:#fff}"+
+  "@media(max-width:700px){.ps-txt span{display:none}.ps-txt em{display:block;margin:2px 0 0}.pro-sticky{padding:30px 12px 10px}}"+
+  "@media(prefers-reduced-motion:reduce){.pro-sticky{transition:opacity .2s}.ps-dot{animation:none}}";
+  function build(){
+    var st=document.createElement("style");st.textContent=css;document.head.appendChild(st);
+    var bar=document.createElement("div");bar.className="pro-sticky";bar.setAttribute("role","complementary");bar.setAttribute("aria-label","TopDividendETFsPRO offer");
+    bar.innerHTML='<div class="ps-in"><span class="ps-dot" aria-hidden="true"></span><div class="ps-txt"><b>TopDividendETFsPRO</b> <span>&middot; Screen 160+ income ETFs with live yields, price decay and ratings in one place.</span><em>From $12.95/mo or lifetime access</em></div><a class="ps-go" href="https://topdividendetfspro.com/" target="_blank" rel="noopener" data-ga="sticky-bar">Go PRO &rarr;</a><button class="ps-x" type="button" aria-label="Close">&times;</button></div>';
+    document.body.appendChild(bar);
+    var foot=document.querySelector("footer"),footVis=false,closed=false;
+    function upd(){var show=!closed&&window.scrollY>500&&!footVis;bar.classList.toggle("on",show);}
+    if(foot&&"IntersectionObserver" in window){new IntersectionObserver(function(es){footVis=es[0].isIntersecting;upd();}).observe(foot);}
+    window.addEventListener("scroll",upd,{passive:true});upd();
+    bar.querySelector(".ps-x").addEventListener("click",function(){closed=true;upd();try{localStorage.setItem("te-pro-bar-off",String(Date.now()+3*864e5));}catch(e){}});
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",build);else build();
+})();
