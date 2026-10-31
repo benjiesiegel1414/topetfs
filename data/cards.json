@@ -244,5 +244,11 @@
   "kind": "vs",
   "style": 3,
   "rendered": "2026-10-30"
+ },
+ "qdte-etf-dividend-yield-total-return": {
+  "hash": "20c9fa6029",
+  "kind": "single",
+  "style": 3,
+  "rendered": "2026-10-31"
  }
 }

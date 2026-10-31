@@ -1,0 +1,108 @@
+<!--meta
+{"title":"QDTE ETF: Dividend Yield, Total Return and What $10,000 Pays Today","short":"QDTE deep dive","seoTitle":"QDTE ETF: Yield, Total Return and $10,000 Income","dek":"QDTE ETF explained in plain English: how its weekly 0DTE covered call income works, live yield, total return, price decay risk and who it fits.","section":"weekly","date":"2026-10-31","time":"08","read":7,"art":"bars","tickers":["QDTE"],"coverLabel":"QDTE  ·  Weekly pay","keyNumbers":[["QDTE yield","{{live:QDTE:yield}}"],["Expense ratio","{{live:QDTE:er:pct2}}"],["Assets","{{live:QDTE:aum:aum}}"],["Total return since inception","{{live:QDTE:tr}}"]],"keyword":"QDTE ETF","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>{{tkr:QDTE}} yields {{live:QDTE:yield}} today and pays {{live:QDTE:freq:text}}, which works out to about {{calc:usd2:10000*QDTE.yield/100/52}} a week on $10,000.</li><li>The income comes from selling same-day call options on a Nasdaq-style portfolio, which caps your upside. The price decay flag in our data reads {{live:QDTE:decay:decay}}.</li><li>Total return since inception is {{live:QDTE:tr}}, but the fund only launched on {{live:QDTE:inception:text}}, so it is a short track record.</li></ul></div>
+
+<p class="lede">QDTE is Roundhill's weekly-pay covered call ETF built on Nasdaq-style tech exposure. It currently yields {{live:QDTE:yield}}, charges {{live:QDTE:er:pct2}} a year, manages {{live:QDTE:aum:aum}} and has returned {{live:QDTE:tr}} since it launched. On $10,000, today's yield implies roughly {{calc:usd:10000*QDTE.yield/100}} a year, but that number is not a promise.</p>
+
+<div class="board" data-w="board" data-syms="QDTE,XDTE,FEPI,AIPI,NVDY,CHPY" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>QDTE vs other weekly payers</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>What QDTE is and who runs it</h2>
+<p>QDTE is the Roundhill Innovation-100 0DTE Covered Call Strategy ETF. Roundhill is the issuer, the same firm behind a family of weekly-pay options funds. The fund launched on {{live:QDTE:inception:text}} alongside its sibling {{tkr:XDTE}}, which does the same job on the S&amp;P 500.</p>
+<p>The pitch is simple. You get exposure to large Nasdaq-style growth names, and instead of waiting for a quarterly dividend, the fund sells options to generate cash it passes out every week. It sits on our weekly-pay and income screens for exactly that reason.</p>
+<p>If you want the bigger picture on this style of fund, I walked through the mechanics in <a href="/articles/0dte-covered-call-etfs">0DTE Covered Call ETFs, Explained</a>.</p>
+
+<h2>How QDTE produces its weekly payout</h2>
+<p>First, a quick definition. A <strong>covered call</strong> means you own an asset and sell someone the right to buy it at a set price. You collect a payment (the premium) up front. In exchange, you give up gains above that price.</p>
+<p>"0DTE" stands for zero days to expiration. The options QDTE sells expire the same day they are sold, so the fund is constantly rolling short-dated trades. Each day brings a fresh premium, and those premiums add up into the weekly distribution.</p>
+<p>Here is the part that matters. The payout is not a stock dividend. Tech companies in the Nasdaq-style basket pay little or nothing. The money comes mostly from option premium, and that is why the yield is so much higher than a normal dividend fund.</p>
+<p>The trade-off is built in. When the market rips higher in a single day, the call options cap what the fund keeps. When the market drops, you still take the full downside on the underlying exposure, with only the premium as a small cushion. Over time that asymmetry is what can wear down the share price.</p>
+
+<h2>The live numbers on QDTE</h2>
+<ul>
+<li><strong>Yield:</strong> {{live:QDTE:yield}}</li>
+<li><strong>Expense ratio:</strong> {{live:QDTE:er:pct2}}</li>
+<li><strong>Assets under management:</strong> {{live:QDTE:aum:aum}}</li>
+<li><strong>Total return since inception:</strong> {{live:QDTE:tr}}</li>
+<li><strong>Payout frequency:</strong> {{live:QDTE:freq:text}}</li>
+<li><strong>Price decay flag:</strong> {{live:QDTE:decay:decay}}</li>
+</ul>
+<p>The fee deserves a comment. At {{live:QDTE:er:pct2}}, QDTE costs far more than a plain index fund. That is normal for active options strategies, but it comes straight out of your return every year. Assets of {{live:QDTE:aum:aum}} tell me plenty of investors are using it, which helps with trading liquidity.</p>
+
+<h2>What $10,000 and $100,000 pay in QDTE</h2>
+<p>Let's turn the yield into real dollars. These are based on today's yield only. Distributions change from week to week, so treat this as a snapshot.</p>
+<ul>
+<li><strong>$10,000 per week:</strong> about {{calc:usd2:10000*QDTE.yield/100/52}}</li>
+<li><strong>$10,000 per month:</strong> about {{calc:usd2:10000*QDTE.yield/100/12}}</li>
+<li><strong>$10,000 per year:</strong> about {{calc:usd:10000*QDTE.yield/100}}</li>
+<li><strong>$100,000 per month:</strong> about {{calc:usd:100000*QDTE.yield/100/12}}</li>
+<li><strong>$100,000 per year:</strong> about {{calc:usd:100000*QDTE.yield/100}}</li>
+</ul>
+<p>Flip it around. To target $1,000 a month at today's yield, you would need roughly {{calc:usd:12000/(QDTE.yield/100)}} invested. That is the math on paper. In real life the weekly amount moves, and your share price moves too, so that income stream can shrink if the fund's price slides.</p>
+<p>If you want to model your own amount, our <a href="/tools">calculators</a> and <a href="https://dividendprojection.com/">Dividend Projection</a> help you project income over time.</p>
+
+<h2>Total return and price decay: the honest check</h2>
+<p>A big yield means nothing if the share price melts. That is why I look at total return, which adds distributions to price change. QDTE shows {{live:QDTE:tr}} since inception.</p>
+<p>One caveat before anyone gets excited: total return in our data runs from each fund's own launch date. QDTE started on {{live:QDTE:inception:text}}, so it has a relatively short history and has not been tested through a long bear market. Sibling {{tkr:XDTE}} launched the same day and shows {{live:XDTE:tr}}, with a much lower yield of {{live:XDTE:yield}}.</p>
+<p>Our data flags QDTE's price decay as {{live:QDTE:decay:decay}}. That means the share price has trended lower over its life, even as the distributions kept arriving. A positive total return with decay means the payouts have so far outrun the price erosion. It does not mean the erosion is not happening.</p>
+<p>This is where <strong>return of capital</strong> comes in. Return of capital means part of a distribution is classified as your own money handed back rather than earnings. Option funds sometimes pay out more than their strategy actually earned in a period, and that can show up as NAV erosion. NAV is the net asset value, or the fund's per-share worth. When NAV keeps falling, future premiums are earned on a smaller base. That is the slow leak to watch.</p>
+
+<h2>How steady are the weekly payouts?</h2>
+<p>The payout is frequent, but it is not fixed. Because it depends on option premium, the amount can swing with market volatility. Active, choppy markets tend to help premiums. Quiet, grinding rallies can shrink them while the cap on upside still bites.</p>
+<p>Do not assume last week's check will be this week's check. If you are budgeting around the income, look at a range of past payments, not just the headline yield. Yield on a screen is a trailing snapshot, and it can look different a few months later.</p>
+
+<h2>How QDTE compares to close alternatives</h2>
+<h3>QDTE vs XDTE</h3>
+<p>Same issuer, same launch day, same fee structure idea. {{tkr:XDTE}} writes 0DTE calls on the S&amp;P 500 and yields {{live:XDTE:yield}}. QDTE writes on a more tech-heavy basket and yields {{live:QDTE:yield}}. Higher yield here comes with more volatility underneath. I broke it down in <a href="/articles/qdte-vs-xdte">QDTE vs XDTE</a>.</p>
+<h3>QDTE vs FEPI</h3>
+<p>{{tkr:FEPI}} from REX is another tech-focused income fund, yielding {{live:FEPI:yield}} with a lower fee of {{live:FEPI:er:pct2}}. Its total return is {{live:FEPI:tr}} since {{live:FEPI:inception:text}}, so it has a longer record than QDTE but the periods are not identical. Fees matter over time, and this one is noticeably cheaper.</p>
+<h3>QDTE vs NVDY</h3>
+<p>{{tkr:NVDY}} from YieldMax is a single-stock bet on NVIDIA. It yields {{live:NVDY:yield}} and shows {{live:NVDY:tr}} since {{live:NVDY:inception:text}}. That return is large partly because it launched earlier and caught a huge run in its underlying stock. QDTE spreads risk across a basket, while NVDY is concentrated in one name. Different risk, not a like-for-like comparison.</p>
+<p>If you want to browse every weekly payer side by side, <a href="https://weeklyetfs.com/">WeeklyETFs.com</a> covers them, and our <a href="/articles/best-weekly-dividend-etfs">best weekly dividend ETFs</a> list is a good starting point.</p>
+
+<h2>The main risks</h2>
+<ul>
+<li><strong>Capped upside:</strong> You will not fully participate if tech surges.</li>
+<li><strong>Full downside:</strong> A sharp sell-off hurts, and premium only partly offsets it.</li>
+<li><strong>NAV erosion:</strong> Price decay is flagged {{live:QDTE:decay:decay}}, so the share price can drift lower over time.</li>
+<li><strong>Variable income:</strong> Weekly checks move with volatility and are not guaranteed.</li>
+<li><strong>Cost:</strong> A {{live:QDTE:er:pct2}} expense ratio is a steady drag.</li>
+<li><strong>Short history:</strong> The fund has only existed since {{live:QDTE:inception:text}}.</li>
+<li><strong>Tax complexity:</strong> Distribution character can vary, so check with a tax professional about your situation.</li>
+</ul>
+
+<h2>Who QDTE tends to fit, and who should skip it</h2>
+<p>QDTE tends to fit investors who want frequent cash flow, understand that the payout comes from options rather than dividends, and accept that growth is capped. It can suit someone who treats part of the income as a return of their own capital and keeps an eye on the share price instead of just the yield.</p>
+<p>It tends to be a poor fit for anyone who needs stable principal, wants to ride a tech rally to the fullest, or assumes a double-digit yield means safe income. If you are a long-term compounder who reinvests and cares most about total wealth, a plain growth fund may serve you better. If you want to see how weekly payers compare in dollars, check <a href="/articles/weekly-pay-etfs-10000">what $10,000 earns in weekly-pay ETFs</a>.</p>
+<p>Compared with the wild single-stock names like {{tkr:MSTY}} (yield {{live:MSTY:yield}}), QDTE is a more diversified approach with a lower headline yield. You can read more in <a href="/articles/msty-etf-dividend-yield-total-return">the MSTY deep dive</a>. And to screen every income ETF by fee, yield and decay, use <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a>.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="QDTE,XDTE,FEPI,NVDY" data-per="year">
+  <p class="figure-title">QDTE vs close alternatives: estimated income</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>Does QDTE pay monthly or weekly?</h3>
+<p>QDTE pays {{live:QDTE:freq:text}}. The amount changes from week to week because it depends on option premium collected.</p>
+<h3>What is QDTE's dividend yield?</h3>
+<p>QDTE's current yield is {{live:QDTE:yield}}. That is a trailing snapshot and can change as payouts and the share price move.</p>
+<h3>Is QDTE a good investment?</h3>
+<p>It depends on your goal. It offers high weekly income, but with capped upside, a {{live:QDTE:er:pct2}} fee and a price decay flag of {{live:QDTE:decay:decay}}. Do your own due diligence.</p>
+<h3>What does 0DTE mean in QDTE?</h3>
+<p>0DTE means zero days to expiration. The fund sells call options that expire the same day to generate its income.</p>
+<h3>QDTE vs XDTE: which is better?</h3>
+<p>QDTE yields {{live:QDTE:yield}} on tech-style exposure, while XDTE yields {{live:XDTE:yield}} on the S&amp;P 500. Neither is better for everyone, it comes down to how much volatility you can handle.</p>
+<h3>How much does $10,000 in QDTE pay?</h3>
+<p>At today's yield, about {{calc:usd2:10000*QDTE.yield/100/52}} a week, or roughly {{calc:usd:10000*QDTE.yield/100}} a year. Real payouts will vary.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+<p>QDTE is a real income machine on paper, with {{live:QDTE:yield}} paid weekly and a {{live:QDTE:tr}} total return since {{live:QDTE:inception:text}}. But the same options engine that creates the cash also caps your gains, and the decay flag reads {{live:QDTE:decay:decay}}. I would watch share price and total return, not just the yield on the screen.</p>
+<p>This isn't a buy or sell signal. It is a tool that suits some income goals and not others. Know what you own, size it carefully, and do your own due diligence.</p>

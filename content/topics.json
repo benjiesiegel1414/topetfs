@@ -831,7 +831,9 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to QDTE: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Roundhill 0DTE Nasdaq covered call, weekly pay",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-10-31",
+   "words": 1716
   },
   {
    "slug": "single-stock-option-income-etfs-risks",
