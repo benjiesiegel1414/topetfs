@@ -459,7 +459,9 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on SCHG: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: Schwab large cap growth, very low fee",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-01",
+   "words": 1608
   },
   {
    "slug": "what-is-return-of-capital-etf",

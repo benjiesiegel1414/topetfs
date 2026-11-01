@@ -250,5 +250,11 @@
   "kind": "single",
   "style": 3,
   "rendered": "2026-10-31"
+ },
+ "schg-etf-review-total-return-fees": {
+  "hash": "dee1ad195c",
+  "kind": "single",
+  "style": 3,
+  "rendered": "2026-11-01"
  }
 }
