@@ -716,11 +716,34 @@ ${linkGrid(null)}${faqHtml}${DISC}${proBand()}</div>`);
   SCREENER_PAGES.push("/screener",...ALLP.map(p=>"/lists/"+p.slug));
 }
 
+// SEO pruning: thin templated ETF variant pages (alternatives, dividend calculator) are noindexed unless they
+// have earned Google impressions (data/seo-keep.json). They stay live and linked for visitors.
+{
+  let keep=[]; try{ keep=JSON.parse(fs.readFileSync(path.join(ROOT,"data","seo-keep.json"),"utf8")).keep||[]; }catch{}
+  const K=new Set(keep); let pruned=0;
+  for(const f of Object.keys(out)){
+    const m=f.match(/^etfs\/(.+-(alternatives|dividend-calculator))\.html$/); if(!m||K.has("/etfs/"+m[1])) continue;
+    const before=out[f]; out[f]=before.replace('<meta name="robots" content="index,follow,max-image-preview:large">','<meta name="robots" content="noindex,follow">');
+    if(out[f]!==before) pruned++;
+  }
+  console.log(`SEO prune: ${pruned} thin ETF pages set to noindex (${K.size} kept)`);
+}
+
+// sitemap lastmod: only changes when a page's content changes (numbers and dates are ignored so daily
+// data refreshes don't mark every page as updated). State lives in data/sitemap-state.json.
+const STATE_FILE=path.join(ROOT,"data","sitemap-state.json");
+let SM_STATE={}; try{ SM_STATE=JSON.parse(fs.readFileSync(STATE_FILE,"utf8")); }catch{}
+const SM_TODAY=BUILD_DATE.toISOString().slice(0,10);
+const urlFile=u=>u==="/"?"index.html":u.endsWith("/")?u.slice(1)+"index.html":u.slice(1)+".html";
+const fingerprint=html=>{ const body=(html.match(/<main[\s\S]*<\/main>/)||[html])[0].replace(/<script[\s\S]*?<\/script>/g,"").replace(/<[^>]+>/g," ").replace(/[0-9$%.,:+\-]+/g,"").replace(/\s+/g," ").trim(); let h=2166136261; for(let i=0;i<body.length;i++){ h^=body.charCodeAt(i); h=Math.imul(h,16777619); } return (h>>>0).toString(36)+":"+body.length; };
+function lastmod(u){ const f=urlFile(u); const html=out[f]; if(html==null) return SM_STATE[u]?.d||SM_TODAY; const fp=fingerprint(html); const prev=SM_STATE[u]; if(prev&&prev.h===fp) return prev.d; SM_STATE[u]={h:fp,d:SM_TODAY}; return SM_TODAY; }
+
 // sitemap, rss, robots, CNAME, favicon
 const pages=["/","/screener",...SCREENER_PAGES.slice(1),"/latest","/dividend","/weekly","/growth","/learn","/tools",...TOOL_PAGES,...PARTNER_PAGES,...ETF_PAGES.filter(u=>!/-(alternatives|dividend-calculator)$/.test(u)),"/network","/about","/author/benjie-siegel","/contact","/privacy","/disclaimer"];
-out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${BUILD_DATE.toISOString().slice(0,10)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
+out["sitemap.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${SITE}${p}</loc><lastmod>${lastmod(p)}</lastmod></url>`).join("\n")}\n${ARTICLES.map(a=>`  <url><loc>${SITE}/articles/${a.slug}</loc><lastmod>${a.date}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 out["feed.xml"]=`<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>TopETFs</title><link>${SITE}/</link><description>ETF research with live data</description>\n${ARTICLES.map(a=>`<item><title>${esc(a.title)}</title><link>${SITE}/articles/${a.slug}</link><guid>${SITE}/articles/${a.slug}</guid><pubDate>${new Date(a.date+"T12:00:00Z").toUTCString()}</pubDate><description>${esc(a.dek)}</description></item>`).join("\n")}\n</channel></rss>\n`;
-out["robots.txt"]=`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
+out["robots.txt"]=`User-agent: *\nAllow: /\nDisallow: /content/\nDisallow: /scripts/\n\nSitemap: ${SITE}/sitemap.xml\n`;
+fs.writeFileSync(STATE_FILE,JSON.stringify(SM_STATE));
 out["CNAME"]="topetfs.com\n";
 out["favicon.svg"]=LOGO.replace('aria-hidden="true"','xmlns="http://www.w3.org/2000/svg"');
 out[".nojekyll"]="";

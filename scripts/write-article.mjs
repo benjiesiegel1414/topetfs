@@ -59,7 +59,7 @@ function nextTopic(){
       if (t.status!=="pending" || t.section!==sec) continue;
       if (existing.some(a=>a.slug===t.slug)) { t.status="published"; t.date=t.date||"2000-01-01"; continue; }
       t.tickers=(t.tickers||[]).filter(s=>ALL[s]);
-      if (!t.tickers.length) { t.status="failed"; t.error="none of the tickers are in the database"; continue; }
+      if (!t.tickers.length && t.type!=="guide") { t.status="failed"; t.error="none of the tickers are in the database"; continue; }
       return t;
     }
   }
@@ -123,7 +123,67 @@ Required structure, in this order:
 Links: link 2 to 4 related TopETFs articles from the list given (href="/articles/SLUG"), and 1 to 3 network links where relevant: https://topdividendetfspro.com/ (screen every income ETF), https://weeklyetfs.com/ (weekly payers), https://topdividendetfs.com/ (top 100 dividend ETFs), https://growthetfs.com/ (growth ETFs), https://dividendprojection.com/ (project future income), /tools (calculators). Use descriptive anchor text.
 Length: 1,300 to 2,000 words of real content. Every paragraph must earn its place.`;
 
+/* Long-tail how-to guides (type "guide"), the main format since Nov 2026. They answer one specific search
+   question that real people type (found via Google autocomplete by scripts/find-topics.mjs). Fund widgets are optional. */
+const GUIDE_SYSTEM=`You write long-tail how-to guides for TopETFs.com in the voice of its founder, Benjie Siegel.
+
+${VOICE}
+
+# What a TopETFs guide is
+Each guide answers ONE specific question that people actually search (the PRIMARY KEYWORD), better than anything else on the web. The site is new, so it wins by being the most complete, practical and honest answer to a narrow question, not by ranking funds. Think: the answer a smart friend who has done this many times would give, with exact steps, a worked example with real dollar amounts, the gotchas, and a clear bottom line.
+- Answer the question in plain words in the first 2 to 3 sentences (the lede). No throat clearing.
+- Then go deep: how it works, step-by-step instructions (numbered <ol>), a worked example with realistic dollar figures, common mistakes, edge cases (account type, taxes, timing), and a short checklist.
+- Use real brokers, account types and rules only in general, well-established terms. If a rule has specific numbers that change yearly (tax brackets, contribution limits) or varies by broker, describe it generally and tell the reader to confirm the current figure. Never invent laws, limits, dates or fees.
+- This is NOT a fund ranking or a dividend article. Do not list yields or rank funds. Mention funds only as examples.
+- Fund numbers: if you quote a fund's yield, fee, assets or return, it must be a live token for a ticker in DATA. Funds not in DATA (for example VTI, VXUS, BND, IVV) may be named in plain text, but never with numbers.
+- General math in a worked example (for example "$10,000 growing 7% a year" or "a 0.03% fee") may be written as plain numbers when it is clearly a hypothetical assumption, and you should label it as an assumption.
+
+# Output format (follow exactly)
+Return ONE JSON object and nothing else (no code fences, no commentary). Keys:
+- "title": the H1. Natural, specific, matches the question. 50 to 75 characters is ideal.
+- "seoTitle": the <title> tag, under 60 characters, main keyword first.
+- "dek": the meta description and subtitle, 140 to 160 characters, includes the keyword, promises a specific payoff.
+- "short": 2 to 5 word label.
+- "coverLabel": 1 to 4 short words separated by "  ·  ".
+- "art": one of "line", "bars", "dots", "rings".
+- "keyNumbers": 0 to 4 pairs like ["VOO fee","{{live:VOO:er:pct2}}"] using only live tokens, or [] if no fund data is relevant.
+- "body": the article HTML (no <h1>, no <html>, no <style>, no <script>).
+
+# Body HTML rules
+Allowed tags: h2, h3, p, ul, ol, li, strong, em, a, table, thead, tbody, tr, th, td, div, section, span. Live token syntax when you use fund data: {{live:SYM:FIELD}} (FIELD yield | er | aum | tr; formats :pct2 for er, :aum for aum), {{tkr:SYM}} for a linked ticker, {{calc:usd:EXPR}} for dollar math from live data. Only tickers from DATA inside tokens.
+
+Required structure, in this order:
+1. <div class="takeaways"><h2>The short version</h2><ul> 3 bullets </ul></div>
+2. <p class="lede"> that answers the question directly.
+3. 5 to 8 <h2> sections that go deep, including a numbered step-by-step section, a worked example (a simple <table> is great for it), and a common mistakes section.
+4. Optional: if (and only if) the topic is about specific funds, you may include the live table widget:
+<div class="board" data-w="board" data-syms="SYM1,SYM2" data-cols="yield,er,aum,tr,freq" data-sort="er" data-n="6"><div class="board-head"><div><h3>TITLE</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="er" aria-pressed="true">Fees</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div><div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div><div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div></div>
+5. <section class="faq"><h2>FAQ</h2> then 4 to 6 pairs written exactly as <h3>Question?</h3><p>Answer in 1 to 3 sentences.</p></section>. Use real follow-up searches people have about this question.
+6. A closing <h2> with Benjie's bottom line (practical, balanced, no buy/sell call, remind readers to check their own situation or a tax professional where relevant).
+
+Links: link 2 to 4 related TopETFs articles from the list given (href="/articles/SLUG") and 1 to 2 relevant tools or network sites: /tools (calculators), /screener (ETF screener), https://dividendprojection.com/ (project future income), https://topdividendetfs.com/ (dividend ETF rankings), https://growthetfs.com/ (growth ETFs). Use descriptive anchor text.
+Length: 1,300 to 2,200 words of real content. Every paragraph must earn its place.`;
+const REF_FUNDS=["VOO","QQQ","SCHD","SGOV","TQQQ"];
+function guidePrompt(t){
+  const refs=[...new Set([...(t.tickers||[]),...REF_FUNDS])].filter(s=>ALL[s]);
+  const related=existing.filter(a=>a.slug!==t.slug).map(a=>({a,s:(a.section===t.section?1:0)+((a.tickers||[]).filter(x=>(t.tickers||[]).includes(x)).length*0.3)})).sort((x,y)=>y.s-x.s).slice(0,10).map(o=>`/articles/${o.a.slug} | ${o.a.title}`);
+  return `TODAY: ${etDate}
+QUESTION / PRIMARY KEYWORD: ${t.keyword}
+WORKING TITLE: ${t.title}
+WHAT THE GUIDE MUST COVER: ${t.angle||"Answer the question directly, then steps, a worked example, common mistakes and a checklist."}
+SECTION: ${t.section}
+
+DATA (live fund values you may reference through tokens; optional):
+${refs.map(card).join("\n")||"(none)"}
+
+RELATED TOPETFS ARTICLES (for internal links):
+${related.join("\n")||"(none yet)"}
+
+Write the guide now. Return only the JSON object.`;
+}
+
 function userPrompt(t){
+  if(t.type==="guide") return guidePrompt(t);
   const peers=Object.values(ALL).filter(e=>!t.tickers.includes(e.sym)&&e.aum&&(t.section==="growth"?e.lists.includes("growth"):t.section==="weekly"?e.lists.includes("weekly"):e.lists.includes("pro"))).sort((a,b)=>b.aum-a.aum).slice(0,14).map(e=>e.sym);
   const related=existing.filter(a=>a.slug!==t.slug).map(a=>({a,s:a.tickers.filter(x=>t.tickers.includes(x)).length+(a.section===t.section?0.5:0)})).sort((x,y)=>y.s-x.s).slice(0,8).map(o=>`/articles/${o.a.slug} | ${o.a.title}`);
   return `TODAY: ${etDate}
@@ -147,10 +207,11 @@ Write the article now. Return only the JSON object.`;
 }
 
 /* ---------- API ---------- */
+let CUR_SYSTEM=SYSTEM;
 async function callClaude(messages){
   if(process.env.MOCK_RESPONSE) return fs.readFileSync(process.env.MOCK_RESPONSE,'utf8');
   const r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"x-api-key":KEY,"anthropic-version":"2023-06-01","content-type":"application/json"},
-    body:JSON.stringify({model:MODEL,max_tokens:16000,system:SYSTEM,messages})});
+    body:JSON.stringify({model:MODEL,max_tokens:16000,system:CUR_SYSTEM,messages})});
   const j=await r.json();
   if(!r.ok) throw new Error("Claude API "+r.status+": "+JSON.stringify(j).slice(0,400));
   const text=(j.content||[]).filter(c=>c.type==="text").map(c=>c.text).join("");
@@ -173,13 +234,14 @@ function validate(a,t){
   for (const m of a.body.matchAll(/data-syms="([^"]+)"/g)) for (const s of m[1].split(",")) if(!ALL[s.trim()]) errs.push("unknown ticker in widget "+s);
   if (!/class="takeaways"/.test(a.body)) errs.push("missing takeaways box");
   if (!/<section class="faq"/.test(a.body)) errs.push("missing FAQ section");
-  if (!/data-w="board"/.test(a.body)) errs.push("missing live data table");
+  const guide=t.type==="guide";
+  if (!guide && !/data-w="board"/.test(a.body)) errs.push("missing live data table");
   const text=a.body.replace(/\{\{[^}]+\}\}/g," X ").replace(/<[^>]+>/g," ");
   const words=text.split(/\s+/).filter(Boolean).length; a.words=words;
   if (words<(+process.env.MIN_WORDS||1000)) errs.push(`too short (${words} words, need 1,300+)`);
   const hard=(text.match(/\b\d+(\.\d+)?%/g)||[]).length;
-  if (hard>10) errs.push(`${hard} hardcoded percentages; fund numbers must be live tokens`);
-  if (!(a.body.match(/\{\{(live|calc):/g)||[]).length) errs.push("no live numbers");
+  if (hard>(guide?30:10)) errs.push(`${hard} hardcoded percentages; fund numbers must be live tokens`);
+  if (!guide && !(a.body.match(/\{\{(live|calc):/g)||[]).length) errs.push("no live numbers");
   return errs;
 }
 
@@ -191,11 +253,12 @@ function buildOk(){
 /* ---------- main ---------- */
 const t=nextTopic();
 if(!t){ console.log("Topic queue is empty. Add topics to content/topics.json."); fs.writeFileSync(TOPICS_FILE,JSON.stringify(TQ,null,1)); process.exit(0); }
-if(DRY){ console.log(SYSTEM+"\n\n=====\n\n"+userPrompt(t)); process.exit(0); }
+if(DRY){ console.log((t.type==="guide"?GUIDE_SYSTEM:SYSTEM)+"\n\n=====\n\n"+userPrompt(t)); process.exit(0); }
 if(!KEY && !process.env.MOCK_RESPONSE){ console.log("::warning::ANTHROPIC_API_KEY is not set. Add it under Settings > Secrets and variables > Actions."); process.exit(0); }
 
 let calls=0, topic=t, done=false;
 while(topic && calls<MAX_CALLS && !done){
+  CUR_SYSTEM=topic.type==="guide"?GUIDE_SYSTEM:SYSTEM;
   const messages=[{role:"user",content:userPrompt(topic)}];
   let attempt=0;
   while(attempt<2 && calls<MAX_CALLS){
@@ -204,7 +267,7 @@ while(topic && calls<MAX_CALLS && !done){
     let a; try{ a=JSON.parse(raw.slice(raw.indexOf("{"),raw.lastIndexOf("}")+1)); }catch(e){ a=null; }
     const errs=a?validate(a,topic):["response was not valid JSON"];
     if(!errs.length){
-      const meta={title:a.title,short:a.short||"",seoTitle:a.seoTitle,dek:a.dek,section:topic.section,date:etDate,time:"08",read:Math.max(4,Math.round(a.words/230)),art:["line","bars","dots","rings"].includes(a.art)?a.art:"line",tickers:topic.tickers,coverLabel:a.coverLabel||topic.tickers.slice(0,3).join("  ·  "),keyNumbers:(a.keyNumbers||[]).filter(k=>Array.isArray(k)&&/^\{\{(live|calc):/.test(k[1])).slice(0,5),keyword:topic.keyword,auto:true};
+      const meta={title:a.title,short:a.short||"",seoTitle:a.seoTitle,dek:a.dek,section:topic.section,date:etDate,time:"08",read:Math.max(4,Math.round(a.words/230)),art:["line","bars","dots","rings"].includes(a.art)?a.art:"line",tickers:topic.tickers,coverLabel:a.coverLabel||topic.tickers.slice(0,3).join("  ·  "),keyNumbers:(a.keyNumbers||[]).filter(k=>Array.isArray(k)&&/^\{\{(live|calc):/.test(k[1])).slice(0,5),keyword:topic.keyword,type:topic.type||"",auto:true};
       const file=path.join(ART_DIR,topic.slug+".html");
       fs.writeFileSync(file,`<!--meta\n${JSON.stringify(meta)}\n-->\n${a.body.trim()}\n`);
       const be=buildOk();
