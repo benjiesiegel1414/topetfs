@@ -1,5 +1,5 @@
 {
- "_note": "Queue of article topics. The daily writer rotates sections in the order of 'rotation' (income, weekly, growth, learn = ETF 101), one article per day, and takes the first 'pending' topic in that day's section. Reorder, add or remove freely. status: pending | published | failed | skipped",
+ "_note": "Queue of article topics. The daily writer takes the first 'pending' topic for the next section in 'rotation'. Since Nov 2026 the queue holds long-tail how-to guides (type 'guide') found by scripts/find-topics.mjs from Google autocomplete. status: pending | published | failed | skipped",
  "topics": [
   {
    "slug": "schd-etf-dividend-yield-total-return",
@@ -243,7 +243,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to VYM: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: broad high-dividend index, 400+ holdings, quarterly",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "highest-yielding-etfs-without-price-decay",
@@ -260,7 +261,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "schd-vs-vym",
@@ -273,7 +275,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between SCHD and VYM: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "spyi-etf-dividend-yield-total-return",
@@ -285,7 +288,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to SPYI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: NEOS S&P 500 high income, index options, Section 1256 tax treatment, monthly",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "best-dividend-etfs-for-beginners",
@@ -330,7 +334,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to QQQI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: NEOS Nasdaq-100 high income, 1256 tax treatment, monthly",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "best-dividend-etfs-for-roth-ira",
@@ -375,7 +380,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to DGRO: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: dividend growth, payout ratio screen",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "leveraged-etf-decay",
@@ -417,7 +423,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to VIG: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: 10+ years of raises, excludes top yielders",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "dividend-growth-vs-high-yield-etfs",
@@ -434,7 +441,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "dgro-vs-vig",
@@ -447,7 +455,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between DGRO and VIG: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "schg-etf-review-total-return-fees",
@@ -491,7 +500,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between SCHD and DGRO: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "growth-etf-vs-dividend-etf",
@@ -507,7 +517,8 @@
    "section": "growth",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "section-1256-etfs-taxes",
@@ -537,7 +548,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between QYLD and QQQI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "qyld-etf-dividend-yield-total-return",
@@ -549,7 +561,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to QYLD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: the original Nasdaq covered call, full writes, price decay history",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "best-weekly-dividend-etfs",
@@ -581,7 +594,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between GPIQ and JEPQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "divo-etf-dividend-yield-total-return",
@@ -593,7 +607,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to DIVO: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: dividend stocks plus tactical covered calls, monthly",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "qdte-vs-xdte",
@@ -621,7 +636,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between SPYI and QQQI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "nobl-etf-dividend-yield-total-return",
@@ -633,7 +649,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to NOBL: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P 500 Dividend Aristocrats, equal weight, 25+ year raisers",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "price-decay-etf-meaning",
@@ -663,7 +680,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between JEPI and DIVO: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "hdv-etf-dividend-yield-total-return",
@@ -675,7 +693,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to HDV: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: iShares core high dividend, quality screen",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "dividend-etf-portfolio-for-1000-a-month",
@@ -691,7 +710,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "xyld-vs-spyi",
@@ -704,7 +724,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between XYLD and SPYI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "ulty-etf-dividend-yield-total-return",
@@ -732,7 +753,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "schd-vs-nobl",
@@ -745,7 +767,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between SCHD and NOBL: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "0dte-covered-call-etfs",
@@ -777,7 +800,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "vym-vs-hdv",
@@ -790,7 +814,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between VYM and HDV: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "msty-vs-ulty",
@@ -851,7 +876,8 @@
    "section": "weekly",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "vug-vs-schg",
@@ -864,7 +890,8 @@
    "section": "growth",
    "type": "vs",
    "angle": "Head-to-head between VUG and SCHG: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "chpy-vs-gpty",
@@ -877,7 +904,8 @@
    "section": "weekly",
    "type": "vs",
    "angle": "Head-to-head between CHPY and GPTY: strategy differences, live numbers, total return since inception (note different start dates), fees, risks, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "gpiq-etf-dividend-yield-total-return",
@@ -889,7 +917,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to GPIQ: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Goldman Nasdaq-100 premium income, partial overwrite, monthly",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "t-bill-etf-yield",
@@ -902,7 +931,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "gpix-vs-jepi",
@@ -915,7 +945,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between GPIX and JEPI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "gpix-etf-dividend-yield-total-return",
@@ -927,7 +958,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to GPIX: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Goldman S&P 500 premium income, partial overwrite",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "dividend-aristocrats-etf",
@@ -942,7 +974,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "vug-etf-review-total-return-fees",
@@ -954,7 +987,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on VUG: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: Vanguard growth, big tech weights",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "bali-etf-dividend-yield-total-return",
@@ -966,7 +1000,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to BALI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: iShares large cap premium income active",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "international-dividend-etfs",
@@ -981,7 +1016,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "schd-vs-spyi",
@@ -994,7 +1030,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between SCHD and SPYI: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "xdte-etf-dividend-yield-total-return",
@@ -1006,7 +1043,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to XDTE: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Roundhill 0DTE S&P 500 covered call, weekly pay",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "tech-dividend-etfs",
@@ -1022,7 +1060,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "jepq-vs-qqq",
@@ -1035,7 +1074,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between JEPQ and QQQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "sphd-etf-dividend-yield-total-return",
@@ -1047,7 +1087,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to SPHD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P 500 high dividend low volatility, monthly",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "drip-dividend-etf-compounding",
@@ -1074,7 +1115,8 @@
    "section": "income",
    "type": "vs",
    "angle": "Head-to-head between SPHD and SCHD: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "dvy-etf-dividend-yield-total-return",
@@ -1086,7 +1128,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to DVY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: iShares select dividend",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "monthly-income-retirement-etfs",
@@ -1102,7 +1145,8 @@
    "section": "income",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "xyld-etf-dividend-yield-total-return",
@@ -1114,7 +1158,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to XYLD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P 500 covered call, full overwrite",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "ryld-etf-dividend-yield-total-return",
@@ -1126,7 +1171,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to RYLD: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Russell 2000 covered call",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "svol-etf-dividend-yield-total-return",
@@ -1138,7 +1184,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to SVOL: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: short volatility income strategy",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "how-do-weekly-dividend-etfs-work",
@@ -1154,7 +1201,8 @@
    "section": "weekly",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "qdte-vs-rdte",
@@ -1167,7 +1215,8 @@
    "section": "weekly",
    "type": "vs",
    "angle": "Head-to-head between QDTE and RDTE: strategy differences, live numbers, total return since inception (note different start dates), fees, risks, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "fepi-etf-dividend-yield-total-return",
@@ -1179,7 +1228,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to FEPI: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: REX FANG & innovation premium income",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "weekly-dividend-etf-income-on-100000",
@@ -1195,7 +1245,8 @@
    "section": "weekly",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "idvo-etf-dividend-yield-total-return",
@@ -1207,7 +1258,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to IDVO: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Amplify international enhanced dividend income",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "fdvv-etf-dividend-yield-total-return",
@@ -1219,7 +1271,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to FDVV: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: Fidelity high dividend",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "sdy-etf-dividend-yield-total-return",
@@ -1231,7 +1284,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to SDY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: S&P High Yield Dividend Aristocrats, 20+ year raisers",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "best-tech-etfs",
@@ -1247,7 +1301,8 @@
    "section": "growth",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "vgt-vs-qqq",
@@ -1260,7 +1315,8 @@
    "section": "growth",
    "type": "vs",
    "angle": "Head-to-head between VGT and QQQ: strategy differences, live yield, fee, assets, total return since inception (note different start dates), price decay, income on the same investment, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "sgov-etf-dividend-yield-total-return",
@@ -1272,7 +1328,8 @@
    "section": "income",
    "type": "profile",
    "angle": "Complete plain-English guide to SGOV: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: 0-3 month T-bills, cash alternative, monthly",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "vgt-etf-review-total-return-fees",
@@ -1284,7 +1341,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on VGT: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: Vanguard info tech sector",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "ymax-vs-ymag",
@@ -1297,7 +1355,8 @@
    "section": "weekly",
    "type": "vs",
    "angle": "Head-to-head between YMAX and YMAG: strategy differences, live numbers, total return since inception (note different start dates), fees, risks, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "nvdy-etf-dividend-yield-total-return",
@@ -1309,7 +1368,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to NVDY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax NVDA option income",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "cony-etf-dividend-yield-total-return",
@@ -1321,7 +1381,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to CONY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax COIN option income",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "tsly-etf-dividend-yield-total-return",
@@ -1333,7 +1394,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to TSLY: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax TSLA option income",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "ymax-etf-dividend-yield-total-return",
@@ -1345,7 +1407,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Complete plain-English guide to YMAX: what it holds, how it pays, live yield, fee, assets, total return, price decay, who it fits and who should skip it. Context: YieldMax universe fund of option income ETFs",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "chpy-etf-weekly-dividend-review",
@@ -1357,7 +1420,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Single-fund weekly-pay deep dive on CHPY: how the weekly distribution is generated, live yield, fee, assets, total return since inception, price decay, return of capital, weekly income on $10,000, who it fits and who should skip it. Context: YieldMax semiconductor portfolio option income, call spreads on 15 to 30 chip stocks, weekly pay",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "gpty-etf-weekly-dividend-review",
@@ -1369,7 +1433,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Single-fund weekly-pay deep dive on GPTY: how the weekly distribution is generated, live yield, fee, assets, total return since inception, price decay, return of capital, weekly income on $10,000, who it fits and who should skip it. Context: YieldMax AI and tech portfolio option income, weekly pay",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "lfgy-etf-weekly-dividend-review",
@@ -1381,7 +1446,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Single-fund weekly-pay deep dive on LFGY: how the weekly distribution is generated, live yield, fee, assets, total return since inception, price decay, return of capital, weekly income on $10,000, who it fits and who should skip it. Context: YieldMax crypto industry and tech portfolio option income, weekly pay",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "rdte-etf-weekly-dividend-review",
@@ -1393,7 +1459,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Single-fund weekly-pay deep dive on RDTE: how the weekly distribution is generated, live yield, fee, assets, total return since inception, price decay, return of capital, weekly income on $10,000, who it fits and who should skip it. Context: Roundhill Russell 2000 0DTE covered call strategy, weekly pay",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "ymag-etf-weekly-dividend-review",
@@ -1405,7 +1472,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Single-fund weekly-pay deep dive on YMAG: how the weekly distribution is generated, live yield, fee, assets, total return since inception, price decay, return of capital, weekly income on $10,000, who it fits and who should skip it. Context: YieldMax Magnificent 7 fund of option income ETFs, weekly pay",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "week-etf-weekly-dividend-review",
@@ -1417,7 +1485,8 @@
    "section": "weekly",
    "type": "profile",
    "angle": "Single-fund weekly-pay deep dive on WEEK: how the weekly distribution is generated, live yield, fee, assets, total return since inception, price decay, return of capital, weekly income on $10,000, who it fits and who should skip it. Context: Roundhill weekly T-bill ETF, cash-like weekly income",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "qqq-vs-vgt",
@@ -1430,7 +1499,8 @@
    "section": "growth",
    "type": "vs",
    "angle": "Head-to-head between QQQ and VGT: strategy differences, live numbers, total return since inception (note different start dates), fees, risks, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "mgk-etf-review-total-return-fees",
@@ -1442,7 +1512,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on MGK: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: Vanguard mega cap growth",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "spyg-vs-voog",
@@ -1455,7 +1526,8 @@
    "section": "growth",
    "type": "vs",
    "angle": "Head-to-head between SPYG and VOOG: strategy differences, live numbers, total return since inception (note different start dates), fees, risks, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "tqqq-etf-review-total-return-fees",
@@ -1467,7 +1539,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on TQQQ: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: 3x leveraged Nasdaq, daily reset, volatility decay",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "voo-vs-vug",
@@ -1480,7 +1553,8 @@
    "section": "growth",
    "type": "vs",
    "angle": "Head-to-head between VOO and VUG: strategy differences, live numbers, total return since inception (note different start dates), fees, risks, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "spyg-etf-review-total-return-fees",
@@ -1492,7 +1566,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on SPYG: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: SPDR S&P 500 growth, very low fee",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "vgt-vs-ftec",
@@ -1505,7 +1580,8 @@
    "section": "growth",
    "type": "vs",
    "angle": "Head-to-head between VGT and FTEC: strategy differences, live numbers, total return since inception (note different start dates), fees, risks, and clear guidance on which type of investor each fits.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "iwf-etf-review-total-return-fees",
@@ -1517,7 +1593,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on IWF: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: iShares Russell 1000 growth",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "ftec-etf-review-total-return-fees",
@@ -1529,7 +1606,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on FTEC: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: Fidelity info tech sector, very low fee",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "arkk-etf-review-total-return-fees",
@@ -1541,7 +1619,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on ARKK: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: ARK Innovation, actively managed disruptive growth, high volatility",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "voog-etf-review-total-return-fees",
@@ -1553,7 +1632,8 @@
    "section": "growth",
    "type": "profile",
    "angle": "Single-fund growth deep dive on VOOG: what it tracks and holds, concentration in its top names, live total return since inception, fee, assets, how it compares to close growth alternatives, risks, and who it fits. Context: Vanguard S&P 500 growth",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "what-is-an-etf",
@@ -1599,7 +1679,8 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "what-is-aum-in-etfs",
@@ -1614,7 +1695,8 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "active-vs-passive-etfs",
@@ -1630,7 +1712,8 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "how-to-buy-your-first-etf",
@@ -1644,7 +1727,8 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "what-is-nav-etf",
@@ -1658,7 +1742,8 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "how-many-etfs-should-i-own",
@@ -1674,7 +1759,8 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "qualified-vs-ordinary-dividends-etf",
@@ -1689,7 +1775,8 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
-   "status": "pending"
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
   },
   {
    "slug": "dollar-cost-averaging-etfs",
@@ -1703,13 +1790,434 @@
    "section": "learn",
    "type": "question",
    "angle": "Answer the search query directly near the top with live numbers, then go deeper: examples, tables, calculator, risks, and a practical takeaway in Benjie's voice.",
+   "status": "skipped",
+   "error": "retired Nov 2026: overlapped with TopDividendETFs/WeeklyETFs topics; queue switched to long-tail guides"
+  },
+  {
+   "slug": "can-i-sell-my-etf-after-market-close",
+   "keyword": "can i sell my etf after market close",
+   "title": "Can You Sell an ETF After the Market Closes? What Actually Happens",
+   "tickers": [
+    "VOO",
+    "QQQ"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Explain regular hours vs extended hours, which brokers allow after-hours ETF trades, why spreads widen, what happens to a market order placed at night, and a worked example of a limit order placed after close.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-long-does-it-take-for-an-etf-to-settle",
+   "keyword": "how long does it take for an etf to settle",
+   "title": "How Long Does It Take for an ETF Sale to Settle (and When Can You Use the Cash)?",
+   "tickers": [
+    "VOO",
+    "SGOV"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "T+1 settlement, settled vs unsettled cash, good faith violations in cash accounts, withdrawing proceeds, a day-by-day example of selling Monday and buying something else.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "do-you-pay-taxes-on-etfs-every-year",
+   "keyword": "do you pay taxes on etfs every year",
+   "title": "Do You Pay Taxes on ETFs Every Year, Even If You Don't Sell?",
+   "tickers": [
+    "VOO",
+    "SCHD",
+    "SGOV"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Dividends and capital gain distributions are taxed yearly in a taxable account even without selling; selling triggers gains; no tax inside IRAs. Worked example of a $10,000 holding's yearly 1099-DIV.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "does-wash-sale-rule-apply-to-etfs",
+   "keyword": "does wash sale rule apply to etfs",
+   "title": "The Wash Sale Rule With ETFs: Can You Swap One S&P 500 Fund for Another?",
+   "tickers": [
+    "VOO",
+    "IVV",
+    "SPY",
+    "VTI"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "What a wash sale is, the 30-day window, the unsettled question of 'substantially identical' funds tracking the same index, safer swaps (different index), DRIP purchases triggering wash sales, worked tax-loss harvesting example.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "etf-trading-at-premium-to-nav",
+   "keyword": "etf trading at premium to nav",
+   "title": "ETF Premium or Discount to NAV: What It Means and When It Matters",
+   "tickers": [
+    "VOO",
+    "SGOV"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "NAV vs market price, why premiums appear (illiquid underlying assets, overseas markets closed, stress), how to check the premium on an issuer page, and why limit orders matter.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "can-an-etf-go-to-zero",
+   "keyword": "can an etf go to zero",
+   "title": "Can an ETF Go to Zero? The Funds That Can and the Ones That Practically Can't",
+   "tickers": [
+    "VOO",
+    "TQQQ",
+    "SGOV"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Diversified index ETFs vs leveraged, inverse and single-stock option ETFs; what actually happens when an ETF closes (liquidation and cash payout); worked example of a 3x fund after a sharp drop.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "what-happens-to-my-etf-if-it-closes",
+   "keyword": "what happens to my etf if it closes",
+   "title": "What Happens to Your Money When an ETF Closes or Liquidates?",
+   "tickers": [],
+   "section": "learn",
+   "type": "guide",
+   "angle": "The closure timeline, last trading day, liquidation payout in cash, tax consequences, choosing to sell early vs waiting, and how to spot a fund at risk (tiny assets, low volume).",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-do-etfs-avoid-capital-gains",
+   "keyword": "how do etfs avoid capital gains",
+   "title": "How ETFs Avoid Capital Gains Distributions (The In-Kind Trick, Explained Simply)",
+   "tickers": [
+    "VOO",
+    "SCHD"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Creation and redemption baskets, authorized participants, why mutual funds distribute more gains, which ETFs still distribute gains (active, bond, some option funds).",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "market-vs-limit-order-for-etf",
+   "keyword": "market vs limit order for etf",
+   "title": "Market Order or Limit Order for ETFs? A Simple Rule That Saves You Money",
+   "tickers": [
+    "VOO",
+    "SGOV"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Bid-ask spread, how to read it, when market orders are fine (huge liquid funds mid-day), when to use limit orders (open, close, thin funds), worked example of the cost difference.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "cost-basis-for-etf",
+   "keyword": "cost basis for etf",
+   "title": "How to Find Your ETF Cost Basis (Including Reinvested Dividends)",
+   "tickers": [
+    "SCHD",
+    "VOO"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Average cost vs specific lots vs FIFO, how DRIP adds new lots, why reinvested dividends raise your basis, where to find it at your broker, inherited and gifted share basis basics.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-transfer-etf-to-another-person",
+   "keyword": "how to transfer etf to another person",
+   "title": "How to Gift or Transfer ETF Shares to Another Person",
+   "tickers": [
+    "VOO"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Transfer in kind between brokerage accounts, the forms involved, gift tax annual exclusion basics, carryover cost basis for the recipient, gifting to a child's custodial account.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-transfer-etf-from-one-broker-to-another",
+   "keyword": "how to transfer etf from one broker to another",
+   "title": "How to Move Your ETFs to Another Broker Without Selling (ACATS Explained)",
+   "tickers": [
+    "VOO",
+    "SCHD"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "ACATS transfer in kind, timeline, fees and who reimburses them, fractional shares that get sold, cost basis carrying over, what to check before starting.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-many-etfs-should-i-have-in-my-roth-ira",
+   "keyword": "how many etfs should i have in my roth ira",
+   "title": "How Many ETFs Should You Own in a Roth IRA? (Usually Fewer Than You Think)",
+   "tickers": [
+    "VTI",
+    "VXUS",
+    "BND",
+    "VOO"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Overlap math, one-fund vs three-fund setups, when adding a fund actually adds diversification, worked example comparing a 2, 3 and 6 fund Roth.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-often-to-rebalance-etf-portfolio",
+   "keyword": "how often to rebalance etf portfolio",
+   "title": "How Often Should You Rebalance an ETF Portfolio? Calendar vs Threshold",
+   "tickers": [
+    "VTI",
+    "BND",
+    "VXUS"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Calendar vs 5 percent band rebalancing, rebalancing with new contributions instead of selling, tax drag in taxable accounts, worked example of a 70/30 portfolio after a strong year.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "three-fund-portfolio-for-30-year-old",
+   "keyword": "three fund portfolio for 30 year old",
+   "title": "The Three-Fund Portfolio at 30: Allocations, Funds and How to Set It Up",
+   "tickers": [
+    "VTI",
+    "VXUS",
+    "BND"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "What the three funds are, sample allocations at 30, ETF vs mutual fund versions at major brokers, how to adjust over time, worked example with monthly contributions.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-invest-100k-for-10-years",
+   "keyword": "how to invest 100k for 10 years",
+   "title": "How to Invest $100,000 for 10 Years: Lump Sum, Dollar Cost Averaging and Mixes",
+   "tickers": [
+    "VOO",
+    "VTI",
+    "BND",
+    "SGOV"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Lump sum vs DCA evidence in plain English, sample allocations by risk level, the role of cash/T-bill ETFs, worked projections, taxes and account choice.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "etf-vs-index-fund-for-taxable-account",
+   "keyword": "etf vs index fund for taxable account",
+   "title": "ETF or Index Mutual Fund in a Taxable Account? The Tax Difference Explained",
+   "tickers": [
+    "VOO",
+    "VTI"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Why ETFs usually distribute fewer capital gains, when the difference matters, minimums and automatic investing differences, worked example of a year-end distribution.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "compare-etf-holdings-overlap",
+   "keyword": "compare etf holdings overlap",
+   "title": "How to Check ETF Overlap (and Why Owning VOO and QQQ Isn't Much Diversification)",
+   "tickers": [
+    "VOO",
+    "QQQ",
+    "VTI",
+    "SCHD"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "What overlap means, how to measure it from holdings lists, typical overlap between popular pairs, a simple step-by-step check, what to do if your funds overlap heavily.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-invest-for-my-child-s-future",
+   "keyword": "how to invest for my child's future",
+   "title": "How to Invest for Your Child's Future With ETFs: Custodial, 529 or Roth?",
+   "tickers": [
+    "VOO",
+    "VTI"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "UTMA/UGMA custodial accounts, 529 plans, custodial Roth IRAs (needs earned income), kiddie tax basics, control at 18/21, worked example of $100 a month from birth.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "can-you-lose-money-in-index-funds",
+   "keyword": "can you lose money in index funds",
+   "title": "Can You Lose Money in Index Funds? Yes, and Here's How Much History Says",
+   "tickers": [
+    "VOO",
+    "VTI",
+    "QQQ"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Short-term drawdowns vs long-term outcomes, worst historical declines and recovery times described generally, sequence of returns, how time horizon changes the risk.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "bucket-strategy-retirement-withdrawals",
+   "keyword": "bucket strategy retirement withdrawals",
+   "title": "The 3-Bucket Retirement Strategy With ETFs: A Worked Example",
+   "tickers": [
+    "SGOV",
+    "BND",
+    "VOO",
+    "SCHD"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Bucket 1 cash/T-bills, bucket 2 bonds, bucket 3 stocks; how much goes in each; how and when to refill; worked example with a $1,000,000 portfolio and $40,000 a year spending.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-much-can-you-safely-withdraw-from-your-retirement-portfolio",
+   "keyword": "how much can you safely withdraw from your retirement portfolio",
+   "title": "The 4% Rule With ETFs: A Worked Example (and When to Use Less)",
+   "tickers": [
+    "VTI",
+    "BND",
+    "SGOV"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Origin of the 4 percent guideline in plain English, inflation adjustments, flexible withdrawal tweaks, worked example on $750,000, sequence risk.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "investing-a-lump-sum-for-monthly-income",
+   "keyword": "investing a lump sum for monthly income",
+   "title": "How to Turn a Lump Sum Into Monthly Income With ETFs",
+   "tickers": [
+    "SGOV",
+    "BND",
+    "SCHD",
+    "VOO"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Mixing T-bill, bond and stock ETFs, monthly vs quarterly payers, selling shares for income vs living on yield, worked example with $250,000.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "treasury-etf-vs-high-yield-savings",
+   "keyword": "treasury etf vs high yield savings",
+   "title": "Treasury ETFs vs High-Yield Savings: Which Is Better for Your Cash?",
+   "tickers": [
+    "SGOV",
+    "BIL"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Yield comparison method, state tax exemption on Treasury interest, FDIC vs government backing, liquidity and settlement, worked after-tax example.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "bond-etf-when-interest-rates-fall",
+   "keyword": "bond etf when interest rates fall",
+   "title": "What Happens to Bond ETFs When Interest Rates Fall (or Rise)?",
+   "tickers": [
+    "BND",
+    "SGOV",
+    "TLT"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Duration explained simply, worked example of a 1 point rate move on short vs long funds, why bond ETFs never mature, how to pick duration for your goal.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-pay-less-tax-on-dividends",
+   "keyword": "how to pay less tax on dividends",
+   "title": "How to Pay Less Tax on ETF Dividends: Qualified Dividends, Account Placement and More",
+   "tickers": [
+    "SCHD",
+    "VOO",
+    "SGOV"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Qualified vs ordinary dividends and the holding period, 0/15/20 percent brackets in general terms, asset location (bonds and high-income funds in IRAs), worked example.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
+   "status": "pending"
+  },
+  {
+   "slug": "rmd-from-etf",
+   "keyword": "rmd from etf",
+   "title": "Taking Required Minimum Distributions From ETFs: Cash vs In-Kind",
+   "tickers": [
+    "VOO",
+    "SGOV"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "What RMDs are in general terms, withdrawing cash vs transferring shares in kind to a taxable account, which shares to sell, timing within the year.",
+   "source": "autocomplete",
+   "found": "2026-11-02",
    "status": "pending"
   }
  ],
  "rotation": [
-  "income",
-  "weekly",
+  "learn",
   "growth",
-  "learn"
+  "income"
  ]
 }

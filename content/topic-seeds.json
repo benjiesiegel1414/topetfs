@@ -1,0 +1,23 @@
+{
+ "_note": "Search stems that scripts/find-topics.mjs expands with Google autocomplete to find long-tail questions. Add or remove stems freely.",
+ "modifiers": ["", "if", "when", "for", "after", "without"],
+ "stems": [
+  "how to buy etf", "how to sell etf", "how to transfer etf", "how to move etfs", "how to rebalance etf portfolio",
+  "how to build an etf portfolio", "how many etfs should i own", "how to choose an etf", "how to read an etf fact sheet",
+  "what happens to my etf", "what happens if an etf", "can you lose money in an etf", "can an etf go to zero",
+  "how are etfs taxed", "etf capital gains distribution", "etf wash sale", "tax loss harvesting etf", "etf in taxable account",
+  "etf in roth ira", "etf in 401k", "etf in hsa", "custodial account etf", "how to invest for my child",
+  "how to invest a lump sum", "dollar cost averaging etf", "how to invest 10000 in etfs", "how to invest 100k",
+  "how to retire on etfs", "how to withdraw from portfolio in retirement", "4% rule with etfs", "bucket strategy retirement",
+  "how to live off investments", "how to pay less tax on dividends", "qualified vs ordinary dividends etf",
+  "etf vs mutual fund", "etf vs index fund", "etf premium to nav", "etf bid ask spread", "limit order etf",
+  "etf closing down", "etf liquidation", "etf merger", "etf share class", "fractional shares etf",
+  "should i sell my etf", "when to sell an etf", "should i reinvest dividends", "how to turn off drip",
+  "leveraged etf how long to hold", "inverse etf how", "bond etf when interest rates", "treasury etf vs",
+  "target date fund vs etf", "three fund portfolio", "boglehead portfolio", "how to invest in the s&p 500",
+  "international etf how much", "etf overlap", "expense ratio how is it charged", "how do etf dividends work",
+  "why did my etf drop", "is it safe to keep money in etf", "etf for emergency fund", "how to invest in etfs on fidelity",
+  "how to invest in etfs on schwab", "how to invest in etfs on vanguard", "how to buy etfs on robinhood",
+  "rollover 401k into etfs", "backdoor roth etf", "rmd from etf", "inherited etf", "gifting etf shares", "cost basis etf"
+ ]
+}

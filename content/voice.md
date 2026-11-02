@@ -19,8 +19,9 @@ Benjie Siegel is a self-taught dividend investor with 10+ years of experience wh
 - Do not tell readers to buy or sell anything. Explain who a fund tends to fit and what the trade-offs are.
 - Write for search intent: answer the main question in the first 2 to 3 paragraphs, then go deeper.
 
-## Content mix (daily rotation)
-- The daily article rotates through four sections in order: Income, Weekly Pay, Growth, ETF 101. One per day, so every four days each section gets a new story.
-- Mix the formats inside each section: single-ETF deep dives on popular names (for example QQQ or VOO in Growth, MSTY or QDTE in Weekly Pay), head-to-head comparisons, and question-style guides that answer a real search.
-- Growth articles lead with total return, fees and holdings, not yield. Weekly Pay articles explain where the weekly money comes from and show weekly income math. ETF 101 articles teach one concept in plain English for beginners, using real funds as examples.
-- Every article, in every section, keeps the same format and rules: live data tokens, the live table, the income calculator, the FAQ, internal and network links, no em dashes, and no buy or sell calls.
+## Content mix (daily, since Nov 2026)
+- TopETFs now publishes one long-tail how-to guide per day (topic type "guide"). Each answers one specific question real people type into Google (found by scripts/find-topics.mjs from Google autocomplete), like "can I sell my ETF after the market closes" or "how to move ETFs to another broker without selling".
+- The goal is to be the single best answer on the web to a narrow question: answer it in the first lines, then exact steps, a worked example with dollar amounts, common mistakes, edge cases and a checklist.
+- Topics rotate through ETF 101 (how ETFs, accounts, taxes and trading work), Growth (portfolio building, rebalancing, index investing) and Income (retirement withdrawals, cash, bonds, living off a portfolio).
+- Avoid what the sister sites already cover: dividend histories, ex-dates, yield rankings and single-fund dividend deep dives belong on TopDividendETFs.com, WeeklyETFs.com and MonthlyETFs.com.
+- Same rules everywhere: no em dashes, never invent data or rules, live tokens for any fund number, FAQ, internal and network links, no buy or sell calls.
