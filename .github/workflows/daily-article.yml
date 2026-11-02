@@ -38,6 +38,12 @@ jobs:
           fetch growth "https://docs.google.com/spreadsheets/d/e/2PACX-1vQgB3eBiOxZ6CoBjVvi9Rm3PmJDssWCsHWuVG4YgCPnXLG02u0tQxoR055J-e21MYbXJES1UpPTy7h9/pub?gid=0&single=true&output=csv"
       - name: Seed topic queue (first run only)
         run: node scripts/seed-topics.mjs
+      - name: Refill long-tail guide topics from Google autocomplete (only when the queue runs low)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+        run: node scripts/find-topics.mjs
+        continue-on-error: true
       - name: Write today's article with Claude
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
