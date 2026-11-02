@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /content/
+Disallow: /scripts/
 
 Sitemap: https://topetfs.com/sitemap.xml
