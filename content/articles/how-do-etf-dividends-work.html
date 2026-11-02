@@ -1,0 +1,166 @@
+<!--meta
+{"title":"How Do ETF Dividends Work? Ex-Dividend Dates, Pay Dates and Yield","short":"ETF Dividends Explained","seoTitle":"How Do ETF Dividends Work? Dates, Pay Dates, Yield","dek":"How do ETF dividends work? Learn ex-dividend dates, pay dates and yield in plain English, with worked income math, step by step, on SCHD, JEPI and VOO.","section":"learn","date":"2026-11-02","time":"08","read":10,"art":"dots","tickers":["SCHD","JEPI","VOO"],"coverLabel":"SCHD  ·  JEPI  ·  VOO","keyNumbers":[["SCHD yield","{{live:SCHD:yield}}"],["JEPI yield","{{live:JEPI:yield}}"],["VOO yield","{{live:VOO:yield}}"],["SCHD payout schedule","{{live:SCHD:freq:text}}"]],"keyword":"how do ETF dividends work","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>An ETF collects the dividends and interest from everything it holds, then passes that cash to you on a schedule. {{tkr:SCHD}} pays {{live:SCHD:freq:text}}, {{tkr:JEPI}} pays {{live:JEPI:freq:text}}.</li><li>You only get the next payout if you own the ETF before the ex-dividend date. The cash lands in your account on the pay date, usually a few days later.</li><li>Yield is just a rate: a year of payouts divided by the share price. It is not a promise, and a higher yield is not automatically better.</li></ul></div>
+
+<p class="lede">So, how do ETF dividends work? The fund owns a basket of investments, collects the dividends or interest they pay, subtracts its small fee, and sends the rest to shareholders on a regular schedule. Right now {{tkr:VOO}} yields {{live:VOO:yield}}, SCHD yields {{live:SCHD:yield}} and JEPI yields {{live:JEPI:yield}}, and all three get to you through the same simple three-date process.</p>
+
+<p>I get this question from beginners all the time, and it trips up plenty of experienced people too. Let's go through it the way I would explain it over coffee: the plain definition first, then the dates, then real numbers.</p>
+
+<div class="board" data-w="board" data-syms="SCHD,JEPI,VOO,SGOV,VYM,SCHP,DGRW,JEPQ" data-cols="yield,er,aum,tr,freq" data-sort="yield" data-n="8">
+  <div class="board-head"><div><h3>Same idea, very different payouts</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="yield" aria-pressed="true">Yield</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div>
+  <div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div>
+  <div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div>
+</div>
+
+<h2>The simple definition: what an ETF dividend actually is</h2>
+
+<p>An ETF (exchange-traded fund) is a fund that holds many investments and trades on the stock market like a single stock. If you want the full background, I cover it in <a href="/articles/what-is-an-etf">What Is an ETF? A Plain-English Guide for Your First Fund</a>.</p>
+
+<p>Here is the key idea. When the companies inside the ETF pay dividends (a share of their profits paid to owners), the cash goes to the fund first. The ETF holds it, subtracts its running costs through the <strong>expense ratio</strong> (the yearly fee, shown as a percent of your investment), and then distributes the rest to you. That payout is the ETF dividend, often called a distribution.</p>
+
+<p>Bond ETFs work the same way, except the cash comes from interest on the bonds. {{tkr:SGOV}} holds very short-term Treasury bills, and its payout comes from that interest. It shows a yield of {{live:SGOV:yield}} and pays {{live:SGOV:freq:text}}.</p>
+
+<p>Some ETFs, like the option-income funds, also collect cash from selling options. That is why {{live:JEPI:yield}} on JEPI looks so different from {{live:VOO:yield}} on VOO. Same pipeline, different source of cash.</p>
+
+<h2>The three dates that matter</h2>
+
+<p>Every dividend has a calendar attached to it. Learn these three dates and you understand 90% of how ETF dividends work.</p>
+
+<ol>
+<li><strong>Declaration date.</strong> The fund announces how much it will pay per share and when.</li>
+<li><strong>Ex-dividend date (the "ex-date").</strong> This is the cutoff. If you buy on or after this day, you do not get the upcoming payout. If you own the shares before it, you do.</li>
+<li><strong>Pay date.</strong> The day the cash actually shows up in your brokerage account.</li>
+</ol>
+
+<p>You may also see a <strong>record date</strong>, which is the day the fund checks its list of shareholders. Since the U.S. moved to one-day trade settlement in 2024, the record date and ex-date are generally the same day, so the ex-date is the one to watch.</p>
+
+<p>Quick rule of thumb: buy before the ex-date, collect on the pay date. Sell on or after the ex-date and you still keep the payout you already qualified for.</p>
+
+<h2>The part beginners get wrong: the price drops on the ex-date</h2>
+
+<p>This one surprises people. On the ex-dividend date, the share price typically drops by about the amount of the dividend. That is not a glitch and it is not a loss. The cash left the fund and is headed to your account instead.</p>
+
+<p>Here is a made-up example with round numbers (not a real fund). Say a fund trades at $100 a share and is about to pay $1 per share.</p>
+
+<ul>
+<li>Before the ex-date: you own a share worth $100.</li>
+<li>On the ex-date: the share trades near $99, and you are owed $1 in cash.</li>
+<li>On the pay date: the $1 arrives. You now hold a $99 share plus $1 cash, still about $100 total.</li>
+</ul>
+
+<p>That is why buying a fund right before the ex-date just to "grab the dividend" does not create free money. You pay the higher price, then the price steps down. Real prices also move all day for other reasons, so the drop will not always be exact, but the logic holds.</p>
+
+<h2>What yield means (and what it does not)</h2>
+
+<p><strong>Dividend yield</strong> is the yearly payout divided by the current share price, shown as a percent. Most data sites base it on the last 12 months of payouts. It tells you how much cash income a fund has been producing relative to its price.</p>
+
+<p>Three things to remember:</p>
+
+<ul>
+<li>Yield moves when the price moves, even if the payout stays the same. A falling price makes yield look bigger.</li>
+<li>Yield is looking backward. It is not a guarantee of what the next 12 months will pay.</li>
+<li>Yield is not the same as total return. Total return adds price change to the payouts.</li>
+</ul>
+
+<p>This is where I slow down every time I see a big number. A high yield can come from a strong income strategy, or from a price that has been sinking. That is why I check price decay (whether the fund's share price has been steadily eroding) before getting excited. Right now the price decay flag for JEPI reads <strong>{{live:JEPI:decay:decay}}</strong>, and for SCHD it reads <strong>{{live:SCHD:decay:decay}}</strong>. A flag is a screening tool, not a verdict, so keep doing your own homework.</p>
+
+<h2>Worked example: turning yield into real dollars</h2>
+
+<p>Let's walk through it step by step with $10,000 invested. The method is the same for any fund.</p>
+
+<p><strong>Step 1: Find the yield.</strong> SCHD currently shows {{live:SCHD:yield}}.</p>
+
+<p><strong>Step 2: Multiply by your investment.</strong> $10,000 at that yield works out to about {{calc:usd:10000*SCHD.yield/100}} a year.</p>
+
+<p><strong>Step 3: Divide by the payout frequency.</strong> SCHD pays {{live:SCHD:freq:text}}, so that is roughly {{calc:usd:10000*SCHD.yield/100/4}} per payment.</p>
+
+<p>Now compare it with a monthly payer. JEPI pays {{live:JEPI:freq:text}}. On the same $10,000, today's yield works out to about {{calc:usd:10000*JEPI.yield/100}} a year, or about {{calc:usd:10000*JEPI.yield/100/12}} a month.</p>
+
+<p>And VOO, the plain S&amp;P 500 fund, produces about {{calc:usd:10000*VOO.yield/100}} a year on $10,000 at its current yield. Much less cash, but I will show you in a minute why that does not mean it is "worse."</p>
+
+<p>Want to flip it around? To aim for $1,000 a month, you would need about {{calc:usd:12000/(SCHD.yield/100)}} in SCHD or about {{calc:usd:12000/(JEPI.yield/100)}} in JEPI at today's yields. I break those down in <a href="/articles/how-much-do-i-need-in-schd-to-make-1000-a-month">How Much Do You Need in SCHD to Make $1,000 a Month?</a> and <a href="/articles/how-much-do-i-need-in-jepi-to-make-1000-a-month">How Much Do You Need in JEPI to Make $1,000 a Month?</a>.</p>
+
+<h2>Quarterly vs monthly: does payout frequency matter?</h2>
+
+<p>Less than most people think. A fund that pays monthly is not paying more in total, it is just slicing the same yearly amount into smaller pieces. {{tkr:SCHD}}, {{tkr:VOO}} and {{tkr:VYM}} pay {{live:SCHD:freq:text}}. {{tkr:JEPI}}, {{tkr:SGOV}} and {{tkr:SCHP}} pay {{live:JEPI:freq:text}}.</p>
+
+<p>Monthly checks are nice if you are using the income to cover bills, because they line up with rent and utilities. If you are reinvesting everything, frequency barely matters. Pick based on the fund's quality and your goal, not the calendar.</p>
+
+<h2>Yield vs total return: why the highest payer is not always the winner</h2>
+
+<p>Total return counts everything: the payouts plus the change in share price. In our data it is measured since each fund's inception, and the funds started at different times, so these are not apples to apples. Still, it makes the point.</p>
+
+<p>VOO yields only {{live:VOO:yield}}, yet its total return since its {{live:VOO:inception:text}} launch is {{live:VOO:tr}}. SCHD yields {{live:SCHD:yield}} and has returned {{live:SCHD:tr}} since its {{live:SCHD:inception:text}} launch. JEPI has returned {{live:JEPI:tr}} since {{live:JEPI:inception:text}}, a much shorter stretch, and it was built mostly to pay income, not to chase growth.</p>
+
+<p>The lesson: a low yield can still come with a big total return, because the money is growing in price instead of being paid out. A high yield can be a fair trade for giving up some upside. Neither is right or wrong. It depends on whether you need cash now or growth later. For a deeper look at the reinvest-or-spend choice, read <a href="/articles/drip-reinvest-or-spend">Reinvest or Spend? What Turning On DRIP Does to Your Portfolio Over 20 Years</a>.</p>
+
+<h2>Common mistakes beginners make with ETF dividends</h2>
+
+<ul>
+<li><strong>Chasing the ex-date.</strong> As shown above, the price steps down by about the payout. There is no free lunch.</li>
+<li><strong>Picking the biggest yield on the screen.</strong> Funds like {{tkr:QQQI}} ({{live:QQQI:yield}}) or {{tkr:SPYI}} ({{live:SPYI:yield}}) use option strategies to produce that income. The yield is real, but you need to understand where it comes from and what upside you may be giving up.</li>
+<li><strong>Treating yield as a guarantee.</strong> Payouts can rise or fall. Option-income and bond funds in particular can change from month to month.</li>
+<li><strong>Ignoring fees.</strong> JEPI charges {{live:JEPI:er:pct2}} while VOO charges {{live:VOO:er:pct2}}. Fees come out before you get paid. My walkthrough in <a href="/articles/expense-ratio-math">The Fee That Compounds Against You</a> shows how big that gap gets over time.</li>
+<li><strong>Forgetting taxes.</strong> In a regular taxable account, dividends are generally taxed in the year you receive them, and different types of payouts can be taxed differently. Retirement accounts change the picture, which is why many people look at <a href="/articles/best-dividend-etfs-for-roth-ira">dividend ETFs for a Roth IRA</a>. Check with a tax professional for your situation.</li>
+<li><strong>Confusing a payout with profit.</strong> Some distributions include return of capital, which is basically the fund handing some of your own money back. It is not always bad, but it is not the same as earned income.</li>
+</ul>
+
+<h2>Who each approach tends to fit</h2>
+
+<p><strong>Dividend growth style (SCHD, {{tkr:VIG}}, {{tkr:DGRO}}).</strong> These tend to fit people who want a modest, growing payout alongside long-term price growth. SCHD yields {{live:SCHD:yield}}, VIG {{live:VIG:yield}} and DGRO {{live:DGRO:yield}}.</p>
+
+<p><strong>Broad market (VOO, {{tkr:SCHG}}).</strong> These tend to fit people who care mostly about growth and treat dividends as a small bonus. SCHG yields just {{live:SCHG:yield}} and VOO {{live:VOO:yield}}.</p>
+
+<p><strong>Income-focused (JEPI, {{tkr:JEPQ}}, SGOV).</strong> These tend to fit people who want larger cash flow now and accept different trade-offs: capped upside for the option funds, or little growth for a Treasury bill fund.</p>
+
+<p>If you are just getting started, my <a href="/articles/best-dividend-etfs-for-beginners">simple starting lineup of dividend ETFs for beginners</a> is a good next read. This is education, not a recommendation.</p>
+
+<h2>See the income side by side</h2>
+
+<p>Change the amount below to see what each fund would pay per year at its current yield. Remember it is a snapshot of today, not a forecast.</p>
+
+<div class="figure" data-w="incomeBars" data-syms="SCHD,JEPI,VOO,SGOV" data-per="year">
+  <p class="figure-title">What your dividends could look like</p>
+  <p class="figure-sub">Estimated annual income at each fund's current yield</p>
+  <div class="controls"><div class="field" style="max-width:220px"><label for="ib-amt">Amount invested</label><input id="ib-amt" name="amount" inputmode="decimal" value="10000"></div></div>
+  <div class="chart" style="min-height:150px"></div>
+  <p class="figure-note">Today's income only. Yields change and are not guaranteed.</p>
+</div>
+
+<h2>What to check before buying any ETF</h2>
+
+<p>Here is the checklist I run through, and you can use it for any fund, dividend or not.</p>
+
+<ol>
+<li><strong>What does it hold, and where does the payout come from?</strong> Stock dividends, bond interest, or option premiums each behave differently.</li>
+<li><strong>What is the yield, and is it stable or stretched?</strong> Compare it with similar funds, not with the whole market.</li>
+<li><strong>What is the expense ratio?</strong> Lower is usually better, all else equal.</li>
+<li><strong>How big is the fund?</strong> Larger funds like VOO ({{live:VOO:aum:aum}}) and SCHD ({{live:SCHD:aum:aum}}) tend to trade smoothly, which helps keep your buying and selling costs low.</li>
+<li><strong>What is the total return and price decay picture?</strong> Check both, and remember the funds launched on different dates.</li>
+<li><strong>How often does it pay, and when is the ex-date?</strong> Know your calendar so there are no surprises.</li>
+<li><strong>How will the payout be taxed in your account?</strong> Taxable, IRA or Roth makes a real difference.</li>
+</ol>
+
+<p>Want to screen income ETFs on these exact points? <a href="https://topdividendetfspro.com/">TopDividendETFsPRO</a> lets you filter every income fund, and <a href="https://dividendprojection.com/">Dividend Projection</a> helps you map out future income. If monthly or weekly cash flow is your thing, <a href="https://weeklyetfs.com/">WeeklyETFs</a> tracks the frequent payers.</p>
+
+<section class="faq"><h2>FAQ</h2>
+<h3>How do ETF dividends work?</h3>
+<p>The ETF collects dividends or interest from its holdings, subtracts its fees, and pays the rest to shareholders on a schedule, such as monthly or quarterly. You must own shares before the ex-dividend date to get the next payment.</p>
+<h3>Do you get paid for owning an ETF on the ex-dividend date?</h3>
+<p>No. If you buy on or after the ex-dividend date, the seller gets that payout. You need to own the shares before the ex-date to qualify.</p>
+<h3>Does SCHD pay monthly?</h3>
+<p>No. SCHD pays {{live:SCHD:freq:text}}. If you want monthly payouts, JEPI pays {{live:JEPI:freq:text}}, but it works differently and has a different yield of {{live:JEPI:yield}}.</p>
+<h3>Why did my ETF price drop after the dividend?</h3>
+<p>On the ex-dividend date, the share price typically falls by about the amount of the payout, because that cash has left the fund. It is not a loss on its own, since the cash goes to your account.</p>
+<h3>Is a higher dividend yield better?</h3>
+<p>Not automatically. A high yield can come with capped growth, higher fees or a falling share price. Check total return, fees and where the income comes from before judging a yield.</p>
+<h3>Are ETF dividends guaranteed?</h3>
+<p>No. Funds can raise, lower or change payouts, and the yield shown is based on past payments. Treat it as a snapshot, not a promise.</p>
+</section>
+
+<h2>Benjie's bottom line</h2>
+
+<p>ETF dividends are not complicated once you see the pipeline: holdings pay the fund, the fund pays you, and three dates tell you when. The harder part is judging the number on the screen. A {{live:VOO:yield}} yield and a {{live:JEPI:yield}} yield are both "dividends," but they come from very different engines and serve very different goals.</p>
+
+<p>My habit is simple. I look at the yield, then immediately check total return, fees and price decay before I decide whether it makes sense for me. If you do the same, you will avoid most of the traps. For more ideas, browse <a href="https://topdividendetfs.com/">the top 100 dividend ETFs</a> or run your own numbers in <a href="/tools">our calculators</a>. This isn't a buy or sell signal, so do your own due diligence.</p>
