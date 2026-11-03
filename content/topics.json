@@ -1978,9 +1978,6 @@
    "keyword": "how many etfs should i have in my roth ira",
    "title": "How Many ETFs Should You Own in a Roth IRA? (Usually Fewer Than You Think)",
    "tickers": [
-    "VTI",
-    "VXUS",
-    "BND",
     "VOO"
    ],
    "section": "growth",
@@ -1988,7 +1985,9 @@
    "angle": "Overlap math, one-fund vs three-fund setups, when adding a fund actually adds diversification, worked example comparing a 2, 3 and 6 fund Roth.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-03",
+   "words": 2292
   },
   {
    "slug": "how-often-to-rebalance-etf-portfolio",
