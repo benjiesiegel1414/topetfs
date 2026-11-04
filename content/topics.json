@@ -2107,7 +2107,6 @@
    "title": "The 3-Bucket Retirement Strategy With ETFs: A Worked Example",
    "tickers": [
     "SGOV",
-    "BND",
     "VOO",
     "SCHD"
    ],
@@ -2116,7 +2115,9 @@
    "angle": "Bucket 1 cash/T-bills, bucket 2 bonds, bucket 3 stocks; how much goes in each; how and when to refill; worked example with a $1,000,000 portfolio and $40,000 a year spending.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-04",
+   "words": 2215
   },
   {
    "slug": "how-much-can-you-safely-withdraw-from-your-retirement-portfolio",
