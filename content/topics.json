@@ -1806,7 +1806,9 @@
    "angle": "Explain regular hours vs extended hours, which brokers allow after-hours ETF trades, why spreads widen, what happens to a market order placed at night, and a worked example of a limit order placed after close.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-05",
+   "words": 2348
   },
   {
    "slug": "how-long-does-it-take-for-an-etf-to-settle",
