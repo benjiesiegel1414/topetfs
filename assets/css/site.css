@@ -482,3 +482,29 @@ a.avatar:hover{color:#fff;text-decoration:none;opacity:.9}
 .scr-faq h3{font-size:17px;margin:20px 0 6px}
 .scr-faq p{margin:0;color:var(--ink-2);max-width:760px}
 @media(max-width:640px){.scr-stats{grid-template-columns:repeat(2,1fr)}.scr-grid{grid-template-columns:repeat(2,1fr)}.scr-grid .scr-wide{grid-column:span 2}.scr-stats b{font-size:20px}.scr-form{padding:14px}}
+
+/* ---------- Fit tables (no sideways scrolling) ---------- */
+.tbl-scroll,.table-scroll{overflow-x:visible}
+table.data th{white-space:normal;padding:10px 10px;line-height:1.25;vertical-align:bottom}
+table.data td{padding:10px 10px}
+table.data td:first-child{white-space:normal}
+.fund-name{max-width:230px}
+.scr-table th:first-child,.scr-table td:first-child{position:static}
+.prose table:not(.data):not(.ch-tbl){width:100%;border-collapse:collapse;font-family:var(--sans);font-size:15px;line-height:1.4;margin:18px 0 22px;font-variant-numeric:tabular-nums}
+.prose table:not(.data):not(.ch-tbl) th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;text-align:left;padding:9px 10px;border-bottom:1px solid var(--rule-strong);background:var(--panel);vertical-align:bottom}
+.prose table:not(.data):not(.ch-tbl) td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+/* Stacked card layout, switched on by app.js only when a table would not fit */
+table.tf-stack,table.tf-stack tbody{display:block;width:100%}
+table.tf-stack thead{display:none}
+table.tf-stack tr{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:8px 14px;padding:13px 16px;border-bottom:1px solid var(--rule)}
+table.tf-stack tbody tr:last-child{border-bottom:0}
+table.tf-stack td{display:block;padding:0!important;border:0!important;text-align:left!important;white-space:normal!important;position:static!important;background:none!important;min-width:0;font-size:14.5px}
+table.tf-stack td::before{content:attr(data-label);display:block;font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+table.tf-stack td[data-label=""]::before{display:none}
+table.tf-stack td.rk{display:none}
+table.tf-stack td.tf-head{grid-column:1/-1;font-weight:700}
+table.tf-stack td.tf-head::before{display:none}
+table.tf-stack td.tf-head[data-rank]::before{content:"#" attr(data-rank);display:inline-block;margin:0 8px 0 0;font-size:13px;letter-spacing:0;color:var(--muted);text-transform:none}
+table.tf-stack .fund-name{max-width:none;white-space:normal;display:block}
+table.tf-stack td:empty{display:none}
+table.tf-stack .fund-name{font-weight:400}
