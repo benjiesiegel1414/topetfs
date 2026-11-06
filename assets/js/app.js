@@ -558,3 +558,50 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",build);else build();
 })();
+
+/* Fit tables: no sideways scrolling. Every table gets column labels on its
+   cells; if a table is still wider than its box after the compact desktop
+   styles, it switches to a stacked card layout (one card per row). Runs on
+   load, on resize and whenever a live table re-renders. */
+(function(){
+  var pending=false;
+  function label(t){
+    var hr=t.tHead&&t.tHead.rows.length?t.tHead.rows[t.tHead.rows.length-1]:null;
+    var heads=hr?[].map.call(hr.cells,function(c){return (c.textContent||"").replace(/[↑↓]/g,"").trim();}):[];
+    var hasRank=hr&&hr.cells[0]&&hr.cells[0].classList.contains("rk");
+    [].forEach.call(t.tBodies,function(tb){[].forEach.call(tb.rows,function(r){
+      var rank=null,headSet=false;
+      [].forEach.call(r.cells,function(c,i){
+        c.setAttribute("data-label",heads[i]||"");
+        c.classList.remove("tf-head");c.removeAttribute("data-rank");
+        if(c.classList.contains("rk")){rank=(c.textContent||"").trim();return;}
+        if(!headSet){headSet=true;c.classList.add("tf-head");if(rank)c.setAttribute("data-rank",rank);}
+      });
+    });});
+    t.classList.toggle("tf-ranked",!!hasRank);
+  }
+  function fit(){
+    pending=false;
+    var ts=document.querySelectorAll("main table");
+    [].forEach.call(ts,function(t){
+      if(t.closest("[data-no-fit]"))return;
+      label(t);
+      t.classList.remove("tf-stack");
+      var box=t.parentElement; if(!box)return;
+      var avail=box.clientWidth;
+      if(avail>0&&t.scrollWidth>avail+2) t.classList.add("tf-stack");
+    });
+  }
+  function soon(){ if(!pending){pending=true;requestAnimationFrame(fit);} }
+  function start(){
+    fit();
+    window.addEventListener("resize",soon);
+    window.addEventListener("load",soon);
+    if("MutationObserver" in window){
+      var mo=new MutationObserver(function(ms){for(var i=0;i<ms.length;i++){var n=ms[i].target;if(n&&n.closest&&n.closest("table")||(n.querySelector&&n.querySelector("table"))){soon();return;}}});
+      var m=document.querySelector("main")||document.body; mo.observe(m,{childList:true,subtree:true});
+    }
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(soon);
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
+})();
