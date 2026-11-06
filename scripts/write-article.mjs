@@ -155,7 +155,7 @@ Allowed tags: h2, h3, p, ul, ol, li, strong, em, a, table, thead, tbody, tr, th,
 Required structure, in this order:
 1. <div class="takeaways"><h2>The short version</h2><ul> 3 bullets </ul></div>
 2. <p class="lede"> that answers the question directly.
-3. 5 to 8 <h2> sections that go deep, including a numbered step-by-step section, a worked example (a simple <table> is great for it), and a common mistakes section.
+3. 5 to 8 <h2> sections that go deep, including a numbered step-by-step section, a worked example (a simple <table> is great for it; keep any <table> to 4 columns or fewer with short header labels so it fits on a phone without sideways scrolling), and a common mistakes section.
 4. Optional: if (and only if) the topic is about specific funds, you may include the live table widget:
 <div class="board" data-w="board" data-syms="SYM1,SYM2" data-cols="yield,er,aum,tr,freq" data-sort="er" data-n="6"><div class="board-head"><div><h3>TITLE</h3><p class="meta">Live from the TopETFs database</p></div><div class="tabs" role="group"><button type="button" data-view="er" aria-pressed="true">Fees</button><button type="button" data-view="tr" aria-pressed="false">Total return</button><button type="button" data-view="aum" aria-pressed="false">Assets</button></div></div><div class="tbl-scroll"><table class="data"><thead></thead><tbody></tbody></table></div><div class="board-foot"><span>Total return since inception. Funds launched in different years.</span><span>Source: TopETFs database</span></div></div>
 5. <section class="faq"><h2>FAQ</h2> then 4 to 6 pairs written exactly as <h3>Question?</h3><p>Answer in 1 to 3 sentences.</p></section>. Use real follow-up searches people have about this question.
