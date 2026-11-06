@@ -161,7 +161,7 @@ const NETWORK=[
   {name:"PhotonicsETFs",domain:"photonicsetfs.com",desc:"Tracking the ETFs behind lasers, optical networking and the photonics buildout.",color:"#05070E",mark:"PH"}
 ];
 const NAV=[["Latest","/latest"],["Screener","/screener"],["Income","/dividend"],["Weekly Pay","/weekly"],["Growth","/growth"],["ETF 101","/learn"],["Tools","/tools"],["Network","/network"]];
-const TAPE="SCHD,JEPI,JEPQ,QQQI,SPYI,VOO,DIVO,GPIQ,GPIX,VYM,DGRO,QQQ,VUG,SCHG,VGT,QDTE,XDTE,FEPI,QYLD,BALI,IDVO,HDV,NOBL,MSTY,ULTI";
+const TAPE="SCHD,JEPI,JEPQ,QQQI,SPYI,VOO,DIVO,GPIQ,GPIX,VYM,DGRO,QQQ,VUG,SCHG,VGT,QDTE,XDTE,FEPI,QYLD,BALI,IDVO,HDV,NOBL,MSTY,ULTY";
 
 const LOGO=`<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#fff"/><rect x="6" y="17" width="4.5" height="9" rx="1.2" fill="#0e2a4d"/><rect x="13.75" y="12" width="4.5" height="14" rx="1.2" fill="#0e2a4d"/><rect x="21.5" y="6" width="4.5" height="20" rx="1.2" fill="#2a78d6"/></svg>`;
 const ICON_SEARCH=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>`;
