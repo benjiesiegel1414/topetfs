@@ -1995,17 +1995,15 @@
    "slug": "how-often-to-rebalance-etf-portfolio",
    "keyword": "how often to rebalance etf portfolio",
    "title": "How Often Should You Rebalance an ETF Portfolio? Calendar vs Threshold",
-   "tickers": [
-    "VTI",
-    "BND",
-    "VXUS"
-   ],
+   "tickers": [],
    "section": "growth",
    "type": "guide",
    "angle": "Calendar vs 5 percent band rebalancing, rebalancing with new contributions instead of selling, tax drag in taxable accounts, worked example of a 70/30 portfolio after a strong year.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-06",
+   "words": 2019
   },
   {
    "slug": "three-fund-portfolio-for-30-year-old",
