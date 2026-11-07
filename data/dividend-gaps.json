@@ -1,35 +1,15 @@
 {
  "checked": "2026-11-07",
  "fixed": [
-  "BALI: added 2 payouts from StockAnalysis",
-  "BITO: added 2 payouts from StockAnalysis",
-  "BLOX: added 1 payout from StockAnalysis",
   "CVNY: added 1 payout from StockAnalysis",
   "DRMP: added 1 payout from StockAnalysis",
-  "FIAT: added 1 payout from StockAnalysis",
-  "GIAX: added 1 payout from StockAnalysis",
   "GOOY: added 1 payout from StockAnalysis",
-  "HIYY: added 1 payout from StockAnalysis",
-  "ISPY: added 2 payouts from StockAnalysis",
-  "ITWO: added 2 payouts from StockAnalysis",
   "IWMY: added 2 payouts from StockAnalysis",
-  "JEPI: added 2 payouts from StockAnalysis",
-  "JPIE: added 2 payouts from StockAnalysis",
-  "JPO: added 1 payout from StockAnalysis",
   "MAGY: added 1 payout from StockAnalysis",
-  "MEMY: added 1 payout from StockAnalysis",
-  "NFLY: added 1 payout from StockAnalysis",
   "QDTE: added 1 payout from StockAnalysis",
-  "RDTE: added 1 payout from StockAnalysis",
-  "SCHP: added 2 payouts from StockAnalysis",
-  "SGOV: added 2 payouts from StockAnalysis",
-  "SMCY: added 1 payout from StockAnalysis",
+  "SCHP: added 1 payout from StockAnalysis",
   "SPCI: added 18 payouts from StockAnalysis",
-  "SPHY: added 2 payouts from StockAnalysis",
-  "SPYT: added 2 payouts from StockAnalysis",
-  "XDTE: added 1 payout from StockAnalysis",
-  "XLEI: added 2 payouts from StockAnalysis",
-  "XLKI: added 2 payouts from StockAnalysis"
+  "SPHY: added 2 payouts from StockAnalysis"
  ],
  "needsReview": [
   {
