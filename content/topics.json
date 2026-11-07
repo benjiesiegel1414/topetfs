@@ -2124,8 +2124,6 @@
    "keyword": "how much can you safely withdraw from your retirement portfolio",
    "title": "The 4% Rule With ETFs: A Worked Example (and When to Use Less)",
    "tickers": [
-    "VTI",
-    "BND",
     "SGOV"
    ],
    "section": "income",
@@ -2133,7 +2131,9 @@
    "angle": "Origin of the 4 percent guideline in plain English, inflation adjustments, flexible withdrawal tweaks, worked example on $750,000, sequence risk.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-07",
+   "words": 1950
   },
   {
    "slug": "investing-a-lump-sum-for-monthly-income",
