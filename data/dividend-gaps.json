@@ -1,0 +1,149 @@
+{
+ "checked": "2026-11-07",
+ "fixed": [
+  "BALI: added 2 payouts from StockAnalysis",
+  "BITO: added 2 payouts from StockAnalysis",
+  "BLOX: added 1 payout from StockAnalysis",
+  "CVNY: added 1 payout from StockAnalysis",
+  "DRMP: added 1 payout from StockAnalysis",
+  "FIAT: added 1 payout from StockAnalysis",
+  "GIAX: added 1 payout from StockAnalysis",
+  "GOOY: added 1 payout from StockAnalysis",
+  "HIYY: added 1 payout from StockAnalysis",
+  "ISPY: added 2 payouts from StockAnalysis",
+  "ITWO: added 2 payouts from StockAnalysis",
+  "IWMY: added 2 payouts from StockAnalysis",
+  "JEPI: added 2 payouts from StockAnalysis",
+  "JPIE: added 2 payouts from StockAnalysis",
+  "JPO: added 1 payout from StockAnalysis",
+  "MAGY: added 1 payout from StockAnalysis",
+  "MEMY: added 1 payout from StockAnalysis",
+  "NFLY: added 1 payout from StockAnalysis",
+  "QDTE: added 1 payout from StockAnalysis",
+  "RDTE: added 1 payout from StockAnalysis",
+  "SCHP: added 2 payouts from StockAnalysis",
+  "SGOV: added 2 payouts from StockAnalysis",
+  "SMCY: added 1 payout from StockAnalysis",
+  "SPCI: added 18 payouts from StockAnalysis",
+  "SPHY: added 2 payouts from StockAnalysis",
+  "SPYT: added 2 payouts from StockAnalysis",
+  "XDTE: added 1 payout from StockAnalysis",
+  "XLEI: added 2 payouts from StockAnalysis",
+  "XLKI: added 2 payouts from StockAnalysis"
+ ],
+ "needsReview": [
+  {
+   "sym": "BAMG",
+   "freq": "quarterly",
+   "every": 91,
+   "issues": [
+    "gap of 609 days between 2024-12-27 and 2026-08-28"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "BUL",
+   "freq": "quarterly",
+   "every": 91,
+   "issues": [
+    "latest payout 2026-06-04 is 156 days old (normally every ~91 days)",
+    "gap of 156 days between 2025-12-30 and 2026-06-04"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "FAD",
+   "freq": "quarterly",
+   "every": 91,
+   "issues": [
+    "gap of 195 days between 2024-12-13 and 2025-06-26"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "FNY",
+   "freq": "quarterly",
+   "every": 104,
+   "issues": [
+    "gap of 195 days between 2024-12-13 and 2025-06-26"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "FTGS",
+   "freq": "quarterly",
+   "every": 91,
+   "issues": [
+    "gap of 286 days between 2025-12-12 and 2026-09-24"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "GFLW",
+   "freq": "quarterly",
+   "every": 105,
+   "issues": [
+    "gap of 426 days between 2025-07-10 and 2026-09-09"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "GRIN",
+   "freq": "monthly",
+   "every": 31,
+   "issues": [
+    "gap of 62 days between 2026-07-09 and 2026-09-09",
+    "gap of 60 days between 2025-12-11 and 2026-02-09",
+    "gap of 63 days between 2025-10-09 and 2025-12-11",
+    "gap of 60 days between 2025-07-10 and 2025-09-08"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "MAXI",
+   "freq": "monthly",
+   "every": 32,
+   "issues": [
+    "gap of 90 days between 2026-01-27 and 2026-04-27"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "PWB",
+   "freq": "quarterly",
+   "every": 91,
+   "issues": [
+    "gap of 182 days between 2024-12-23 and 2025-06-23"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "RDYY",
+   "freq": "weekly",
+   "every": 7,
+   "issues": [
+    "gap of 14 days between 2025-10-02 and 2025-10-16"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "SCHP",
+   "freq": "monthly",
+   "every": 30,
+   "issues": [
+    "gap of 103 days between 2025-12-19 and 2026-04-01",
+    "gap of 73 days between 2024-12-20 and 2025-03-03"
+   ],
+   "triedStockAnalysis": true
+  },
+  {
+   "sym": "VFLO",
+   "freq": "monthly",
+   "every": 30,
+   "issues": [
+    "gap of 89 days between 2025-12-11 and 2026-03-10"
+   ],
+   "triedStockAnalysis": true
+  }
+ ]
+}
