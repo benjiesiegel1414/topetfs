@@ -1,15 +1,29 @@
 {
- "checked": "2026-11-07",
+ "checked": "2026-11-08",
  "fixed": [
-  "CVNY: added 1 payout from StockAnalysis",
-  "DRMP: added 1 payout from StockAnalysis",
-  "GOOY: added 1 payout from StockAnalysis",
-  "IWMY: added 2 payouts from StockAnalysis",
-  "MAGY: added 1 payout from StockAnalysis",
-  "QDTE: added 1 payout from StockAnalysis",
+  "AAPW: added 1 payout from StockAnalysis",
+  "AMDW: added 1 payout from StockAnalysis",
+  "AMZW: added 1 payout from StockAnalysis",
+  "ARMW: added 1 payout from StockAnalysis",
+  "AVGW: added 1 payout from StockAnalysis",
+  "BABW: added 1 payout from StockAnalysis",
+  "BRKW: added 1 payout from StockAnalysis",
+  "COIW: added 1 payout from StockAnalysis",
+  "COSW: added 1 payout from StockAnalysis",
+  "GOOW: added 1 payout from StockAnalysis",
+  "HOOW: added 1 payout from StockAnalysis",
+  "ISBG: added 1 payout from StockAnalysis",
+  "ISSB: added 1 payout from StockAnalysis",
+  "METW: added 1 payout from StockAnalysis",
+  "MSFW: added 1 payout from StockAnalysis",
+  "MSTW: added 1 payout from StockAnalysis",
+  "NFLW: added 1 payout from StockAnalysis",
+  "NVDW: added 1 payout from StockAnalysis",
+  "PLTW: added 1 payout from StockAnalysis",
   "SCHP: added 1 payout from StockAnalysis",
-  "SPCI: added 18 payouts from StockAnalysis",
-  "SPHY: added 2 payouts from StockAnalysis"
+  "SPCI: added 19 payouts from StockAnalysis",
+  "TSLW: added 1 payout from StockAnalysis",
+  "UBEW: added 1 payout from StockAnalysis"
  ],
  "needsReview": [
   {
@@ -26,7 +40,7 @@
    "freq": "quarterly",
    "every": 91,
    "issues": [
-    "latest payout 2026-06-04 is 156 days old (normally every ~91 days)",
+    "latest payout 2026-06-04 is 157 days old (normally every ~91 days)",
     "gap of 156 days between 2025-12-30 and 2026-06-04"
    ],
    "triedStockAnalysis": true
