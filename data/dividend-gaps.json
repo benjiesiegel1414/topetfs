@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-08",
+ "checked": "2026-11-09",
  "fixed": [
   "AAPW: added 1 payout from StockAnalysis",
   "AMDW: added 1 payout from StockAnalysis",
@@ -23,7 +23,8 @@
   "SCHP: added 1 payout from StockAnalysis",
   "SPCI: added 19 payouts from StockAnalysis",
   "TSLW: added 1 payout from StockAnalysis",
-  "UBEW: added 1 payout from StockAnalysis"
+  "UBEW: added 1 payout from StockAnalysis",
+  "YBTY: added 1 payout from StockAnalysis"
  ],
  "needsReview": [
   {
@@ -40,7 +41,7 @@
    "freq": "quarterly",
    "every": 91,
    "issues": [
-    "latest payout 2026-06-04 is 157 days old (normally every ~91 days)",
+    "latest payout 2026-06-04 is 158 days old (normally every ~91 days)",
     "gap of 156 days between 2025-12-30 and 2026-06-04"
    ],
    "triedStockAnalysis": true
