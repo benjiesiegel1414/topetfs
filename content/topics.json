@@ -2011,17 +2011,15 @@
    "slug": "three-fund-portfolio-for-30-year-old",
    "keyword": "three fund portfolio for 30 year old",
    "title": "The Three-Fund Portfolio at 30: Allocations, Funds and How to Set It Up",
-   "tickers": [
-    "VTI",
-    "VXUS",
-    "BND"
-   ],
+   "tickers": [],
    "section": "growth",
    "type": "guide",
    "angle": "What the three funds are, sample allocations at 30, ETF vs mutual fund versions at major brokers, how to adjust over time, worked example with monthly contributions.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-09",
+   "words": 2302
   },
   {
    "slug": "how-to-invest-100k-for-10-years",
