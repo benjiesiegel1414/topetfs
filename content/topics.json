@@ -2141,7 +2141,6 @@
    "title": "How to Turn a Lump Sum Into Monthly Income With ETFs",
    "tickers": [
     "SGOV",
-    "BND",
     "SCHD",
     "VOO"
    ],
@@ -2150,7 +2149,9 @@
    "angle": "Mixing T-bill, bond and stock ETFs, monthly vs quarterly payers, selling shares for income vs living on yield, worked example with $250,000.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-10",
+   "words": 2246
   },
   {
    "slug": "treasury-etf-vs-high-yield-savings",
