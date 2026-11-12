@@ -2029,8 +2029,6 @@
    "title": "How to Invest $100,000 for 10 Years: Lump Sum, Dollar Cost Averaging and Mixes",
    "tickers": [
     "VOO",
-    "VTI",
-    "BND",
     "SGOV"
    ],
    "section": "growth",
@@ -2038,7 +2036,9 @@
    "angle": "Lump sum vs DCA evidence in plain English, sample allocations by risk level, the role of cash/T-bill ETFs, worked projections, taxes and account choice.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-12",
+   "words": 2252
   },
   {
    "slug": "etf-vs-index-fund-for-taxable-account",
