@@ -2,25 +2,25 @@ Symbol,Name,AUM ,Total Returns,Votes,Price
 VUG,Vanguard Growth ETF,$217.62B,1180%,,$83.98
 IWF,iShares Russell 1000 Growth ETF,$116.57B,665%,,$114.37
 IVW,iShares S&P 500 Growth ETF,$72.94B,796%,,$132.13
-SCHG,Schwab U.S. Large-Cap Growth ETF,$61.00B,1116%,,$33.93
-SPYG,State Street SPDR Portfolio S&P 500 Growth ETF,$52.36B,521%,,$114.38
-VONG,Vanguard Russell 1000 Growth ETF,$44.12B,980%,,$117.87
+SCHG,Schwab U.S. Large-Cap Growth ETF,$61.00B,1116%,,$33.92
+SPYG,State Street SPDR Portfolio S&P 500 Growth ETF,$52.36B,521%,,$114.36
+VONG,Vanguard Russell 1000 Growth ETF,$44.12B,980%,,$117.77
 MGK,Vanguard Mega Cap Growth ETF,$32.27B,930%,,$85.40
 IUSG,iShares Core S&P U.S. Growth ETF,$32.15B,644%,,$180.32
-VOOG,Vanguard S&P 500 Growth ETF,$26.13B,1031%,,$79.41
-VBK,Vanguard Small-Cap Growth ETF,$22.34B,668%,,$326.61
+VOOG,Vanguard S&P 500 Growth ETF,$26.13B,1031%,,$79.40
+VBK,Vanguard Small-Cap Growth ETF,$22.34B,668%,,$326.44
 IWP,iShares Russell Mid-Cap Growth ETF,$18.09B,1589%,,$128.71
-CGGR,Capital Group Growth ETF,$25.71B,88%,,$45.75
+CGGR,Capital Group Growth ETF,$25.71B,88%,,$45.73
 VOT,Vanguard Mid-Cap Growth ETF,$18.66B,550%,,$287.63
 IWY,iShares Russell Top 200 Growth ETF,$14.52B,1221%,,$270.08
 IWO,iShares Russell 2000 Growth ETF,$14.06B,446%,,$348.87
-EFG,iShares MSCI EAFE Growth ETF,$15.14B,234%,,$39.25
+EFG,iShares MSCI EAFE Growth ETF,$15.14B,234%,,$39.26
 IJK,iShares S&P Mid-Cap 400 Growth ETF,$10.46B,730%,,$108.24
 CGGO,Capital Group Global Growth Equity ETF,$11.89B,64%,,$37.96
 JGRO,JPMorgan Active Growth ETF,$9.31B,81%,,$88.56
 IJT,iShares S&P Small-Cap 600 Growth ETF,$7.45B,936%,,$164.53
-FBCG,Fidelity Blue Chip Growth ETF,$7.22B,185%,,$56.84
-FELG,Fidelity Enhanced Large Cap Growth ETF,$5.28B,65%,,$40.82
+FBCG,Fidelity Blue Chip Growth ETF,$7.22B,185%,,$56.88
+FELG,Fidelity Enhanced Large Cap Growth ETF,$5.28B,65%,,$40.87
 SLYG,State Street SPDR S&P 600 Small Cap Growth ETF,$4.72B,504%,,$109.92
 IMCG,iShares Morningstar Mid-Cap Growth ETF,$4.02B,962%,,$92.86
 ILCG,iShares Morningstar Growth ETF,$2.95B,974%,,$107.18
@@ -30,16 +30,16 @@ NULG,Nuveen ESG Large-Cap Growth ETF,$2.82B,388%,,$106.22
 QGRO,American Century U.S. Quality Growth ETF,$1.81B,192%,,$113.63
 QGRW,WisdomTree U.S. Quality Growth Fund,$3.22B,164%,,$63.76
 TCHP,T. Rowe Price Blue Chip Growth ETF,$2.00B,89%,,$47.20
-RPG,Invesco S&P 500 Pure Growth ETF,$1.69B,763%,,$51.83
+RPG,Invesco S&P 500 Pure Growth ETF,$1.69B,763%,,$51.92
 PWB,Invesco Large Cap Growth ETF,$2.48B,978%,,$143.77
 IVOG,Vanguard S&P Mid-Cap 400 Growth ETF,$1.68B,515%,,$134.53
-FTGS,First Trust Growth Strength ETF,$1.28B,90%,,$37.87
+FTGS,First Trust Growth Strength ETF,$1.28B,90%,,$37.85
 GARP,iShares MSCI USA Quality GARP ETF,$3.43B,223%,,$76.19
-VTWG,Vanguard Russell 2000 Growth ETF,$1.41B,450%,,$254.57
+VTWG,Vanguard Russell 2000 Growth ETF,$1.41B,450%,,$254.54
 FTC,First Trust Large Cap Growth AlphaDEX Fund,$1.26B,531%,,$166.54
-WINN,Harbor Long-Term Growers ETF,$1.17B,78%,,$32.52
+WINN,Harbor Long-Term Growers ETF,$1.17B,78%,,$32.53
 TGRT,T. Rowe Price Growth ETF,$1.64B,73%,,$43.03
-FYC,First Trust Small Cap Growth AlphaDEX Fund,$1.35B,467%,,$112.11
+FYC,First Trust Small Cap Growth AlphaDEX Fund,$1.35B,467%,,$112.13
 ISCG,iShares Morningstar Small-Cap Growth ETF,$961.55M,597%,,$60.56
 VIOG,Vanguard S&P Small-Cap 600 Growth ETF,$1.06B,558%,,$142.30
 TGRW,T. Rowe Price Growth Stock ETF,$1.09B,77%,,$44.80
@@ -53,8 +53,8 @@ FNY,First Trust Mid Cap Growth AlphaDEX Fund,$550.52M,390%,,$97.10
 FFLG,Fidelity Fundamental Large Cap Growth ETF,$606.44M,50%,,$30.25
 DNL,WisdomTree Global ex-U.S. Quality Growth Fund,$448.81M,173%,,$42.21
 CSMD,Congress SMid Growth ETF,$475.72M,34%,,$33.43
-GQGU,GQG US Equity ETF,$490.35M,-6%,,$23.29
-FAD,First Trust Multi Cap Growth AlphaDEX Fund,$588.54M,533%,,$174.14
+GQGU,GQG US Equity ETF,$490.35M,-6%,,$23.28
+FAD,First Trust Multi Cap Growth AlphaDEX Fund,$588.54M,533%,,$174.30
 LRGE,ClearBridge Large Cap Growth Select ETF,$352.79M,250%,,$82.71
 FLCG,Federated Hermes MDT Large Cap Growth ETF,$803.88M,30%,,$32.56
 GGUS,Marketbeta Russell 1000 Growth Equity ETF,$480.96M,58%,,$63.31
@@ -67,7 +67,7 @@ RFG,Invesco S&P Midcap 400 Pure Growth ETF,$309.82M,503%,,$56.31
 LRGG,Nomura Focused Large Growth ETF,$286.02M,19%,,$29.87
 JSML,Janus Henderson Small Cap Growth Alpha ETF,$377.91M,272%,,$86.92
 CARK,CastleArk Large Growth ETF,$318.22M,51%,,$45.89
-GRIN,VictoryShares International Free Cash Flow Growth ETF,$341.30M,21%,,$30.43
+GRIN,VictoryShares International Free Cash Flow Growth ETF,$341.30M,21%,,$30.45
 CNEQ,Alger Concentrated Equity ETF,$2.78B,80%,,$35.69
 FFOG,Franklin Focused Growth ETF FOCUSED GROWTH ETF,$353.11M,80%,,$45.41
 BLGR,Bluemonte Large Cap Growth ETF,$296.74M,23%,,$30.63
@@ -90,17 +90,17 @@ GQQQ,Astoria US Quality Growth Kings ETF,$168.73M,39%,,$33.94
 NBJP,Neuberger Japan Equity ETF,$120.47M,39%,,$33.95
 AGRW,Allspring LT Large Growth ETF,$108.32M,28%,,$31.34
 LCLG,Logan Capital Broad Innovative Growth ETF,$103.64M,112%,,$69.11
-QQQ,Invesco QQQ Trust Series,$463.24B,1470%,,$677.52
-GRNY,Fundstrat Granny Shots US Large Cap,$3.92B,29%,,$26.01
+QQQ,Invesco QQQ Trust Series,$463.24B,1470%,,$676.86
+GRNY,Fundstrat Granny Shots US Large Cap,$3.92B,29%,,$25.99
 AOTG,AOT Growth and Innovation ETF,$94.99M,141%,,$58.17
 VOO,Vanguard S&P 500 ETF,"$1,057.10B",812%,,$691.09
 VGT,Vanguard Information Technology ETF,$138.43B,2082%,,$110.59
 FTEC,Fidelity MSCI Information Technology Index ,$19.74B,1086%,,$263.76
 FNDX,Schwab Fundamental U.S. Large Company ETF,$28.65B,420%,,$32.88
 EEM,iShares MSCI Emerging Markets ETF,$28.05B,750%,,$60.54
-VEU,Vanguard FTSE All-World ex-US Index Fund,$66.84B,172%,,$80.71
+VEU,Vanguard FTSE All-World ex-US Index Fund,$66.84B,172%,,$80.66
 TQQQ,ProShares UltraPro QQQ ,$31.85B,27445%,,$56.93
 ARKK,ARK Innovation ETF,$6.11B,304%,,$74.78
-AIS,VistaShares Artificial Intelligence Supercycle® ETF,$861.58M,114%,,$53.75
+AIS,VistaShares Artificial Intelligence Supercycle® ETF,$861.58M,114%,,$53.71
 POW,VistaShares Electrification Supercycle® ETF,$58.01M,9%,,$21.68
 UPSD,Aptus Large Cap Upside ETF,$141.48M,22%,,$29.81
