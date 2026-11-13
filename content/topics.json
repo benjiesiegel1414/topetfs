@@ -2216,6 +2216,24 @@
    "source": "autocomplete",
    "found": "2026-11-02",
    "status": "pending"
+  },
+  {
+   "slug": "how-do-you-get-paid-dividends",
+   "keyword": "how do you get paid dividends",
+   "title": "How Do You Get Paid Dividends? Where the Money Actually Goes",
+   "tickers": [
+    "SCHD",
+    "JEPI",
+    "VOO",
+    "SGOV"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Hand-written by Benjie: how dividends are paid into a brokerage account or IRA, cash vs reinvest, moving dividends to a bank, why a dividend did not show up.",
+   "source": "manual",
+   "status": "published",
+   "date": "2026-11-13",
+   "words": 2366
   }
  ],
  "rotation": [
