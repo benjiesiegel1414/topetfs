@@ -12,10 +12,10 @@
   "rendered": "2026-11-10"
  },
  "how-much-does-100-000-in-schd-pay": {
-  "hash": "1ba70947dc",
+  "hash": "65269b192c",
   "kind": "income",
   "style": 3,
-  "rendered": "2026-10-27"
+  "rendered": "2026-11-13"
  },
  "best-growth-etfs": {
   "hash": "609b1bf556",
@@ -48,10 +48,10 @@
   "rendered": "2026-11-10"
  },
  "how-much-do-i-need-in-jepi-to-make-1000-a-month": {
-  "hash": "b83323ea43",
+  "hash": "880dc398d4",
   "kind": "need",
   "style": 3,
-  "rendered": "2026-10-27"
+  "rendered": "2026-11-13"
  },
  "yield-vs-total-return": {
   "hash": "4e84de9854",
@@ -96,10 +96,10 @@
   "rendered": "2026-10-27"
  },
  "jepi-etf-dividend-yield-total-return": {
-  "hash": "89a5630900",
+  "hash": "75063b73f3",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-10-27"
+  "rendered": "2026-11-13"
  },
  "schd-vs-jepi": {
   "hash": "e1c5470beb",
@@ -108,10 +108,10 @@
   "rendered": "2026-11-10"
  },
  "how-much-do-i-need-in-schd-to-make-1000-a-month": {
-  "hash": "80315eb49e",
+  "hash": "9c2910b290",
   "kind": "need",
   "style": 3,
-  "rendered": "2026-10-27"
+  "rendered": "2026-11-13"
  },
  "schd-etf-dividend-yield-total-return": {
   "hash": "af47b21e07",
@@ -240,10 +240,10 @@
   "rendered": "2026-11-12"
  },
  "spyi-vs-jepi": {
-  "hash": "1d6e069d33",
+  "hash": "029ed87d4a",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-06"
+  "rendered": "2026-11-13"
  },
  "qdte-etf-dividend-yield-total-return": {
   "hash": "86b8868b2f",
