@@ -2045,15 +2045,16 @@
    "keyword": "etf vs index fund for taxable account",
    "title": "ETF or Index Mutual Fund in a Taxable Account? The Tax Difference Explained",
    "tickers": [
-    "VOO",
-    "VTI"
+    "VOO"
    ],
    "section": "growth",
    "type": "guide",
    "angle": "Why ETFs usually distribute fewer capital gains, when the difference matters, minimums and automatic investing differences, worked example of a year-end distribution.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-13",
+   "words": 2375
   },
   {
    "slug": "compare-etf-holdings-overlap",
