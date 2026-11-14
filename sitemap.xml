@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://topetfs.com/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://topetfs.com/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/screener</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/lists/high-yield-etfs</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/lists/monthly-dividend-etfs</loc><lastmod>2026-11-14</lastmod></url>
@@ -38,10 +38,10 @@
   <url><loc>https://topetfs.com/lists/kurv-etfs</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/lists/nestyield-etfs</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/lists/tuttle-capital-etfs</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://topetfs.com/latest</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://topetfs.com/latest</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/dividend</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/weekly</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://topetfs.com/growth</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://topetfs.com/growth</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/learn</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://topetfs.com/tools</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/dividend-calculator</loc><lastmod>2026-11-02</lastmod></url>
@@ -164,7 +164,7 @@
   <url><loc>https://topetfs.com/etfs/qdvo-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/gpix</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://topetfs.com/etfs/gpix-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/schd</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/schd</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/etfs/schd-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/dgro</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://topetfs.com/etfs/dgro-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
@@ -306,7 +306,7 @@
   <url><loc>https://topetfs.com/etfs/ovl-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/khpi</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://topetfs.com/etfs/khpi-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/voo</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/voo</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/etfs/voo-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/qdpl</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://topetfs.com/etfs/qdpl-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
@@ -690,7 +690,7 @@
   <url><loc>https://topetfs.com/etfs/agrw-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/lclg</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/lclg-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/qqq</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/qqq</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/etfs/qqq-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/grny</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://topetfs.com/etfs/grny-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
@@ -716,10 +716,11 @@
   <url><loc>https://topetfs.com/etfs/upsd-dividend-history</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/network</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/about</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/author/benjie-siegel</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://topetfs.com/author/benjie-siegel</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/contact</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/privacy</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/disclaimer</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://topetfs.com/articles/compare-etf-holdings-overlap</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/articles/how-do-you-get-paid-dividends</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://topetfs.com/articles/etf-vs-index-fund-for-taxable-account</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://topetfs.com/articles/how-to-invest-100k-for-10-years</loc><lastmod>2026-11-12</lastmod></url>

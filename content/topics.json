@@ -2063,7 +2063,6 @@
    "tickers": [
     "VOO",
     "QQQ",
-    "VTI",
     "SCHD"
    ],
    "section": "growth",
@@ -2071,7 +2070,9 @@
    "angle": "What overlap means, how to measure it from holdings lists, typical overlap between popular pairs, a simple step-by-step check, what to do if your funds overlap heavily.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-14",
+   "words": 2096
   },
   {
    "slug": "how-to-invest-for-my-child-s-future",
