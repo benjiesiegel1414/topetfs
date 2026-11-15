@@ -1,7 +1,7 @@
 {
- "checked": "2026-11-14",
+ "checked": "2026-11-15",
  "fixed": [
-  "SPCI: added 19 payouts from StockAnalysis",
+  "SPCI: added 20 payouts from StockAnalysis",
   "VAIE: added 2 payouts from StockAnalysis"
  ],
  "needsReview": [
@@ -19,7 +19,7 @@
    "freq": "quarterly",
    "every": 91,
    "issues": [
-    "latest payout 2026-06-04 is 163 days old (normally every ~91 days)",
+    "latest payout 2026-06-04 is 164 days old (normally every ~91 days)",
     "gap of 156 days between 2025-12-30 and 2026-06-04"
    ],
    "triedStockAnalysis": true
