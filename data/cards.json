@@ -328,5 +328,11 @@
   "kind": "vs",
   "style": 3,
   "rendered": "2026-11-14"
+ },
+ "treasury-etf-vs-high-yield-savings": {
+  "hash": "73cf2179fe",
+  "kind": "single",
+  "style": 3,
+  "rendered": "2026-11-15"
  }
 }

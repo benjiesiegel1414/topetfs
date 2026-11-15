@@ -2162,15 +2162,16 @@
    "keyword": "treasury etf vs high yield savings",
    "title": "Treasury ETFs vs High-Yield Savings: Which Is Better for Your Cash?",
    "tickers": [
-    "SGOV",
-    "BIL"
+    "SGOV"
    ],
    "section": "income",
    "type": "guide",
    "angle": "Yield comparison method, state tax exemption on Treasury interest, FDIC vs government backing, liquidity and settlement, worked after-tax example.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-15",
+   "words": 2084
   },
   {
    "slug": "bond-etf-when-interest-rates-fall",
