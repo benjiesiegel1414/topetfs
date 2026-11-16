@@ -1850,17 +1850,16 @@
    "keyword": "does wash sale rule apply to etfs",
    "title": "The Wash Sale Rule With ETFs: Can You Swap One S&P 500 Fund for Another?",
    "tickers": [
-    "VOO",
-    "IVV",
-    "SPY",
-    "VTI"
+    "VOO"
    ],
    "section": "learn",
    "type": "guide",
    "angle": "What a wash sale is, the 30-day window, the unsettled question of 'substantially identical' funds tracking the same index, safer swaps (different index), DRIP purchases triggering wash sales, worked tax-loss harvesting example.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-16",
+   "words": 2083
   },
   {
    "slug": "etf-trading-at-premium-to-nav",
