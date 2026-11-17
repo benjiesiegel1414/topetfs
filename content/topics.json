@@ -2078,15 +2078,16 @@
    "keyword": "how to invest for my child's future",
    "title": "How to Invest for Your Child's Future With ETFs: Custodial, 529 or Roth?",
    "tickers": [
-    "VOO",
-    "VTI"
+    "VOO"
    ],
    "section": "growth",
    "type": "guide",
    "angle": "UTMA/UGMA custodial accounts, 529 plans, custodial Roth IRAs (needs earned income), kiddie tax basics, control at 18/21, worked example of $100 a month from birth.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-17",
+   "words": 1955
   },
   {
    "slug": "can-you-lose-money-in-index-funds",
