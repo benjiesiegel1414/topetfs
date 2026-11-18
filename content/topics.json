@@ -2178,16 +2178,16 @@
    "keyword": "bond etf when interest rates fall",
    "title": "What Happens to Bond ETFs When Interest Rates Fall (or Rise)?",
    "tickers": [
-    "BND",
-    "SGOV",
-    "TLT"
+    "SGOV"
    ],
    "section": "income",
    "type": "guide",
    "angle": "Duration explained simply, worked example of a 1 point rate move on short vs long funds, why bond ETFs never mature, how to pick duration for your goal.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-18",
+   "words": 2107
   },
   {
    "slug": "how-to-pay-less-tax-on-dividends",
