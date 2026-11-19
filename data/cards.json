@@ -352,5 +352,11 @@
   "kind": "single",
   "style": 3,
   "rendered": "2026-11-18"
+ },
+ "etf-trading-at-premium-to-nav": {
+  "hash": "34a48c4539",
+  "kind": "vs",
+  "style": 3,
+  "rendered": "2026-11-19"
  }
 }

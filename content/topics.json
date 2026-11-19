@@ -1874,7 +1874,9 @@
    "angle": "NAV vs market price, why premiums appear (illiquid underlying assets, overseas markets closed, stress), how to check the premium on an issuer page, and why limit orders matter.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-19",
+   "words": 2176
   },
   {
    "slug": "can-an-etf-go-to-zero",
