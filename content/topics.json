@@ -2097,7 +2097,6 @@
    "title": "Can You Lose Money in Index Funds? Yes, and Here's How Much History Says",
    "tickers": [
     "VOO",
-    "VTI",
     "QQQ"
    ],
    "section": "growth",
@@ -2105,7 +2104,9 @@
    "angle": "Short-term drawdowns vs long-term outcomes, worst historical declines and recovery times described generally, sequence of returns, how time horizon changes the risk.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-20",
+   "words": 2285
   },
   {
    "slug": "bucket-strategy-retirement-withdrawals",
