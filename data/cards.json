@@ -246,10 +246,10 @@
   "rendered": "2026-11-20"
  },
  "qdte-etf-dividend-yield-total-return": {
-  "hash": "691c66b664",
+  "hash": "2deec51c8c",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-14"
+  "rendered": "2026-11-21"
  },
  "schg-etf-review-total-return-fees": {
   "hash": "2cdb33832e",
@@ -324,10 +324,10 @@
   "rendered": "2026-11-20"
  },
  "compare-etf-holdings-overlap": {
-  "hash": "d8bfc9cdc6",
+  "hash": "a0c7dc6f0c",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-14"
+  "rendered": "2026-11-21"
  },
  "treasury-etf-vs-high-yield-savings": {
   "hash": "73cf2179fe",
