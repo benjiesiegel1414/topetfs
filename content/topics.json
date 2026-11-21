@@ -2206,7 +2206,9 @@
    "angle": "Qualified vs ordinary dividends and the holding period, 0/15/20 percent brackets in general terms, asset location (bonds and high-income funds in IRAs), worked example.",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-21",
+   "words": 2343
   },
   {
    "slug": "rmd-from-etf",
@@ -2240,6 +2242,230 @@
    "status": "published",
    "date": "2026-11-13",
    "words": 2366
+  },
+  {
+   "slug": "can-you-buy-etf-in-hsa",
+   "keyword": "can you buy etf in hsa",
+   "title": "Can You Buy ETFs in an HSA? How to Invest Your HSA Balance",
+   "tickers": [
+    "VTI",
+    "VOO",
+    "BND"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Explain how HSA investing works: cash thresholds, which HSA custodians offer ETFs or only mutual funds, and the triple tax advantage. Work through $5,000 in VTI inside an HSA vs. a taxable account over 20 years, then cover what to look for in an HSA provider.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "etf-in-401k-plans",
+   "keyword": "etf in 401k plans",
+   "title": "Can You Hold ETFs in a 401(k)? What Plans Actually Allow",
+   "tickers": [
+    "VOO",
+    "VTI",
+    "VXUS",
+    "BND"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Cover why most 401(k)s offer only mutual funds, how brokerage windows and self-directed 401(k)s allow ETFs, and what to do if your plan has none. Include an example of mapping a typical plan's index funds to ETF equivalents, plus the fee and rollover considerations.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "tax-loss-harvesting-etf",
+   "keyword": "tax loss harvesting etf",
+   "title": "Tax-Loss Harvesting With ETFs: A Step-by-Step Worked Example",
+   "tickers": [
+    "VTI",
+    "ITOT",
+    "SCHB",
+    "VOO"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Walk through selling an ETF at a loss, buying a similar but not identical one, and using the loss against gains and up to $3,000 of ordinary income. Use a $20,000 VTI position down 15% swapped into ITOT or SCHB, showing the tax saved at two brackets and how the lower cost basis carries forward.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-sell-etf-without-paying-taxes",
+   "keyword": "how to sell etf without paying taxes",
+   "title": "How to Sell an ETF Without Paying Taxes (Legal Ways That Work)",
+   "tickers": [
+    "VOO",
+    "VTI"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Cover legal methods: selling inside an IRA or 401(k), long-term holding rates, the 0% bracket, offsetting gains with losses, donating appreciated shares, and specific lot identification. Use a worked example of selling $30,000 of VOO with $12,000 of gain under different strategies, with an honest note that 'no tax ever' usually means deferring.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "what-happens-to-my-etf-when-i-die",
+   "keyword": "what happens to my etf when i die",
+   "title": "What Happens to Your ETFs When You Die? Beneficiaries and Step-Up",
+   "tickers": [
+    "VTI",
+    "VOO"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Explain transfer-on-death registration, beneficiary designations, probate, and the step-up in cost basis for heirs. Use an example of $200,000 of VTI bought for $80,000, comparing the heir's tax if sold after inheriting vs. if gifted while alive, and contrast taxable accounts with IRAs.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "what-happens-to-my-etf-if-vanguard-fails",
+   "keyword": "what happens to my etf if vanguard fails",
+   "title": "What Happens to Your ETFs If Vanguard or Your Broker Fails?",
+   "tickers": [
+    "VOO",
+    "VTI",
+    "BND"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Clarify that fund assets are held separately with a custodian and are not part of the sponsor's balance sheet, and that broker failure is covered by SIPC (up to $500,000), which does not cover market losses. Lay out the sequence of events in a fund-company failure vs. a brokerage failure, with a short checklist for spreading risk.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "etf-bid-ask-spread",
+   "keyword": "etf bid ask spread",
+   "title": "ETF Bid-Ask Spread: How to See It and What It Really Costs You",
+   "tickers": [
+    "VOO",
+    "SPY",
+    "VTI"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Explain bid, ask and spread, and how to read them on a broker quote. Work out the round-trip cost of buying and selling $10,000 of a tight-spread ETF like VOO vs. a thinly traded niche ETF, and give tips such as avoiding the open and close and using limit orders.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "fractional-shares-etf",
+   "keyword": "fractional shares etf",
+   "title": "Fractional Shares of ETFs: Which Brokers Offer Them and How They Work",
+   "tickers": [
+    "VOO",
+    "VTI",
+    "QQQ"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Explain how fractional ETF shares let you invest a fixed dollar amount like $50, and compare how Fidelity, Schwab, Robinhood, Interactive Brokers and others handle them, including which ETFs qualify and transfer limits. Use an example of investing $200 a month in a $500 ETF share, plus the caveats on limit orders and moving the position.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "can-you-automatically-buy-etfs",
+   "keyword": "can you automatically buy etfs",
+   "title": "How to Automatically Buy ETFs Every Month (Auto-Invest Setup)",
+   "tickers": [
+    "VTI",
+    "VXUS",
+    "VOO",
+    "BND"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Show how recurring ETF purchases work at major brokers, how they differ from auto-investing in mutual funds, and what to do about whole-share limits and cash timing. Use a $500-a-month plan split 70/30 across two ETFs, with a payday-to-purchase timeline and a checklist of pitfalls.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-read-an-etf-fact-sheet",
+   "keyword": "how to read an etf fact sheet",
+   "title": "How to Read an ETF Fact Sheet: The 7 Numbers That Matter",
+   "tickers": [
+    "VTI",
+    "VOO",
+    "BND"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Go section by section through a real fact sheet: objective, expense ratio, holdings and concentration, index tracked, inception date, premium/discount and distribution history. Annotate an example sheet such as VTI and say which figures to check and which to ignore.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "inverse-etf-how-does-it-work",
+   "keyword": "inverse etf how does it work",
+   "title": "How Inverse ETFs Work (and Why You Shouldn't Hold Them Long)",
+   "tickers": [
+    "SH",
+    "SPY",
+    "VOO"
+   ],
+   "section": "learn",
+   "type": "guide",
+   "angle": "Explain how an inverse ETF delivers the opposite of an index's daily return using swaps and futures, and why compounding makes multi-week results drift. Use a day-by-day example with a -1x S&P 500 fund over a choppy 5-day stretch to show the gap from the 'expected' result, and note the alternatives and costs.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "target-date-fund-vs-etf",
+   "keyword": "target date fund vs etf",
+   "title": "Target-Date Fund vs. Index Funds: Which Is Better in Your 401(k)?",
+   "tickers": [
+    "VTI",
+    "VXUS",
+    "BND"
+   ],
+   "section": "growth",
+   "type": "guide",
+   "angle": "Compare a target-date fund's automatic glide path with building your own mix from index funds or ETFs: fees, control, rebalancing and behavior. Use a 2055 target-date fund against a DIY 80/20 mix of VTI, VXUS and BND, showing cost and allocation, and when each approach fits.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-withdraw-from-portfolio",
+   "keyword": "how to withdraw from portfolio",
+   "title": "Which Investments to Sell First in Retirement: Withdrawal Order",
+   "tickers": [
+    "VTI",
+    "BND",
+    "SGOV"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Explain the standard order of taxable, then tax-deferred, then Roth, and when it makes sense to break it, such as filling low brackets or planning around RMDs. Use a $1M portfolio across taxable, IRA and Roth accounts to compare year-1 tax and 15-year balances under two withdrawal orders.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
+  },
+  {
+   "slug": "how-to-live-off-investments-tax-free",
+   "keyword": "how to live off investments tax free",
+   "title": "How to Live Off Investments Tax-Free: The 0% Capital Gains Bracket",
+   "tickers": [
+    "VTI",
+    "VOO"
+   ],
+   "section": "income",
+   "type": "guide",
+   "angle": "Explain how long-term gains and qualified dividends can be taxed at 0% below the taxable income threshold, and how Roth withdrawals and cost basis fit in. Use a married couple selling $40,000 of VTI with a $25,000 gain, showing the taxable income math, standard deduction and the point where tax kicks in.",
+   "source": "autocomplete",
+   "found": "2026-11-21",
+   "status": "pending"
   }
  ],
  "rotation": [
