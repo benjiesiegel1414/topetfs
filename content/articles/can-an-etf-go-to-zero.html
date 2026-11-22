@@ -1,0 +1,92 @@
+<!--meta
+{"title":"Can an ETF Go to Zero? Which Funds Can and Which Practically Can't","short":"Can an ETF Go to Zero","seoTitle":"Can an ETF Go to Zero? What Actually Happens","dek":"Can an ETF go to zero? Broad index funds practically can't, but leveraged and single-stock funds can. See what happens when an ETF closes, with real math.","section":"learn","date":"2026-11-22","time":"08","read":10,"art":"line","tickers":["VOO","TQQQ","SGOV"],"coverLabel":"ETF 101  ·  Risk","keyNumbers":[["VOO fee","{{live:VOO:er:pct2}}"],["VOO assets","{{live:VOO:aum:aum}}"],["TQQQ assets","{{live:TQQQ:aum:aum}}"]],"keyword":"can an etf go to zero","type":"guide","auto":true}
+-->
+<div class="takeaways"><h2>The short version</h2><ul><li>A broad, diversified index ETF going to zero would require essentially every company it holds to become worthless at once. That is not a realistic risk for a fund like {{tkr:VOO}}, even though the price can fall hard.</li><li>Leveraged, inverse and single-stock ETFs can lose almost everything, and they can do it fast. A 3x fund can be wiped out by a one-day drop of about a third in its index.</li><li>When an ETF closes, it does not vanish with your money. The fund sells its holdings and pays you cash at about the fund's net asset value, but you may owe taxes on the gain.</li></ul></div>
+
+<p class="lede">Technically yes, an ETF can go to zero, but it depends entirely on what the fund holds. A broad index fund holding hundreds of companies practically can't. A leveraged, inverse or very concentrated fund absolutely can lose nearly all of its value.</p>
+
+<p>So the real question is not "are ETFs safe?" It is "which kind of ETF am I holding, and what would it take to wipe it out?" Let's walk through that, then look at what actually happens if a fund shuts down.</p>
+
+<h2>Why a diversified index ETF practically can't hit zero</h2>
+
+<p>An ETF is a basket. You own a slice of the basket, and the basket holds real stocks or bonds. The price of the ETF is just the value of those holdings, divided by the number of shares.</p>
+
+<p>A fund like {{tkr:VOO}} tracks the S&amp;P 500, which is made up of roughly 500 of the largest U.S. companies. For that fund to hit zero, every one of those companies would have to be worth nothing at the same time. If that happened, you would have much bigger problems than your brokerage statement.</p>
+
+<p>That does not mean it can't hurt. The S&amp;P 500 has fallen by more than half in past bear markets (2007 to 2009 is the classic example) and then recovered over the following years. A 50% drop is painful, and it is a real risk. It is just very different from going to zero.</p>
+
+<p>For scale, {{tkr:VOO}} has {{live:VOO:aum:aum}} in assets and charges {{live:VOO:er:pct2}} a year. Its total return since inception is {{live:VOO:tr}}. Funds launched at different times, so don't compare that number to other funds' returns without checking start dates. The point here is that broad index funds have been through multiple crashes and kept going.</p>
+
+<p>The same logic applies to other diversified funds. A broad Treasury bill fund like {{tkr:SGOV}} holds short-term U.S. government debt, so its risk is a different shape entirely: small price moves, but your returns depend on interest rates. A dividend fund like {{tkr:SCHD}} holds a screened basket of dividend-paying U.S. stocks. It can drop in a bad market, but it is still a diversified basket of real companies.</p>
+
+<h2>The ETFs that really can go to zero (or close to it)</h2>
+
+<p>Here is where I'd slow down. Some ETF types are built in a way that makes a near-total loss a real possibility.</p>
+
+<h3>Leveraged ETFs</h3>
+
+<p>A leveraged ETF uses borrowed money and derivatives to deliver a multiple of an index's <em>daily</em> move. A 3x fund aims to return three times the index's move for each day. That cuts both ways. If the index drops 10% in a day, the fund aims to drop 30%.</p>
+
+<p>{{tkr:TQQQ}} is a well-known example. It aims for three times the daily move of the Nasdaq-100, and it has {{live:TQQQ:aum:aum}} in assets with a total return since inception of {{live:TQQQ:tr}}. That number looks incredible, and it is also a good example of how misleading a single figure can be. This fund has gone through stretches where it lost most of its value before recovering. Holding through those drops takes a stomach most people don't have.</p>
+
+<h3>Inverse ETFs</h3>
+
+<p>An inverse ETF aims to go up when its index goes down. A 1x inverse fund loses value as the market rises. In theory, if the index doubled in a single day, a 1x inverse fund would be wiped out. That is extremely unlikely, but leveraged inverse funds have far less room for error.</p>
+
+<h3>Single-stock and single-stock option ETFs</h3>
+
+<p>These funds hold one company, or use options on one company, instead of a basket. A fund built on one stock is only as safe as that stock. Covered call strategies, which sell the upside of a stock in exchange for income, do <strong>not</strong> protect you on the downside. If the underlying company collapses, the fund collapses with it, and the income you collected along the way may not make up for it. Leveraged single-stock funds are even more fragile.</p>
+
+<h3>ETNs (a different animal)</h3>
+
+<p>An exchange-traded note looks like an ETF on your screen, but it is actually a debt obligation of the bank that issued it. It does not hold a basket for you. If the issuer fails, you can lose money even if the thing the note tracks did fine. Always check whether a product is an ETF or an ETN.</p>
+
+<h2>Worked example: a 3x fund after a sharp drop</h2>
+
+<p>Let's use hypothetical numbers. Say you put $10,000 into a 3x fund, and the index it tracks drops 10% a day for three days in a row, then bounces 10% on day four. These are assumptions to show how the math works, not a forecast.</p>
+
+<table><thead><tr><th>Day</th><th>Index move</th><th>3x fund move</th><th>Fund value</th></tr></thead><tbody><tr><td>Start</td><td>n/a</td><td>n/a</td><td>$10,000</td></tr><tr><td>1</td><td>-10%</td><td>-30%</td><td>$7,000</td></tr><tr><td>2</td><td>-10%</td><td>-30%</td><td>$4,900</td></tr><tr><td>3</td><td>-10%</td><td>-30%</td><td>$3,430</td></tr><tr><td>4</td><td>+10%</td><td>+30%</td><td>$4,459</td></tr></tbody></table>
+
+<p>After day three, the index is down about 27% (0.9 x 0.9 x 0.9 = 0.729), but the 3x fund is down about 66%. After the day-four bounce, the index is down about 20% from the start. The fund is down about 55%.</p>
+
+<p>Notice the trap: you need a much bigger gain to get back. To recover from $4,459 to $10,000, the fund needs to gain about 124%.</p>
+
+<p>Now here is the quieter problem, called volatility drag. Say the index falls 20% in a day and then rises 25% the next day. That puts the index right back where it started (0.8 x 1.25 = 1.0). A 3x fund would go down 60% on the first day, to $4,000 from $10,000, then up 75% on the second day, to $7,000. The index is flat, and you are down 30%. Choppy markets quietly eat leveraged funds even when the index ends up nowhere.</p>
+
+<p>And the true wipeout case: if the index falls roughly 33% in a single day, a 3x fund would in theory lose everything. Markets have safeguards like trading halts that make a one-day drop that large very unlikely for a major index, and leveraged funds can use tools to reduce exposure during extreme moves. But a fund can still be damaged badly, and it does not always bounce back.</p>
+
+<h2>What actually happens when an ETF closes</h2>
+
+<p>This is the part that worries people most, and the truth is calmer than the headline. When an ETF shuts down, it is called a liquidation. You do not wake up to a zero balance. The general process looks like this:</p>
+
+<ol><li><strong>The issuer announces the closure.</strong> You get a notice from the fund company and usually from your broker. It includes a last trading day.</li><li><strong>You can sell any time before the last day.</strong> The fund keeps trading on the exchange until then, so you can exit at the market price like any other day.</li><li><strong>The fund sells its holdings.</strong> It converts everything into cash.</li><li><strong>Cash is paid to remaining shareholders.</strong> If you still hold shares, the fund pays out your share of what is left, based on net asset value (NAV, the value of the fund's holdings per share), after any closing costs. The exact timing varies, so read the notice from your fund company.</li><li><strong>The cash lands in your account.</strong> You don't need to do anything, but you do need to decide what to do with the money.</li></ol>
+
+<p>The reason this works is that the fund's holdings are kept separately from the issuer's own business. If the fund company stops offering a product, the assets inside still belong to the fund's shareholders. This protection does not apply to ETNs, which are the bank's debt.</p>
+
+<p>Closures are common among small, niche funds that never attracted enough assets to cover their costs. Most closures are a business decision, not a collapse. Often you get back close to what the holdings are worth, which may be more or less than you paid.</p>
+
+<h2>The tax side of a closure</h2>
+
+<p>In a taxable brokerage account, a forced cash payout generally counts as a sale. If you receive more than your cost basis, you may owe capital gains tax. If you receive less, you may have a capital loss. In an IRA or 401(k), you typically don't owe tax on the payout itself, but you will need to reinvest the cash within the account.</p>
+
+<p>Tax details depend on your situation, so confirm with a tax professional. For the basics of how ETF taxes work, see <a href="/articles/do-you-pay-taxes-on-etfs-every-year">do you pay taxes on ETFs every year</a>. If you plan to buy something similar after a closure at a loss, read about <a href="/articles/does-wash-sale-rule-apply-to-etfs">the wash sale rule with ETFs</a> first.</p>
+
+<h2>Common mistakes</h2>
+
+<ul><li><strong>Treating "can't go to zero" as "can't lose much."</strong> A broad index fund can still drop 30%, 40% or more. Be sure your time horizon and nerves can handle it.</li><li><strong>Holding leveraged funds like normal index funds.</strong> They are designed for short-term use. Because they reset daily, long-term results can look very different from simply multiplying the index's return by three.</li><li><strong>Chasing past returns.</strong> A giant total return number, like the one for {{tkr:TQQQ}}, hides the drawdowns along the way. Always ask what the worst stretch looked like.</li><li><strong>Confusing income with safety.</strong> A high yield on a single-stock option fund does not protect you if the stock craters. Check total return and whether the share price has been falling, not just the payout.</li><li><strong>Panic selling at a wide spread.</strong> If a fund is thinly traded or the market is chaotic, the price you see can drift from NAV. See <a href="/articles/etf-trading-at-premium-to-nav">what it means when an ETF trades at a premium or discount</a>.</li><li><strong>Ignoring ETN fine print.</strong> If the product is a note, you carry the issuer's credit risk.</li></ul>
+
+<h2>A quick checklist before you buy any ETF</h2>
+
+<ul><li>Is it an ETF or an ETN?</li><li>How many holdings does it have, and is it tied to one stock or one theme?</li><li>Does it use leverage or inverse exposure? If yes, is it meant to be held for days, not years?</li><li>How big is the fund? Very small funds are the ones that tend to close.</li><li>What did the worst drop look like in the fund's history?</li><li>Do I understand the fee? Check it against what you get, using <a href="/articles/expense-ratio-math">expense ratio math</a>.</li><li>Does it fit how much loss I can sit through without selling?</li></ul>
+
+<p>You can compare funds side by side in the <a href="/screener">ETF screener</a>. If your focus is growth funds, the <a href="https://growthetfs.com/">GrowthETFs.com</a> site covers that side in more detail.</p>
+
+<section class="faq"><h2>FAQ</h2><h3>Has a big index ETF ever gone to zero?</h3><p>Not that I'm aware of for major broad-market index funds. Individual small or niche ETFs have closed, but that is a liquidation where shareholders get cash back, not a total wipeout.</p><h3>If my ETF closes, do I lose all my money?</h3><p>No. The fund sells its holdings and pays out the cash to shareholders at about NAV, minus closing costs. You may get back more or less than you paid, and you may owe taxes on a gain in a taxable account.</p><h3>Can a leveraged ETF go to zero?</h3><p>Yes, at least in theory. A 3x fund can lose almost everything if its index falls about a third in a day, and daily resetting can drain value over time in choppy markets. They are built for short-term trading, not buy-and-hold.</p><h3>Can a covered call or single-stock ETF go to zero?</h3><p>It can lose most of its value if the underlying stock collapses. Selling options brings in income, but it does not protect you from a big drop in the stock.</p><h3>What should I do if I get a closure notice?</h3><p>Read the notice for the last trading day and payout date, then decide whether to sell before the closing date or wait for the cash. Check the tax impact in your account type first, and consider how you will reinvest the money.</p></section>
+
+<h2>Benjie's bottom line</h2>
+
+<p>Here's how I think about it. A diversified index ETF going to zero is not the risk to worry about. A deep, painful drop is, and that comes with owning stocks at all. The funds that can truly go near zero are the ones with leverage, inverse bets, a single stock, or a debt note from a bank behind them.</p>
+
+<p>If you do own one of those, treat it as a short-term, high-risk tool and size it small. And if a fund you own ever closes, don't panic: the money inside is still yours, and the process is more boring than scary.</p>
+
+<p>This isn't a buy or sell signal. Do your own due diligence, and talk to a tax professional about your own account before making any moves.</p>
