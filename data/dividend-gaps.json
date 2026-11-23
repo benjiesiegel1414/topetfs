@@ -1,7 +1,7 @@
 {
- "checked": "2026-11-22",
+ "checked": "2026-11-23",
  "fixed": [
-  "MEMY: added 33 payouts from StockAnalysis",
+  "MEMY: added 32 payouts from StockAnalysis",
   "SEPI: added 1 payout from StockAnalysis",
   "SPCI: added 21 payouts from StockAnalysis",
   "VAIE: added 2 payouts from StockAnalysis"
@@ -21,7 +21,7 @@
    "freq": "quarterly",
    "every": 91,
    "issues": [
-    "latest payout 2026-06-04 is 171 days old (normally every ~91 days)",
+    "latest payout 2026-06-04 is 172 days old (normally every ~91 days)",
     "gap of 156 days between 2025-12-30 and 2026-06-04"
    ],
    "triedStockAnalysis": true
@@ -88,7 +88,7 @@
    "freq": "weekly",
    "every": 7,
    "issues": [
-    "latest payout 2026-11-06 is 16 days old (normally every ~7 days)"
+    "latest payout 2026-11-06 is 17 days old (normally every ~7 days)"
    ],
    "triedStockAnalysis": true
   },
