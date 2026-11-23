@@ -3,6 +3,7 @@ name: Daily article
 on:
   schedule:
     - cron: "7 12 * * *"   # every day ~8am ET
+    - cron: "53 17 * * *"   # backup run (~1pm ET); skips if today's article already went out
   workflow_dispatch:
     inputs:
       force:

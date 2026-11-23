@@ -3,6 +3,7 @@ name: Refresh data and build site
 on:
   schedule:
     - cron: "17 11 * * *"   # daily, ~7am ET
+    - cron: "41 16 * * *"   # backup run (~12pm ET) in case GitHub skips the first one
   workflow_dispatch:
   push:
     branches: [main]
