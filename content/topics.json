@@ -2363,7 +2363,6 @@
    "title": "Fractional Shares of ETFs: Which Brokers Offer Them and How They Work",
    "tickers": [
     "VOO",
-    "VTI",
     "QQQ"
    ],
    "section": "growth",
@@ -2371,7 +2370,9 @@
    "angle": "Explain how fractional ETF shares let you invest a fixed dollar amount like $50, and compare how Fidelity, Schwab, Robinhood, Interactive Brokers and others handle them, including which ETFs qualify and transfer limits. Use an example of investing $200 a month in a $500 ETF share, plus the caveats on limit orders and moving the position.",
    "source": "autocomplete",
    "found": "2026-11-21",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-23",
+   "words": 2094
   },
   {
    "slug": "can-you-automatically-buy-etfs",
