@@ -15,7 +15,7 @@
   <url><loc>https://topetfs.com/lists/growth-etfs</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/lists/income-etfs</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/lists/roundhill-etfs</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/lists/yieldmax-etfs</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://topetfs.com/lists/yieldmax-etfs</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/lists/neos-etfs</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/lists/graniteshares-etfs</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/lists/amplify-etfs</loc><lastmod>2026-11-14</lastmod></url>
@@ -39,7 +39,7 @@
   <url><loc>https://topetfs.com/lists/nestyield-etfs</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/lists/tuttle-capital-etfs</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/latest</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/dividend</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://topetfs.com/dividend</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/weekly</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/growth</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/learn</loc><lastmod>2026-11-22</lastmod></url>
@@ -78,7 +78,7 @@
   <url><loc>https://topetfs.com/etfs/ahd-dividend-history</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://topetfs.com/etfs/cony</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/cony-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/ulty</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/ulty</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ulty-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/msty</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/msty-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
@@ -96,27 +96,27 @@
   <url><loc>https://topetfs.com/etfs/amdy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/snoy</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/snoy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/ymax</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/ymax</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ymax-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/pypy</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/pypy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/amzy</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/amzy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/amzy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/gooy</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/gooy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/gooy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/babo</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/babo</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/babo-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/oark</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/oark</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/oark-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/hooy</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/hooy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/lfgy</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/lfgy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/lfgy-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/chpy</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/chpy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/chpy-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/ymag</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/ymag</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ymag-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/fby</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/fby</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/fby-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/soxy</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/soxy-dividend-history</loc><lastmod>2026-11-05</lastmod></url>
@@ -132,8 +132,8 @@
   <url><loc>https://topetfs.com/etfs/btci-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/cshi</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://topetfs.com/etfs/cshi-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/qqqh</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/qqqh-dividend-history</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/qqqh</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/qqqh-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/iwmi</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/iwmi-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/iyri</loc><lastmod>2026-11-23</lastmod></url>
@@ -168,8 +168,8 @@
   <url><loc>https://topetfs.com/etfs/schd-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/dgro</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/dgro-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/dgrw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/dgrw-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/dgrw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/dgrw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/vig</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/vig-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/vym</loc><lastmod>2026-11-02</lastmod></url>
@@ -194,36 +194,36 @@
   <url><loc>https://topetfs.com/etfs/xdte-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ybtc</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ybtc-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/pltw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/pltw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/yeth</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/pltw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/pltw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/yeth</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/yeth-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/coiw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/coiw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/coiw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/coiw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/rdte</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/rdte-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/week</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/week-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/magy</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/magy-dividend-history</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/tslw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/tslw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/goow</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/goow-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/tslw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/tslw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/goow</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/goow-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/topw</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/topw-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/amdw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/amdw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/acky</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/acky-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/omah</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/omah-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/drky</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/drky-dividend-history</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/qusa</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/qusa-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/sioo</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/sioo-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/amdw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/amdw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/acky</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/acky-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/omah</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/omah-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/drky</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/drky-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/qusa</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/qusa-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/sioo</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/sioo-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/xyld</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/xyld-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/hdv</loc><lastmod>2026-11-20</lastmod></url>
@@ -245,16 +245,16 @@
   <url><loc>https://topetfs.com/etfs/schg</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/schg-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ryld</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/ryld-dividend-history</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/ryld-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/qyld</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/qyld-dividend-history</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/qyld-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/jepi</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/jepi-dividend-history</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://topetfs.com/etfs/jepq</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/jepq-dividend-history</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/maxi</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/maxi-dividend-history</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/blox</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/maxi</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/maxi-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/blox</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/blox-dividend-history</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://topetfs.com/etfs/giax</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://topetfs.com/etfs/giax-dividend-history</loc><lastmod>2026-11-21</lastmod></url>
@@ -262,8 +262,8 @@
   <url><loc>https://topetfs.com/etfs/svol-dividend-history</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://topetfs.com/etfs/bito</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/bito-dividend-history</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/kqqq</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/kqqq-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/kqqq</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/kqqq-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/fepi</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/fepi-dividend-history</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://topetfs.com/etfs/aipi</loc><lastmod>2026-11-18</lastmod></url>
@@ -330,10 +330,10 @@
   <url><loc>https://topetfs.com/etfs/ovs-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ovf</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://topetfs.com/etfs/ovf-dividend-history</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/isbg</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/isbg-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/issb</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/issb-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/isbg</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/isbg-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/issb</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/issb-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/tmgn</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/tmgn-dividend-history</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://topetfs.com/etfs/sepi</loc><lastmod>2026-11-23</lastmod></url>
@@ -374,8 +374,8 @@
   <url><loc>https://topetfs.com/etfs/sgov-dividend-history</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://topetfs.com/etfs/sphy</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/sphy-dividend-history</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/tpry</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/tpry-dividend-history</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/tpry</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/tpry-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/tdvi</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://topetfs.com/etfs/tdvi-dividend-history</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://topetfs.com/etfs/eggq</loc><lastmod>2026-11-20</lastmod></url>
@@ -411,43 +411,43 @@
   <url><loc>https://topetfs.com/etfs/xpay-dividend-history</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://topetfs.com/etfs/tpay</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/tpay-dividend-history</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/hoow</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/hoow-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/nvdw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/nvdw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/mstw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/mstw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/gdxw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/gdxw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/msfw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/msfw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/aapw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/aapw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/metw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/metw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/avgw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/avgw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/amzw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/amzw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/armw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/armw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/gldw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/gldw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/brkw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/brkw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/cosw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/cosw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/nflw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/nflw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/unhw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/unhw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/ubew</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/ubew-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/tsyw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/tsyw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/babw</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/babw-dividend-history</loc><lastmod>2026-11-17</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/qldy</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/hoow</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/hoow-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/nvdw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/nvdw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/mstw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/mstw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/gdxw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/gdxw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/msfw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/msfw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/aapw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/aapw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/metw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/metw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/avgw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/avgw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/amzw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/amzw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/armw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/armw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/gldw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/gldw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/brkw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/brkw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/cosw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/cosw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/nflw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/nflw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/unhw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/unhw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/ubew</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/ubew-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/tsyw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/tsyw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/babw</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/babw-dividend-history</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/qldy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/qldy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/usoy</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/usoy-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
@@ -455,9 +455,9 @@
   <url><loc>https://topetfs.com/etfs/kyld-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/aiyy</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/aiyy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/aply</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/aply</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/aply-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/brkc</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/brkc</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/brkc-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/crco</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/crco-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
@@ -479,13 +479,13 @@
   <url><loc>https://topetfs.com/etfs/hiyy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/inyy</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/inyy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/jpo</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/jpo</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/jpo-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/maro</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/maro-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/mrny</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/mrny-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/msfo</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/msfo</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/msfo-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/nfly</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/nfly-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
@@ -493,11 +493,11 @@
   <url><loc>https://topetfs.com/etfs/rbly-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/rdyy</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/rdyy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/tsmy</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/tsmy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/tsmy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/wntr</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/wntr-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/xomo</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/xomo</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/xomo-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/xyzy</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://topetfs.com/etfs/xyzy-dividend-history</loc><lastmod>2026-11-20</lastmod></url>
@@ -505,7 +505,7 @@
   <url><loc>https://topetfs.com/etfs/yqqq-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/gpty</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/gpty-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://topetfs.com/etfs/miny</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://topetfs.com/etfs/miny</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://topetfs.com/etfs/miny-dividend-history</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://topetfs.com/etfs/qdty</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://topetfs.com/etfs/qdty-dividend-history</loc><lastmod>2026-11-19</lastmod></url>

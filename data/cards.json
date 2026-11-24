@@ -1,15 +1,15 @@
 {
  "price-decay-etf-meaning": {
-  "hash": "1afb6e33f2",
+  "hash": "863320066a",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "schd-vs-voo": {
-  "hash": "bcc4ce4040",
+  "hash": "e0ba897573",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "how-much-does-100-000-in-schd-pay": {
   "hash": "65269b192c",
@@ -18,22 +18,22 @@
   "rendered": "2026-11-13"
  },
  "best-growth-etfs": {
-  "hash": "813b7a8c04",
+  "hash": "9279f6df62",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "best-weekly-dividend-etfs": {
-  "hash": "26e912aed1",
+  "hash": "8b43349a98",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "voo-etf-review-total-return-fees": {
-  "hash": "f1bd9e62af",
+  "hash": "2ab7eae16d",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "msty-etf-dividend-yield-total-return": {
   "hash": "043ef9c184",
@@ -42,10 +42,10 @@
   "rendered": "2026-11-18"
  },
  "jepi-vs-jepq": {
-  "hash": "b59e3b1651",
+  "hash": "dad296fb5d",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "how-much-do-i-need-in-jepi-to-make-1000-a-month": {
   "hash": "b83323ea43",
@@ -54,40 +54,40 @@
   "rendered": "2026-11-20"
  },
  "yield-vs-total-return": {
-  "hash": "bb9a1f5bd1",
+  "hash": "4147c931be",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "qqqi-vs-jepq": {
-  "hash": "6871effc6a",
+  "hash": "6e21a8598e",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "qqq-etf-review-total-return-fees": {
-  "hash": "7f5995d65a",
+  "hash": "c350851f55",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "ulty-etf-dividend-yield-total-return": {
-  "hash": "20c10e7055",
+  "hash": "605e878036",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "voo-vs-qqq": {
-  "hash": "c4e17c667f",
+  "hash": "bef72467b5",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "qdte-vs-xdte": {
-  "hash": "03b1973ac9",
+  "hash": "8d5ef7b5c2",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "jepq-etf-dividend-yield-total-return": {
   "hash": "637493734b",
@@ -102,10 +102,10 @@
   "rendered": "2026-11-20"
  },
  "schd-vs-jepi": {
-  "hash": "278cfc82ac",
+  "hash": "6cc21de38d",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "how-much-do-i-need-in-schd-to-make-1000-a-month": {
   "hash": "9c2910b290",
@@ -114,118 +114,118 @@
   "rendered": "2026-11-13"
  },
  "schd-etf-dividend-yield-total-return": {
-  "hash": "fa3b026ae7",
+  "hash": "cd8ac8c350",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "highest-yield-etfs-no-price-decay": {
-  "hash": "eacb46ecbc",
+  "hash": "b5381131b5",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "leveraged-etf-decay": {
-  "hash": "4b5365657c",
+  "hash": "249c0883bb",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "0dte-covered-call-etfs": {
-  "hash": "459f2f82b9",
+  "hash": "7d1ffd5cde",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "best-monthly-dividend-etfs": {
-  "hash": "4457e709f9",
+  "hash": "317fc007d5",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "section-1256-etfs-taxes": {
-  "hash": "79febe1eee",
+  "hash": "100bb353dc",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "what-is-return-of-capital-etf": {
-  "hash": "4d1f315fd4",
+  "hash": "5afc23b5d7",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "alpha-picks-review": {
-  "hash": "c4e17c667f",
+  "hash": "bef72467b5",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "best-dividend-etfs-for-roth-ira": {
-  "hash": "b57d19f26a",
+  "hash": "a0194257fc",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "best-dividend-etfs-for-beginners": {
-  "hash": "3ad34bda1b",
+  "hash": "cb54c4a380",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "chpy-dividend-history": {
-  "hash": "6e193e205b",
+  "hash": "c4965cea09",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "covered-call-etfs-explained": {
-  "hash": "ad14d0dd2b",
+  "hash": "8b708c13f1",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "weekly-pay-etfs-10000": {
-  "hash": "ac0d0fe43c",
+  "hash": "79cfc8445d",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "growth-etf-scoreboard": {
-  "hash": "437360fbba",
+  "hash": "afa235ffde",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "expense-ratio-math": {
-  "hash": "b6d74fa421",
+  "hash": "ae698d5c34",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "schd-vs-vym-vs-dgro-vs-vig": {
-  "hash": "087c8fc221",
+  "hash": "5d6a49ad66",
   "kind": "table",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "how-etfs-work": {
-  "hash": "b3b9c828e3",
+  "hash": "2c2ce05179",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "drip-reinvest-or-spend": {
-  "hash": "48f25022ec",
+  "hash": "6d7c2b541f",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "msty-vs-ulty": {
-  "hash": "be864d807f",
+  "hash": "1ebeed3075",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "schg-vs-qqq": {
   "hash": "63a8999c53",
@@ -264,10 +264,10 @@
   "rendered": "2026-11-23"
  },
  "how-many-etfs-should-i-have-in-my-roth-ira": {
-  "hash": "f1bd9e62af",
+  "hash": "2ab7eae16d",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "bucket-strategy-retirement-withdrawals": {
   "hash": "40eb3d5604",
@@ -294,10 +294,10 @@
   "rendered": "2026-11-22"
  },
  "investing-a-lump-sum-for-monthly-income": {
-  "hash": "337df8b9f6",
+  "hash": "672b45edb0",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "do-you-pay-taxes-on-etfs-every-year": {
   "hash": "40eb3d5604",
@@ -342,10 +342,10 @@
   "rendered": "2026-11-23"
  },
  "how-to-invest-for-my-child-s-future": {
-  "hash": "f1bd9e62af",
+  "hash": "2ab7eae16d",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-17"
+  "rendered": "2026-11-24"
  },
  "bond-etf-when-interest-rates-fall": {
   "hash": "73cf2179fe",
