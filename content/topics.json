@@ -1906,7 +1906,9 @@
    "angle": "The closure timeline, last trading day, liquidation payout in cash, tax consequences, choosing to sell early vs waiting, and how to spot a fund at risk (tiny assets, low volume).",
    "source": "autocomplete",
    "found": "2026-11-02",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-25",
+   "words": 2253
   },
   {
    "slug": "how-do-etfs-avoid-capital-gains",
