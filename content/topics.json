@@ -2383,17 +2383,16 @@
    "keyword": "can you automatically buy etfs",
    "title": "How to Automatically Buy ETFs Every Month (Auto-Invest Setup)",
    "tickers": [
-    "VTI",
-    "VXUS",
-    "VOO",
-    "BND"
+    "VOO"
    ],
    "section": "growth",
    "type": "guide",
    "angle": "Show how recurring ETF purchases work at major brokers, how they differ from auto-investing in mutual funds, and what to do about whole-share limits and cash timing. Use a $500-a-month plan split 70/30 across two ETFs, with a payday-to-purchase timeline and a checklist of pitfalls.",
    "source": "autocomplete",
    "found": "2026-11-21",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-26",
+   "words": 1927
   },
   {
    "slug": "how-to-read-an-etf-fact-sheet",
