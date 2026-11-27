@@ -240,10 +240,10 @@
   "rendered": "2026-11-26"
  },
  "spyi-vs-jepi": {
-  "hash": "2ce958f905",
+  "hash": "fb5c148954",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-20"
+  "rendered": "2026-11-27"
  },
  "qdte-etf-dividend-yield-total-return": {
   "hash": "2deec51c8c",
@@ -312,16 +312,16 @@
   "rendered": "2026-11-26"
  },
  "how-do-you-get-paid-dividends": {
-  "hash": "e57d1d6977",
+  "hash": "ddaf927eec",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-20"
+  "rendered": "2026-11-27"
  },
  "etf-vs-index-fund-for-taxable-account": {
-  "hash": "3e70070742",
+  "hash": "53bbab61e0",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-20"
+  "rendered": "2026-11-27"
  },
  "compare-etf-holdings-overlap": {
   "hash": "a0c7dc6f0c",
@@ -360,10 +360,10 @@
   "rendered": "2026-11-26"
  },
  "can-you-lose-money-in-index-funds": {
-  "hash": "a0c7dc6f0c",
+  "hash": "99736fa568",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-20"
+  "rendered": "2026-11-27"
  },
  "how-to-pay-less-tax-on-dividends": {
   "hash": "f791d60a48",

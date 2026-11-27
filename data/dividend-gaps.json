@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-26",
+ "checked": "2026-11-27",
  "fixed": [
   "MEMY: added 30 payouts from StockAnalysis",
   "RDYY: added 1 payout from StockAnalysis",
@@ -22,7 +22,7 @@
    "freq": "quarterly",
    "every": 91,
    "issues": [
-    "latest payout 2026-06-04 is 175 days old (normally every ~91 days)",
+    "latest payout 2026-06-04 is 176 days old (normally every ~91 days)",
     "gap of 156 days between 2025-12-30 and 2026-06-04"
    ],
    "triedStockAnalysis": true
@@ -89,7 +89,7 @@
    "freq": "weekly",
    "every": 7,
    "issues": [
-    "latest payout 2026-11-06 is 20 days old (normally every ~7 days)"
+    "latest payout 2026-11-06 is 21 days old (normally every ~7 days)"
    ],
    "triedStockAnalysis": true
   },
