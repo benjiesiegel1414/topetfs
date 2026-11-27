@@ -8,7 +8,7 @@ VONG,Vanguard Russell 1000 Growth ETF,$42.14B,913%,,$112.75
 MGK,Vanguard Mega Cap Growth ETF,$30.89B,873%,,$82.07
 IUSG,iShares Core S&P U.S. Growth ETF,$30.78B,595%,,$172.08
 VOOG,Vanguard S&P 500 Growth ETF,$24.87B,962%,,$75.58
-VBK,Vanguard Small-Cap Growth ETF,$21.15B,649%,,$320.30
+VBK,Vanguard Small-Cap Growth ETF,$21.15B,649%,,$320.23
 IWP,iShares Russell Mid-Cap Growth ETF,$17.12B,1532%,,$125.67
 CGGR,Capital Group Growth ETF,$24.50B,80%,,$44.25
 VOT,Vanguard Mid-Cap Growth ETF,$17.98B,525%,,$280.92
@@ -29,10 +29,10 @@ COWG,Pacer US Large Cap Cash Cows Growth Leaders ETF,$2.16B,88%,,$37.31
 NULG,Nuveen ESG Large-Cap Growth ETF,$2.68B,353%,,$100.15
 QGRO,American Century U.S. Quality Growth ETF,$1.70B,178%,,$110.02
 QGRW,WisdomTree U.S. Quality Growth Fund,$2.96B,147%,,$60.80
-TCHP,T. Rowe Price Blue Chip Growth ETF,$1.86B,75%,,$44.61
+TCHP,T. Rowe Price Blue Chip Growth ETF,$1.86B,75%,,$44.63
 RPG,Invesco S&P 500 Pure Growth ETF,$1.56B,700%,,$49.02
-PWB,Invesco Large Cap Growth ETF,$2.36B,901%,,$137.35
-IVOG,Vanguard S&P Mid-Cap 400 Growth ETF,$1.59B,495%,,$132.94
+PWB,Invesco Large Cap Growth ETF,$2.36B,901%,,$137.30
+IVOG,Vanguard S&P Mid-Cap 400 Growth ETF,$1.59B,495%,,$133.03
 FTGS,First Trust Growth Strength ETF,$1.21B,81%,,$36.57
 GARP,iShares MSCI USA Quality GARP ETF,$3.32B,202%,,$73.02
 VTWG,Vanguard Russell 2000 Growth ETF,$1.36B,439%,,$252.97
@@ -40,11 +40,11 @@ FTC,First Trust Large Cap Growth AlphaDEX Fund,$1.20B,495%,,$161.11
 WINN,Harbor Long-Term Growers ETF,$1.14B,67%,,$31.26
 TGRT,T. Rowe Price Growth ETF,$1.56B,61%,,$41.22
 FYC,First Trust Small Cap Growth AlphaDEX Fund,$1.31B,453%,,$110.56
-ISCG,iShares Morningstar Small-Cap Growth ETF,$926.84M,578%,,$60.00
-VIOG,Vanguard S&P Small-Cap 600 Growth ETF,$1.02B,546%,,$138.98
+ISCG,iShares Morningstar Small-Cap Growth ETF,$926.84M,578%,,$59.92
+VIOG,Vanguard S&P Small-Cap 600 Growth ETF,$1.02B,546%,,$139.94
 TGRW,T. Rowe Price Growth Stock ETF,$1.03B,63%,,$41.67
 JSMD,Janus Henderson Small/Mid Cap Growth Alpha ETF,$1.00B,256%,,$86.04
-IWLG,NYLI Winslow Large Cap Growth ETF,$275.36M,97%,,$50.24
+IWLG,NYLI Winslow Large Cap Growth ETF,$275.36M,97%,,$50.25
 GFLW,VictoryShares Free Cash Flow Growth ETF,$1.13B,15%,,$29.40
 LSGR,Natixis Loomis Sayles Focused Growth ETF,$795.27M,64%,,$41.31
 QDVO,Amplify CWP Growth & Income ETF,$703.16M,35%,,$26.96
@@ -61,34 +61,34 @@ GGUS,Marketbeta Russell 1000 Growth Equity ETF,$538.48M,47%,,$59.39
 JIG,JPMorgan International Growth ETF,$499.16M,60%,,$76.79
 NUMG,Nuveen ESG Mid-Cap Growth ETF,$289.84M,116%,,$43.15
 TMFG,Motley Fool Global Opportunities ETF,$313.75M,16%,,$29.96
-FDG,American Century Focused Dynamic Growth ETF,$375.84M,195%,,$113.61
+FDG,American Century Focused Dynamic Growth ETF,$375.84M,195%,,$114.05
 CAML,Congress Large Cap Growth ETF,$341.91M,45%,,$36.98
 RFG,Invesco S&P Midcap 400 Pure Growth ETF,$288.00M,473%,,$53.60
-LRGG,Nomura Focused Large Growth ETF,$292.54M,13%,,$28.55
+LRGG,Nomura Focused Large Growth ETF,$292.54M,13%,,$28.61
 JSML,Janus Henderson Small Cap Growth Alpha ETF,$371.33M,259%,,$86.52
 CARK,CastleArk Large Growth ETF,$296.84M,37%,,$42.27
 GRIN,VictoryShares International Free Cash Flow Growth ETF,$317.91M,12%,,$29.08
 CNEQ,Alger Concentrated Equity ETF,$854.03M,66%,,$33.87
 FFOG,Franklin Focused Growth ETF FOCUSED GROWTH ETF,$351.98M,66%,,$43.09
-BLGR,Bluemonte Large Cap Growth ETF,$286.05M,15%,,$29.05
+BLGR,Bluemonte Large Cap Growth ETF,$286.05M,15%,,$29.33
 BCHP,Principal Focused Blue Chip ETF,$218.51M,42%,,$35.76
 MFSG,MFS Active Growth ETF,$408.14M,5%,,$27.05
 HFGO,Hartford Large Cap Growth ETF,$150.94M,27%,,$24.96
 MTRA,Invesco International Growth Focus ETF,$120.44M,-3%,,$24.73
 GLRY,Inspire Growth ETF,$151.55M,53%,,$36.16
-FRTY,Alger Mid Cap 40 ETF,$123.40M,1%,,$19.80
+FRTY,Alger Mid Cap 40 ETF,$123.40M,1%,,$19.98
 STXG,Strive 1000 Growth ETF,$136.60M,103%,,$52.48
-PJFG,PGIM Jennison Focused Growth ETF,$125.95M,114%,,$107.67
+PJFG,PGIM Jennison Focused Growth ETF,$125.95M,114%,,$107.87
 BUL,Pacer US Cash Cows Growth ETF,$126.53M,151%,,$60.37
 BAMG,Brookstone Growth Stock ETF,$122.87M,66%,,$41.75
-HBTA,Horizon Expedition Plus ETF,$216.16M,9%,,$28.14
+HBTA,Horizon Expedition Plus ETF,$216.16M,9%,,$28.18
 ATFV,Alger 35 ETF,$180.22M,61%,,$32.14
-BKCG,BNY Mellon Concentrated Growth ETF,$111.32M,19%,,$36.79
+BKCG,BNY Mellon Concentrated Growth ETF,$111.32M,19%,,$36.91
 LGRO,Level Four Large Cap Growth Active ETF,$130.21M,74%,,$43.77
-RZG,Invesco S&P Smallcap 600 Pure Growth ETF,$110.76M,429%,,$60.05
+RZG,Invesco S&P Smallcap 600 Pure Growth ETF,$110.76M,429%,,$60.16
 GQQQ,Astoria US Quality Growth Kings ETF,$156.84M,29%,,$32.54
 NBJP,Neuberger Japan Equity ETF,$114.91M,33%,,$33.32
-AGRW,Allspring LT Large Growth ETF,$102.53M,18%,,$29.16
+AGRW,Allspring LT Large Growth ETF,$102.53M,18%,,$29.46
 LCLG,Logan Capital Broad Innovative Growth ETF,$98.05M,98%,,$65.83
 QQQ,Invesco QQQ Trust Series,$446.53B,1384%,,$650.99
 GRNY,Fundstrat Granny Shots US Large Cap,$3.55B,20%,,$24.54
@@ -102,5 +102,5 @@ VEU,Vanguard FTSE All-World ex-US Index Fund,$64.06B,161%,,$77.89
 TQQQ,ProShares UltraPro QQQ ,$28.26B,22464%,,$48.85
 ARKK,ARK Innovation ETF,$5.56B,270%,,$69.50
 AIS,VistaShares Artificial Intelligence Supercycle® ETF,$628.49M,88%,,$48.56
-POW,VistaShares Electrification Supercycle® ETF,$54.31M,1%,,$20.54
+POW,VistaShares Electrification Supercycle® ETF,$54.31M,1%,,$20.58
 UPSD,Aptus Large Cap Upside ETF,$138.48M,14%,,$28.63

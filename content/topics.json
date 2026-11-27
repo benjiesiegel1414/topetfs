@@ -2447,8 +2447,6 @@
    "keyword": "how to withdraw from portfolio",
    "title": "Which Investments to Sell First in Retirement: Withdrawal Order",
    "tickers": [
-    "VTI",
-    "BND",
     "SGOV"
    ],
    "section": "income",
@@ -2456,7 +2454,9 @@
    "angle": "Explain the standard order of taxable, then tax-deferred, then Roth, and when it makes sense to break it, such as filling low brackets or planning around RMDs. Use a $1M portfolio across taxable, IRA and Roth accounts to compare year-1 tax and 15-year balances under two withdrawal orders.",
    "source": "autocomplete",
    "found": "2026-11-21",
-   "status": "pending"
+   "status": "published",
+   "date": "2026-11-27",
+   "words": 2517
   },
   {
    "slug": "how-to-live-off-investments-tax-free",
