@@ -246,10 +246,10 @@
   "rendered": "2026-11-27"
  },
  "qdte-etf-dividend-yield-total-return": {
-  "hash": "2deec51c8c",
+  "hash": "01fa156e9c",
   "kind": "single",
   "style": 3,
-  "rendered": "2026-11-21"
+  "rendered": "2026-11-28"
  },
  "schg-etf-review-total-return-fees": {
   "hash": "f67d29680b",
@@ -324,10 +324,10 @@
   "rendered": "2026-11-27"
  },
  "compare-etf-holdings-overlap": {
-  "hash": "a0c7dc6f0c",
+  "hash": "b7cb470178",
   "kind": "vs",
   "style": 3,
-  "rendered": "2026-11-21"
+  "rendered": "2026-11-28"
  },
  "treasury-etf-vs-high-yield-savings": {
   "hash": "73cf2179fe",
@@ -366,10 +366,10 @@
   "rendered": "2026-11-27"
  },
  "how-to-pay-less-tax-on-dividends": {
-  "hash": "f791d60a48",
+  "hash": "dac133e77c",
   "kind": "bars",
   "style": 3,
-  "rendered": "2026-11-21"
+  "rendered": "2026-11-28"
  },
  "can-an-etf-go-to-zero": {
   "hash": "b6b14c245f",
